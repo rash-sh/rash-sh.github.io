@@ -87,7 +87,7 @@ p {
   font-weight: 500;
   line-height: 50px;
   color: $white;
-  background-color: $blue;
+  background-color: $orange;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -100,7 +100,7 @@ p {
 
   &:visited {
     color: $white;
-    background-color: $blue;
+    background-color: $orange;
     text-decoration: none;
   }
 
@@ -108,7 +108,7 @@ p {
   &:focus,
   &:active {
     color: $white;
-    background-color: $blueDark;
+    background-color: $orangeDark;
     text-decoration: none;
   }
 
@@ -333,7 +333,7 @@ p {
 
             &:before {
               width: 100%;
-              background-color: $blue;
+              background-color: $orange;
             }
           }
         }
@@ -482,7 +482,7 @@ p {
       font-family: $fontHeader;
       font-size: 14px;
       font-weight: 700;
-      color: $blueDarker;
+      color: $orangeDarker;
       padding: 8px 0;
     }
 

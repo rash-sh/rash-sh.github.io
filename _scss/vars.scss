@@ -12,9 +12,10 @@ $pageWidth: 1280px;
 $pagePadding: 30px;
 $pagePaddingSmall: 15px;
 
-$blue: #2ac6ea;
-$blueDark: #14aacc;
-$blueDarker: #0e748b;
+$orange: #e89f4a;
+// 50 % between normal and darker using: https://mycolor.space/gradient?
+$orangeDark: #d1822a;
+$orangeDarker: #b96500;
 
 $purpleLight: #4f4384;
 $purple: #1b0c59;
@@ -44,4 +45,4 @@ $base-font-weight: 300;
 
 $text-color: $textDark;
 $background-color: $white;
-$brand-color: $blue;
+$brand-color: $orange;

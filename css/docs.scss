@@ -35,18 +35,18 @@
     font-family: $fontHeader;
     font-size: 16px;
     font-weight: 500;
-    color: $blue;
+    color: $orange;
     text-decoration: none;
     transition: all $timingFast ease-in-out;
 
     &:visited {
-      color: $blue;
+      color: $orange;
     }
 
     &:hover,
     &:focus,
     &:active {
-      color: $blueDark;
+      color: $orangeDark;
     }
   }
 
@@ -143,7 +143,7 @@
         height: 4px;
         width: 100%;
         border-radius: 3px;
-        background-color: $blue;
+        background-color: $orange;
       }
 
       &:hover {
@@ -204,7 +204,7 @@
 
             &:before {
               width: 100%;
-              background-color: $blue;
+              background-color: $orange;
             }
           }
         }
@@ -305,12 +305,12 @@
         position: relative;
 
         &.current {
-          color: $blue;
+          color: $orange;
           opacity: 0.76;
         }
 
         &.childCurrent > a {
-          color: $blue;
+          color: $orange;
         }
 
         &,
