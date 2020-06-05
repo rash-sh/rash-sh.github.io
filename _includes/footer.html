@@ -1,12 +1,5 @@
 <footer id="footer" aria-label="Footer">
   <div class="top">
-    <a href="{{ cncfLink }}">
-      <img
-        class="cncf"
-        src="{{ "/images/cncf.png" | relative_url }}"
-        srcset="{{ "/images/cncf@2x.png" | relative_url }} 2x, {{ "/images/cncf@3x.png" | relative_url }} 3x" />
-    </a>
-    <p>We are a Cloud Native Computing Foundation incubating project.</p>
   </div>
   <div class="middle">
     <div class="grid-center">
@@ -19,28 +12,17 @@
       <div class="col_sm-12">
         <span>Community</span>
         <a href="{{ slackLink }}">Slack</a>
-        <a href="{{ twitterLink }}">Twitter</a>
-        <a href="{{ forumLink }}">Forum</a>
-        <a href="{{ blogLink }}">Blog</a>
       </div>
       <div class="col_sm-12">
         <span>Contact</span>
         <a href="{{ emailLink }}">Email</a>
         <a href="{{ featureRequestLink }}">Feature request</a>
       </div>
-      <div class="col_sm-12">
-        <span>Top Contributers</span>
-        <a href="{{ cloudicalLink }}">Cloudical</a>
-        <a href="{{ nexentaLink }}">Nexenta</a>
-        <a href="{{ redHatLink }}">Red Hat</a>
-        <a href="{{ suseLink }}">SUSE</a>
-        <a href="{{ upboundLink }}">Upbound</a>
-      </div>
     </div>
   </div>
   <div class="bottom">
-    <a class="logo" href="{{ "/" | relative_url }}"><img src="{{ "/images/rook-logo-small.svg" | relative_url }}" alt="rook.io" /></a>
-    <span>&#169; {{ site.time | date: '%Y' }} Rook Authors. All rights reserved.</span>
+    <a class="logo" href="{{ "/" | relative_url }}"><img src="{{ "/images/rash-logo.svg" | relative_url }}" alt="rash.io" /></a>
+    <span>&#169; {{ site.time | date: '%Y' }} Rash Authors. All rights reserved.</span>
   </div>
 </footer>
 

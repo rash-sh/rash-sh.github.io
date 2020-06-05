@@ -7,34 +7,38 @@ stylesheet: index
 <div id="holder">
     <section class="grid-middle hero">
         <div class="col-5_md-12">
-            <h1>Open-Source,<br />Cloud-Native Storage for Kubernetes</h1>
-            <p>Production ready management for File, Block and Object Storage</p>
+            <h1>Declarative shell scripting container oriented</h1>
+            <p>Simple YAML language based in modules and templates.</p>
             <a class="button" href="{{ gettingStartedLink }}">Try it out now</a>
         </div>
         <div class="col-7_md-12_md-first">
             <img src="{{ "/images/index-hero.svg" | relative_url }}" />
         </div>
     </section>
-    <h1 class="text-center">What is Rook?</h1>
+    <h1 class="text-center">What is Rash?</h1>
     <section class="grid-middle">
         <div class="col-6_md-12">
-            <img src="{{ "/images/index-what-is-rook.svg" | relative_url }}" />
+            <img src="{{ "/images/index-what-is-rash.svg" | relative_url }}" />
         </div>
         <div class="col-6_md-12">
             <h2>Storage Operators for Kubernetes</h2>
-            <p>Rook turns distributed storage systems into self-managing, self-scaling, self-healing storage services. It automates the tasks of a storage administrator: deployment, bootstrapping, configuration, provisioning, scaling, upgrading, migration, disaster recovery, monitoring, and resource management.<br /><br />Rook uses the power of the Kubernetes platform to deliver its services via a Kubernetes Operator for each storage provider.</p>
+            <p>Rash turns distributed storage systems into self-managing, self-scaling, self-healing storage services.
+                It automates the tasks of a storage administrator: deployment, bootstrapping, configuration,
+                provisioning, scaling, upgrading, migration, disaster recovery, monitoring, and resource
+                management.<br /><br />Rash uses the power of the Kubernetes platform to deliver its services via a
+                Kubernetes Operator for each storage provider.</p>
             <div class="github-pills">
                 <div id="watch-pill" class="pill">
-                    <a href="https://github.com/rook/rook/subscription">Watch</a>
-                    <a id="watch-pill-count" class="count" href="https://github.com/rook/rook/watchers"></a>
+                    <a href="https://github.com/rash/rash/subscription">Watch</a>
+                    <a id="watch-pill-count" class="count" href="https://github.com/rash/rash/watchers"></a>
                 </div>
                 <div id="star-pill" class="pill">
-                    <a href="https://github.com/rook/rook">Star</a>
-                    <a id="star-pill-count" class="count" href="https://github.com/rook/rook/stargazers"></a>
+                    <a href="https://github.com/rash/rash">Star</a>
+                    <a id="star-pill-count" class="count" href="https://github.com/rash/rash/stargazers"></a>
                 </div>
                 <div id="fork-pill" class="pill">
-                    <a href="https://github.com/rook/rook/fork">Forks</a>
-                    <a id="fork-pill-count" class="count" href="https://github.com/rook/rook/network"></a>
+                    <a href="https://github.com/rash/rash/fork">Forks</a>
+                    <a id="fork-pill-count" class="count" href="https://github.com/rash/rash/network"></a>
                 </div>
             </div>
         </div>
@@ -42,7 +46,9 @@ stylesheet: index
     <section class="grid-middle storage">
         <div class="col-6_md-12">
             <h2>Multiple Storage Providers</h2>
-            <p>Rook orchestrates multiple storage solutions, each with a specialized Kubernetes Operator to automate management. Choose the best storage provider for your scenarios, and Rook ensures that they all run well on Kubernetes with the same, consistent experience.</p>
+            <p>Rash orchestrates multiple storage solutions, each with a specialized Kubernetes Operator to automate
+                management. Choose the best storage provider for your scenarios, and Rash ensures that they all run well
+                on Kubernetes with the same, consistent experience.</p>
             <div class="grid providers">
                 <div class="col-4_xs-6"><span>Ceph</span></div>
                 <div class="col-4_xs-6"><span>EdgeFS</span></div>
@@ -57,106 +63,108 @@ stylesheet: index
                 <h3 id="terminal-header">Ceph</h3>
                 <div class="terminal-body">
                     <div id="terminal-player-wrapper" class="terminal">
-                        <asciinema-player id="terminal-player" cols="61" rows="16" preload loop speed="1.25" src="{{ "/data/ceph.cast" | relative_url }}"></asciinema-player>
+                        <asciinema-player id="terminal-player" cols="61" rows="16" preload loop speed="1.25"
+                            src="{{ "/data/ceph.cast" | relative_url }}"></asciinema-player>
                     </div>
                 </div>
                 <div class="terminal-buttons">
                     <div class="grid">
-                        <div class="col-4_xs-6"><button class="active" type="button" onclick="terminalTypeClick(this, 'Ceph')" data-terminal-rows="16" data-terminal-src="{{ "/data/ceph.cast" | relative_url }}">Ceph</button></div>
-                        <div class="col-4_xs-6"><button type="button" onclick="terminalTypeClick(this, 'EdgeFS')" data-terminal-rows="10" data-terminal-src="{{ "/data/edgefs.cast" | relative_url }}">EdgeFS</button></div>
-                        <div class="col-4_xs-6"><button type="button" onclick="terminalTypeClick(this, 'CockroachDB')" data-terminal-rows="10" data-terminal-src="{{ "/data/cockroachdb.cast" | relative_url }}">CockroachDB</button></div>
-                        <div class="col-4_xs-6"><button type="button" onclick="terminalTypeClick(this, 'Cassandra')" data-terminal-rows="9" data-terminal-src="{{ "/data/cassandra.cast" | relative_url }}">Cassandra</button></div>
-                        <div class="col-4_xs-6"><button type="button" onclick="terminalTypeClick(this, 'NFS')" data-terminal-rows="13" data-terminal-src="{{ "/data/nfs.cast" | relative_url }}">NFS</button></div>
-                        <div class="col-4_xs-6"><button type="button" onclick="terminalTypeClick(this, 'Yugabyte DB')" data-terminal-rows="13" data-terminal-src="{{ "/data/yugabytedb.cast" | relative_url }}">Yugabyte DB</button></div>
+                        <div class="col-4_xs-6"><button class="active" type="button"
+                                onclick="terminalTypeClick(this, 'Ceph')" data-terminal-rows="16"
+                                data-terminal-src="{{ "/data/ceph.cast" | relative_url }}">Ceph</button></div>
+                        <div class="col-4_xs-6"><button type="button" onclick="terminalTypeClick(this, 'EdgeFS')"
+                                data-terminal-rows="10"
+                                data-terminal-src="{{ "/data/edgefs.cast" | relative_url }}">EdgeFS</button></div>
+                        <div class="col-4_xs-6"><button type="button" onclick="terminalTypeClick(this, 'CockroachDB')"
+                                data-terminal-rows="10"
+                                data-terminal-src="{{ "/data/cockroachdb.cast" | relative_url }}">CockroachDB</button>
+                        </div>
+                        <div class="col-4_xs-6"><button type="button" onclick="terminalTypeClick(this, 'Cassandra')"
+                                data-terminal-rows="9"
+                                data-terminal-src="{{ "/data/cassandra.cast" | relative_url }}">Cassandra</button></div>
+                        <div class="col-4_xs-6"><button type="button" onclick="terminalTypeClick(this, 'NFS')"
+                                data-terminal-rows="13"
+                                data-terminal-src="{{ "/data/nfs.cast" | relative_url }}">NFS</button></div>
+                        <div class="col-4_xs-6"><button type="button" onclick="terminalTypeClick(this, 'Yugabyte DB')"
+                                data-terminal-rows="13"
+                                data-terminal-src="{{ "/data/yugabytedb.cast" | relative_url }}">Yugabyte DB</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <h1 class="text-center">Who loves Rook?</h1>
-    <p class="text-center">With hundreds of contributors and millions of downloads of the Rook software, this true community-driven effort is putting dynamic orchestration, high performance, and solid reliability in the hands of a global user base.<br /><br />Rook operators are deployed in production across multiple industries, enabling them to store, deliver & protect the data that powers their businesses.</p>
+    <h1 class="text-center">Who loves Rash?</h1>
+    <p class="text-center">With hundreds of contributors and millions of downloads of the Rash software, this true
+        community-driven effort is putting dynamic orchestration, high performance, and solid reliability in the hands
+        of a global user base.<br /><br />Rash operators are deployed in production across multiple industries, enabling
+        them to store, deliver & protect the data that powers their businesses.</p>
     <section class="grid-middle affiliates">
         <div class="col-2_xs-4">
             <a href="//pacificresearchplatform.org/">
-                <img
-                    class="prp"
-                    src="{{ "/images/affiliates/prp.jpg" | relative_url }}"
+                <img class="prp" src="{{ "/images/affiliates/prp.jpg" | relative_url }}"
                     srcset="{{ "/images/affiliates/prp@2x.jpg" | relative_url }} 2x, {{ "/images/affiliates/prp@3x.jpg" | relative_url }} 3x" />
             </a>
         </div>
         <div class="col-2_xs-4">
             <a href="//www.cengn.ca">
-                <img
-                    class="cengn"
-                    src="{{ "/images/affiliates/cengn.jpg" | relative_url }}"
+                <img class="cengn" src="{{ "/images/affiliates/cengn.jpg" | relative_url }}"
                     srcset="{{ "/images/affiliates/cengn@2x.jpg" | relative_url }} 2x, {{ "/images/affiliates/cengn@3x.jpg" | relative_url }} 3x" />
             </a>
         </div>
         <div class="col-2_xs-4">
             <a href="//www.crowdfox.com">
-                <img
-                    class="crowdfox"
-                    src="{{ "/images/affiliates/crowdfox.jpg" | relative_url }}"
+                <img class="crowdfox" src="{{ "/images/affiliates/crowdfox.jpg" | relative_url }}"
                     srcset="{{ "/images/affiliates/crowdfox@2x.jpg" | relative_url }} 2x, {{ "/images/affiliates/crowdfox@3x.jpg" | relative_url }} 3x" />
             </a>
         </div>
         <div class="col-2_xs-4">
             <a href="//www.cloudways.com">
-                <img
-                    class="cloudways"
-                    src="{{ "/images/affiliates/cloudways.jpg" | relative_url }}"
+                <img class="cloudways" src="{{ "/images/affiliates/cloudways.jpg" | relative_url }}"
                     srcset="{{ "/images/affiliates/cloudways@2x.jpg" | relative_url }} 2x, {{ "/images/affiliates/cloudways@3x.jpg" | relative_url }} 3x" />
             </a>
         </div>
         <div class="col-2_xs-4">
             <a href="//gini.net">
-                <img
-                    class="gini"
-                    src="{{ "/images/affiliates/gini.svg" | relative_url }}"/>
+                <img class="gini" src="{{ "/images/affiliates/gini.svg" | relative_url }}" />
             </a>
         </div>
         <div class="col-2_xs-4">
             <a href="//www.radiosound.com/">
-                <img
-                    class="radiosound"
-                    src="{{ "/images/affiliates/radiosound.jpg" | relative_url }}"
+                <img class="radiosound" src="{{ "/images/affiliates/radiosound.jpg" | relative_url }}"
                     srcset="{{ "/images/affiliates/radiosound@2x.jpg" | relative_url }} 2x, {{ "/images/affiliates/radiosound@3x.jpg" | relative_url }} 3x" />
             </a>
         </div>
     </section>
-    <h1 class="text-center">Features of Rook</h1>
+    <h1 class="text-center">Features of Rash</h1>
     <section class="grid-bottom features">
         <div class="col-3_xs-6">
-            <img class="automate" src="{{ "/images/features/automate.svg" | relative_url }}" />
-            <span>Simple and reliable automated resource management</span>
+            <img class="simple" src="{{ "/images/features/simple.svg" | relative_url }}" />
+            <span>Simple Syntax</span>
         </div>
         <div class="col-3_xs-6">
-            <img class="scale" src="{{ "/images/features/scale.svg" | relative_url }}" />
-            <span>Hyper-scale or hyper-converge your storage clusters</span>
+            <img class="container" src="{{ "/images/features/container.svg" | relative_url }}" />
+            <span>Container Oriented</span>
         </div>
         <div class="col-3_xs-6">
-            <img class="distribute" src="{{ "/images/features/distribute.svg" | relative_url }}" />
-            <span>Efficiently distribute and replicate data to minimize loss</span>
+            <img class="declarative" src="{{ "/images/features/declarative.svg" | relative_url }}" />
+            <span>Declarative</span>
         </div>
         <div class="col-3_xs-6">
-            <img class="provision" src="{{ "/images/features/provision.svg" | relative_url }}" />
-            <span>Provision, file, block, and object with multiple storage providers</span>
+            <img class="clear" src="{{ "/images/features/clear.svg" | relative_url }}" />
+            <span>Clear Output</span>
         </div>
         <div class="col-3_xs-6">
-            <img class="manage" src="{{ "/images/features/manage.svg" | relative_url }}" />
-            <span>Manage open-source storage technologies</span>
+            <img class="secure" src="{{ "/images/features/secure.svg" | relative_url }}" />
+            <span>Secure by Design</span>
         </div>
         <div class="col-3_xs-6">
-            <img class="elasticstorage" src="{{ "/images/features/elasticstorage.svg" | relative_url }}" />
-            <span>Easily enable elastic storage in your datacenter</span>
+            <img class="efficient" src="{{ "/images/features/efficient.svg" | relative_url }}" />
+            <span>Fast & Efficient</span>
         </div>
         <div class="col-3_xs-6">
-            <img class="opensource" src="{{ "/images/features/opensource.svg" | relative_url }}" />
-            <span>Open source software released under the Apache 2.0 license</span>
-        </div>
-        <div class="col-3_xs-6">
-            <img class="optimize" src="{{ "/images/features/optimize.svg" | relative_url }}" />
-            <span>Optimize workloads on commodity hardware</span>
+            <img class="templates" src="{{ "/images/features/templates.svg" | relative_url }}" />
+            <span>Templates</span>
         </div>
     </section>
 </div>
@@ -195,9 +203,9 @@ stylesheet: index
         terminalPlayerWrapper.innerHTML = '<asciinema-player id="terminal-player" cols="61" rows="' + terminalRows + '" preload autoplay loop speed="1.25" src="' + terminalSrc + '"></asciinema-player>';
     }
 
-    githubFetch('https://api.github.com/repos/rook/rook');
+    githubFetch('https://api.github.com/repos/rash/rash');
 
-    document.getElementById('terminal-player').addEventListener('loadedmetadata', function(e) {
+    document.getElementById('terminal-player').addEventListener('loadedmetadata', function (e) {
         this.play();
     });
-  </script>
+</script>

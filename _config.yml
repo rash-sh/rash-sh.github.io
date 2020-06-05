@@ -1,6 +1,6 @@
 # Site settings
-title: rook.io
-url: "https://rook.io" # the base hostname & protocol for your site, e.g. http://example.com
+title: rash.sh
+url: "https://rash.sh" # the base hostname & protocol for your site, e.g. http://example.com
 google_analytics: UA-93639004-1
 
 # Build settings
@@ -26,14 +26,14 @@ defaults:
       path: ""
     values:
       layout: default
-      title: "Rook"
+      title: "Rash"
   -
     scope:
-      path: "docs/rook"
+      path: "docs/rash"
     values:
       layout: "docs"
-      doctitle: "Rook Docs"
-      github: "https://github.com/rook/rook/blob/master/Documentation/"
+      doctitle: "Rash Docs"
+      github: "https://github.com/rash/rash/blob/master/Documentation/"
       stylesheet: "docs"
 
 sass:

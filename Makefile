@@ -1,4 +1,10 @@
+.PHONY: help run build publish
+
 JEKYLL_DOCKER_IMAGE ?= jekyll/jekyll:3.7
+
+.DEFAULT: help
+help:
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##/\n\t/'
 
 # Run jekyll in development mode
 run: _data/projects.json
@@ -25,10 +31,10 @@ publish: _data/projects.json
 		echo "no changes detected";\
 	else \
 		echo "committing changes...";\
-		git -C "$(ROOT_DIR)" -c user.email="cncf-rook-info@lists.cncf.io" -c user.name="Rook" commit --message="docs snapshot for rook version \`$(DOCS_VERSION)\`"; \
+		git -C "$(ROOT_DIR)" -c user.email="pando855@gmail.com" -c user.name="rash" commit --message="docs snapshot for rash version \`$(DOCS_VERSION)\`"; \
 		echo "pushing changes..."; \
 		git -C "$(ROOT_DIR)" push; \
-		echo "rook.github.io changes published"; \
+		echo "rash.github.io changes published"; \
 	fi
 
 # Generate projects.json

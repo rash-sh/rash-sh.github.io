@@ -7,7 +7,7 @@
   display: flex;
   -ms-flex-align: center;
   align-items: center;
-  
+
   #holder {
     margin: 120px 0 60px;
 
@@ -78,7 +78,7 @@
     margin-top: 30px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    
+
     @media (max-width: $mdWidth) {
       -ms-flex-pack: center;
       justify-content: center;
@@ -137,7 +137,7 @@
 
   .providers {
     margin-top: 50px;
-  
+
     span {
       font-family: $fontHeader;
       font-size: 18px;
@@ -367,101 +367,94 @@
       height: auto;
     }
 
-    .automate {
+    .simple {
       max-width: 92px;
     }
-    
-    .scale {
+
+    .container {
       max-width: 92px;
     }
-    
-    .distribute {
+
+    .declarative {
       max-width: 86px;
     }
-    
-    .provision {
+
+    .clear {
       max-width: 102px;
     }
-    
-    .manage {
+
+    .secure {
       max-width: 169px;
     }
-    
-    .elasticstorage {
+
+    .efficient {
       max-width: 93px;
     }
-    
-    .opensource {
+
+    .templates {
       max-width: 139px;
-    }
-    
-    .optimize {
-      max-width: 131px;
     }
 
     @media (max-width: $smWidth) {
-        .automate {
+        .simple {
           max-width: 72px;
         }
-        
-        .scale {
+
+        .container {
           max-width: 72px;
         }
-        
-        .distribute {
+
+        .declarative {
           max-width: 66px;
         }
-        
-        .provision {
+
+        .clear {
           max-width: 82px;
         }
-        
-        .manage {
+
+        .secure {
           max-width: 149px;
         }
-        
-        .elasticstorage {
+
+        .efficient {
           max-width: 73px;
         }
-        
-        .opensource {
+
+        .templates {
           max-width: 119px;
         }
-        
-        .optimize {
-          max-width: 111px;
-        }
+
       }
 
       @media (max-width: $xsWidth) {
         .automate {
           max-width: 82px;
         }
-        
+
         .scale {
           max-width: 82px;
         }
-        
+
         .distribute {
           max-width: 76px;
         }
-        
+
         .provision {
           max-width: 92px;
         }
-        
+
         .manage {
           max-width: 159px;
         }
-        
+
         .elasticstorage {
           max-width: 83px;
         }
-        
+
         .opensource {
           max-width: 129px;
         }
-        
+
         .optimize {
           max-width: 121px;
         }

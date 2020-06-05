@@ -142,9 +142,9 @@ p {
 }
 
 #navigation {
-  $navigation-padding: 30px;
+  $navigation-padding: 0px;
   padding: $navigation-padding 0;
-  $navigation-height: 32px;
+  $navigation-height: 80px;
   height: $navigation-height;
   font-size: 16px;
   -ms-flex-negative: 0;
@@ -159,11 +159,8 @@ p {
   .logo,
   .logo a,
   .logo a img {
-    display: block;
-  }
-
-  .logo img {
-    height: 30px;
+    vertical-align: middle;
+    width: 80px;
   }
 
   .hamburger-controls {
