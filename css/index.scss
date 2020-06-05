@@ -427,37 +427,34 @@
       }
 
       @media (max-width: $xsWidth) {
-        .automate {
+        .simple {
           max-width: 82px;
         }
 
-        .scale {
+        .container {
           max-width: 82px;
         }
 
-        .distribute {
+        .declarative {
           max-width: 76px;
         }
 
-        .provision {
+        .clear {
           max-width: 92px;
         }
 
-        .manage {
+        .secure {
           max-width: 159px;
         }
 
-        .elasticstorage {
+        .efficient {
           max-width: 83px;
         }
 
-        .opensource {
+        .templates {
           max-width: 129px;
         }
 
-        .optimize {
-          max-width: 121px;
-        }
       }
 
     span {
