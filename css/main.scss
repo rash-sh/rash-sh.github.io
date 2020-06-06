@@ -268,7 +268,7 @@ p {
       &:visited {
         color: $textDark;
       }
-      
+
       &:hover,
       &:focus,
       &:active {
@@ -419,6 +419,13 @@ p {
   .bottom {
     text-align: center;
 
+    .copyleft {
+      display: inline-block;
+      transform: rotateY(180deg);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
     p {
       font-family: $fontHeader;
       font-size: 13px;
@@ -428,7 +435,7 @@ p {
       margin: 13px 0 0;
     }
   }
-  
+
   .cncf {
     width: 250px;
     height: 39px;
@@ -497,11 +504,11 @@ p {
       text-decoration: none;
       padding: 8px 0;
       transition: all $timingFast ease-in-out;
-      
+
       &:visited {
         color: $textDark;
       }
-      
+
       &:hover,
       &:focus,
       &:active {
@@ -533,7 +540,7 @@ p {
         height: 18px;
       }
     }
-    
+
     span {
       font-family: $fontHeader;
       font-size: 11px;
