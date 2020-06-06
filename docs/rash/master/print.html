@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title-page.html">Rash Book</a></li><li class="chapter-item expanded "><a href="overview.html"><strong aria-hidden="true">1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="tasks.html"><strong aria-hidden="true">2.</strong> Tasks</a></li><li class="chapter-item expanded "><a href="module_index.html"><strong aria-hidden="true">3.</strong> Module Index</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="assert.html"><strong aria-hidden="true">3.1.</strong> assert</a></li><li class="chapter-item expanded "><a href="command.html"><strong aria-hidden="true">3.2.</strong> command</a></li><li class="chapter-item expanded "><a href="copy.html"><strong aria-hidden="true">3.3.</strong> copy</a></li><li class="chapter-item expanded "><a href="template.html"><strong aria-hidden="true">3.4.</strong> template</a></li><li class="chapter-item expanded "><a href="set_vars.html"><strong aria-hidden="true">3.5.</strong> set_vars</a></li></ol></li><li class="chapter-item expanded "><a href="vars.html"><strong aria-hidden="true">4.</strong> Vars</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lookups.html"><strong aria-hidden="true">4.1.</strong> Lookups</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">4.2.</strong> Filters</a></li></ol></li><li class="chapter-item expanded "><a href="roadmap.html"><strong aria-hidden="true">5.</strong> Roadmap</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title-page.html">Rash Book</a></li><li class="chapter-item expanded "><a href="getting_started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="tasks.html"><strong aria-hidden="true">2.</strong> Tasks</a></li><li class="chapter-item expanded "><a href="module_index.html"><strong aria-hidden="true">3.</strong> Module Index</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="assert.html"><strong aria-hidden="true">3.1.</strong> assert</a></li><li class="chapter-item expanded "><a href="command.html"><strong aria-hidden="true">3.2.</strong> command</a></li><li class="chapter-item expanded "><a href="copy.html"><strong aria-hidden="true">3.3.</strong> copy</a></li><li class="chapter-item expanded "><a href="template.html"><strong aria-hidden="true">3.4.</strong> template</a></li><li class="chapter-item expanded "><a href="set_vars.html"><strong aria-hidden="true">3.5.</strong> set_vars</a></li></ol></li><li class="chapter-item expanded "><a href="vars.html"><strong aria-hidden="true">4.</strong> Vars</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lookups.html"><strong aria-hidden="true">4.1.</strong> Lookups</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">4.2.</strong> Filters</a></li></ol></li><li class="chapter-item expanded "><a href="roadmap.html"><strong aria-hidden="true">5.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">6.</strong> Contributing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">6.1.</strong> Install</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -150,8 +150,26 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#rash-book" id="rash-book">Rash Book</a></h1>
-<h1><a class="header" href="#overview" id="overview">Overview</a></h1>
-<p>Rash is a declarative shell scripting tool oriented to build containers entrypoints.
+<p><code>rash</code> solves an optimization problem in containers ecosystem. Nowadays, container <em>entrypoints</em>
+must be written in <code>bash</code> or included in the binary (the program itself). This is a trade off
+decision between being fast or being reusable, efficient, flexible...</p>
+<p>Beside, <em>entrypoints</em> share use cases between kind of applications (for example
+<a href="https://github.com/pando85/entrypoint-examples">databases entrypoints</a> are quite similar).
+Or between platforms you have to provision your containers with same tools to care about
+secrets, configuration management...</p>
+<p><code>rash</code> provides:</p>
+<ul>
+<li><strong>simple syntax</strong> to maintain low complexity.</li>
+<li>static binary to be <strong>container oriented</strong>.</li>
+<li><strong>declarative</strong> syntax to be idempotent.</li>
+<li><strong>clear output</strong> to log properly.</li>
+<li><strong>secure</strong> by design.</li>
+<li><strong>fast and efficient</strong> (TODO: performance tests versus <code>bash</code>).</li>
+<li><strong>modular</strong> design.</li>
+<li>support <a href="https://tera.netlify.app/">Tera</a> <strong>templates</strong>.</li>
+</ul>
+<h1><a class="header" href="#getting-started" id="getting-started">Getting started</a></h1>
+<p>Simple YAML declarative shell scripting language based in modules and templates.
 <code>rash</code> syntax is inspired by <a href="https://www.ansible.com/">Ansible</a>.</p>
 <h2><a class="header" href="#quickstart" id="quickstart">Quickstart</a></h2>
 <p>To start using <code>rash</code> you just need a container with entrypoint.
@@ -174,6 +192,10 @@ ENTRYPOINT [&quot;/entrypoint.rh&quot;]
   # transforms process in pid 1 (similar to `exec` in bash)
   transfer_pid_1: true
 </code></pre>
+<h2><a class="header" href="#who-is-using-rash" id="who-is-using-rash">Who is using <code>rash</code></a></h2>
+<ul>
+<li>A production ready <a href="https://github.com/dcarrillo/docker-phpfpm">php-fpm</a> docker image</li>
+</ul>
 <h1><a class="header" href="#tasks" id="tasks">Tasks</a></h1>
 <p><code>tasks</code> are main execution unit. They need a module and admits some optional fields described below.</p>
 <pre><code class="language-yaml">- name: &quot;save password to file&quot;
@@ -486,6 +508,108 @@ concrete examples can be found below.</p>
 - set_vars:
     my_ips: &quot;{{ my_data.json | json_query('[*].ipv4.address') }}&quot;
 
+</code></pre>
+<h2><a class="header" href="#how-to-contribute" id="how-to-contribute">How to Contribute</a></h2>
+<p>The Rash project in under <a href="LICENSE">The GNU General Public License v3.0</a>. We accept contributions
+via GitHub pull requests. This document outlines some of the conventions related to
+development workflow, commit message formatting, contact points and other
+resources to make it easier to get your contribution accepted.</p>
+<h2><a class="header" href="#certificate-of-origin" id="certificate-of-origin">Certificate of Origin</a></h2>
+<p>By contributing to this project you agree to the Developer Certificate of
+Origin (DCO). This document was created by the Linux Kernel community and is a
+simple statement that you, as a contributor, have the legal right to make the
+contribution. See the <a href="DCO">DCO</a> file for details.</p>
+<p>Contributors sign-off that they adhere to these requirements by adding a
+Signed-off-by line to commit messages. For example:</p>
+<pre><code>This is my commit message
+
+Signed-off-by: Random J Developer &lt;random@developer.example.org&gt;
+</code></pre>
+<p>Git even has a -s command line option to append this automatically to your
+commit message:</p>
+<pre><code>$ git commit -s -m 'This is my commit message'
+</code></pre>
+<p>If you have already made a commit and forgot to include the sign-off, you can amend your last commit
+to add the sign-off with the following command, which can then be force pushed.</p>
+<pre><code>git commit --amend -s
+</code></pre>
+<p>We use a <a href="https://github.com/apps/dco">DCO bot</a> to enforce the DCO on each pull
+request and branch commits.</p>
+<h2><a class="header" href="#getting-started-1" id="getting-started-1">Getting Started</a></h2>
+<ol>
+<li>Fork the repository on GitHub</li>
+<li>Read the <a href="INSTALL.html">install</a> for build and test instructions</li>
+<li>Play with the project, submit bugs, submit patches!</li>
+</ol>
+<h2><a class="header" href="#contribution-flow" id="contribution-flow">Contribution Flow</a></h2>
+<p>This is a rough outline of what a contributor's workflow looks like:</p>
+<ol>
+<li>Create a branch from where you want to base your work (usually master).</li>
+<li>Make your changes and arrange them in readable commits.</li>
+<li>Make sure your commit messages are in the proper format (see below).</li>
+<li>Push your changes to the branch in your fork of the repository.</li>
+<li>Make sure all tests pass, and add any new tests as appropriate.</li>
+<li>Submit a pull request to the original repository.</li>
+</ol>
+<h2><a class="header" href="#coding-style" id="coding-style">Coding Style</a></h2>
+<p>Rash projects are written in Rust and follows a functional style trying to keep code simple.</p>
+<h2><a class="header" href="#comments" id="comments">Comments</a></h2>
+<p>Comments should be added to all new methods and structures as is appropriate for the coding
+language. Additionally, if an existing method or structure is modified sufficiently, comments should
+be created if they do not yet exist and updated if they do.</p>
+<p>The goal of comments is to make the code more readable and grokkable by future developers. Once you
+have made your code as understandable as possible, add comments to make sure future developers can
+understand (A) what this piece of code's responsibility is within Rash's architecture and (B) why it
+was written as it was.</p>
+<p>The below blog entry explains more the why's and how's of this guideline.
+https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/</p>
+<h2><a class="header" href="#commit-messages" id="commit-messages">Commit Messages</a></h2>
+<p>We follow a rough convention for commit messages that is designed to answer two
+questions: what changed and why. The subject line should feature the what and
+the body of the commit should describe the why.</p>
+<pre><code>ceph: update MON to use rocksdb
+
+this enables us to remove leveldb from the codebase.
+</code></pre>
+<p>The format can be described more formally as follows:</p>
+<pre><code>&lt;area&gt;: &lt;what changed&gt;
+&lt;BLANK LINE&gt;
+&lt;why this change was made&gt;
+&lt;BLANK LINE&gt;
+&lt;footer&gt;
+{% if issue related %}
+Resolves: #{issue.id}
+{%- endif %}
+</code></pre>
+<p>You can find what values area could take see
+<a href="https://github.com/rash-sh/rash-sh.github.io/blob/master/.commitlintrc.json">rash/.commitlintrc.json</a>.</p>
+<p>The first line is the subject and should be no longer than 70 characters, the
+second line is always blank, and other lines should be wrapped at 80 characters.
+This allows the message to be easier to read on GitHub as well as in various
+git tools.</p>
+<h1><a class="header" href="#building-rash" id="building-rash">Building Rash</a></h1>
+<p><code>rash</code> is a Rust entiretly project and can be built directly with
+<a href="https://doc.rust-lang.org/cargo/">cargo</a> tool.</p>
+<h2><a class="header" href="#build-requirements" id="build-requirements">Build requirements</a></h2>
+<p>The following tools are need:</p>
+<ul>
+<li>docker</li>
+<li>make</li>
+<li>rustc</li>
+<li>cargo</li>
+</ul>
+<h2><a class="header" href="#build" id="build">Build</a></h2>
+<p>You can build <code>rash</code> images with the binary inside by simply running the command below.</p>
+<pre><code class="language-bash">make build-images
+</code></pre>
+<p>Developers may often wish to make only one image or just test it in local.
+You can do one of both:</p>
+<pre><code class="language-bash"># docker image
+DOCKERFILES=Dockerfile make build-images
+
+# binary
+make build
+echo rash binary is under ${CARGO_TARGET_DIR}/release/rash
 </code></pre>
 
                     </main>

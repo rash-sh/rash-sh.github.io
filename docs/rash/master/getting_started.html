@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>set_vars - Rash book</title>
+        <title>Getting Started - Rash book</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title-page.html">Rash Book</a></li><li class="chapter-item expanded "><a href="getting_started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="tasks.html"><strong aria-hidden="true">2.</strong> Tasks</a></li><li class="chapter-item expanded "><a href="module_index.html"><strong aria-hidden="true">3.</strong> Module Index</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="assert.html"><strong aria-hidden="true">3.1.</strong> assert</a></li><li class="chapter-item expanded "><a href="command.html"><strong aria-hidden="true">3.2.</strong> command</a></li><li class="chapter-item expanded "><a href="copy.html"><strong aria-hidden="true">3.3.</strong> copy</a></li><li class="chapter-item expanded "><a href="template.html"><strong aria-hidden="true">3.4.</strong> template</a></li><li class="chapter-item expanded "><a href="set_vars.html" class="active"><strong aria-hidden="true">3.5.</strong> set_vars</a></li></ol></li><li class="chapter-item expanded "><a href="vars.html"><strong aria-hidden="true">4.</strong> Vars</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lookups.html"><strong aria-hidden="true">4.1.</strong> Lookups</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">4.2.</strong> Filters</a></li></ol></li><li class="chapter-item expanded "><a href="roadmap.html"><strong aria-hidden="true">5.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">6.</strong> Contributing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">6.1.</strong> Install</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title-page.html">Rash Book</a></li><li class="chapter-item expanded "><a href="getting_started.html" class="active"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="tasks.html"><strong aria-hidden="true">2.</strong> Tasks</a></li><li class="chapter-item expanded "><a href="module_index.html"><strong aria-hidden="true">3.</strong> Module Index</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="assert.html"><strong aria-hidden="true">3.1.</strong> assert</a></li><li class="chapter-item expanded "><a href="command.html"><strong aria-hidden="true">3.2.</strong> command</a></li><li class="chapter-item expanded "><a href="copy.html"><strong aria-hidden="true">3.3.</strong> copy</a></li><li class="chapter-item expanded "><a href="template.html"><strong aria-hidden="true">3.4.</strong> template</a></li><li class="chapter-item expanded "><a href="set_vars.html"><strong aria-hidden="true">3.5.</strong> set_vars</a></li></ol></li><li class="chapter-item expanded "><a href="vars.html"><strong aria-hidden="true">4.</strong> Vars</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lookups.html"><strong aria-hidden="true">4.1.</strong> Lookups</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">4.2.</strong> Filters</a></li></ol></li><li class="chapter-item expanded "><a href="roadmap.html"><strong aria-hidden="true">5.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">6.</strong> Contributing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">6.1.</strong> Install</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,36 +147,47 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#set_vars" id="set_vars">set_vars</a></h1>
-<p>This module allows setting new variables.</p>
-<h2><a class="header" href="#parameters" id="parameters">Parameters</a></h2>
-<pre><code class="language-yaml">key_value:
-  type: list
-  required: true
-  description: |
-    This module takes key/value pairs and save un current Vars context.
-</code></pre>
-<h2><a class="header" href="#example" id="example">Example</a></h2>
-<pre><code class="language-yaml">- set_vars:
-    foo: boo
+                        <h1><a class="header" href="#getting-started" id="getting-started">Getting started</a></h1>
+<p>Simple YAML declarative shell scripting language based in modules and templates.
+<code>rash</code> syntax is inspired by <a href="https://www.ansible.com/">Ansible</a>.</p>
+<h2><a class="header" href="#quickstart" id="quickstart">Quickstart</a></h2>
+<p>To start using <code>rash</code> you just need a container with entrypoint.
+For install, add <code>rash</code> binary to your Dockerfile:</p>
+<pre><code class="language-dockerfile">FROM rustagainshell/rash AS rash
 
-- assert
-    that:
-      - foo == 'boo'
+FROM base_image
+
+COPY --from=rash /bin/rash /bin
+
+RUN my app things...
+
+COPY entrypoint.rh /
+ENTRYPOINT [&quot;/entrypoint.rh&quot;]
 </code></pre>
+<p>Also, create your first <code>entrypoint.rh</code>:</p>
+<pre><code class="language-yaml">#!/bin/rash
+
+- command: myapp -u &quot;{{ rash.user }}&quot; -h &quot;{{ env.HOSTNAME }}&quot;
+  # transforms process in pid 1 (similar to `exec` in bash)
+  transfer_pid_1: true
+</code></pre>
+<h2><a class="header" href="#who-is-using-rash" id="who-is-using-rash">Who is using <code>rash</code></a></h2>
+<ul>
+<li>A production ready <a href="https://github.com/dcarrillo/docker-phpfpm">php-fpm</a> docker image</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="template.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="title-page.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="vars.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="tasks.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -188,13 +199,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="template.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="title-page.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="vars.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="tasks.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
