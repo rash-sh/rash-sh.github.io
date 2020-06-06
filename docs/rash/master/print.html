@@ -150,23 +150,24 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#rash-book" id="rash-book">Rash Book</a></h1>
-<p><code>rash</code> solves an optimization problem in containers ecosystem. Nowadays, container <em>entrypoints</em>
-must be written in <code>bash</code> or included in the binary (the program itself). This is a trade off
-decision between being fast or being reusable, efficient, flexible...</p>
-<p>Beside, <em>entrypoints</em> share use cases between kind of applications (for example
-<a href="https://github.com/pando85/entrypoint-examples">databases entrypoints</a> are quite similar).
-Or between platforms you have to provision your containers with same tools to care about
-secrets, configuration management...</p>
+<p><code>rash</code> solves an optimization problem in the containers ecosystem.</p>
+<p>Nowadays, container <em>entrypoints</em> must be written in <code>bash</code> or included in the binary
+(the program itself). This is a trade-off decision between being fast or being reusable,
+efficient, flexible...</p>
+<p>Besides, <em>entrypoints</em> share use cases between different kinds of applications, e.g.
+<a href="https://github.com/pando85/entrypoint-examples">databases entrypoints</a> are quite similar.
+Likewise, you might need to provision your containers between different platforms with the same
+tools, paying attention to secrets, configuration management...</p>
 <p><code>rash</code> provides:</p>
 <ul>
-<li><strong>simple syntax</strong> to maintain low complexity.</li>
-<li>static binary to be <strong>container oriented</strong>.</li>
-<li><strong>declarative</strong> syntax to be idempotent.</li>
-<li><strong>clear output</strong> to log properly.</li>
-<li><strong>secure</strong> by design.</li>
-<li><strong>fast and efficient</strong> (TODO: performance tests versus <code>bash</code>).</li>
-<li><strong>modular</strong> design.</li>
-<li>support <a href="https://tera.netlify.app/">Tera</a> <strong>templates</strong>.</li>
+<li>A <strong>simple syntax</strong> to maintain low complexity.</li>
+<li>One static binary to be <strong>container oriented</strong>.</li>
+<li>A <strong>declarative</strong> syntax to be idempotent.</li>
+<li><strong>Clear output</strong> to log properly.</li>
+<li><strong>Security</strong> by design.</li>
+<li><strong>Speed and efficiency</strong> (TODO: performance tests versus <code>bash</code>).</li>
+<li><strong>Modular</strong> design.</li>
+<li>Support of <a href="https://tera.netlify.app/">Tera</a> <strong>templates</strong>.</li>
 </ul>
 <h1><a class="header" href="#getting-started" id="getting-started">Getting started</a></h1>
 <p>Simple YAML declarative shell scripting language based in modules and templates.
@@ -197,7 +198,7 @@ ENTRYPOINT [&quot;/entrypoint.rh&quot;]
 <li>A production ready <a href="https://github.com/dcarrillo/docker-phpfpm">php-fpm</a> docker image</li>
 </ul>
 <h1><a class="header" href="#tasks" id="tasks">Tasks</a></h1>
-<p><code>tasks</code> are main execution unit. They need a module and admits some optional fields described below.</p>
+<p><code>tasks</code> are the main execution unit. They need a module and admit some optional fields described below.</p>
 <pre><code class="language-yaml">- name: &quot;save password to file&quot;
   copy:
     content: &quot;{{ env.MY_PASSWORD }}&quot;
@@ -206,7 +207,7 @@ ENTRYPOINT [&quot;/entrypoint.rh&quot;]
 
 </code></pre>
 <h2><a class="header" href="#fields" id="fields">Fields</a></h2>
-<p>Tasks admits the following keys:</p>
+<p>Tasks admit the following keys:</p>
 <pre><code class="language-rust no_run noplaypen">pub struct Task {
     /// Module could be any [`Module`] accessible by its name.
     ///
@@ -231,13 +232,14 @@ ENTRYPOINT [&quot;/entrypoint.rh&quot;]
 }
 </code></pre>
 <h3><a class="header" href="#register-structure" id="register-structure">Register structure</a></h3>
-<p>Register saves in a variable a modules result structure like this one:</p>
+<p>Use the Register field to define the name of the variable in which you wish to save
+the module result. Its value will conform to the following structure:</p>
 <pre><code class="language-rust no_run noplaypen">pub struct ModuleResult {
-    /// True when module changed something.
+    /// True when the executed module changed something.
     changed: bool,
-    /// Output value is showed in logs when module is executed.
+    /// Output value will appear in logs when module is executed.
     output: Option&lt;String&gt;,
-    /// Extra field is used by modules to return its own data.
+    /// Extra field is used by modules to return their own data.
     extra: Option&lt;Value&gt;,
 }
 </code></pre>
@@ -354,17 +356,17 @@ mode:
       - foo == 'boo'
 </code></pre>
 <h1><a class="header" href="#vars----omit-in-toc---" id="vars----omit-in-toc---">Vars <!-- omit in toc --></a></h1>
-<p><code>rash</code> Context has variables associated to use as <a href="https://tera.netlify.app/">Tera</a> templates.
-You can use them everywhere except in Yaml keys and they are going to be rendered at execution time.</p>
+<p>The <code>rash</code> context has variables associated to use as <a href="https://tera.netlify.app/">Tera</a> templates.
+You can use them everywhere except in Yaml keys. They will be rendered at execution time.</p>
 <p>There are two kind of variables:</p>
 <ul>
 <li><a href="vars.html#core">Core</a></li>
 <li><a href="vars.html#runtime">Runtime</a></li>
 </ul>
 <h2><a class="header" href="#core" id="core">Core</a></h2>
-<p>By default, every execution of rash expose <code>{{ rash }}</code> and <code>{{ env }}</code> variables to Context.</p>
+<p>By default, every execution of rash exposes two variables to the Context: <code>{{ rash }}</code> and <code>{{ env }}</code>.</p>
 <h3><a class="header" href="#rash----omit-in-toc---" id="rash----omit-in-toc---">rash <!-- omit in toc --></a></h3>
-<p><code>{{ rash }}</code> variables are builtin values gotten from execution context.</p>
+<p><code>{{ rash }}</code> variables are builtin values retrieved from execution context.</p>
 <pre><code class="language-yaml">- assert:
     that:
       - 'rash.args | length == 0'
@@ -392,19 +394,19 @@ struct UserInfo {
 }
 </code></pre>
 <h3><a class="header" href="#env----omit-in-toc---" id="env----omit-in-toc---">env <!-- omit in toc --></a></h3>
-<p>Any environment var could be accessed as <code>{{ env.MY_ENV_VAR }}</code>.</p>
-<p>Also, you can use command line to pass environment variables:</p>
+<p>Any environment var can be accessed as <code>{{ env.MY_ENV_VAR }}</code>.</p>
+<p>Also, you can use command line arguments to pass environment variables:</p>
 <pre><code class="language-bash">rash -e MY_ENV_VAR=foo example.rh
 </code></pre>
 <h2><a class="header" href="#runtime" id="runtime">Runtime</a></h2>
-<p>In runtime, Variables could be added. You can check <a href="./set_vars.html">module: set_vars</a> or
-<a href="./tasks.html">Tasks</a> fields to get more information.</p>
+<p>It's possible to set Variables in runtime, too. Check sections <a href="./set_vars.html">module: set_vars</a> or
+<a href="./tasks.html">Tasks</a> to get additional information.</p>
 <h1><a class="header" href="#lookups" id="lookups">Lookups</a></h1>
 <p>incoming...</p>
 <h1><a class="header" href="#filters" id="filters">Filters</a></h1>
 <p>incoming...</p>
 <h1><a class="header" href="#roadmap----omit-in-toc---" id="roadmap----omit-in-toc---">Roadmap <!-- omit in toc --></a></h1>
-<p>The projects Roadmap is defined in our
+<p>The project Roadmap is defined in our
 <a href="https://mind42.com/mindmap/f299679e-8dc5-48d8-b0f0-4d65235cdf56">Concept Map</a>. Some more
 concrete examples can be found below.</p>
 <p>These are just some ideas about the possibilities of <code>rash</code>.</p>
@@ -509,7 +511,7 @@ concrete examples can be found below.</p>
     my_ips: &quot;{{ my_data.json | json_query('[*].ipv4.address') }}&quot;
 
 </code></pre>
-<h2><a class="header" href="#how-to-contribute" id="how-to-contribute">How to Contribute</a></h2>
+<h1><a class="header" href="#how-to-contribute" id="how-to-contribute">How to Contribute</a></h1>
 <p>The Rash project in under <a href="LICENSE">The GNU General Public License v3.0</a>. We accept contributions
 via GitHub pull requests. This document outlines some of the conventions related to
 development workflow, commit message formatting, contact points and other
@@ -521,17 +523,17 @@ simple statement that you, as a contributor, have the legal right to make the
 contribution. See the <a href="DCO">DCO</a> file for details.</p>
 <p>Contributors sign-off that they adhere to these requirements by adding a
 Signed-off-by line to commit messages. For example:</p>
-<pre><code>This is my commit message
+<pre><code class="language-text">This is my commit message
 
 Signed-off-by: Random J Developer &lt;random@developer.example.org&gt;
 </code></pre>
 <p>Git even has a -s command line option to append this automatically to your
 commit message:</p>
-<pre><code>$ git commit -s -m 'This is my commit message'
+<pre><code class="language-shell">git commit -s -m 'This is my commit message'
 </code></pre>
 <p>If you have already made a commit and forgot to include the sign-off, you can amend your last commit
 to add the sign-off with the following command, which can then be force pushed.</p>
-<pre><code>git commit --amend -s
+<pre><code class="language-shell">git commit --amend -s
 </code></pre>
 <p>We use a <a href="https://github.com/apps/dco">DCO bot</a> to enforce the DCO on each pull
 request and branch commits.</p>
@@ -562,17 +564,17 @@ have made your code as understandable as possible, add comments to make sure fut
 understand (A) what this piece of code's responsibility is within Rash's architecture and (B) why it
 was written as it was.</p>
 <p>The below blog entry explains more the why's and how's of this guideline.
-https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/</p>
+<a href="https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/">https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/</a></p>
 <h2><a class="header" href="#commit-messages" id="commit-messages">Commit Messages</a></h2>
 <p>We follow a rough convention for commit messages that is designed to answer two
 questions: what changed and why. The subject line should feature the what and
 the body of the commit should describe the why.</p>
-<pre><code>ceph: update MON to use rocksdb
+<pre><code class="language-text">ceph: update MON to use rocksdb
 
 this enables us to remove leveldb from the codebase.
 </code></pre>
 <p>The format can be described more formally as follows:</p>
-<pre><code>&lt;area&gt;: &lt;what changed&gt;
+<pre><code class="language-text">&lt;area&gt;: &lt;what changed&gt;
 &lt;BLANK LINE&gt;
 &lt;why this change was made&gt;
 &lt;BLANK LINE&gt;
@@ -591,7 +593,7 @@ git tools.</p>
 <p><code>rash</code> is a Rust entiretly project and can be built directly with
 <a href="https://doc.rust-lang.org/cargo/">cargo</a> tool.</p>
 <h2><a class="header" href="#build-requirements" id="build-requirements">Build requirements</a></h2>
-<p>The following tools are need:</p>
+<p>The following tools are needed:</p>
 <ul>
 <li>docker</li>
 <li>make</li>

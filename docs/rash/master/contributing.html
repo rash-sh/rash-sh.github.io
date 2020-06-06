@@ -147,7 +147,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h2><a class="header" href="#how-to-contribute" id="how-to-contribute">How to Contribute</a></h2>
+                        <h1><a class="header" href="#how-to-contribute" id="how-to-contribute">How to Contribute</a></h1>
 <p>The Rash project in under <a href="LICENSE">The GNU General Public License v3.0</a>. We accept contributions
 via GitHub pull requests. This document outlines some of the conventions related to
 development workflow, commit message formatting, contact points and other
@@ -159,17 +159,17 @@ simple statement that you, as a contributor, have the legal right to make the
 contribution. See the <a href="DCO">DCO</a> file for details.</p>
 <p>Contributors sign-off that they adhere to these requirements by adding a
 Signed-off-by line to commit messages. For example:</p>
-<pre><code>This is my commit message
+<pre><code class="language-text">This is my commit message
 
 Signed-off-by: Random J Developer &lt;random@developer.example.org&gt;
 </code></pre>
 <p>Git even has a -s command line option to append this automatically to your
 commit message:</p>
-<pre><code>$ git commit -s -m 'This is my commit message'
+<pre><code class="language-shell">git commit -s -m 'This is my commit message'
 </code></pre>
 <p>If you have already made a commit and forgot to include the sign-off, you can amend your last commit
 to add the sign-off with the following command, which can then be force pushed.</p>
-<pre><code>git commit --amend -s
+<pre><code class="language-shell">git commit --amend -s
 </code></pre>
 <p>We use a <a href="https://github.com/apps/dco">DCO bot</a> to enforce the DCO on each pull
 request and branch commits.</p>
@@ -200,17 +200,17 @@ have made your code as understandable as possible, add comments to make sure fut
 understand (A) what this piece of code's responsibility is within Rash's architecture and (B) why it
 was written as it was.</p>
 <p>The below blog entry explains more the why's and how's of this guideline.
-https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/</p>
+<a href="https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/">https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/</a></p>
 <h2><a class="header" href="#commit-messages" id="commit-messages">Commit Messages</a></h2>
 <p>We follow a rough convention for commit messages that is designed to answer two
 questions: what changed and why. The subject line should feature the what and
 the body of the commit should describe the why.</p>
-<pre><code>ceph: update MON to use rocksdb
+<pre><code class="language-text">ceph: update MON to use rocksdb
 
 this enables us to remove leveldb from the codebase.
 </code></pre>
 <p>The format can be described more formally as follows:</p>
-<pre><code>&lt;area&gt;: &lt;what changed&gt;
+<pre><code class="language-text">&lt;area&gt;: &lt;what changed&gt;
 &lt;BLANK LINE&gt;
 &lt;why this change was made&gt;
 &lt;BLANK LINE&gt;

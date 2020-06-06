@@ -148,7 +148,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#tasks" id="tasks">Tasks</a></h1>
-<p><code>tasks</code> are main execution unit. They need a module and admits some optional fields described below.</p>
+<p><code>tasks</code> are the main execution unit. They need a module and admit some optional fields described below.</p>
 <pre><code class="language-yaml">- name: &quot;save password to file&quot;
   copy:
     content: &quot;{{ env.MY_PASSWORD }}&quot;
@@ -157,7 +157,7 @@
 
 </code></pre>
 <h2><a class="header" href="#fields" id="fields">Fields</a></h2>
-<p>Tasks admits the following keys:</p>
+<p>Tasks admit the following keys:</p>
 <pre><code class="language-rust no_run noplaypen">pub struct Task {
     /// Module could be any [`Module`] accessible by its name.
     ///
@@ -182,13 +182,14 @@
 }
 </code></pre>
 <h3><a class="header" href="#register-structure" id="register-structure">Register structure</a></h3>
-<p>Register saves in a variable a modules result structure like this one:</p>
+<p>Use the Register field to define the name of the variable in which you wish to save
+the module result. Its value will conform to the following structure:</p>
 <pre><code class="language-rust no_run noplaypen">pub struct ModuleResult {
-    /// True when module changed something.
+    /// True when the executed module changed something.
     changed: bool,
-    /// Output value is showed in logs when module is executed.
+    /// Output value will appear in logs when module is executed.
     output: Option&lt;String&gt;,
-    /// Extra field is used by modules to return its own data.
+    /// Extra field is used by modules to return their own data.
     extra: Option&lt;Value&gt;,
 }
 </code></pre>
