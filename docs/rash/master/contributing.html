@@ -225,6 +225,16 @@ Resolves: #{issue.id}
 second line is always blank, and other lines should be wrapped at 80 characters.
 This allows the message to be easier to read on GitHub as well as in various
 git tools.</p>
+<p><strong>Important!</strong> Any submitted pull request needs to have commit messages validated according
+to that specification. To avoid nasty surprises, we set up a <code>commit-msg</code> hook that validates
+your commit message before the commit actually takes place.</p>
+<p>You need to install <a href="https://docs.docker.com/engine/install/">Docker</a> for this hook to work.
+If you're working on Linux, make sure you can run it with non-root permissions! More info
+<a href="https://docs.docker.com/engine/install/linux-postinstall/">here</a>.</p>
+<p>Finally, keep in mind that you need to set up the hooks before you commit for the first time.
+It's really easy, as <code>cargo-husky</code> takes care of the whole thing. You just need to ensure you
+run <code>cargo test</code> at least once before committing. If the hooks changed at some point in the repo,
+remove any <code>target</code> directory and run <code>cargo test</code> again.</p>
 
                     </main>
 
