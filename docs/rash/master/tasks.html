@@ -149,12 +149,14 @@
                     <main>
                         <h1><a class="header" href="#tasks" id="tasks">Tasks</a></h1>
 <p><code>tasks</code> are the main execution unit. They need a module and admit some optional fields described below.</p>
-<pre><code class="language-yaml">- name: &quot;save password to file&quot;
+<pre><code class="language-yaml">- name: &quot;save password to multiple files&quot;
   copy:
     content: &quot;{{ env.MY_PASSWORD }}&quot;
-    dest: &quot;/tmp/MY_PASSWORD_FILE&quot;
+    dest: &quot;/tmp/MY_PASSWORD_FILE_{{ item }}&quot;
     mode: &quot;400&quot;
-
+  loop: &quot;{{ range(end=4) }}&quot;
+  when: env | get(key=&quot;MY_PASSWORD&quot;)
+  register: save_passwords_result
 </code></pre>
 <h2><a class="header" href="#fields" id="fields">Fields</a></h2>
 <p>Tasks admit the following keys:</p>
