@@ -149,14 +149,14 @@
                     <main>
                         <h1><a class="header" href="#vars----omit-in-toc---" id="vars----omit-in-toc---">Vars <!-- omit in toc --></a></h1>
 <p>The <code>rash</code> context has variables associated to use as <a href="https://tera.netlify.app/">Tera</a> templates.
-You can use them everywhere except in Yaml keys. They will be rendered at execution time.</p>
+You can use them everywhere except in Yaml keys. <code>rash</code> will render them at execution time.</p>
 <p>There are two kind of variables:</p>
 <ul>
 <li><a href="#core">Core</a></li>
 <li><a href="#runtime">Runtime</a></li>
 </ul>
 <h2><a class="header" href="#core" id="core">Core</a></h2>
-<p>By default, every execution of rash exposes two variables to the Context: <code>{{ rash }}</code> and <code>{{ env }}</code>.</p>
+<p>By default, every execution of <code>rash</code> exposes two variables to the Context: <code>{{ rash }}</code> and <code>{{ env }}</code>.</p>
 <h3><a class="header" href="#rash----omit-in-toc---" id="rash----omit-in-toc---">rash <!-- omit in toc --></a></h3>
 <p><code>{{ rash }}</code> variables are builtin values retrieved from execution context.</p>
 <pre><code class="language-yaml">- assert:
@@ -186,7 +186,7 @@ struct UserInfo {
 }
 </code></pre>
 <h3><a class="header" href="#env----omit-in-toc---" id="env----omit-in-toc---">env <!-- omit in toc --></a></h3>
-<p>Any environment var can be accessed as <code>{{ env.MY_ENV_VAR }}</code>.</p>
+<p>You can access any environment var as <code>{{ env.MY_ENV_VAR }}</code>.</p>
 <p>Also, you can use command line arguments to pass environment variables:</p>
 <pre><code class="language-bash">rash -e MY_ENV_VAR=foo example.rh
 </code></pre>
