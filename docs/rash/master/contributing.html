@@ -190,16 +190,16 @@ request and branch commits.</p>
 <li>Submit a pull request to the original repository.</li>
 </ol>
 <h2><a class="header" href="#coding-style" id="coding-style">Coding Style</a></h2>
-<p>Rash projects are written in Rust and follows a functional style trying to keep code simple.</p>
+<p>Rash projects are written in Rust and follow a functional style trying to keep code simple.</p>
 <h2><a class="header" href="#comments" id="comments">Comments</a></h2>
-<p>Comments should be added to all new methods and structures as is appropriate for the coding
-language. Additionally, if an existing method or structure is modified sufficiently, comments should
-be created if they do not yet exist and updated if they do.</p>
+<p>You should add appropriate comments to all new methods and structures.
+Additionally, if an existing method or structure is sufficiently modified, you should
+add comments to it if it doesn't have any already or update them if they do.</p>
 <p>The goal of comments is to make the code more readable and grokkable by future developers. Once you
 have made your code as understandable as possible, add comments to make sure future developers can
-understand (A) what this piece of code's responsibility is within Rash's architecture and (B) why it
+understand (A) the responsibility of piece of code within Rash's architecture and (B) why it
 was written as it was.</p>
-<p>The below blog entry explains more the why's and how's of this guideline.
+<p>The blog entry below explains more the whys and hows of this guideline.
 <a href="https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/">https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/</a></p>
 <h2><a class="header" href="#commit-messages" id="commit-messages">Commit Messages</a></h2>
 <p>We follow a rough convention for commit messages that is designed to answer two
@@ -209,7 +209,7 @@ the body of the commit should describe the why.</p>
 
 this enables us to remove leveldb from the codebase.
 </code></pre>
-<p>The format can be described more formally as follows:</p>
+<p>We can define the format more formally as follows:</p>
 <pre><code class="language-text">&lt;area&gt;: &lt;what changed&gt;
 &lt;BLANK LINE&gt;
 &lt;why this change was made&gt;
@@ -221,7 +221,7 @@ Resolves: #{issue.id}
 </code></pre>
 <p>You can find what values area could take see
 <a href="https://github.com/rash-sh/rash-sh.github.io/blob/master/.commitlintrc.json">rash/.commitlintrc.json</a>.</p>
-<p>The first line is the subject and should be no longer than 70 characters, the
+<p>The first line is the subject and should be no longer than 70 characters. The
 second line is always blank, and other lines should be wrapped at 80 characters.
 This allows the message to be easier to read on GitHub as well as in various
 git tools.</p>
