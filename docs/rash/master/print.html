@@ -189,14 +189,16 @@ ENTRYPOINT [&quot;/entrypoint.rh&quot;]
 <p>Also, create your first <code>entrypoint.rh</code>:</p>
 <pre><code class="language-yaml">#!/bin/rash
 
-- command: myapp -u &quot;{{ rash.user }}&quot; -h &quot;{{ env.HOSTNAME }}&quot;
+- command: myapp -u &quot;{{ rash.user.uid }}&quot; -h &quot;{{ env.HOSTNAME }}&quot;
   # transforms process in pid 1 (similar to `exec` in bash)
   transfer_pid_1: true
 </code></pre>
-<h2><a class="header" href="#who-is-using-rash" id="who-is-using-rash">Who is using <code>rash</code></a></h2>
-<ul>
-<li>A production ready <a href="https://github.com/dcarrillo/docker-phpfpm">php-fpm</a> docker image</li>
-</ul>
+<h2><a class="header" href="#syntax" id="syntax">Syntax</a></h2>
+<p>YAML syntax based on <a href="module_index.html">modules</a>.</p>
+<p>Besides, <a href="https://tera.netlify.app/docs/">Tera</a> templates are included and could be used in
+all places. You can use all functions or combine then as you desire.</p>
+<p>Furthermore, <code>rash</code> implements custom <a href="vars.html">builtins</a> as for example: <code>{{ rash.path }}</code> or
+<code>{{ env.MY_ENV_VAR }}</code>.</p>
 <h1><a class="header" href="#tasks" id="tasks">Tasks</a></h1>
 <p><code>tasks</code> are the main execution unit. They need a module and admit some optional fields described below.</p>
 <pre><code class="language-yaml">- name: &quot;save password to multiple files&quot;
