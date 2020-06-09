@@ -158,17 +158,12 @@
 - command: ls examples
   register: ls_result
 
-# env missing in title (rash ignore it and continue)
-- name: &quot;{{ env.TITLE }}&quot;
-  set_vars:
-    file_list: &quot;{{ ls_result.output | split(pat='\n') }}&quot;
-
 - name: &quot;save password to multiple files&quot;
   copy:
     content: &quot;{{ env.MY_PASSWORD }}&quot;
     dest: &quot;/tmp/MY_PASSWORD_FILE_{{ item }}&quot;
     mode: &quot;400&quot;
-  loop: &quot;{{ file_list }}&quot;
+  loop: &quot;{{ ls_result.output | split(pat='\n') }}&quot;
   when: env | get(key=&quot;MY_PASSWORD&quot;)
   register: save_passwords_result
 </code></pre>
