@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Contributing - Rash book</title>
+        <title>Builtins - Rash book</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title-page.html">Rash Book</a></li><li class="chapter-item expanded "><a href="getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="tasks.html"><strong aria-hidden="true">2.</strong> Tasks</a></li><li class="chapter-item expanded "><a href="module_index.html"><strong aria-hidden="true">3.</strong> Module Index</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="assert.html"><strong aria-hidden="true">3.1.</strong> assert</a></li><li class="chapter-item expanded "><a href="command.html"><strong aria-hidden="true">3.2.</strong> command</a></li><li class="chapter-item expanded "><a href="copy.html"><strong aria-hidden="true">3.3.</strong> copy</a></li><li class="chapter-item expanded "><a href="template.html"><strong aria-hidden="true">3.4.</strong> template</a></li><li class="chapter-item expanded "><a href="set_vars.html"><strong aria-hidden="true">3.5.</strong> set_vars</a></li></ol></li><li class="chapter-item expanded "><a href="vars.html"><strong aria-hidden="true">4.</strong> Vars</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="builtins.html"><strong aria-hidden="true">4.1.</strong> Builtins</a></li><li class="chapter-item expanded "><a href="runtime.html"><strong aria-hidden="true">4.2.</strong> Runtime</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lookups.html"><strong aria-hidden="true">4.2.1.</strong> Lookups</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">4.2.2.</strong> Filters</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="roadmap.html"><strong aria-hidden="true">5.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="contributing.html" class="active"><strong aria-hidden="true">6.</strong> Contributing</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title-page.html">Rash Book</a></li><li class="chapter-item expanded "><a href="getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="tasks.html"><strong aria-hidden="true">2.</strong> Tasks</a></li><li class="chapter-item expanded "><a href="module_index.html"><strong aria-hidden="true">3.</strong> Module Index</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="assert.html"><strong aria-hidden="true">3.1.</strong> assert</a></li><li class="chapter-item expanded "><a href="command.html"><strong aria-hidden="true">3.2.</strong> command</a></li><li class="chapter-item expanded "><a href="copy.html"><strong aria-hidden="true">3.3.</strong> copy</a></li><li class="chapter-item expanded "><a href="template.html"><strong aria-hidden="true">3.4.</strong> template</a></li><li class="chapter-item expanded "><a href="set_vars.html"><strong aria-hidden="true">3.5.</strong> set_vars</a></li></ol></li><li class="chapter-item expanded "><a href="vars.html"><strong aria-hidden="true">4.</strong> Vars</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="builtins.html" class="active"><strong aria-hidden="true">4.1.</strong> Builtins</a></li><li class="chapter-item expanded "><a href="runtime.html"><strong aria-hidden="true">4.2.</strong> Runtime</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lookups.html"><strong aria-hidden="true">4.2.1.</strong> Lookups</a></li><li class="chapter-item expanded "><a href="filters.html"><strong aria-hidden="true">4.2.2.</strong> Filters</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="roadmap.html"><strong aria-hidden="true">5.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">6.</strong> Contributing</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,24 +147,57 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#contributing" id="contributing">Contributing</a></h1>
-<p>Anyone can contribute whether you're new to the project or you've been around a long time.</p>
-<ul>
-<li><a href="https://github.com/rash-sh/rash/tree/master/rash_book/src">Doc source code</a></li>
-<li><a href="https://github.com/rash-sh/rash/blob/master/CONTRIBUTING.md">Developer Contributing Guide</a></li>
-<li><a href="https://github.com/rash-sh/rash/blob/master/INSTALL.md">How to install</a></li>
-</ul>
+                        <h1><a class="header" href="#bultins" id="bultins">Bultins</a></h1>
+<p>By default, every execution of <code>rash</code> exposes two variables to the Context: <code>{{ rash }}</code> and
+<code>{{ env }}</code>.</p>
+<h2><a class="header" href="#rash" id="rash">rash</a></h2>
+<p><code>{{ rash }}</code> variables are builtin values retrieved from execution context.</p>
+<pre><code class="language-yaml">- assert:
+    that:
+      - 'rash.args | length == 0'
+      - 'rash.dir == &quot;/&quot;'
+      - 'rash.path == &quot;/builtins_example.rh&quot;'
+      - 'rash.user.uid == 1000'
+      - 'rash.user.gid == 1000'
+</code></pre>
+<p><code>src/vars/builtin.rs</code>:</p>
+<pre><code class="language-rust no_run noplaypen">#[derive(Serialize)]
+pub struct Builtins {
+    /// Args passed from command line execution.
+    args: Vec&lt;String&gt;,
+    /// Script directory absolute path.
+    dir: PathBuf,
+    /// Script absolute path.
+    path: PathBuf,
+    user: UserInfo,
+}
+
+#[derive(Serialize)]
+struct UserInfo {
+    uid: u32,
+    gid: u32,
+}
+</code></pre>
+<h2><a class="header" href="#env" id="env">env</a></h2>
+<p>You can access any environment var as <code>{{ env.MY_ENV_VAR }}</code>.</p>
+<p>Also, you can use command line arguments to pass environment variables:</p>
+<pre><code class="language-bash">rash -e MY_ENV_VAR=foo example.rh
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="roadmap.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="vars.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
+                        
+                            <a rel="next" href="runtime.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -174,11 +207,15 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="roadmap.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="vars.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
+                
+                    <a rel="next" href="runtime.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 
             </nav>
 
