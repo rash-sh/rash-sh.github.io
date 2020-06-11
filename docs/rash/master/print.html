@@ -285,6 +285,7 @@ the module result. Its value will conform to the following structure:</p>
     that:
       - boo is defined
       - 1 + 1 == 2
+      - env.MY_VAR is defined
 </code></pre>
 <h1><a class="header" href="#command" id="command">command</a></h1>
 <p>Execute commands.</p>
@@ -304,7 +305,11 @@ transfer_pid_1:
     Note: from this point on, your rash script execution is transfered to the command.
 </code></pre>
 <h2><a class="header" href="#example-1" id="example-1">Example</a></h2>
-<pre><code class="language-yaml">- command: 'echo &quot;Hellow World&quot;'
+<pre><code class="language-yaml">- command:
+    argv:
+      - echo
+      - &quot;Hellow World&quot;'
+    transfer_pid_1: true
 </code></pre>
 <h1><a class="header" href="#copy" id="copy">copy</a></h1>
 <p>Copy files to path.</p>

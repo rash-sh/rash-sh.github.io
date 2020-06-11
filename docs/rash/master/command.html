@@ -165,7 +165,11 @@ transfer_pid_1:
     Note: from this point on, your rash script execution is transfered to the command.
 </code></pre>
 <h2><a class="header" href="#example" id="example">Example</a></h2>
-<pre><code class="language-yaml">- command: 'echo &quot;Hellow World&quot;'
+<pre><code class="language-yaml">- command:
+    argv:
+      - echo
+      - &quot;Hellow World&quot;'
+    transfer_pid_1: true
 </code></pre>
 
                     </main>
