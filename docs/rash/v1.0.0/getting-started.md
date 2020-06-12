@@ -16,25 +16,35 @@ For install, add `rash` binary to your Dockerfile:
 
 ```dockerfile
 FROM rustagainshell/rash AS rash
-
-FROM base_image
-
+FROM nginx
 COPY --from=rash /bin/rash /bin
-
-RUN my app things...
 
 COPY entrypoint.rh /
 ENTRYPOINT ["/entrypoint.rh"]
 ```
 
-Also, create your first `entrypoint.rh`:
+Also, you must create your first `entrypoint.rh`:
 
 ```yaml
 #!/bin/rash
+- copy:
+    content: |
+      server {
+        listen       80;
 
-- command: myapp -u "{{ rash.user.uid }}" -h "{{ env.HOSTNAME }}"
-  # transforms process in pid 1 (similar to `exec` in bash)
-  transfer_pid_1: true
+        {% for domain in env.DOMAINS | split(pat=',') -%}
+        {% set path = domain | split(pat='.') | first -%}
+        location /{{ path }} {
+            rewrite /{{ path }}[/]?(.*) /$1 break;
+            proxy_pass http://{{ domain }};
+        }
+        {% endfor %}
+      }
+    dest: /etc/nginx/conf.d/default.conf
+
+- command:
+    argv: [nginx, '-g', 'daemon off;']
+    transfer_pid_1: true
 ```
 
 ## Syntax
