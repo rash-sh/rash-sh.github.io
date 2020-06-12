@@ -32,7 +32,7 @@ defaults:
     values:
       layout: "docs"
       doctitle: "Rash Docs"
-      github: "https://github.com/rash/rash/blob/master/Documentation/"
+      github: "https://github.com/rash-sh/rash/blob/master/rash_book/src/"
       stylesheet: "docs"
 
 sass:
