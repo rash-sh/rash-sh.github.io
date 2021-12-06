@@ -8,7 +8,7 @@
   display: flex;
   -ms-flex-align: center;
   align-items: center;
-  
+
   #holder {
     margin: 90px 0 25px;
 
@@ -233,11 +233,11 @@
       padding: 0 22px 0 0px;
       cursor: pointer;
       z-index: 1;
-      
+
       &::-ms-expand {
         display: none; /* hide the default arrow in ie10 and ie11 */
       }
-      
+
       &:focus,
       &:-moz-focusring {
         outline: 0;
@@ -407,7 +407,7 @@
       }
     }
   }
-  
+
   .alert {
     padding: 20px;
     margin-bottom: 15px;
@@ -425,8 +425,8 @@
     }
 
     &.old {
-      border-color: #2196f3;
-      color: #2196f3;
+      border-color: $orangeDark;
+      color: $orange;
     }
   }
 }

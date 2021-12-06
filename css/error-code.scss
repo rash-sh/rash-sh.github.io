@@ -7,7 +7,7 @@
   display: flex;
   -ms-flex-align: center;
   align-items: center;
-  
+
   #holder {
     margin: 25px 0;
   }
@@ -44,7 +44,7 @@
 
     &.text-right {
       text-align: right;
-      
+
       img {
         position: relative;
         @media (max-width: $lgWidth) {
