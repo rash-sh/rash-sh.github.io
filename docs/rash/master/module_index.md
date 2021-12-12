@@ -9,6 +9,7 @@ weight: 4000
 - [assert](./assert.html)
 - [command](./command.html)
 - [copy](./copy.html)
+- [file](./file.html)
 - [template](./template.html)
 - [set_vars](./set_vars.html)
 {% endraw %}
