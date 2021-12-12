@@ -6,10 +6,10 @@ weight: 4000
 {% raw %}
 # Module Index
 
-- [copy](./copy.html)
-- [set_vars](./set_vars.html)
+- [assert](./assert.html)
 - [file](./file.html)
 - [template](./template.html)
-- [assert](./assert.html)
+- [set_vars](./set_vars.html)
 - [command](./command.html)
+- [copy](./copy.html)
 {% endraw %}
