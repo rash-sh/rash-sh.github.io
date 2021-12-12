@@ -1,8 +1,10 @@
 ---
 title: command
-weight: 4200
+weight: 4600
 indent: true
 ---
+
+{% raw %}
 # command
 
 Execute commands.
@@ -33,3 +35,4 @@ transfer_pid_1:
       - "Hellow World"'
     transfer_pid_1: true
 ```
+{% endraw %}

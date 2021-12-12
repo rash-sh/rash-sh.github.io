@@ -1,8 +1,10 @@
 ---
 title: template
-weight: 4500
+weight: 4400
 indent: true
 ---
+
+{% raw %}
 # template
 
 Render [Tera template](https://tera.netlify.app/docs/#templates).
@@ -32,3 +34,4 @@ mode:
     dest: /tmp/MY_PASSWORD_FILE.txt
     mode: "0400"
 ```
+{% endraw %}

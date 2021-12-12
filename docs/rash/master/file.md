@@ -1,8 +1,10 @@
 ---
 title: file
-weight: 4400
+weight: 4300
 indent: true
 ---
+
+{% raw %}
 # file
 
 Manage files and file properties.
@@ -38,3 +40,4 @@ state:
     state: present
     mode: 0644
 ```
+{% endraw %}

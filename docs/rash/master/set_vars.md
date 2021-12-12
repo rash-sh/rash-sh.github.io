@@ -1,8 +1,10 @@
 ---
 title: set_vars
-weight: 4600
+weight: 4200
 indent: true
 ---
+
+{% raw %}
 # set_vars
 
 This module allows setting new variables.
@@ -27,3 +29,4 @@ key_value:
     that:
       - foo == 'boo'
 ```
+{% endraw %}

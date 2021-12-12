@@ -1,8 +1,10 @@
 ---
 title: copy
-weight: 4300
+weight: 4100
 indent: true
 ---
+
+{% raw %}
 # copy
 
 Copy files to path.
@@ -31,3 +33,4 @@ mode:
     dest: /tmp/MY_PASSWORD_FILE.txt
     mode: "0400"
 ```
+{% endraw %}

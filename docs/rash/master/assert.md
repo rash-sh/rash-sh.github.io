@@ -1,8 +1,10 @@
 ---
 title: assert
-weight: 4100
+weight: 4500
 indent: true
 ---
+
+{% raw %}
 # assert
 
 Assert given expressions are true.
@@ -27,3 +29,4 @@ that:
       - 1 + 1 == 2
       - env.MY_VAR is defined
 ```
+{% endraw %}
