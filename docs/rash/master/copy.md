@@ -11,19 +11,11 @@ Copy files to path.
 
 ## Parameters
 
-```yaml
-content:
-  type: string
-  required: true
-  description: Sets the contents of a file directly to the specified value.
-dest:
-  type: string
-  required: true
-  description: The absolute path where the file should be copied to.
-mode:
-  type: string
-  description: Permissions of the destination file or directory.
-```
+| Parameter | Required | Type   | Values | Description                                                  |
+|-----------|----------|--------|--------|--------------------------------------------------------------|
+| content   | true     | string |        | Sets the contents of a file directly to the specified value. |
+| dest      | true     | string |        | The absolute path where the file should be copied to.        |
+| mode      |          | string |        | Permissions of the destination file or directory.            |
 
 ## Examples
 
@@ -33,4 +25,5 @@ mode:
     dest: /tmp/MY_PASSWORD_FILE.txt
     mode: "0400"
 ```
+
 {% endraw %}

@@ -1,6 +1,6 @@
 ---
 title: set_vars
-weight: 4500
+weight: 4300
 indent: true
 ---
 
@@ -11,13 +11,9 @@ This module allows setting new variables.
 
 ## Parameters
 
-```yaml
-key_value:
-  type: list
-  required: true
-  description: |
-    This module takes key/value pairs and save un current Vars context.
-```
+| Parameter | Required | Type  | Values | Description                                                         |
+|-----------|----------|-------|--------|---------------------------------------------------------------------|
+| key_value | true     | map   |        | This module takes key/value pairs and save un current Vars context. |
 
 ## Example
 
@@ -29,4 +25,5 @@ key_value:
     that:
       - foo == 'boo'
 ```
+
 {% endraw %}

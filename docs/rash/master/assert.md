@@ -1,6 +1,6 @@
 ---
 title: assert
-weight: 4200
+weight: 4500
 indent: true
 ---
 
@@ -11,14 +11,9 @@ Assert given expressions are true.
 
 ## Parameters
 
-```yaml
-that:
-  type: list
-  required: true
-  description: |
-    A list of string expressions of the same form that can be passed to the
-    'when' statement.
-```
+| Parameter | Required | Type  | Values | Description                                                                               |
+|-----------|----------|-------|--------|-------------------------------------------------------------------------------------------|
+| that      | true     | array |        | A list of string expressions of the same form that can be passed to the _when_ statement. |
 
 ## Example
 
@@ -29,4 +24,5 @@ that:
       - 1 + 1 == 2
       - env.MY_VAR is defined
 ```
+
 {% endraw %}

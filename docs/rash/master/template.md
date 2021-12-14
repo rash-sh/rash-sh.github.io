@@ -1,6 +1,6 @@
 ---
 title: template
-weight: 4300
+weight: 4100
 indent: true
 ---
 
@@ -9,23 +9,15 @@ indent: true
 
 Render [Tera template](https://tera.netlify.app/docs/#templates).
 
+
 ## Parameters
 
-```yaml
-src:
-  type: string
-  required: true
-  description: |
-    Path of Tera formatted template.
-    This can be a relative or an absolute path.
-dest:
-  type: string
-  required: true
-  description: Absolute path where the file should be rendered to.
-mode:
-  type: string
-  description: Permissions of the destination file or directory.
-```
+| Parameter | Required | Type   | Values | Description                                                                  |
+|-----------|----------|--------|--------|------------------------------------------------------------------------------|
+| dest      | true     | string |        | Absolute path where the file should be rendered to.                          |
+| mode      |          | string |        | Permissions of the destination file or directory.                            |
+| src       | true     | string |        | Path of Tera formatted template. This can be a relative or an absolute path. |
+
 ## Examples
 
 ```yaml
@@ -34,4 +26,5 @@ mode:
     dest: /tmp/MY_PASSWORD_FILE.txt
     mode: "0400"
 ```
+
 {% endraw %}
