@@ -1,6 +1,6 @@
 ---
 title: command
-weight: 4600
+weight: 4100
 indent: true
 ---
 
@@ -8,6 +8,13 @@ indent: true
 # command
 
 Execute commands.
+
+## Attributes
+
+```yaml
+check_mode:
+  support: none
+```
 
 ## Parameters
 

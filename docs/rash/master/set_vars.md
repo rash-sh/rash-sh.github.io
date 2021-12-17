@@ -1,6 +1,6 @@
 ---
 title: set_vars
-weight: 4200
+weight: 4600
 indent: true
 ---
 
@@ -8,6 +8,13 @@ indent: true
 # set_vars
 
 This module allows setting new variables.
+
+## Attributes
+
+```yaml
+check_mode:
+  support: none
+```
 
 ## Parameters
 

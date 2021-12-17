@@ -1,6 +1,6 @@
 ---
 title: copy
-weight: 4500
+weight: 4400
 indent: true
 ---
 
@@ -8,6 +8,13 @@ indent: true
 # copy
 
 Copy files to path.
+
+## Attributes
+
+```yaml
+check_mode:
+  support: full
+```
 
 ## Parameters
 

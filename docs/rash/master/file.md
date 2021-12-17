@@ -1,6 +1,6 @@
 ---
 title: file
-weight: 4300
+weight: 4500
 indent: true
 ---
 
@@ -9,6 +9,12 @@ indent: true
 
 Manage files and file properties.
 
+## Attributes
+
+```yaml
+check_mode:
+  support: full
+```
 
 ## Parameters
 

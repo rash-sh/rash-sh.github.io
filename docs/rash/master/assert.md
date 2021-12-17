@@ -1,6 +1,6 @@
 ---
 title: assert
-weight: 4100
+weight: 4200
 indent: true
 ---
 
@@ -8,6 +8,13 @@ indent: true
 # assert
 
 Assert given expressions are true.
+
+## Attributes
+
+```yaml
+check_mode:
+  support: none
+```
 
 ## Parameters
 

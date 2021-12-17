@@ -42,6 +42,8 @@ pub struct Task {
     ///
     /// [`Module::exec`]: ../modules/struct.Module.html#method.exec
     params: Yaml,
+    /// Run task in dry-run mode without modifications.
+    check_mode: bool,
     /// Task name.
     name: Option<String>,
     /// Template expression passed directly without {{ }}; if false skip task execution.

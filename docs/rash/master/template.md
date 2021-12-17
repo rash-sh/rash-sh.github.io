@@ -1,6 +1,6 @@
 ---
 title: template
-weight: 4400
+weight: 4300
 indent: true
 ---
 
@@ -9,6 +9,12 @@ indent: true
 
 Render [Tera template](https://tera.netlify.app/docs/#templates).
 
+## Attributes
+
+```yaml
+check_mode:
+  support: full
+```
 
 ## Parameters
 
