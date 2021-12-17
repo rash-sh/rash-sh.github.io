@@ -1,6 +1,6 @@
 ---
 title: copy
-weight: 4400
+weight: 4200
 indent: true
 ---
 
@@ -18,11 +18,10 @@ check_mode:
 
 ## Parameters
 
-| Parameter | Required | Type   | Values | Description                                                  |
-|-----------|----------|--------|--------|--------------------------------------------------------------|
-| content   | true     | string |        | Sets the contents of a file directly to the specified value. |
-| dest      | true     | string |        | The absolute path where the file should be copied to.        |
-| mode      |          | string |        | Permissions of the destination file or directory.            |
+| Parameter | Required | Type   | Values | Description                                           |
+|-----------|----------|--------|--------|-------------------------------------------------------|
+| dest      | true     | string |        | The absolute path where the file should be copied to. |
+| mode      |          | string |        | Permissions of the destination file or directory.     |
 
 ## Examples
 
