@@ -34,6 +34,8 @@ Tasks admit the following keys:
 
 ```rust,no_run,noplaypen
 pub struct Task {
+    /// Run task in dry-run mode without modifications.
+    check_mode: bool,
     /// Module could be any [`Module`] accessible by its name.
     ///
     /// [`Module`]: ../modules/struct.Module.html
@@ -42,20 +44,22 @@ pub struct Task {
     ///
     /// [`Module::exec`]: ../modules/struct.Module.html#method.exec
     params: Yaml,
-    /// Run task in dry-run mode without modifications.
-    check_mode: bool,
+    /// Overwrite changed field in [`ModuleResult`].
+    ///
+    /// [`ModuleResult`]: ../modules/struct.ModuleResult.html
+    changed_when: Option<String>,
+    /// Template expression passed directly without {{ }}; if true errors are ignored.
+    ignore_errors: Option<bool>,
     /// Task name.
     name: Option<String>,
-    /// Template expression passed directly without {{ }}; if false skip task execution.
-    when: Option<String>,
+    /// `loop` field receives a Template (with {{ }}) or a list to iterate over it.
+    r#loop: Option<Yaml>,
     /// Variable name to store [`ModuleResult`].
     ///
     /// [`ModuleResult`]: ../modules/struct.ModuleResult.html
     register: Option<String>,
-    /// Template expression passed directly without {{ }}; if true errors are ignored.
-    ignore_errors: Option<bool>,
-    /// `loop` field receives a Template (with {{ }}) or a list to iterate over it.
-    r#loop: Option<Yaml>,
+    /// Template expression passed directly without {{ }}; if false skip task execution.
+    when: Option<String>,
 }
 ```
 
