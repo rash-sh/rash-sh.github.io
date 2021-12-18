@@ -32,9 +32,9 @@ pub struct Builtins {
     /// Args passed from command line execution.
     args: Vec<String>,
     /// Script directory absolute path.
-    dir: PathBuf,
+    dir: String,
     /// Script absolute path.
-    path: PathBuf,
+    path: String,
     user: UserInfo,
 }
 
