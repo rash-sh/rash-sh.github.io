@@ -1,6 +1,6 @@
 ---
 title: command
-weight: 4400
+weight: 4700
 indent: true
 ---
 
@@ -30,7 +30,7 @@ check_mode:
 - command:
     argv:
       - echo
-      - "Hellow World"'
+      - "Hellow World"
     transfer_pid_1: true
 ```
 

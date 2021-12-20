@@ -82,9 +82,12 @@ pub struct ModuleResult {
 For example:
 
 ```yaml
-- command: ls examples
-  register: ls_result
+- find:
+    paths: "{{ rash.dir }}"
+  register: find_result
 
-- command: echo "{{ ls_result.output }}"
+- name: files in directory
+  command: echo {{ item | replace(from=rash.dir, to='.') }}
+  loop: "{{ find_result.extra }}"
 ```
 {% endraw %}

@@ -13,7 +13,7 @@ This module allows setting new variables.
 
 ```yaml
 check_mode:
-  support: none
+  support: always
 ```
 
 ## Parameters
