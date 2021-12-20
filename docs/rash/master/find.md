@@ -1,6 +1,6 @@
 ---
 title: find
-weight: 4600
+weight: 4400
 indent: true
 ---
 
@@ -25,6 +25,7 @@ check_mode:
 | follow    |          | boolean |                                  | Set this to true to follow symlinks                                                                                                                                                                                                                                      |
 | hidden    |          | boolean |                                  | Set this to yes to include hidden files, otherwise they will be ignored.                                                                                                                                                                                                 |
 | paths     | true     | array   |                                  | List of absolute paths of directories to search.                                                                                                                                                                                                                         |
+| patterns  |          | array   |                                  | The patterns restrict the list of files to be returned to those whose basenames match at least one of the patterns specified. Multiple patterns can be specified using a list.                                                                                           |
 | recurse   |          | boolean |                                  | If target is a directory, recursively descend into the directory looking for files.                                                                                                                                                                                      |
 | size      |          | string  |                                  | Select files whose size is less than the specified size. Unqualified values are in bytes but B, KB, MB, GB, TB can be appended to specify bytes. KiB, MiB, GiB, TiB can be used too an represent binary values: 1 GiB = 1024 MiB. Size is not evaluated for directories. |
 

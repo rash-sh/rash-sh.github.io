@@ -1,6 +1,6 @@
 ---
 title: command
-weight: 4700
+weight: 4200
 indent: true
 ---
 
