@@ -47,6 +47,9 @@ Also, you must create your first `entrypoint.rh`:
     transfer_pid_1: true
 ```
 
+Or instead, you could want to use `rash` for local scripting. In that case you can follow
+our [installation guide](installation.md).
+
 ## Syntax
 
 YAML syntax based on [modules](module_index.md).

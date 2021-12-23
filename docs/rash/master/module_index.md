@@ -1,16 +1,16 @@
 ---
 title: Module Index
-weight: 4000
+weight: 5000
 ---
 
 {% raw %}
 # Module Index
 
-- [find](./find.html)
-- [command](./command.html)
 - [assert](./assert.html)
-- [template](./template.html)
-- [file](./file.html)
+- [command](./command.html)
 - [copy](./copy.html)
+- [file](./file.html)
+- [template](./template.html)
 - [set_vars](./set_vars.html)
+- [find](./find.html)
 {% endraw %}
