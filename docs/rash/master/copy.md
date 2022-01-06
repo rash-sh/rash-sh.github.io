@@ -1,6 +1,6 @@
 ---
 title: copy
-weight: 5200
+weight: 5400
 indent: true
 ---
 
@@ -18,10 +18,10 @@ check_mode:
 
 ## Parameters
 
-| Parameter | Required | Type   | Values | Description                                           |
-|-----------|----------|--------|--------|-------------------------------------------------------|
-| dest      | true     | string |        | The absolute path where the file should be copied to. |
-| mode      |          | string |        | Permissions of the destination file or directory.     |
+| Parameter | Required | Type   | Values | Description                                                                                                                                                                                 |
+|-----------|----------|--------|--------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| dest      | true     | string |        | The absolute path where the file should be copied to.                                                                                                                                       |
+| mode      |          | string |        | Permissions of the destination file or directory. The mode may also be the special string `preserve`. `preserve` means that the file will be given the same permissions as the source file. |
 
 ## Examples
 
