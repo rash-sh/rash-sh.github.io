@@ -1,6 +1,6 @@
 ---
 title: template
-weight: 5300
+weight: 5600
 indent: true
 ---
 
