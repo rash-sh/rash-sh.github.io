@@ -23,13 +23,13 @@ E.g.:
 
 ## Modules index
 
-- [command](./command.html)
 - [copy](./copy.html)
 - [file](./file.html)
-- [template](./template.html)
-- [assert](./assert.html)
+- [command](./command.html)
 - [find](./find.html)
 - [set_vars](./set_vars.html)
+- [assert](./assert.html)
+- [template](./template.html)
 
 ## Omitting parameters
 
