@@ -31,6 +31,5 @@ E.g.:
     dest: "{{ dest }}/{{ item | split(pat='/') | last }}"
     mode: "{{ options.mode }}"
   loop: "{{ source | default (value=[]) }}"
-  when: "source is defined"
 ```
 {% endraw %}
