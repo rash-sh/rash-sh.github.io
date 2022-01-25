@@ -1,6 +1,6 @@
 ---
 title: assert
-weight: 5600
+weight: 5500
 indent: true
 ---
 

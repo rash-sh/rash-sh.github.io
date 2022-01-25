@@ -44,7 +44,7 @@ Also, you must create your first `entrypoint.rh`:
 
 - command:
     argv: [nginx, '-g', 'daemon off;']
-    transfer_pid_1: true
+    transfer_pid: true
 ```
 
 Or instead, you could want to use `rash` for local scripting. In that case you can follow
