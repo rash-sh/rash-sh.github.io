@@ -26,11 +26,11 @@ E.g.:
 - [assert](./assert.html)
 - [command](./command.html)
 - [copy](./copy.html)
-- [template](./template.html)
+- [debug](./debug.html)
 - [file](./file.html)
 - [find](./find.html)
-- [debug](./debug.html)
 - [set_vars](./set_vars.html)
+- [template](./template.html)
 
 ## Omitting parameters
 
