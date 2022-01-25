@@ -68,7 +68,8 @@ For example:
   register: find_result
 
 - name: files in directory
-  command: echo {{ item | replace(from=rash.dir, to='.') }}
+  debug:
+    var: item | replace(from=rash.dir, to='.')
   loop: "{{ find_result.extra }}"
 ```
 
