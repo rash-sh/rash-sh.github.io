@@ -1,6 +1,6 @@
 ---
 title: debug
-weight: 5800
+weight: 5100
 indent: true
 ---
 
