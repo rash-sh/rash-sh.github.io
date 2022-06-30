@@ -27,10 +27,18 @@ check_mode:
 ```yaml
 - set_vars:
     foo: boo
+    buu:
+      - 1
+      - 2
+      - 3
+    zoo:
+      suu: yea
 
-- assert
+- assert:
     that:
       - foo == 'boo'
+      - buu[2] == 3
+      - zoo.suu == 'yea'
 ```
 
 {% endraw %}
