@@ -14,7 +14,7 @@ behind is to write the documentation and `rash` automatically parses arguments b
 E.g.:
 
 ```yaml
-#!/usr/bin/env rash
+#!/usr/bin/env -S rash --
 #
 # Copy files from source to dest dir
 #
