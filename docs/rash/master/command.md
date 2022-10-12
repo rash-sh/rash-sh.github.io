@@ -33,6 +33,10 @@ check_mode:
       - echo
       - "Hellow World"
     transfer_pid: true
+
+- command: ls examples
+  register: ls_result
+
 ```
 
 {% endraw %}
