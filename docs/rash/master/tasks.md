@@ -26,8 +26,10 @@ weight: 4000
 - name: "save password to multiple files"
   copy:
     content: "{{ env.MY_PASSWORD }}"
-    dest: "/tmp/MY_PASSWORD_FILE_{{ item | split(pat='/') | last }}"
+    dest: "/tmp/MY_PASSWORD_FILE_{{ file_name }}"
     mode: "400"
+  vars:
+    file_name: "{{ item | split(pat='/') | last }}"
   loop: "{{ find_result.extra }}"
   when: env | get(key="MY_PASSWORD")
   register: save_passwords_result
@@ -45,8 +47,9 @@ Tasks admit the following optional keys:
 | changed_when | string | Template expression passed directly without `{{ }}`; Overwrite change status |
 | ignore_errors | string | Template expression passed directly without `{{ }}`; if true errors are ignored |
 | name | string | Task name |
-| loop | string | `loop` receives a Template (with `{{ }}`) or a list to iterate over it |
+| loop | array | `loop` receives a Template (with `{{ }}`) or a list to iterate over it |
 | register | string | Variable name to store module result |
+| vars | map | Define variables in task scope. Does not support own reference variables. |
 | when | string | Template expression passed directly without {{ }}; if false skip task execution |
 
 ### Registering variables
