@@ -32,9 +32,6 @@ check_mode:
 
 - debug:
     var: rash.user.gid
-
-- debug:
-    var: __tera_context
 ```
 
 {% endraw %}

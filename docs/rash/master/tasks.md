@@ -64,7 +64,7 @@ pub struct ModuleResult {
     /// The Output value will appear in logs when module is executed.
     output: Option<String>,
     /// Modules store the data they return in the Extra field.
-    extra: Option<Value>,
+    extra: Option<YamlValue>,
 }
 ```
 
