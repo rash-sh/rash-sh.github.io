@@ -32,8 +32,8 @@ Also, you must create your first `entrypoint.rh`:
       server {
         listen       80;
 
-        {% for domain in env.DOMAINS | split(pat=',') -%}
-        {% set path = domain | split(pat='.') | first -%}
+        {% for domain in env.DOMAINS | split(',') -%}
+        {% set path = domain | split('.') | first -%}
         location /{{ path }} {
             rewrite /{{ path }}[/]?(.*) /$1 break;
             proxy_pass http://{{ domain }};
@@ -54,7 +54,7 @@ our [installation guide](installation.md).
 
 YAML syntax based on [modules](module_index.md).
 
-Besides, `rash` includes [Tera](https://tera.netlify.app/docs/) templates which you can use
+Besides, `rash` includes [MiniJinja](https://docs.rs/minijinja/) templates which you can use
 anywhere. You can use all its functions and combine them as you want.
 
 `rash` implements custom [builtins](vars.md), too. For example, `{{ rash.path }}` or

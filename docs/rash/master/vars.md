@@ -6,7 +6,7 @@ weight: 6000
 {% raw %}
 # Vars <!-- omit in toc -->
 
-The `rash` context has variables associated to use as [Tera](https://tera.netlify.app/) templates.
+The `rash` context has variables associated to use as [MiniJinja](https://docs.rs/minijinja/) templates.
 You can use them everywhere except in Yaml keys. `rash` will render them at execution time.
 
 There are two kinds of variables:
