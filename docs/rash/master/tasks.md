@@ -29,9 +29,9 @@ weight: 4000
     dest: "/tmp/MY_PASSWORD_FILE_{{ file_name }}"
     mode: "400"
   vars:
-    file_name: "{{ item | split(pat='/') | last }}"
+    file_name: "{{ item | split('/') | last }}"
   loop: "{{ find_result.extra }}"
-  when: env | get(key="MY_PASSWORD")
+  when: "'MY_PASSWORD' in env"
   register: save_passwords_result
 ```
 
@@ -77,7 +77,7 @@ For example:
 
 - name: files in directory
   debug:
-    var: item | replace(from=rash.dir, to='.')
+    var: item | replace(rash.dir, '.')
   loop: "{{ find_result.extra }}"
 ```
 

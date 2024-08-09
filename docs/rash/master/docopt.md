@@ -28,8 +28,8 @@ E.g.:
 
 - copy:
     src: "{{ item }}"
-    dest: "{{ dest }}/{{ item | split(pat='/') | last }}"
+    dest: "{{ dest }}/{{ item | split('/') | last }}"
     mode: "{{ options.mode }}"
-  loop: "{{ source | default (value=[]) }}"
+  loop: "{{ source | default([]) }}"
 ```
 {% endraw %}
