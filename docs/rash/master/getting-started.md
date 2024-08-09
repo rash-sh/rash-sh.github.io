@@ -32,8 +32,8 @@ Also, you must create your first `entrypoint.rh`:
       server {
         listen       80;
 
-        {% for domain in env.DOMAINS | split(',') -%}
-        {% set path = domain | split('.') | first -%}
+        {% for domain in env.DOMAINS | split(pat=',') -%}
+        {% set path = domain | split(pat='.') | first -%}
         location /{{ path }} {
             rewrite /{{ path }}[/]?(.*) /$1 break;
             proxy_pass http://{{ domain }};
