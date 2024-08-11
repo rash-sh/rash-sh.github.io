@@ -32,6 +32,10 @@ check_mode:
 
 - debug:
     var: rash.user.gid
+
+- name: Print all template engine context
+  debug:
+    msg: "{{ debug() }}"
 ```
 
 {% endraw %}
