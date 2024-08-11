@@ -1,11 +1,13 @@
 ---
 title: Lookups
-weight: 6210
+weight: 7100
 indent: true
 ---
 
 {% raw %}
 # Lookups
+
+Lookups are functions designed to extract data from different sources.
 
 ## Lookups index
 
