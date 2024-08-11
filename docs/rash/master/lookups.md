@@ -7,5 +7,7 @@ indent: true
 {% raw %}
 # Lookups
 
-incoming...
+## Lookups index
+
+- [passwordstore](./passwordstore.html)
 {% endraw %}
