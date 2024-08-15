@@ -23,15 +23,15 @@ E.g.:
 
 ## Modules index
 
-- [assert](./assert.html)
-- [command](./command.html)
-- [copy](./copy.html)
-- [debug](./debug.html)
-- [file](./file.html)
-- [find](./find.html)
-- [pacman](./pacman.html)
-- [set_vars](./set_vars.html)
-- [template](./template.html)
+- [assert](./module_assert.html)
+- [command](./module_command.html)
+- [copy](./module_copy.html)
+- [debug](./module_debug.html)
+- [file](./module_file.html)
+- [find](./module_find.html)
+- [pacman](./module_pacman.html)
+- [set_vars](./module_set_vars.html)
+- [template](./module_template.html)
 
 ## Omitting parameters
 

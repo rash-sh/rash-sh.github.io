@@ -10,5 +10,6 @@ Lookups are functions designed to extract data from different sources.
 
 ## Lookups index
 
-- [passwordstore](./passwordstore.html)
+- [find](./lookup_find.html)
+- [passwordstore](./lookup_passwordstore.html)
 {% endraw %}
