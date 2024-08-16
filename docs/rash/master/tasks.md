@@ -15,24 +15,18 @@ weight: 4000
       - "rash.path == ''"
   ignore_errors: true
 
-- find:
-    paths: "{{ rash.dir }}"
-    file_type: file
-  register: find_result
-
-- debug:
-    var: "find_result.extra"
-
 - name: save password to multiple files
+  when: "'MY_PASSWORD' in env"
+  vars:
+    file_name: "{{ item | split('/') | last }}"
+    find_query:
+      paths: "{{ rash.dir }}"
+      file_type: file
+  loop: "{{ find(find_query) }}"
   copy:
     content: "{{ env.MY_PASSWORD }}"
     dest: "/tmp/MY_PASSWORD_FILE_{{ file_name }}"
     mode: "400"
-  vars:
-    file_name: "{{ item | split('/') | last }}"
-  loop: "{{ find_result.extra }}"
-  when: "'MY_PASSWORD' in env"
-  register: save_passwords_result
 ```
 
 ## Keywords
@@ -71,14 +65,9 @@ pub struct ModuleResult {
 For example:
 
 ```yaml
-- find:
-    paths: "{{ rash.dir }}"
-  register: find_result
-
-- name: files in directory
   debug:
     var: item | replace(rash.dir, '.')
-  loop: "{{ find_result.extra }}"
+  loop: "{{ find(paths=rash.dir) }}"
 ```
 
 ### Using become
