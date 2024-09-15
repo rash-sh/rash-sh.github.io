@@ -11,10 +11,9 @@ Lookup passwords from the passwordstore.org pass utility.
 
 ## Parameters
 
-| Parameter | Required | Type    | Values | Description                                                                                                              |
-| --------- | -------- | ------- | ------ | ------------------------------------------------------------------------------------------------------------------------ |
-| returnall |          | boolean |        | Return all the content of the password, not only the first line. **[default: `false`]**                                  |
-| subkey    |          | string  |        | Return a specific subkey of the password. When set to password, always returns the first line. **[default: `password`]** |
+| Parameter | Required | Type    | Values | Description                                                                             |
+|-----------|----------|---------|--------|-----------------------------------------------------------------------------------------|
+| returnall |          | boolean |        | Return all the content of the password, not only the first line. **[default: `false`]** |
 
 
 ## Example
