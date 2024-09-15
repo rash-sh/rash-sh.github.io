@@ -29,6 +29,7 @@ E.g.:
 - [debug](./module_debug.html)
 - [file](./module_file.html)
 - [find](./module_find.html)
+- [include](./module_include.html)
 - [pacman](./module_pacman.html)
 - [set_vars](./module_set_vars.html)
 - [template](./module_template.html)

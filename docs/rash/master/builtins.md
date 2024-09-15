@@ -27,7 +27,7 @@ By default, every execution of `rash` exposes two variables to the Context: `{{ 
 `src/vars/builtin.rs`:
 
 ```rust,no_run,noplaypen
-#[derive(Serialize)]
+#[derive(Serialize, Deserialize)]
 pub struct Builtins {
     /// Args passed from command line execution.
     args: Vec<String>,
@@ -38,7 +38,7 @@ pub struct Builtins {
     user: UserInfo,
 }
 
-#[derive(Serialize)]
+#[derive(Serialize, Deserialize)]
 struct UserInfo {
     uid: u32,
     gid: u32,
