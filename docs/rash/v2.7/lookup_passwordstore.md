@@ -20,11 +20,17 @@ Lookup passwords from the passwordstore.org pass utility.
 ## Example
 
 ```yaml
-- debug:
+- name: Return the first line of the secret
+  debug:
     msg: "{{ passwordstore('foo/boo') }}"
 
-- debug:
+- name: Return all the content
+  debug:
     msg: "{{ passwordstore('foo/boo', returnall=true) }}"
+
+- name: Return just the username
+  debug:
+    msg: "{{ passwordstore('foo/boo', subkey='username') }}"
 ```
 
 {% endraw %}
