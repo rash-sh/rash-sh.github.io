@@ -20,6 +20,6 @@ To show all variables in current context:
 
 ```yaml
 - debug:
-    msg: "{{ debug () }}"
+    msg: "{{ debug() }}"
 ```
 {% endraw %}
