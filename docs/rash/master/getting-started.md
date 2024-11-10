@@ -15,7 +15,7 @@ To start using `rash` you just need a container with entrypoint.
 For install, add `rash` binary to your Dockerfile:
 
 ```dockerfile
-FROM rustagainshell/rash AS rash
+FROM ghcr.io/rash-sh/rash AS rash
 FROM nginx
 COPY --from=rash /bin/rash /bin
 
