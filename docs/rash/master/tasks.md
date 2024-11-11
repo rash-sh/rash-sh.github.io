@@ -67,7 +67,7 @@ For example:
 ```yaml
   debug:
     var: item | replace(rash.dir, '.')
-  loop: "{{ find(paths=rash.dir) }}"
+  loop: "{{ find({'paths': rash.dir}) }}"
 ```
 
 ### Using become
