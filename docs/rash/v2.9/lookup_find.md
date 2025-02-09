@@ -14,7 +14,7 @@ Use [find module](./module_find.html) as a lookup. Returns the extra field of th
 
 ```yaml
 - debug:
-    msg: "{{ find(paths='/') }}"
+    msg: "{{ find({'paths': '/'}) }}"
 
 - name: Copy all files in /tmp to /tmp2
   vars:
