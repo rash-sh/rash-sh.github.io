@@ -93,20 +93,19 @@ These notations will be interpreted as an option with argument only if a descrip
 is provided.
 
 **Warning**: Options should be passed to rash after `--` to be interpreted as script arguments.
-Otherwise, they will be treated as options for rash itself:
+Otherwise, they will be treated as options for rash itself. Alternatively, you can place options after
+another non-option argument:
 
 ```bash
 # Correct (using --):
 rash script.rh -- --option value
 
-# Incorrect (option passed to rash, not your script):
+# Correct (after non-option arg):
 rash script.rh command --option value
 
 # Incorrect (option passed to rash, not your script):
 rash script.rh --option value
 ```
-
-**Note**: Shebang line `#!/usr/bin/env rash --` can be used to pass options to the script directly:
 
 ## Optional elements
 
