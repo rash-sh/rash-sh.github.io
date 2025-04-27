@@ -1,10 +1,10 @@
 ---
-title: Rash Book
+title: Introduction
 weight: 000
 ---
 
 {% raw %}
-# Rash Book
+# Introduction
 
 `rash` solves an optimization problem in the containers ecosystem.
 
