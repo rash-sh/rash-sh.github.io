@@ -22,7 +22,8 @@ check_mode:
 | Parameter | Required | Type   | Values | Description                                                                   |
 |-----------|----------|--------|--------|-------------------------------------------------------------------------------|
 | msg       |          | string |        | The customized message that is printed. If omitted, prints a generic message. |
-| var       |          | string |        | A variable name to debug. Mutually exclusive with the msg option.             |
+| var       |          | string |        | A variable name to debug.                                                     |
+|           |          |        |        |  Mutually exclusive with the msg option.                                      |
 
 ## Example
 
