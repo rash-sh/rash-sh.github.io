@@ -24,6 +24,7 @@ E.g.:
 ## Modules index
 
 - [assert](./module_assert.html)
+- [block](./module_block.html)
 - [command](./module_command.html)
 - [copy](./module_copy.html)
 - [debug](./module_debug.html)
