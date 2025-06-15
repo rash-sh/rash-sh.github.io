@@ -18,10 +18,9 @@ check_mode:
 
 ## Parameters
 
-| Parameter | Required | Type  | Values | Description                                                             |
-|-----------|----------|-------|--------|-------------------------------------------------------------------------|
-| that      | true     | array |        | A list of string expressions of the same form that can be passed to the |
-|           |          |       |        |  _when_ statement.                                                      |
+| Parameter | Required | Type  | Values | Description                                                                               |
+|-----------|----------|-------|--------|-------------------------------------------------------------------------------------------|
+| that      | true     | array |        | A list of string expressions of the same form that can be passed to the _when_ statement. |
 
 ## Example
 

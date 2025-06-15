@@ -21,12 +21,9 @@ check_mode:
 
 ## Parameters
 
-| Parameter | Required | Type  | Values | Description                                                                         |
-|-----------|----------|-------|--------|-------------------------------------------------------------------------------------|
-| from      |          | array |        | List of file paths to load variables from.                                          |
-|           |          |       |        |  Supports .env, .yaml/.yml, and .json files. `.env` files are loaded into the `env` |
-|           |          |       |        |  namespace, while YAML and JSON files are loaded as top-level context variables.    |
-|           |          |       |        |  If a file has no extension, its format is auto-detected based on its content.      |
+| Parameter | Required | Type  | Values | Description                                                                                                                                                                                                                                                                                 |
+|-----------|----------|-------|--------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| from      |          | array |        | List of file paths to load variables from. Supports .env, .yaml/.yml, and .json files. `.env` files are loaded into the `env` namespace, while YAML and JSON files are loaded as top-level context variables. If a file has no extension, its format is auto-detected based on its content. |
 
 ## Examples
 
