@@ -18,7 +18,6 @@ E.g.:
       gid: {{ rash.user.gid }}
     dest: "{% if rash.user.uid != 0 %}/tmp{% endif %}/user_info"
     mode: "{{ env.FILE_MODE | default('400') }}"
-
 ```
 
 ## Modules index
