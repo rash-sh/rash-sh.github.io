@@ -32,6 +32,7 @@ E.g.:
 - [include](./module_include.html)
 - [pacman](./module_pacman.html)
 - [set_vars](./module_set_vars.html)
+- [setup](./module_setup.html)
 - [template](./module_template.html)
 
 ## Omitting parameters
