@@ -10,8 +10,6 @@ indent: true
 This module allows grouping tasks together for execution.
 Similar to Ansible's block directive.
 
-Note: `vars` declared in a block are added to the parent context.
-
 ## Attributes
 
 ```yaml
