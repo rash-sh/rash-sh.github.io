@@ -68,13 +68,9 @@ pub struct ModuleResult {
 For example:
 
 ```yaml
-- name: "Get system information"
-  command: "uname -a"
-  register: system_info
-
-- name: "Display system information"
   debug:
-    msg: "System Information: {{ system_info.output }}"
+    var: item | replace(rash.dir, '.')
+  loop: "{{ find({'paths': rash.dir}) }}"
 ```
 
 ### Using become
