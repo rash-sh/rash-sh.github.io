@@ -14,4 +14,5 @@ Lookups are functions designed to extract data from different sources.
 - [password](./lookup_password.html)
 - [passwordstore](./lookup_passwordstore.html)
 - [pipe](./lookup_pipe.html)
+- [vault](./lookup_vault.html)
 {% endraw %}
