@@ -10,6 +10,7 @@ Lookups are functions designed to extract data from different sources.
 
 ## Lookups index
 
+- [file](./lookup_file.html)
 - [find](./lookup_find.html)
 - [password](./lookup_password.html)
 - [passwordstore](./lookup_passwordstore.html)
