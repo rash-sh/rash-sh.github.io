@@ -12,7 +12,12 @@ layout: default
     <a role="button" href="javascript:void(0)">{{ currentVersion }}</a>
     <div class="versions-dropdown-content">
       {% assign latest = project.versions | where: 'version', 'latest' | first %}
-      {% assign others = project.versions | reject: 'version', 'latest' %}
+      {% assign others = '' | split: ',' %}
+      {% for ver in project.versions %}
+        {% unless ver.version == 'latest' %}
+          {% assign others = others | push: ver %}
+        {% endunless %}
+      {% endfor %}
       {% if latest %}
         <a href="{{ latest.path | append: currentPath | relative_url }}"{% if latest.version == currentVersion %} class="active"{% endif %}>latest</a>
       {% endif %}
