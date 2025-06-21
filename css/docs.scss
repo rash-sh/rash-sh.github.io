@@ -176,9 +176,6 @@
         box-shadow: -2px 5px 8px 0 rgba($black, 0.1);
         z-index: 1;
         white-space: nowrap;
-        max-height: 140px; // Show ~4 items (each ~32px including margin/padding)
-        overflow-y: auto;
-        scrollbar-width: thin; // For Firefox
 
         a {
           font-size: 17px;
