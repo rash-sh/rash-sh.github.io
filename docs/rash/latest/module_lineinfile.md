@@ -1,6 +1,6 @@
 ---
 title: lineinfile
-weight: 6100
+weight: 6000
 indent: true
 ---
 
@@ -25,24 +25,24 @@ check_mode:
 | regexp    |          | string |                   | The regular expression to look for in every line of the file. If the regular expression is not matched, the line will be added to the file. Uses Python regular expressions. |
 | state     |          | string | present<br>absent | Whether the line should be there or not. **[default: `"present"`]**                                                                                                          |
 
-## Examples
-
-```yaml
-- lineinfile:
-    path: /etc/sudoers
-    line: '%wheel ALL=(ALL) NOPASSWD: ALL'
-    state: present
-
-- lineinfile:
-    path: /etc/hosts
-    regexp: '^127\.0\.0\.1'
-    line: '127.0.0.1 localhost'
-    state: present
-
-- lineinfile:
-    path: /tmp/testfile
-    regexp: '^#?banana'
-    state: absent
-```
+{$include_doc /// ## Examples
+///
+/// ```yaml
+/// - lineinfile:
+///     path: /etc/sudoers
+///     line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+///     state: present
+///
+/// - lineinfile:
+///     path: /etc/hosts
+///     regexp: '^127\.0\.0\.1'
+///     line: '127.0.0.1 localhost'
+///     state: present
+///
+/// - lineinfile:
+///     path: /tmp/testfile
+///     regexp: '^#?banana'
+///     state: absent
+/// ```}
 
 {% endraw %}

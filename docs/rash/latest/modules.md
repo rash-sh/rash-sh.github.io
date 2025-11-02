@@ -30,7 +30,6 @@ E.g.:
 - [file](./module_file.html)
 - [find](./module_find.html)
 - [get_url](./module_get_url.html)
-- [group](./module_group.html)
 - [include](./module_include.html)
 - [lineinfile](./module_lineinfile.html)
 - [pacman](./module_pacman.html)
@@ -39,7 +38,6 @@ E.g.:
 - [systemd](./module_systemd.html)
 - [template](./module_template.html)
 - [uri](./module_uri.html)
-- [user](./module_user.html)
 
 ## Omitting parameters
 
