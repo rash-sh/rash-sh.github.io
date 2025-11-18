@@ -26,6 +26,7 @@ E.g.:
 - [block](./module_block.html)
 - [command](./module_command.html)
 - [copy](./module_copy.html)
+- [dconf](./module_dconf.html)
 - [debug](./module_debug.html)
 - [file](./module_file.html)
 - [find](./module_find.html)
