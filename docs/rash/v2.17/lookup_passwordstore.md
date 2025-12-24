@@ -1,6 +1,6 @@
 ---
 title: passwordstore
-weight: 8400
+weight: 9400
 indent: true
 ---
 
