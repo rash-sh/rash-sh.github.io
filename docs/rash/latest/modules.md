@@ -49,6 +49,7 @@ E.g.:
 - [systemd](./module_systemd.html)
 - [template](./module_template.html)
 - [timezone](./module_timezone.html)
+- [trace](./module_trace.html)
 - [unarchive](./module_unarchive.html)
 - [uri](./module_uri.html)
 - [user](./module_user.html)
