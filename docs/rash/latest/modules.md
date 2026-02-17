@@ -23,6 +23,7 @@ E.g.:
 ## Modules index
 
 - [assert](./module_assert.html)
+- [authorized_key](./module_authorized_key.html)
 - [block](./module_block.html)
 - [command](./module_command.html)
 - [copy](./module_copy.html)
@@ -36,6 +37,7 @@ E.g.:
 - [group](./module_group.html)
 - [hostname](./module_hostname.html)
 - [include](./module_include.html)
+- [ini_file](./module_ini_file.html)
 - [lineinfile](./module_lineinfile.html)
 - [mount](./module_mount.html)
 - [pacman](./module_pacman.html)
