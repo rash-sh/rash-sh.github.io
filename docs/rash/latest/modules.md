@@ -41,6 +41,7 @@ E.g.:
 - [template](./module_template.html)
 - [uri](./module_uri.html)
 - [user](./module_user.html)
+- [wait_for](./module_wait_for.html)
 
 ## Omitting parameters
 
