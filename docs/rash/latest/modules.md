@@ -22,6 +22,7 @@ E.g.:
 
 ## Modules index
 
+- [archive](./module_archive.html)
 - [assert](./module_assert.html)
 - [authorized_key](./module_authorized_key.html)
 - [block](./module_block.html)
@@ -48,6 +49,7 @@ E.g.:
 - [systemd](./module_systemd.html)
 - [template](./module_template.html)
 - [timezone](./module_timezone.html)
+- [unarchive](./module_unarchive.html)
 - [uri](./module_uri.html)
 - [user](./module_user.html)
 - [wait_for](./module_wait_for.html)
