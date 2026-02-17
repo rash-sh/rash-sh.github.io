@@ -43,6 +43,7 @@ E.g.:
 - [pacman](./module_pacman.html)
 - [set_vars](./module_set_vars.html)
 - [setup](./module_setup.html)
+- [slurp](./module_slurp.html)
 - [stat](./module_stat.html)
 - [systemd](./module_systemd.html)
 - [template](./module_template.html)
