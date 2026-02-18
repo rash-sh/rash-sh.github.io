@@ -24,6 +24,8 @@ E.g.:
 
 - [archive](./module_archive.html)
 - [assert](./module_assert.html)
+- [async_poll](./module_async_poll.html)
+- [async_status](./module_async_status.html)
 - [authorized_key](./module_authorized_key.html)
 - [block](./module_block.html)
 - [command](./module_command.html)
