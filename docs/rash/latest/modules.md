@@ -32,6 +32,7 @@ E.g.:
 - [block](./module_block.html)
 - [command](./module_command.html)
 - [copy](./module_copy.html)
+- [cron](./module_cron.html)
 - [dconf](./module_dconf.html)
 - [debug](./module_debug.html)
 - [fail](./module_fail.html)
