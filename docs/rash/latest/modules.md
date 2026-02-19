@@ -23,6 +23,7 @@ E.g.:
 ## Modules index
 
 - [archive](./module_archive.html)
+- [assemble](./module_assemble.html)
 - [assert](./module_assert.html)
 - [async_poll](./module_async_poll.html)
 - [async_status](./module_async_status.html)
