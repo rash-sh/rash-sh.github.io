@@ -55,14 +55,7 @@ Use the Register field to define the name of the variable in which you wish to s
 result. Its value will conform to the following structure:
 
 ```rust
-pub struct ModuleResult {
-    /// True when the executed module changed something.
-    changed: bool,
-    /// The Output value will appear in logs when module is executed.
-    output: Option<String>,
-    /// Modules store the data they return in the Extra field.
-    extra: Option<YamlValue>,
-}
+
 ```
 
 For example:

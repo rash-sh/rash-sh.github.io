@@ -22,6 +22,7 @@ E.g.:
 
 ## Modules index
 
+- [apk](./module_apk.html)
 - [archive](./module_archive.html)
 - [assemble](./module_assemble.html)
 - [assert](./module_assert.html)
