@@ -48,6 +48,7 @@ E.g.:
 - [setup](./module_setup.html)
 - [slurp](./module_slurp.html)
 - [stat](./module_stat.html)
+- [sysctl](./module_sysctl.html)
 - [systemd](./module_systemd.html)
 - [template](./module_template.html)
 - [timezone](./module_timezone.html)
