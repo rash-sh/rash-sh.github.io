@@ -47,6 +47,7 @@ E.g.:
 - [lineinfile](./module_lineinfile.html)
 - [mount](./module_mount.html)
 - [pacman](./module_pacman.html)
+- [script](./module_script.html)
 - [set_vars](./module_set_vars.html)
 - [setup](./module_setup.html)
 - [slurp](./module_slurp.html)
