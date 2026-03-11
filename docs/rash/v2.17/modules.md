@@ -22,25 +22,59 @@ E.g.:
 
 ## Modules index
 
-- [assert](./module_assert.html)
-- [block](./module_block.html)
-- [command](./module_command.html)
-- [copy](./module_copy.html)
-- [dconf](./module_dconf.html)
-- [debug](./module_debug.html)
-- [file](./module_file.html)
-- [find](./module_find.html)
-- [get_url](./module_get_url.html)
-- [group](./module_group.html)
-- [include](./module_include.html)
-- [lineinfile](./module_lineinfile.html)
-- [pacman](./module_pacman.html)
-- [set_vars](./module_set_vars.html)
-- [setup](./module_setup.html)
-- [systemd](./module_systemd.html)
-- [template](./module_template.html)
-- [uri](./module_uri.html)
-- [user](./module_user.html)
+### Package Management
+
+| Module | Description |
+| ------ | ----------- |
+| [pacman](./module_pacman.html) | Manage packages with the pacman package manager (Arch Linux) |
+
+### File Operations
+
+| Module | Description |
+| ------ | ----------- |
+| [copy](./module_copy.html) | Copy files to path |
+| [file](./module_file.html) | Manage files and file properties |
+| [find](./module_find.html) | Return a list of files based on specific criteria |
+| [get_url](./module_get_url.html) | Downloads files from HTTP, HTTPS, or FTP |
+| [lineinfile](./module_lineinfile.html) | Ensure a particular line is in a file |
+| [template](./module_template.html) | Render MiniJinja templates |
+
+### Command Execution
+
+| Module | Description |
+| ------ | ----------- |
+| [command](./module_command.html) | Execute commands |
+
+### System Management
+
+| Module | Description |
+| ------ | ----------- |
+| [dconf](./module_dconf.html) | Modify and read dconf database |
+| [group](./module_group.html) | Manage groups and group attributes |
+| [systemd](./module_systemd.html) | Control systemd services |
+| [user](./module_user.html) | Manage user accounts and user attributes |
+
+### Flow Control
+
+| Module | Description |
+| ------ | ----------- |
+| [assert](./module_assert.html) | Assert given expressions are true |
+| [block](./module_block.html) | Group tasks together for execution |
+| [include](./module_include.html) | Include tasks from another file |
+| [set_vars](./module_set_vars.html) | Set new variables |
+| [setup](./module_setup.html) | Load variables from .env, YAML, and JSON files |
+
+### Network
+
+| Module | Description |
+| ------ | ----------- |
+| [uri](./module_uri.html) | Interacts with HTTP and HTTPS web services |
+
+### Debugging
+
+| Module | Description |
+| ------ | ----------- |
+| [debug](./module_debug.html) | Print statements during execution |
 
 ## Omitting parameters
 
