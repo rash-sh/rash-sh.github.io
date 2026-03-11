@@ -1,0 +1,195 @@
+# Rash
+
+> Rash is a declarative shell scripting language using Ansible-like YAML syntax, compiled to a single Rust binary. Designed for container entrypoints, IoT devices, and local scripting with zero dependencies.
+
+
+## What is Rash
+
+Rash provides:
+- A **simple syntax** to maintain low complexity
+- One static binary to be **container oriented**
+- A **declarative** syntax to be idempotent
+- **Clear output** to log properly
+- **Security** by design
+- **Speed and efficiency**
+- **Modular** design
+- Support of [MiniJinja](https://docs.rs/minijinja/latest/minijinja/syntax/index.html) **templates**
+
+
+## Installation
+
+```bash
+# Download latest binary (Linux/macOS)
+curl -s https://api.github.com/repos/rash-sh/rash/releases/latest \
+    | grep browser_download_url \
+    | grep -v sha256 \
+    | grep $(uname -m) \
+    | grep $(uname | tr '[:upper:]' '[:lower:]') \
+    | grep -v musl \
+    | cut -d '"' -f 4 \
+    | xargs curl -s -L \
+    | sudo tar xvz -C /usr/local/bin
+```
+
+
+## Quick Start
+
+Create an `entrypoint.rh` file:
+
+```yaml
+- name: Ensure directory exists
+  file:
+    path: /app/data
+    state: directory
+
+- name: Copy configuration
+  copy:
+    content: "{{ env.APP_CONFIG }}"
+    dest: /app/config.yml
+
+- name: Run application
+  command:
+    cmd: /app/bin/start
+```
+
+
+## Modules
+
+Rash modules are idempotent operations like Ansible.
+
+- alternatives
+- apk
+- apt
+- apt_repository
+- archive
+- assemble
+- assert
+- async_poll
+- async_status
+- at
+- authorized_key
+- blkdiscard
+- block
+- cargo
+- chroot
+- command
+- composer
+- copy
+- cron
+- dconf
+- debconf
+- debootstrap
+- debug
+- dmsetup
+- dnf
+- docker_container
+- docker_image
+- expect
+- fail
+- file
+- filesystem
+- find
+- firewalld
+- gem
+- get_url
+- git
+- gpg_key
+- group
+- grub
+- hostname
+- include
+- ini_file
+- initramfs
+- interfaces_file
+- iptables
+- java_keystore
+- json_file
+- kernel_blacklist
+- known_hosts
+- lbu
+- lineinfile
+- locale
+- logrotate
+- lvg
+- lvol
+- make
+- mdadm
+- meta
+- modprobe
+- mount
+- mysql_db
+- netplan
+- nmcli
+- npm
+- openssl_certificate
+- openssl_csr
+- openssl_privatekey
+- package
+- pacman
+- pam_limits
+- parted
+- pause
+- ping
+- pip
+- postgresql_db
+- reboot
+- redis
+- script
+- seboolean
+- selinux
+- service
+- set_vars
+- setup
+- sgdisk
+- slurp
+- stat
+- synchronize
+- sysctl
+- systemd
+- template
+- timezone
+- trace
+- unarchive
+- uri
+- user
+- wait_for
+- wipefs
+- xml
+- yum_repository
+- zfs
+- zpool
+- zypper
+
+See https://rash-sh.github.io/docs/rash/latest/modules.html for full documentation.
+
+
+## Lookups
+
+Lookups allow fetching data from external sources.
+
+- file
+- find
+- password
+- passwordstore
+- pipe
+- vault
+
+See https://rash-sh.github.io/docs/rash/latest/lookups.html for full documentation.
+
+
+## Built-in Variables
+
+- `rash.path` - Path to the current script
+- `rash.dir` - Directory of the current script
+- `rash.cwd` - Current working directory
+- `rash.arch` - System architecture
+- `rash.check_mode` - Boolean indicating check mode
+- `env.VAR_NAME` - Access environment variables
+
+See https://rash-sh.github.io/docs/rash/latest/builtins.html for full documentation.
+
+
+## Links
+
+- GitHub: https://github.com/rash-sh/rash
+- Documentation: https://rash-sh.github.io/docs/rash/latest/
