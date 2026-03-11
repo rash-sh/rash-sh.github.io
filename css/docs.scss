@@ -440,6 +440,23 @@
       td:not(:last-of-type) {
         padding: 15px 15px;
       }
+
+      th:first-child,
+      td:first-child {
+        white-space: nowrap;
+      }
+
+      td a {
+        font-weight: 500;
+      }
+    }
+
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: $purple;
+      font-size: 18px;
+      font-weight: 600;
     }
   }
 
