@@ -176,9 +176,24 @@
         box-shadow: -2px 5px 8px 0 rgba($black, 0.1);
         z-index: 1;
         white-space: nowrap;
-        max-height: 140px; // Show ~4 items (each ~32px including margin/padding)
+        max-height: 300px;
         overflow-y: auto;
-        scrollbar-width: thin; // For Firefox
+        scrollbar-width: thin;
+        min-width: 100px;
+
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: $codeBackground;
+          border-radius: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: $orange;
+          border-radius: 3px;
+        }
 
         a {
           font-size: 17px;
@@ -204,6 +219,16 @@
           &:focus,
           &:active {
             color: $textDark;
+
+            &:before {
+              width: 100%;
+              background-color: $orange;
+            }
+          }
+
+          &.active {
+            color: $orange;
+            font-weight: 600;
 
             &:before {
               width: 100%;
