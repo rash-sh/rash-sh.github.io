@@ -22,6 +22,7 @@ By default, every execution of `rash` exposes two variables to the Context: `{{ 
       - 'rash.path == "/builtins_example.rh"'
       - 'rash.user.uid == 1000'
       - 'rash.user.gid == 1000'
+      - 'rash.check_mode == false'
 ```
 
 `src/vars/builtin.rs`:
@@ -36,6 +37,8 @@ pub struct Builtins {
     /// Script absolute path.
     path: String,
     user: UserInfo,
+    /// Whether rash is running in check mode.
+    check_mode: bool,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -43,6 +46,20 @@ struct UserInfo {
     uid: u32,
     gid: u32,
 }
+```
+
+### check_mode
+
+The `rash.check_mode` variable is a boolean that indicates whether rash is running in check mode
+(dry-run mode). This is useful for conditionally executing tasks or validating behavior when
+`--check` flag is passed.
+
+Example:
+```yaml
+- name: Skip in check mode
+  debug:
+    msg: "Running in check mode, skipping actual changes"
+  when: rash.check_mode
 ```
 
 ## env

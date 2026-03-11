@@ -1,6 +1,6 @@
 ---
 title: password
-weight: 9300
+weight: 8300
 indent: true
 ---
 

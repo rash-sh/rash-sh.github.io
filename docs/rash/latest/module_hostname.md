@@ -1,6 +1,6 @@
 ---
 title: hostname
-weight: 6200
+weight: 5400
 indent: true
 ---
 

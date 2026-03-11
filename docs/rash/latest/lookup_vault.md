@@ -1,6 +1,6 @@
 ---
 title: vault
-weight: 9600
+weight: 8600
 indent: true
 ---
 

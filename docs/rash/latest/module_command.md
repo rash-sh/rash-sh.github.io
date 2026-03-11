@@ -1,6 +1,6 @@
 ---
 title: command
-weight: 6090
+weight: 5160
 indent: true
 ---
 
@@ -13,7 +13,7 @@ Execute commands.
 
 ```yaml
 check_mode:
-  support: none
+  support: full
 ```
 
 ## Parameters

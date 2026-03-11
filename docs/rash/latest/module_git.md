@@ -1,6 +1,6 @@
 ---
 title: git
-weight: 6180
+weight: 5360
 indent: true
 ---
 

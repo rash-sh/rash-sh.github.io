@@ -1,6 +1,6 @@
 ---
 title: pacman
-weight: 6250
+weight: 5690
 indent: true
 ---
 

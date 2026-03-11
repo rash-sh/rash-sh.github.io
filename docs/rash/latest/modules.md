@@ -22,84 +22,108 @@ E.g.:
 
 ## Modules index
 
-### Package Management
-
-| Module | Description |
-| ------ | ----------- |
-| [apk](./module_apk.html) | Manage packages with the apk package manager (Alpine Linux) |
-| [pacman](./module_pacman.html) | Manage packages with the pacman package manager (Arch Linux) |
-
-### File Operations
-
-| Module | Description |
-| ------ | ----------- |
-| [archive](./module_archive.html) | Creates a compressed archive of files or directories |
-| [assemble](./module_assemble.html) | Assemble configuration files from fragments |
-| [copy](./module_copy.html) | Copy files to path |
-| [file](./module_file.html) | Manage files and file properties |
-| [find](./module_find.html) | Return a list of files based on specific criteria |
-| [get_url](./module_get_url.html) | Downloads files from HTTP, HTTPS, or FTP |
-| [ini_file](./module_ini_file.html) | Manage settings in INI-style configuration files |
-| [lineinfile](./module_lineinfile.html) | Ensure a particular line is in a file |
-| [slurp](./module_slurp.html) | Read a file and return its content base64 encoded |
-| [stat](./module_stat.html) | Retrieve file or file system status |
-| [template](./module_template.html) | Render MiniJinja templates |
-| [unarchive](./module_unarchive.html) | Unpacks an archive to a destination |
-
-### Command Execution
-
-| Module | Description |
-| ------ | ----------- |
-| [command](./module_command.html) | Execute commands |
-| [script](./module_script.html) | Execute script files |
-
-### System Management
-
-| Module | Description |
-| ------ | ----------- |
-| [cron](./module_cron.html) | Manage cron jobs and crontab entries |
-| [dconf](./module_dconf.html) | Modify and read dconf database |
-| [group](./module_group.html) | Manage groups and group attributes |
-| [hostname](./module_hostname.html) | Manage system hostname |
-| [mount](./module_mount.html) | Control filesystem mounts |
-| [sysctl](./module_sysctl.html) | Manage kernel parameters via sysctl |
-| [systemd](./module_systemd.html) | Control systemd services |
-| [timezone](./module_timezone.html) | Configure system timezone |
-| [user](./module_user.html) | Manage user accounts and user attributes |
-
-### Async Operations
-
-| Module | Description |
-| ------ | ----------- |
-| [async_poll](./module_async_poll.html) | Poll async tasks |
-| [async_status](./module_async_status.html) | Check the status of an async task |
-
-### Flow Control
-
-| Module | Description |
-| ------ | ----------- |
-| [assert](./module_assert.html) | Assert given expressions are true |
-| [block](./module_block.html) | Group tasks together for execution |
-| [fail](./module_fail.html) | Fail execution with a custom error message |
-| [include](./module_include.html) | Include tasks from another file |
-| [set_vars](./module_set_vars.html) | Set new variables |
-| [setup](./module_setup.html) | Load variables from .env, YAML, and JSON files |
-
-### Network & Security
-
-| Module | Description |
-| ------ | ----------- |
-| [authorized_key](./module_authorized_key.html) | Add or remove SSH authorized keys |
-| [git](./module_git.html) | Manage git checkouts of repositories |
-| [uri](./module_uri.html) | Interacts with HTTP and HTTPS web services |
-| [wait_for](./module_wait_for.html) | Wait until a TCP port accepts connections |
-
-### Debugging & Tracing
-
-| Module | Description |
-| ------ | ----------- |
-| [debug](./module_debug.html) | Print statements during execution |
-| [trace](./module_trace.html) | Trace system activity using eBPF via bpftrace |
+- [alternatives](./module_alternatives.html)
+- [apk](./module_apk.html)
+- [apt](./module_apt.html)
+- [apt_repository](./module_apt_repository.html)
+- [archive](./module_archive.html)
+- [assemble](./module_assemble.html)
+- [assert](./module_assert.html)
+- [async_poll](./module_async_poll.html)
+- [async_status](./module_async_status.html)
+- [at](./module_at.html)
+- [authorized_key](./module_authorized_key.html)
+- [blkdiscard](./module_blkdiscard.html)
+- [block](./module_block.html)
+- [cargo](./module_cargo.html)
+- [chroot](./module_chroot.html)
+- [command](./module_command.html)
+- [composer](./module_composer.html)
+- [copy](./module_copy.html)
+- [cron](./module_cron.html)
+- [dconf](./module_dconf.html)
+- [debconf](./module_debconf.html)
+- [debootstrap](./module_debootstrap.html)
+- [debug](./module_debug.html)
+- [dmsetup](./module_dmsetup.html)
+- [dnf](./module_dnf.html)
+- [docker_container](./module_docker_container.html)
+- [docker_image](./module_docker_image.html)
+- [expect](./module_expect.html)
+- [fail](./module_fail.html)
+- [file](./module_file.html)
+- [filesystem](./module_filesystem.html)
+- [find](./module_find.html)
+- [firewalld](./module_firewalld.html)
+- [gem](./module_gem.html)
+- [get_url](./module_get_url.html)
+- [git](./module_git.html)
+- [gpg_key](./module_gpg_key.html)
+- [group](./module_group.html)
+- [grub](./module_grub.html)
+- [hostname](./module_hostname.html)
+- [include](./module_include.html)
+- [ini_file](./module_ini_file.html)
+- [initramfs](./module_initramfs.html)
+- [interfaces_file](./module_interfaces_file.html)
+- [iptables](./module_iptables.html)
+- [java_keystore](./module_java_keystore.html)
+- [json_file](./module_json_file.html)
+- [kernel_blacklist](./module_kernel_blacklist.html)
+- [known_hosts](./module_known_hosts.html)
+- [lbu](./module_lbu.html)
+- [lineinfile](./module_lineinfile.html)
+- [locale](./module_locale.html)
+- [logrotate](./module_logrotate.html)
+- [lvg](./module_lvg.html)
+- [lvol](./module_lvol.html)
+- [make](./module_make.html)
+- [mdadm](./module_mdadm.html)
+- [meta](./module_meta.html)
+- [modprobe](./module_modprobe.html)
+- [mount](./module_mount.html)
+- [mysql_db](./module_mysql_db.html)
+- [netplan](./module_netplan.html)
+- [nmcli](./module_nmcli.html)
+- [npm](./module_npm.html)
+- [openssl_certificate](./module_openssl_certificate.html)
+- [openssl_csr](./module_openssl_csr.html)
+- [openssl_privatekey](./module_openssl_privatekey.html)
+- [package](./module_package.html)
+- [pacman](./module_pacman.html)
+- [pam_limits](./module_pam_limits.html)
+- [parted](./module_parted.html)
+- [pause](./module_pause.html)
+- [ping](./module_ping.html)
+- [pip](./module_pip.html)
+- [postgresql_db](./module_postgresql_db.html)
+- [reboot](./module_reboot.html)
+- [redis](./module_redis.html)
+- [script](./module_script.html)
+- [seboolean](./module_seboolean.html)
+- [selinux](./module_selinux.html)
+- [service](./module_service.html)
+- [set_vars](./module_set_vars.html)
+- [setup](./module_setup.html)
+- [sgdisk](./module_sgdisk.html)
+- [slurp](./module_slurp.html)
+- [stat](./module_stat.html)
+- [synchronize](./module_synchronize.html)
+- [sysctl](./module_sysctl.html)
+- [systemd](./module_systemd.html)
+- [template](./module_template.html)
+- [timezone](./module_timezone.html)
+- [trace](./module_trace.html)
+- [unarchive](./module_unarchive.html)
+- [uri](./module_uri.html)
+- [user](./module_user.html)
+- [wait_for](./module_wait_for.html)
+- [wipefs](./module_wipefs.html)
+- [xml](./module_xml.html)
+- [yum_repository](./module_yum_repository.html)
+- [zfs](./module_zfs.html)
+- [zpool](./module_zpool.html)
+- [zypper](./module_zypper.html)
 
 ## Omitting parameters
 

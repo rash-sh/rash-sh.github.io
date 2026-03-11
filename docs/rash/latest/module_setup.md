@@ -1,6 +1,6 @@
 ---
 title: setup
-weight: 6280
+weight: 5830
 indent: true
 ---
 
