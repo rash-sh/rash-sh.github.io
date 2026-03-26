@@ -152,6 +152,7 @@ Rash modules are idempotent operations like Ansible.
 - unarchive
 - uri
 - user
+- vault
 - wait_for
 - wipefs
 - xml
