@@ -1,6 +1,6 @@
 ---
 title: yum_repository
-weight: 6010
+weight: 6110
 indent: true
 ---
 

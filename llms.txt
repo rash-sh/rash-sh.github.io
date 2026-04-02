@@ -74,6 +74,7 @@ Rash modules are idempotent operations like Ansible.
 - chroot
 - command
 - composer
+- consul_kv
 - copy
 - cron
 - dconf
@@ -84,6 +85,7 @@ Rash modules are idempotent operations like Ansible.
 - dnf
 - docker_container
 - docker_image
+- docker_volume
 - expect
 - fail
 - file
@@ -96,6 +98,7 @@ Rash modules are idempotent operations like Ansible.
 - gpg_key
 - group
 - grub
+- helm_info
 - hostname
 - include
 - ini_file
@@ -112,6 +115,7 @@ Rash modules are idempotent operations like Ansible.
 - logrotate
 - lvg
 - lvol
+- lxd_container
 - make
 - mdadm
 - meta
@@ -124,6 +128,7 @@ Rash modules are idempotent operations like Ansible.
 - openssl_certificate
 - openssl_csr
 - openssl_privatekey
+- opkg
 - package
 - pacman
 - pam_limits
@@ -132,8 +137,10 @@ Rash modules are idempotent operations like Ansible.
 - ping
 - pip
 - postgresql_db
+- rabbitmq_user
 - reboot
 - redis
+- runit
 - script
 - seboolean
 - selinux
@@ -142,10 +149,12 @@ Rash modules are idempotent operations like Ansible.
 - setup
 - sgdisk
 - slurp
+- ssh_config
 - stat
 - synchronize
 - sysctl
 - systemd
+- tempfile
 - template
 - timezone
 - trace
@@ -156,6 +165,7 @@ Rash modules are idempotent operations like Ansible.
 - vdo
 - wait_for
 - wipefs
+- xattr
 - xml
 - yum_repository
 - zfs
