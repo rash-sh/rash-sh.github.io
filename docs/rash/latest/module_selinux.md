@@ -1,6 +1,6 @@
 ---
 title: selinux
-weight: 5890
+weight: 5920
 indent: true
 ---
 
