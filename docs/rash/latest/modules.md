@@ -67,6 +67,7 @@ E.g.:
 - [gpg_key](./module_gpg_key.html)
 - [group](./module_group.html)
 - [grub](./module_grub.html)
+- [helm](./module_helm.html)
 - [helm_info](./module_helm_info.html)
 - [hostname](./module_hostname.html)
 - [include](./module_include.html)

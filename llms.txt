@@ -102,6 +102,7 @@ Rash modules are idempotent operations like Ansible.
 - gpg_key
 - group
 - grub
+- helm
 - helm_info
 - hostname
 - include
