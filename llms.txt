@@ -83,11 +83,13 @@ Rash modules are idempotent operations like Ansible.
 - debug
 - dmsetup
 - dnf
+- docker_config
 - docker_container
 - docker_image
 - docker_volume
 - expect
 - fail
+- fail2ban
 - file
 - filesystem
 - find
