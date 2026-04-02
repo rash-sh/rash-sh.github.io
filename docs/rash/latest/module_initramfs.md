@@ -1,6 +1,6 @@
 ---
 title: initramfs
-weight: 5480
+weight: 5500
 indent: true
 ---
 

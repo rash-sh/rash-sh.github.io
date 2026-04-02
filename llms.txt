@@ -85,6 +85,7 @@ Rash modules are idempotent operations like Ansible.
 - dnf
 - docker_config
 - docker_container
+- docker_exec
 - docker_image
 - docker_volume
 - expect
@@ -94,6 +95,7 @@ Rash modules are idempotent operations like Ansible.
 - filesystem
 - find
 - firewalld
+- flatpak
 - gem
 - get_url
 - git

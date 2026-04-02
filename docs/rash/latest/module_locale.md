@@ -1,6 +1,6 @@
 ---
 title: locale
-weight: 5580
+weight: 5600
 indent: true
 ---
 
