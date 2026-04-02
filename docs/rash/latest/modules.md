@@ -128,6 +128,7 @@ E.g.:
 - [template](./module_template.html)
 - [timezone](./module_timezone.html)
 - [trace](./module_trace.html)
+- [ufw](./module_ufw.html)
 - [unarchive](./module_unarchive.html)
 - [uri](./module_uri.html)
 - [user](./module_user.html)

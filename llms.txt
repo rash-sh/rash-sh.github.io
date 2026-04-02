@@ -163,6 +163,7 @@ Rash modules are idempotent operations like Ansible.
 - template
 - timezone
 - trace
+- ufw
 - unarchive
 - uri
 - user
