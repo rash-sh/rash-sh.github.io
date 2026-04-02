@@ -87,6 +87,7 @@ Rash modules are idempotent operations like Ansible.
 - docker_container
 - docker_exec
 - docker_image
+- docker_prune
 - docker_volume
 - expect
 - fail
@@ -115,6 +116,7 @@ Rash modules are idempotent operations like Ansible.
 - json_file
 - kernel_blacklist
 - known_hosts
+- kubectl
 - lbu
 - lineinfile
 - locale
