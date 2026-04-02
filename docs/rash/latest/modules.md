@@ -118,6 +118,7 @@ E.g.:
 - [uri](./module_uri.html)
 - [user](./module_user.html)
 - [vault](./module_vault.html)
+- [vdo](./module_vdo.html)
 - [wait_for](./module_wait_for.html)
 - [wipefs](./module_wipefs.html)
 - [xml](./module_xml.html)
