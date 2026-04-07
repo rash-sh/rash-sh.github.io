@@ -30,6 +30,17 @@ layout: default
 </section>
 <div class="page">
   <div class="docs-menu">
+      <div class="docs-search">
+        <input
+          id="docs-search-input"
+          type="text"
+          placeholder="Loading..."
+          disabled
+          data-base-path="{{ '' | relative_url }}"
+          autocomplete="off"
+        />
+        <ul id="docs-search-results"></ul>
+      </div>
       <ul id="docs-ul"></ul>
   </div>
   <div class="docs-content">
@@ -158,3 +169,6 @@ layout: default
     menuDom.appendChild(itemDom);
   }
 </script>
+
+<script src="https://unpkg.com/lunr/lunr.min.js"></script>
+<script src="{{ "/js/search.js" | relative_url }}"></script>

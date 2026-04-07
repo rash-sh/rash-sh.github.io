@@ -298,6 +298,80 @@
       padding-right: 0;
     }
 
+    .docs-search {
+      position: relative;
+      margin-bottom: 20px;
+      padding-top: 30px;
+
+      input {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: $fontBody;
+        font-size: 14px;
+        color: $textDark;
+        background-color: $white;
+        box-sizing: border-box;
+        outline: none;
+        transition: border-color $timingFast ease-in-out;
+
+        &:focus {
+          border-color: $orange;
+        }
+
+        &:disabled {
+          background-color: $codeBackground;
+          cursor: wait;
+        }
+      }
+
+      #docs-search-results {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: $white;
+        border: 1px solid #ddd;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 4px 8px rgba($black, 0.1);
+        max-height: 300px;
+        overflow-y: auto;
+        z-index: 10;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          padding: 0;
+
+          a {
+            display: block;
+            padding: 8px 12px;
+            font-family: $fontBody;
+            font-size: 13px;
+            color: $textDark;
+            text-decoration: none;
+            transition: background-color $timingFastest ease-in-out;
+
+            &:hover {
+              background-color: $orangeLight;
+              color: $textDark;
+            }
+          }
+
+          &.no-results {
+            padding: 8px 12px;
+            font-family: $fontBody;
+            font-size: 13px;
+            color: $textMuted;
+          }
+        }
+      }
+    }
+
     & > ul {
       top: 0;
       position: -webkit-sticky;
