@@ -145,6 +145,7 @@ Rash modules are idempotent operations like Ansible.
 - pam_limits
 - parted
 - pause
+- pids
 - ping
 - pip
 - postgresql_db

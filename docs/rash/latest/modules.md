@@ -110,6 +110,7 @@ E.g.:
 - [pam_limits](./module_pam_limits.html)
 - [parted](./module_parted.html)
 - [pause](./module_pause.html)
+- [pids](./module_pids.html)
 - [ping](./module_ping.html)
 - [pip](./module_pip.html)
 - [postgresql_db](./module_postgresql_db.html)
