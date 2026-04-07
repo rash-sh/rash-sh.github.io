@@ -1,0 +1,16 @@
+---
+layout: null
+sitemap: false
+---
+[
+  {% assign latest_version = site.data.projects[0].versions[site.current_release_index].version %}
+  {% assign latest_path = "/docs/rash/" | append: latest_version | append: "/" %}
+  {% assign docs = site.pages | where_exp: 'page', 'page.url contains latest_path' %}
+  {% for page in docs %}
+  {
+    "title": {{ page.title | default: page.name | jsonify }},
+    "url": {{ page.url | relative_url | jsonify }},
+    "content": {{ page.content | strip_html | strip_newlines | normalize_whitespace | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
