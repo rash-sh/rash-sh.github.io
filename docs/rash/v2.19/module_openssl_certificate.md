@@ -1,6 +1,6 @@
 ---
 title: openssl_certificate
-weight: 5650
+weight: 5790
 indent: true
 ---
 
