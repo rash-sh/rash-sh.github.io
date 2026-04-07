@@ -1,6 +1,6 @@
 ---
 title: mdadm
-weight: 5690
+weight: 5700
 indent: true
 ---
 

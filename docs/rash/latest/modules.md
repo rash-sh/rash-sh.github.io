@@ -48,6 +48,7 @@ E.g.:
 - [debug](./module_debug.html)
 - [dmsetup](./module_dmsetup.html)
 - [dnf](./module_dnf.html)
+- [docker_compose](./module_docker_compose.html)
 - [docker_config](./module_docker_config.html)
 - [docker_container](./module_docker_container.html)
 - [docker_exec](./module_docker_exec.html)
