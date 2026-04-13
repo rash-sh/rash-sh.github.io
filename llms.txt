@@ -88,6 +88,7 @@ Rash modules are idempotent operations like Ansible.
 - docker_container
 - docker_exec
 - docker_image
+- docker_network
 - docker_prune
 - docker_volume
 - expect
@@ -133,6 +134,7 @@ Rash modules are idempotent operations like Ansible.
 - mongodb_user
 - mount
 - mysql_db
+- mysql_user
 - netplan
 - nftables
 - nmcli
@@ -150,6 +152,7 @@ Rash modules are idempotent operations like Ansible.
 - ping
 - pip
 - postgresql_db
+- postgresql_user
 - rabbitmq_user
 - reboot
 - redis
