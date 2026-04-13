@@ -94,6 +94,7 @@ E.g.:
 - [mdadm](./module_mdadm.html)
 - [meta](./module_meta.html)
 - [modprobe](./module_modprobe.html)
+- [mongodb_db](./module_mongodb_db.html)
 - [mongodb_user](./module_mongodb_user.html)
 - [mount](./module_mount.html)
 - [mysql_db](./module_mysql_db.html)
