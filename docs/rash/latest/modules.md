@@ -77,6 +77,7 @@ E.g.:
 - [helm_info](./module_helm_info.html)
 - [hostname](./module_hostname.html)
 - [include](./module_include.html)
+- [incus](./module_incus.html)
 - [ini_file](./module_ini_file.html)
 - [initramfs](./module_initramfs.html)
 - [interfaces_file](./module_interfaces_file.html)
