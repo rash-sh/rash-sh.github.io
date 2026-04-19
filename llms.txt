@@ -146,6 +146,7 @@ Rash modules are idempotent operations like Ansible.
 - mysql_user
 - netplan
 - nftables
+- nginx
 - nmcli
 - npm
 - openrc
@@ -179,6 +180,7 @@ Rash modules are idempotent operations like Ansible.
 - sgdisk
 - slurp
 - ssh_config
+- sshd_config
 - stat
 - sudoers
 - swapfile
