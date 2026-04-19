@@ -1,6 +1,6 @@
 ---
 title: firewalld
-weight: 5460
+weight: 5470
 indent: true
 ---
 

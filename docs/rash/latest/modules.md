@@ -22,6 +22,7 @@ E.g.:
 
 ## Modules index
 
+- [acl](./module_acl.html)
 - [alternatives](./module_alternatives.html)
 - [apk](./module_apk.html)
 - [apt](./module_apt.html)

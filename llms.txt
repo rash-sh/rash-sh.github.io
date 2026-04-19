@@ -57,6 +57,7 @@ Create an `entrypoint.rh` file:
 
 Rash modules are idempotent operations like Ansible.
 
+- acl
 - alternatives
 - apk
 - apt
