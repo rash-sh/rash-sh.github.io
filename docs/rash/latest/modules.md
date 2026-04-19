@@ -43,6 +43,7 @@ E.g.:
 - [consul_kv](./module_consul_kv.html)
 - [copy](./module_copy.html)
 - [cron](./module_cron.html)
+- [crypttab](./module_crypttab.html)
 - [dconf](./module_dconf.html)
 - [debconf](./module_debconf.html)
 - [debootstrap](./module_debootstrap.html)

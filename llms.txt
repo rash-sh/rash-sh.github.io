@@ -78,6 +78,7 @@ Rash modules are idempotent operations like Ansible.
 - consul_kv
 - copy
 - cron
+- crypttab
 - dconf
 - debconf
 - debootstrap
