@@ -117,6 +117,7 @@ Rash modules are idempotent operations like Ansible.
 - interfaces_file
 - ipaddr
 - iptables
+- iso_extract
 - java_keystore
 - jenkins_job
 - json_file

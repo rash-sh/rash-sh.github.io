@@ -82,6 +82,7 @@ E.g.:
 - [interfaces_file](./module_interfaces_file.html)
 - [ipaddr](./module_ipaddr.html)
 - [iptables](./module_iptables.html)
+- [iso_extract](./module_iso_extract.html)
 - [java_keystore](./module_java_keystore.html)
 - [jenkins_job](./module_jenkins_job.html)
 - [json_file](./module_json_file.html)
