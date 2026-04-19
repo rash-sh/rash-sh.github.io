@@ -169,6 +169,7 @@ Rash modules are idempotent operations like Ansible.
 - stat
 - synchronize
 - sysctl
+- syslog
 - systemd
 - tempfile
 - template

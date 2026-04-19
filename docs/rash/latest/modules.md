@@ -134,6 +134,7 @@ E.g.:
 - [stat](./module_stat.html)
 - [synchronize](./module_synchronize.html)
 - [sysctl](./module_sysctl.html)
+- [syslog](./module_syslog.html)
 - [systemd](./module_systemd.html)
 - [tempfile](./module_tempfile.html)
 - [template](./module_template.html)
