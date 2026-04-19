@@ -158,7 +158,9 @@ Rash modules are idempotent operations like Ansible.
 - pip
 - postgresql_db
 - postgresql_user
+- proxmox
 - rabbitmq_user
+- rclone
 - reboot
 - redis
 - replace
@@ -173,6 +175,7 @@ Rash modules are idempotent operations like Ansible.
 - slurp
 - ssh_config
 - stat
+- sudoers
 - swapfile
 - synchronize
 - sysctl
@@ -189,6 +192,7 @@ Rash modules are idempotent operations like Ansible.
 - vault
 - vdo
 - wait_for
+- wakeonlan
 - wipefs
 - xattr
 - xml
