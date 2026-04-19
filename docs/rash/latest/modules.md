@@ -54,6 +54,7 @@ E.g.:
 - [docker_container](./module_docker_container.html)
 - [docker_exec](./module_docker_exec.html)
 - [docker_image](./module_docker_image.html)
+- [docker_info](./module_docker_info.html)
 - [docker_network](./module_docker_network.html)
 - [docker_prune](./module_docker_prune.html)
 - [docker_volume](./module_docker_volume.html)
