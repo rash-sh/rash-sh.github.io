@@ -160,6 +160,7 @@ Rash modules are idempotent operations like Ansible.
 - rabbitmq_user
 - reboot
 - redis
+- replace
 - runit
 - script
 - seboolean

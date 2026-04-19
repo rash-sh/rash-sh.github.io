@@ -125,6 +125,7 @@ E.g.:
 - [rabbitmq_user](./module_rabbitmq_user.html)
 - [reboot](./module_reboot.html)
 - [redis](./module_redis.html)
+- [replace](./module_replace.html)
 - [runit](./module_runit.html)
 - [script](./module_script.html)
 - [seboolean](./module_seboolean.html)
