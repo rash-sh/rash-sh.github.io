@@ -104,6 +104,7 @@ E.g.:
 - [nftables](./module_nftables.html)
 - [nmcli](./module_nmcli.html)
 - [npm](./module_npm.html)
+- [openrc](./module_openrc.html)
 - [openssl_certificate](./module_openssl_certificate.html)
 - [openssl_csr](./module_openssl_csr.html)
 - [openssl_privatekey](./module_openssl_privatekey.html)

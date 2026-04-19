@@ -139,6 +139,7 @@ Rash modules are idempotent operations like Ansible.
 - nftables
 - nmcli
 - npm
+- openrc
 - openssl_certificate
 - openssl_csr
 - openssl_privatekey
