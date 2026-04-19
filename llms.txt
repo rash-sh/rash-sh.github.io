@@ -73,6 +73,7 @@ Rash modules are idempotent operations like Ansible.
 - blkdiscard
 - block
 - cargo
+- cgroups
 - chroot
 - command
 - composer
@@ -170,6 +171,7 @@ Rash modules are idempotent operations like Ansible.
 - reboot
 - redis
 - replace
+- restic
 - runit
 - script
 - seboolean
