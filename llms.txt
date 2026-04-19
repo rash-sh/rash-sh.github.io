@@ -172,6 +172,7 @@ Rash modules are idempotent operations like Ansible.
 - slurp
 - ssh_config
 - stat
+- swapfile
 - synchronize
 - sysctl
 - syslog

@@ -137,6 +137,7 @@ E.g.:
 - [slurp](./module_slurp.html)
 - [ssh_config](./module_ssh_config.html)
 - [stat](./module_stat.html)
+- [swapfile](./module_swapfile.html)
 - [synchronize](./module_synchronize.html)
 - [sysctl](./module_sysctl.html)
 - [syslog](./module_syslog.html)
