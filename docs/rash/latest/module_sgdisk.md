@@ -1,6 +1,6 @@
 ---
 title: sgdisk
-weight: 6080
+weight: 6110
 indent: true
 ---
 

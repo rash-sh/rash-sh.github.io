@@ -1,6 +1,6 @@
 ---
 title: openrc
-weight: 5830
+weight: 5860
 indent: true
 ---
 

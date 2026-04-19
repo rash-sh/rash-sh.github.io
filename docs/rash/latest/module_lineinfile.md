@@ -1,6 +1,6 @@
 ---
 title: lineinfile
-weight: 5640
+weight: 5670
 indent: true
 ---
 

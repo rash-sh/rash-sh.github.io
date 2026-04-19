@@ -1,6 +1,6 @@
 ---
 title: kubectl
-weight: 5620
+weight: 5650
 indent: true
 ---
 

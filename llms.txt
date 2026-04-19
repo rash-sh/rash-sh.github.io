@@ -68,6 +68,7 @@ Rash modules are idempotent operations like Ansible.
 - async_status
 - at
 - authorized_key
+- aws_s3
 - blkdiscard
 - block
 - cargo
@@ -91,6 +92,7 @@ Rash modules are idempotent operations like Ansible.
 - docker_network
 - docker_prune
 - docker_volume
+- dpkg_selections
 - expect
 - fail
 - fail2ban
@@ -112,6 +114,7 @@ Rash modules are idempotent operations like Ansible.
 - ini_file
 - initramfs
 - interfaces_file
+- ipaddr
 - iptables
 - java_keystore
 - jenkins_job
