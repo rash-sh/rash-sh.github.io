@@ -1,6 +1,6 @@
 ---
 title: kernel_blacklist
-weight: 5720
+weight: 5730
 indent: true
 ---
 

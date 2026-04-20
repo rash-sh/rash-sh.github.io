@@ -117,6 +117,7 @@ Rash modules are idempotent operations like Ansible.
 - helm
 - helm_info
 - hostname
+- htpasswd
 - include
 - incus
 - ini_file
