@@ -1,6 +1,6 @@
 ---
 title: gpg_key
-weight: 5530
+weight: 5540
 indent: true
 ---
 

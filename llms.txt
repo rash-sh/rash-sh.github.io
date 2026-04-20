@@ -75,6 +75,7 @@ Rash modules are idempotent operations like Ansible.
 - cargo
 - cgroups
 - chroot
+- cloud_init
 - command
 - composer
 - consul_kv
@@ -163,6 +164,7 @@ Rash modules are idempotent operations like Ansible.
 - pids
 - ping
 - pip
+- podman
 - postgresql_db
 - postgresql_user
 - proxmox
@@ -172,6 +174,7 @@ Rash modules are idempotent operations like Ansible.
 - redis
 - replace
 - restic
+- route
 - runit
 - script
 - seboolean
