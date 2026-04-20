@@ -177,6 +177,7 @@ E.g.:
 - [wait_for](./module_wait_for.html)
 - [wakeonlan](./module_wakeonlan.html)
 - [wipefs](./module_wipefs.html)
+- [wireguard](./module_wireguard.html)
 - [xattr](./module_xattr.html)
 - [xml](./module_xml.html)
 - [yum_repository](./module_yum_repository.html)

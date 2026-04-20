@@ -212,6 +212,7 @@ Rash modules are idempotent operations like Ansible.
 - wait_for
 - wakeonlan
 - wipefs
+- wireguard
 - xattr
 - xml
 - yum_repository
