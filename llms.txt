@@ -169,6 +169,7 @@ Rash modules are idempotent operations like Ansible.
 - pip
 - podman
 - postgresql_db
+- postgresql_query
 - postgresql_user
 - proxmox
 - rabbitmq_user

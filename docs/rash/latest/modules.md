@@ -134,6 +134,7 @@ E.g.:
 - [pip](./module_pip.html)
 - [podman](./module_podman.html)
 - [postgresql_db](./module_postgresql_db.html)
+- [postgresql_query](./module_postgresql_query.html)
 - [postgresql_user](./module_postgresql_user.html)
 - [proxmox](./module_proxmox.html)
 - [rabbitmq_user](./module_rabbitmq_user.html)
