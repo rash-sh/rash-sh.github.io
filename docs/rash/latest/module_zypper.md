@@ -1,6 +1,6 @@
 ---
 title: zypper
-weight: 6560
+weight: 6570
 indent: true
 ---
 

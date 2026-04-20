@@ -110,6 +110,7 @@ E.g.:
 - [mongodb_user](./module_mongodb_user.html)
 - [mount](./module_mount.html)
 - [mysql_db](./module_mysql_db.html)
+- [mysql_query](./module_mysql_query.html)
 - [mysql_user](./module_mysql_user.html)
 - [netplan](./module_netplan.html)
 - [nftables](./module_nftables.html)

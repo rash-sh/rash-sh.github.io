@@ -145,6 +145,7 @@ Rash modules are idempotent operations like Ansible.
 - mongodb_user
 - mount
 - mysql_db
+- mysql_query
 - mysql_user
 - netplan
 - nftables
