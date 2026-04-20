@@ -155,6 +155,7 @@ E.g.:
 - [sysctl](./module_sysctl.html)
 - [syslog](./module_syslog.html)
 - [systemd](./module_systemd.html)
+- [tailscale](./module_tailscale.html)
 - [tempfile](./module_tempfile.html)
 - [template](./module_template.html)
 - [timezone](./module_timezone.html)

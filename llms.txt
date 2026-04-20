@@ -190,6 +190,7 @@ Rash modules are idempotent operations like Ansible.
 - sysctl
 - syslog
 - systemd
+- tailscale
 - tempfile
 - template
 - timezone
