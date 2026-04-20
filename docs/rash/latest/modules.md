@@ -126,6 +126,7 @@ E.g.:
 - [pacman](./module_pacman.html)
 - [pam_limits](./module_pam_limits.html)
 - [parted](./module_parted.html)
+- [patch](./module_patch.html)
 - [pause](./module_pause.html)
 - [pids](./module_pids.html)
 - [ping](./module_ping.html)
