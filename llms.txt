@@ -161,6 +161,7 @@ Rash modules are idempotent operations like Ansible.
 - pacman
 - pam_limits
 - parted
+- passwordstore
 - patch
 - pause
 - pids
