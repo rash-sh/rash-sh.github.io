@@ -1,6 +1,6 @@
 ---
 title: nmcli
-weight: 5970
+weight: 6020
 indent: true
 ---
 

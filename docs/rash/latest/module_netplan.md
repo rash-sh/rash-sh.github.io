@@ -1,6 +1,6 @@
 ---
 title: netplan
-weight: 5940
+weight: 5990
 indent: true
 ---
 

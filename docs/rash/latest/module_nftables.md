@@ -1,6 +1,6 @@
 ---
 title: nftables
-weight: 5950
+weight: 6000
 indent: true
 ---
 

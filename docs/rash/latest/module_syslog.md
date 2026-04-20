@@ -1,6 +1,6 @@
 ---
 title: syslog
-weight: 6420
+weight: 6480
 indent: true
 ---
 

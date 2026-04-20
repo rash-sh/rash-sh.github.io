@@ -103,6 +103,7 @@ Rash modules are idempotent operations like Ansible.
 - expect
 - fail
 - fail2ban
+- fetch
 - file
 - filesystem
 - find
@@ -125,6 +126,7 @@ Rash modules are idempotent operations like Ansible.
 - interfaces_file
 - ipaddr
 - iptables
+- iscsi
 - iso_extract
 - java_keystore
 - jenkins_job
@@ -134,9 +136,11 @@ Rash modules are idempotent operations like Ansible.
 - kubectl
 - kubernetes
 - lbu
+- libvirt
 - lineinfile
 - locale
 - logrotate
+- luks
 - lvg
 - lvol
 - lxd_container
@@ -147,6 +151,7 @@ Rash modules are idempotent operations like Ansible.
 - mongodb_db
 - mongodb_user
 - mount
+- mqtt
 - mysql_db
 - mysql_query
 - mysql_user
@@ -195,6 +200,7 @@ Rash modules are idempotent operations like Ansible.
 - sshd_config
 - stat
 - sudoers
+- supervisor
 - swapfile
 - synchronize
 - sysctl

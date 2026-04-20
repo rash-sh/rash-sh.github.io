@@ -1,6 +1,6 @@
 ---
 title: mysql_user
-weight: 5930
+weight: 5980
 indent: true
 ---
 
