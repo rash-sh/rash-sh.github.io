@@ -96,6 +96,7 @@ E.g.:
 - [kernel_blacklist](./module_kernel_blacklist.html)
 - [known_hosts](./module_known_hosts.html)
 - [kubectl](./module_kubectl.html)
+- [kubernetes](./module_kubernetes.html)
 - [lbu](./module_lbu.html)
 - [lineinfile](./module_lineinfile.html)
 - [locale](./module_locale.html)

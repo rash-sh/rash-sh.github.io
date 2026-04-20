@@ -131,6 +131,7 @@ Rash modules are idempotent operations like Ansible.
 - kernel_blacklist
 - known_hosts
 - kubectl
+- kubernetes
 - lbu
 - lineinfile
 - locale
