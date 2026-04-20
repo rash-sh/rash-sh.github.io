@@ -37,6 +37,7 @@ E.g.:
 - [aws_s3](./module_aws_s3.html)
 - [blkdiscard](./module_blkdiscard.html)
 - [block](./module_block.html)
+- [borgmatic](./module_borgmatic.html)
 - [cargo](./module_cargo.html)
 - [cgroups](./module_cgroups.html)
 - [chroot](./module_chroot.html)
