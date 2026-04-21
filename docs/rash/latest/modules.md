@@ -129,6 +129,7 @@ E.g.:
 - [modprobe](./module_modprobe.html)
 - [mongodb_collection](./module_mongodb_collection.html)
 - [mongodb_db](./module_mongodb_db.html)
+- [mongodb_replicaset](./module_mongodb_replicaset.html)
 - [mongodb_user](./module_mongodb_user.html)
 - [mount](./module_mount.html)
 - [mqtt](./module_mqtt.html)

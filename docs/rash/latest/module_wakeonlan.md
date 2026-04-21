@@ -1,6 +1,6 @@
 ---
 title: wakeonlan
-weight: 6850
+weight: 6860
 indent: true
 ---
 

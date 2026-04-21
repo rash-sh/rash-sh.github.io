@@ -164,6 +164,7 @@ Rash modules are idempotent operations like Ansible.
 - modprobe
 - mongodb_collection
 - mongodb_db
+- mongodb_replicaset
 - mongodb_user
 - mount
 - mqtt
