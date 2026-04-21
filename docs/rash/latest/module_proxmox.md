@@ -1,6 +1,6 @@
 ---
 title: proxmox
-weight: 6350
+weight: 6380
 indent: true
 ---
 

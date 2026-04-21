@@ -1,6 +1,6 @@
 ---
 title: mqtt
-weight: 6050
+weight: 6080
 indent: true
 ---
 

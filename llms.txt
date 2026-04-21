@@ -93,6 +93,7 @@ Rash modules are idempotent operations like Ansible.
 - debconf
 - debootstrap
 - debug
+- distro_package
 - dmsetup
 - dnf
 - docker_compose
@@ -119,6 +120,7 @@ Rash modules are idempotent operations like Ansible.
 - gem
 - get_url
 - git
+- github_release
 - gpg_key
 - group
 - grub
@@ -151,6 +153,7 @@ Rash modules are idempotent operations like Ansible.
 - logrotate
 - luks
 - lvg
+- lvm_snapshot
 - lvol
 - lxd_container
 - make
