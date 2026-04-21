@@ -195,6 +195,7 @@ E.g.:
 - [uri](./module_uri.html)
 - [user](./module_user.html)
 - [vault](./module_vault.html)
+- [vault_secret](./module_vault_secret.html)
 - [vdo](./module_vdo.html)
 - [wait_for](./module_wait_for.html)
 - [wakeonlan](./module_wakeonlan.html)
