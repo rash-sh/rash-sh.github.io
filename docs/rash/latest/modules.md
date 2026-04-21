@@ -42,6 +42,7 @@ E.g.:
 - [borgmatic](./module_borgmatic.html)
 - [btrfs](./module_btrfs.html)
 - [cargo](./module_cargo.html)
+- [certbot](./module_certbot.html)
 - [cgroups](./module_cgroups.html)
 - [chroot](./module_chroot.html)
 - [cloud_init](./module_cloud_init.html)
