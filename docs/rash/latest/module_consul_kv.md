@@ -1,6 +1,6 @@
 ---
 title: consul_kv
-weight: 5240
+weight: 5270
 indent: true
 ---
 

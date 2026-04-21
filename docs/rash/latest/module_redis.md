@@ -1,6 +1,6 @@
 ---
 title: redis
-weight: 6280
+weight: 6380
 indent: true
 ---
 

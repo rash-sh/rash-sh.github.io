@@ -1,6 +1,6 @@
 ---
 title: cloudflare_dns
-weight: 5210
+weight: 5230
 indent: true
 ---
 

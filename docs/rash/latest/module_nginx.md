@@ -1,6 +1,6 @@
 ---
 title: nginx
-weight: 6020
+weight: 6110
 indent: true
 ---
 

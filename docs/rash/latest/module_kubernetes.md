@@ -1,6 +1,6 @@
 ---
 title: kubernetes
-weight: 5790
+weight: 5860
 indent: true
 ---
 

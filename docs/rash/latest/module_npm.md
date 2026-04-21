@@ -1,6 +1,6 @@
 ---
 title: npm
-weight: 6040
+weight: 6130
 indent: true
 ---
 
