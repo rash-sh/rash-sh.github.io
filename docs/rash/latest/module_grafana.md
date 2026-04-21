@@ -1,6 +1,6 @@
 ---
 title: grafana
-weight: 5680
+weight: 5068
 indent: true
 ---
 

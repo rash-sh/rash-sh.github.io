@@ -1,6 +1,6 @@
 ---
 title: mysql_db
-weight: 6150
+weight: 5115
 indent: true
 ---
 

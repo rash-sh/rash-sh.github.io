@@ -1,6 +1,6 @@
 ---
 title: cloud_init
-weight: 5240
+weight: 5024
 indent: true
 ---
 

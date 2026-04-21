@@ -1,6 +1,6 @@
 ---
 title: parted
-weight: 6330
+weight: 5133
 indent: true
 ---
 

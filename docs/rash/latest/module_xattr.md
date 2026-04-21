@@ -1,6 +1,6 @@
 ---
 title: xattr
-weight: 6950
+weight: 5195
 indent: true
 ---
 

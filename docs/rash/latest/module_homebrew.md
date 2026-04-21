@@ -1,6 +1,6 @@
 ---
 title: homebrew
-weight: 5750
+weight: 5075
 indent: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: shell
-weight: 6630
+weight: 5163
 indent: true
 ---
 

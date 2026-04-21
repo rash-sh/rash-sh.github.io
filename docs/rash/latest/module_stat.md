@@ -1,6 +1,6 @@
 ---
 title: stat
-weight: 6680
+weight: 5168
 indent: true
 ---
 

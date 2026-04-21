@@ -1,6 +1,6 @@
 ---
 title: dmsetup
-weight: 5390
+weight: 5039
 indent: true
 ---
 

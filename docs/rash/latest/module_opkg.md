@@ -1,6 +1,6 @@
 ---
 title: opkg
-weight: 6290
+weight: 5129
 indent: true
 ---
 

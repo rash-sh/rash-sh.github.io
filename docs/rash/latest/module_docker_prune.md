@@ -1,6 +1,6 @@
 ---
 title: docker_prune
-weight: 5490
+weight: 5049
 indent: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: netbox_ipam
-weight: 6190
+weight: 5119
 indent: true
 ---
 

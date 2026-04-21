@@ -1,6 +1,6 @@
 ---
 title: fail2ban
-weight: 5560
+weight: 5056
 indent: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: chroot
-weight: 5230
+weight: 5023
 indent: true
 ---
 

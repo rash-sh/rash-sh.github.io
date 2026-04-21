@@ -1,6 +1,6 @@
 ---
 title: sysctl
-weight: 6730
+weight: 5173
 indent: true
 ---
 

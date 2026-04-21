@@ -1,6 +1,6 @@
 ---
 title: vault_token
-weight: 6890
+weight: 5189
 indent: true
 ---
 

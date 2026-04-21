@@ -1,6 +1,6 @@
 ---
 title: synchronize
-weight: 6720
+weight: 5172
 indent: true
 ---
 

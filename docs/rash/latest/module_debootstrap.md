@@ -1,6 +1,6 @@
 ---
 title: debootstrap
-weight: 5360
+weight: 5036
 indent: true
 ---
 

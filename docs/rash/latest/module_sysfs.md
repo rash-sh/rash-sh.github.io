@@ -1,6 +1,6 @@
 ---
 title: sysfs
-weight: 6740
+weight: 5174
 indent: true
 ---
 

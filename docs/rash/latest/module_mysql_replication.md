@@ -1,6 +1,6 @@
 ---
 title: mysql_replication
-weight: 6170
+weight: 5117
 indent: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: rabbitmq_user
-weight: 6480
+weight: 5148
 indent: true
 ---
 

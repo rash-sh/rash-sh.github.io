@@ -1,6 +1,6 @@
 ---
 title: authorized_key
-weight: 5140
+weight: 5014
 indent: true
 ---
 

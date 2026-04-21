@@ -1,6 +1,6 @@
 ---
 title: haproxy
-weight: 5720
+weight: 5072
 indent: true
 ---
 

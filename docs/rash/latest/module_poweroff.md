@@ -1,6 +1,6 @@
 ---
 title: poweroff
-weight: 6440
+weight: 5144
 indent: true
 ---
 

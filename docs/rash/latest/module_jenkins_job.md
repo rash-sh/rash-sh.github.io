@@ -1,6 +1,6 @@
 ---
 title: jenkins_job
-weight: 5880
+weight: 5088
 indent: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: openssl_privatekey
-weight: 6280
+weight: 5128
 indent: true
 ---
 

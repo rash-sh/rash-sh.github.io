@@ -1,6 +1,6 @@
 ---
 title: crypttab
-weight: 5330
+weight: 5033
 indent: true
 ---
 
