@@ -77,6 +77,7 @@ Rash modules are idempotent operations like Ansible.
 - cgroups
 - chroot
 - cloud_init
+- cloudflare_dns
 - command
 - composer
 - consul_kv

@@ -1,6 +1,6 @@
 ---
 title: mysql_query
-weight: 5970
+weight: 5980
 indent: true
 ---
 

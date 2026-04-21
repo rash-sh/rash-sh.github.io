@@ -42,6 +42,7 @@ E.g.:
 - [cgroups](./module_cgroups.html)
 - [chroot](./module_chroot.html)
 - [cloud_init](./module_cloud_init.html)
+- [cloudflare_dns](./module_cloudflare_dns.html)
 - [command](./module_command.html)
 - [composer](./module_composer.html)
 - [consul_kv](./module_consul_kv.html)
