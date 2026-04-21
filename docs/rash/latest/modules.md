@@ -94,6 +94,7 @@ E.g.:
 - [haproxy](./module_haproxy.html)
 - [helm](./module_helm.html)
 - [helm_info](./module_helm_info.html)
+- [homebrew](./module_homebrew.html)
 - [hostname](./module_hostname.html)
 - [htpasswd](./module_htpasswd.html)
 - [include](./module_include.html)

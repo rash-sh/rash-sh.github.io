@@ -1,6 +1,6 @@
 ---
 title: sshd_config
-weight: 6620
+weight: 6630
 indent: true
 ---
 
