@@ -1,6 +1,6 @@
 ---
 title: ssh_config
-weight: 6560
+weight: 6600
 indent: true
 ---
 

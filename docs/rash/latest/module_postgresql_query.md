@@ -1,6 +1,6 @@
 ---
 title: postgresql_query
-weight: 6350
+weight: 6370
 indent: true
 ---
 

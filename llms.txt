@@ -122,6 +122,8 @@ Rash modules are idempotent operations like Ansible.
 - git
 - github_release
 - gpg_key
+- grafana
+- grafana_dashboard
 - group
 - grub
 - haproxy
@@ -193,7 +195,9 @@ Rash modules are idempotent operations like Ansible.
 - postgresql_db
 - postgresql_query
 - postgresql_user
+- poweroff
 - prometheus
+- prometheus_rule
 - proxmox
 - rabbitmq_user
 - rclone

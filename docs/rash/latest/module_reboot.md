@@ -1,6 +1,6 @@
 ---
 title: reboot
-weight: 6410
+weight: 6450
 indent: true
 ---
 

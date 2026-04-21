@@ -1,6 +1,6 @@
 ---
 title: sudoers
-weight: 6590
+weight: 6630
 indent: true
 ---
 
