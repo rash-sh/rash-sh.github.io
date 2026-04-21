@@ -1,6 +1,6 @@
 ---
 title: ping
-weight: 6270
+weight: 6280
 indent: true
 ---
 

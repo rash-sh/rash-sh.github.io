@@ -61,6 +61,7 @@ Rash modules are idempotent operations like Ansible.
 - alternatives
 - apk
 - apt
+- apt_hold
 - apt_repository
 - archive
 - assemble

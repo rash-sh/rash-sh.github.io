@@ -26,6 +26,7 @@ E.g.:
 - [alternatives](./module_alternatives.html)
 - [apk](./module_apk.html)
 - [apt](./module_apt.html)
+- [apt_hold](./module_apt_hold.html)
 - [apt_repository](./module_apt_repository.html)
 - [archive](./module_archive.html)
 - [assemble](./module_assemble.html)
