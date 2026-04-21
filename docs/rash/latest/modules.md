@@ -207,6 +207,7 @@ E.g.:
 - [user](./module_user.html)
 - [vault](./module_vault.html)
 - [vault_secret](./module_vault_secret.html)
+- [vault_token](./module_vault_token.html)
 - [vdo](./module_vdo.html)
 - [wait_for](./module_wait_for.html)
 - [wakeonlan](./module_wakeonlan.html)

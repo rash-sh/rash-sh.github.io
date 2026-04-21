@@ -242,6 +242,7 @@ Rash modules are idempotent operations like Ansible.
 - user
 - vault
 - vault_secret
+- vault_token
 - vdo
 - wait_for
 - wakeonlan
