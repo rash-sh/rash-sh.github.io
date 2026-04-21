@@ -1,6 +1,6 @@
 ---
 title: vault_secret
-weight: 6850
+weight: 6880
 indent: true
 ---
 

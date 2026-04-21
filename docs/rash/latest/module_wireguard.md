@@ -1,6 +1,6 @@
 ---
 title: wireguard
-weight: 6910
+weight: 6940
 indent: true
 ---
 
