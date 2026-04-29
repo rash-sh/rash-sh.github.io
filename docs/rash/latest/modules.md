@@ -142,6 +142,7 @@ E.g.:
 - [mysql_user](./module_mysql_user.html)
 - [netbox_ipam](./module_netbox_ipam.html)
 - [netplan](./module_netplan.html)
+- [networkd](./module_networkd.html)
 - [nftables](./module_nftables.html)
 - [nginx](./module_nginx.html)
 - [nmcli](./module_nmcli.html)

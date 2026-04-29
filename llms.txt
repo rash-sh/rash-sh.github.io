@@ -177,6 +177,7 @@ Rash modules are idempotent operations like Ansible.
 - mysql_user
 - netbox_ipam
 - netplan
+- networkd
 - nftables
 - nginx
 - nmcli
