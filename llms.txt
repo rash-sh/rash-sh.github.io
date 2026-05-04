@@ -182,6 +182,7 @@ Rash modules are idempotent operations like Ansible.
 - nginx
 - nmcli
 - npm
+- nsupdate
 - openrc
 - openssl_certificate
 - openssl_csr

@@ -1,6 +1,6 @@
 ---
 title: smartctl
-weight: 5166
+weight: 5167
 indent: true
 ---
 

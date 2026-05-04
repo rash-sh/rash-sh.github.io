@@ -147,6 +147,7 @@ E.g.:
 - [nginx](./module_nginx.html)
 - [nmcli](./module_nmcli.html)
 - [npm](./module_npm.html)
+- [nsupdate](./module_nsupdate.html)
 - [openrc](./module_openrc.html)
 - [openssl_certificate](./module_openssl_certificate.html)
 - [openssl_csr](./module_openssl_csr.html)

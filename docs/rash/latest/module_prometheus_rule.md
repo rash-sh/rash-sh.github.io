@@ -1,6 +1,6 @@
 ---
 title: prometheus_rule
-weight: 5147
+weight: 5148
 indent: true
 ---
 
