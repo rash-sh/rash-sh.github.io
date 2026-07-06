@@ -24,14 +24,14 @@ check_mode:
 
 | Parameter | Required | Type    | Values            | Description                                              |
 |-----------|----------|---------|-------------------|----------------------------------------------------------|
-| dashboard |          |         |                   | Dashboard JSON definition as a dict.                     |
-| folder    |          | string  |                   | Folder name to place the dashboard in.                   |
 | name      | true     | string  |                   | Dashboard name (used for identification and display).    |
-| overwrite |          | boolean |                   | Whether to overwrite an existing dashboard if it exists. |
 | state     |          | string  | present<br>absent | The desired state of the dashboard.                      |
-| token     |          | string  |                   | Grafana API token for authentication.                    |
+| folder    |          | string  |                   | Folder name to place the dashboard in.                   |
+| dashboard |          |         |                   | Dashboard JSON definition as a dict.                     |
+| overwrite |          | boolean |                   | Whether to overwrite an existing dashboard if it exists. |
 | uid       |          | string  |                   | Dashboard UID (unique identifier).                       |
 | url       |          | string  |                   | Grafana server URL.                                      |
+| token     |          | string  |                   | Grafana API token for authentication.                    |
 
 ## Examples
 

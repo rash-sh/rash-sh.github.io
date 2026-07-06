@@ -22,9 +22,9 @@ check_mode:
 |-----------|----------|---------|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | name      | true     | string  |                                                                                                  | Name of package to configure.                                                                                    |
 | question  |          | string  |                                                                                                  | A debconf configuration setting.                                                                                 |
-| unseen    |          | boolean |                                                                                                  | Do not set 'seen' flag when pre-seeding.                                                                         |
 | value     |          | string  |                                                                                                  | Value to set the configuration to.                                                                               |
 | vtype     |          | string  | string<br>password<br>boolean<br>select<br>multiselect<br>note<br>text<br>error<br>title<br>seen | The type of the value supplied (string, password, boolean, select, multiselect, note, text, error, title, seen). |
+| unseen    |          | boolean |                                                                                                  | Do not set 'seen' flag when pre-seeding.                                                                         |
 
 ## Example
 

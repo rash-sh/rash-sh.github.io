@@ -20,19 +20,19 @@ check_mode:
 
 | Parameter      | Required | Type    | Values                              | Description                                                           |
 |----------------|----------|---------|-------------------------------------|-----------------------------------------------------------------------|
-| address        |          | string  |                                     | IP address or prefix CIDR (required for ip_address and prefix types). |
-| description    |          | string  |                                     | Description for the resource.                                         |
-| rd             |          | string  |                                     | Route distinguisher for VRF (e.g. "65000:100").                       |
-| state          |          | string  | present<br>absent<br>query          | Desired state of the resource. **[default: `"present"`]**             |
-| tenant         |          | string  |                                     | Tenant name to assign.                                                |
-| timeout        |          | integer |                                     | Timeout in seconds for API requests.                                  |
+| url            | true     | string  |                                     | NetBox instance URL.                                                  |
 | token          | true     | string  |                                     | NetBox API token.                                                     |
 | type           |          | string  | ip_address<br>prefix<br>vlan<br>vrf | Type of NetBox IPAM object to manage. **[default: `"ip_address"`]**   |
-| url            | true     | string  |                                     | NetBox instance URL.                                                  |
-| validate_certs |          | boolean |                                     | If false, SSL certificates will not be validated.                     |
+| address        |          | string  |                                     | IP address or prefix CIDR (required for ip_address and prefix types). |
+| state          |          | string  | present<br>absent<br>query          | Desired state of the resource. **[default: `"present"`]**             |
+| description    |          | string  |                                     | Description for the resource.                                         |
+| tenant         |          | string  |                                     | Tenant name to assign.                                                |
 | vlan_id        |          | integer |                                     | VLAN ID (required for vlan type).                                     |
 | vlan_name      |          | string  |                                     | VLAN name (for vlan type).                                            |
 | vrf_name       |          | string  |                                     | VRF name (required for vrf type).                                     |
+| rd             |          | string  |                                     | Route distinguisher for VRF (e.g. "65000:100").                       |
+| timeout        |          | integer |                                     | Timeout in seconds for API requests.                                  |
+| validate_certs |          | boolean |                                     | If false, SSL certificates will not be validated.                     |
 
 ## Examples
 

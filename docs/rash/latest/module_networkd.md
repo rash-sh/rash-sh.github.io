@@ -20,21 +20,21 @@ check_mode:
 
 | Parameter   | Required | Type    | Values                                                                                   | Description                                                                                   |
 |-------------|----------|---------|------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| addresses   |          | array   |                                                                                          | IP addresses for the interface.                                                               |
-| backup      |          | boolean |                                                                                          | Create backup of existing config file.                                                        |
-| config      |          | string  |                                                                                          | Raw INI content to use instead of generated config.                                           |
-| dhcp        |          | boolean |                                                                                          | Enable DHCP (ipv4, ipv6, true, false). **[default: `false`]**                                 |
-| directory   |          | string  |                                                                                          | Path to the systemd-networkd configuration directory. **[default: `"/etc/systemd/network"`]** |
-| dns         |          | array   |                                                                                          | DNS servers.                                                                                  |
-| gateway     |          | string  |                                                                                          | Default gateway.                                                                              |
-| interfaces  |          | array   |                                                                                          | Interface names to match.                                                                     |
-| mtu         |          | integer |                                                                                          | MTU for the link.                                                                             |
 | name        | true     | string  |                                                                                          | Name of the configuration file (without extension).                                           |
-| netdev_kind |          | string  | bridge<br>bond<br>vlan<br>macvlan<br>ipvlan<br>vxlan<br>tun<br>tap<br>wireguard<br>dummy | Netdev kind (bridge, bond, vlan, etc.).                                                       |
-| restart     |          | boolean |                                                                                          | Restart systemd-networkd after changes. **[default: `true`]**                                 |
-| state       |          | string  | present<br>absent                                                                        | Whether the configuration should exist or not. **[default: `"present"`]**                     |
 | type        | true     | string  | network<br>link<br>netdev                                                                | Type of configuration: network, link, or netdev.                                              |
+| state       |          | string  | present<br>absent                                                                        | Whether the configuration should exist or not. **[default: `"present"`]**                     |
+| interfaces  |          | array   |                                                                                          | Interface names to match.                                                                     |
+| addresses   |          | array   |                                                                                          | IP addresses for the interface.                                                               |
+| gateway     |          | string  |                                                                                          | Default gateway.                                                                              |
+| dns         |          | array   |                                                                                          | DNS servers.                                                                                  |
+| dhcp        |          | boolean |                                                                                          | Enable DHCP (ipv4, ipv6, true, false). **[default: `false`]**                                 |
 | vlan_id     |          | integer |                                                                                          | VLAN ID (for netdev type vlan).                                                               |
+| netdev_kind |          | string  | bridge<br>bond<br>vlan<br>macvlan<br>ipvlan<br>vxlan<br>tun<br>tap<br>wireguard<br>dummy | Netdev kind (bridge, bond, vlan, etc.).                                                       |
+| mtu         |          | integer |                                                                                          | MTU for the link.                                                                             |
+| backup      |          | boolean |                                                                                          | Create backup of existing config file.                                                        |
+| directory   |          | string  |                                                                                          | Path to the systemd-networkd configuration directory. **[default: `"/etc/systemd/network"`]** |
+| restart     |          | boolean |                                                                                          | Restart systemd-networkd after changes. **[default: `true`]**                                 |
+| config      |          | string  |                                                                                          | Raw INI content to use instead of generated config.                                           |
 
 ## Examples
 

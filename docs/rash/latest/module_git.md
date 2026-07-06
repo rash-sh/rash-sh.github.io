@@ -22,15 +22,15 @@ diff_mode:
 
 | Parameter      | Required | Type    | Values | Description                                                                         |
 |----------------|----------|---------|--------|-------------------------------------------------------------------------------------|
-| accept_hostkey |          | boolean |        | Automatically accept the host key when connecting via SSH.                          |
-| depth          |          | integer |        | Create a shallow clone with a history truncated to the specified number of commits. |
-| dest           | true     | string  |        | The destination path where the repository should be cloned.                         |
-| force          |          | boolean |        | Force a reset to the specified version, discarding any local changes.               |
-| key_file       |          | string  |        | Path to the SSH private key file to use for authentication.                         |
 | repo           | true     | string  |        | The repository URL to clone.                                                        |
+| dest           | true     | string  |        | The destination path where the repository should be cloned.                         |
+| version        |          | string  |        | The version to checkout. Can be a branch, tag, or commit hash.                      |
+| depth          |          | integer |        | Create a shallow clone with a history truncated to the specified number of commits. |
 | single_branch  |          | boolean |        | Clone only the specified branch.                                                    |
 | update         |          | boolean |        | Update an existing repository to the latest revision.                               |
-| version        |          | string  |        | The version to checkout. Can be a branch, tag, or commit hash.                      |
+| key_file       |          | string  |        | Path to the SSH private key file to use for authentication.                         |
+| accept_hostkey |          | boolean |        | Automatically accept the host key when connecting via SSH.                          |
+| force          |          | boolean |        | Force a reset to the specified version, discarding any local changes.               |
 
 {$include_doc /// ## Examples
 ///

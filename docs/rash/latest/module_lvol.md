@@ -20,14 +20,14 @@ check_mode:
 
 | Parameter  | Required | Type    | Values            | Description                                                                |
 |------------|----------|---------|-------------------|----------------------------------------------------------------------------|
-| filesystem |          | string  |                   | Filesystem type to create on the logical volume.                           |
-| force      |          | boolean |                   | Force removal of logical volume. **[default: `false`]**                    |
+| vg         | true     | string  |                   | Volume group name.                                                         |
 | lv         | true     | string  |                   | Logical volume name.                                                       |
-| resizefs   |          | boolean |                   | Resize the filesystem with the logical volume. **[default: `false`]**      |
-| shrink     |          | boolean |                   | Allow shrinking of the logical volume. **[default: `false`]**              |
 | size       |          | string  |                   | Size of the logical volume (e.g., 10G, 512M).                              |
 | state      |          | string  | present<br>absent | Whether the logical volume should exist or not. **[default: `"present"`]** |
-| vg         | true     | string  |                   | Volume group name.                                                         |
+| force      |          | boolean |                   | Force removal of logical volume. **[default: `false`]**                    |
+| filesystem |          | string  |                   | Filesystem type to create on the logical volume.                           |
+| shrink     |          | boolean |                   | Allow shrinking of the logical volume. **[default: `false`]**              |
+| resizefs   |          | boolean |                   | Resize the filesystem with the logical volume. **[default: `false`]**      |
 
 ## Example
 

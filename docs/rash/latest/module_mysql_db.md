@@ -20,18 +20,18 @@ check_mode:
 
 | Parameter          | Required | Type    | Values                              | Description                                                                             |
 |--------------------|----------|---------|-------------------------------------|-----------------------------------------------------------------------------------------|
-| collation          |          | string  |                                     | The database collation.                                                                 |
-| config_file        |          | string  |                                     | MySQL config file to read credentials from.                                             |
+| name               | true     | string  |                                     | Name of the database to manage.                                                         |
+| state              |          | string  | present<br>absent<br>dump<br>import | The database state. **[default: `"present"`]**                                          |
 | encoding           |          | string  |                                     | The database encoding. **[default: `"utf8"`]**                                          |
+| collation          |          | string  |                                     | The database collation.                                                                 |
+| target             |          | string  |                                     | File to dump/import database to/from (required for dump/import states).                 |
 | login_host         |          | string  |                                     | Database host to connect to. **[default: `"localhost"`]**                               |
+| login_user         |          | string  |                                     | Database user to connect with.                                                          |
 | login_password     |          | string  |                                     | Database password to use.                                                               |
 | login_port         |          | integer |                                     | Database port to connect to. **[default: `3306`]**                                      |
-| login_user         |          | string  |                                     | Database user to connect with.                                                          |
-| name               | true     | string  |                                     | Name of the database to manage.                                                         |
-| quick              |          | boolean |                                     | Use quick option for dump (retrieve rows one at a time). **[default: `true` for dump]** |
+| config_file        |          | string  |                                     | MySQL config file to read credentials from.                                             |
 | single_transaction |          | boolean |                                     | Use single transaction for dump (no table locking). **[default: `true` for dump]**      |
-| state              |          | string  | present<br>absent<br>dump<br>import | The database state. **[default: `"present"`]**                                          |
-| target             |          | string  |                                     | File to dump/import database to/from (required for dump/import states).                 |
+| quick              |          | boolean |                                     | Use quick option for dump (retrieve rows one at a time). **[default: `true` for dump]** |
 
 ## Example
 

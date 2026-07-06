@@ -20,17 +20,17 @@ check_mode:
 
 | Parameter  | Required | Type    | Values                       | Description                                                                              |
 |------------|----------|---------|------------------------------|------------------------------------------------------------------------------------------|
-| access_key |          | string  |                              | AWS access key ID. If not provided, uses AWS_ACCESS_KEY_ID environment variable.         |
 | bucket     | true     | string  |                              | The S3 bucket name.                                                                      |
-| dest       |          | string  |                              | Local file path to download (required for mode=get).                                     |
-| endpoint   |          | string  |                              | Custom S3 endpoint URL (for S3-compatible services like MinIO).                          |
-| max_keys   |          | integer |                              | Maximum number of objects to return when listing.                                        |
-| mode       |          | string  | get<br>put<br>delete<br>list | The operation mode: get, put, delete, or list.                                           |
 | object     |          | string  |                              | The S3 object key path.                                                                  |
-| prefix     |          | string  |                              | Prefix to filter objects when listing.                                                   |
-| region     |          | string  |                              | AWS region. If not provided, uses AWS_REGION or AWS_DEFAULT_REGION environment variable. |
-| secret_key |          | string  |                              | AWS secret access key. If not provided, uses AWS_SECRET_ACCESS_KEY environment variable. |
 | src        |          | string  |                              | Local file path to upload (required for mode=put).                                       |
+| dest       |          | string  |                              | Local file path to download (required for mode=get).                                     |
+| mode       |          | string  | get<br>put<br>delete<br>list | The operation mode: get, put, delete, or list.                                           |
+| region     |          | string  |                              | AWS region. If not provided, uses AWS_REGION or AWS_DEFAULT_REGION environment variable. |
+| endpoint   |          | string  |                              | Custom S3 endpoint URL (for S3-compatible services like MinIO).                          |
+| access_key |          | string  |                              | AWS access key ID. If not provided, uses AWS_ACCESS_KEY_ID environment variable.         |
+| secret_key |          | string  |                              | AWS secret access key. If not provided, uses AWS_SECRET_ACCESS_KEY environment variable. |
+| prefix     |          | string  |                              | Prefix to filter objects when listing.                                                   |
+| max_keys   |          | integer |                              | Maximum number of objects to return when listing.                                        |
 
 ## Examples
 

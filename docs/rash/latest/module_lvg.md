@@ -20,10 +20,10 @@ check_mode:
 
 | Parameter | Required | Type    | Values            | Description                                                               |
 |-----------|----------|---------|-------------------|---------------------------------------------------------------------------|
-| force     |          | boolean |                   | Force removal of volume group. **[default: `false`]**                     |
+| vg        | true     | string  |                   | Name of the volume group.                                                 |
 | pvs       |          | string  |                   | List of comma-separated physical volumes. Required when state is present. |
 | state     |          | string  | present<br>absent | Whether the volume group should exist or not. **[default: `"present"`]**  |
-| vg        | true     | string  |                   | Name of the volume group.                                                 |
+| force     |          | boolean |                   | Force removal of volume group. **[default: `false`]**                     |
 
 ## Example
 

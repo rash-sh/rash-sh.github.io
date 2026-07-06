@@ -20,12 +20,12 @@ check_mode:
 
 | Parameter      | Required | Type   | Values            | Description                                                                                          |
 |----------------|----------|--------|-------------------|------------------------------------------------------------------------------------------------------|
-| backing_device |          | string |                   | Device containing encrypted data. Required when state=present.                                       |
 | name           | true     | string |                   | Name of the encrypted device mapping.                                                                |
-| opts           |          | string |                   | Options for cryptsetup.                                                                              |
+| backing_device |          | string |                   | Device containing encrypted data. Required when state=present.                                       |
 | password       |          | string |                   | Password/keyfile for decryption. Use 'none' for interactive password prompt. **[default: `"none"`]** |
-| path           |          | string |                   | Path to the crypttab file. **[default: `"/etc/crypttab"`]**                                          |
+| opts           |          | string |                   | Options for cryptsetup.                                                                              |
 | state          |          | string | present<br>absent | Whether the entry should exist or not. **[default: `"present"`]**                                    |
+| path           |          | string |                   | Path to the crypttab file. **[default: `"/etc/crypttab"`]**                                          |
 
 ## Examples
 

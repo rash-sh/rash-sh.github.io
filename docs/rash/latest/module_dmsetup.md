@@ -21,12 +21,12 @@ check_mode:
 | Parameter | Required | Type    | Values                                          | Description                                               |
 |-----------|----------|---------|-------------------------------------------------|-----------------------------------------------------------|
 | action    | true     | string  | create<br>remove<br>remove_all<br>info<br>table | Action to perform on the device mapper device.            |
-| deferred  |          | boolean |                                                 | Use deferred removal. **[default: `false`]**              |
-| force     |          | boolean |                                                 | Force operation. **[default: `false`]**                   |
 | name      |          | string  |                                                 | Device mapper device name.                                |
-| retry     |          | integer |                                                 | Retry on failure.                                         |
-| table     |          | array   |                                                 | Table specification for device (used with create action). |
 | uuid      |          | string  |                                                 | Device UUID.                                              |
+| table     |          | array   |                                                 | Table specification for device (used with create action). |
+| force     |          | boolean |                                                 | Force operation. **[default: `false`]**                   |
+| deferred  |          | boolean |                                                 | Use deferred removal. **[default: `false`]**              |
+| retry     |          | integer |                                                 | Retry on failure.                                         |
 
 ## Example
 

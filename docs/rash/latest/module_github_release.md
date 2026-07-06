@@ -20,13 +20,13 @@ check_mode:
 
 | Parameter | Required | Type    | Values | Description                                                     |
 |-----------|----------|---------|--------|-----------------------------------------------------------------|
-| api_token |          | string  |        | GitHub API token for private repositories or higher rate limits |
+| repo      | true     | string  |        | GitHub repository in owner/repo format                          |
+| tag       |          | string  |        | Release tag to download from (default: latest)                  |
 | asset     |          | string  |        | Specific asset name pattern to download (regex supported)       |
 | dest      | true     | string  |        | Destination path for downloaded file                            |
 | mode      |          | string  |        | File permissions (default: 0755 for binaries)                   |
-| repo      | true     | string  |        | GitHub repository in owner/repo format                          |
-| tag       |          | string  |        | Release tag to download from (default: latest)                  |
 | timeout   |          | integer |        | Timeout in seconds for API and download requests                |
+| api_token |          | string  |        | GitHub API token for private repositories or higher rate limits |
 
 ## Examples
 

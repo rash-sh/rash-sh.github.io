@@ -20,15 +20,15 @@ check_mode:
 
 | Parameter      | Required | Type    | Values            | Description                                                             |
 |----------------|----------|---------|-------------------|-------------------------------------------------------------------------|
-| config         |          | string  |                   | Job configuration XML content.                                          |
-| enabled        |          | boolean |                   | Whether to trigger a build (only for state=present).                    |
 | name           | true     | string  |                   | Name of the Jenkins job.                                                |
-| password       | true     | string  |                   | Jenkins password or API token.                                          |
-| state          |          | string  | present<br>absent | Whether the job should be present or absent. **[default: `"present"`]** |
-| timeout        |          | integer |                   | Timeout in seconds for API requests.                                    |
-| token          |          | string  |                   | Build token for triggering builds.                                      |
 | url            | true     | string  |                   | Jenkins server URL.                                                     |
 | user           | true     | string  |                   | Jenkins username for authentication.                                    |
+| password       | true     | string  |                   | Jenkins password or API token.                                          |
+| state          |          | string  | present<br>absent | Whether the job should be present or absent. **[default: `"present"`]** |
+| config         |          | string  |                   | Job configuration XML content.                                          |
+| token          |          | string  |                   | Build token for triggering builds.                                      |
+| enabled        |          | boolean |                   | Whether to trigger a build (only for state=present).                    |
+| timeout        |          | integer |                   | Timeout in seconds for API requests.                                    |
 | validate_certs |          | boolean |                   | If false, SSL certificates will not be validated.                       |
 
 {$include_doc /// ## Examples

@@ -22,10 +22,10 @@ diff_mode:
 
 | Parameter | Required | Type    | Values | Description                                                                                    |
 |-----------|----------|---------|--------|------------------------------------------------------------------------------------------------|
+| iso       | true     | string  |        | Path to the ISO file to extract.                                                               |
 | dest      | true     | string  |        | Destination directory where files will be extracted.                                           |
 | files     |          | array   |        | List of specific files to extract from the ISO. If not specified, all files will be extracted. |
 | force     |          | boolean |        | Overwrite existing files in the destination directory. **[default: `false`]**                  |
-| iso       | true     | string  |        | Path to the ISO file to extract.                                                               |
 
 ## Examples
 

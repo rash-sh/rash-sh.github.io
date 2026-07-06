@@ -20,10 +20,10 @@ check_mode:
 
 | Parameter | Required | Type   | Values | Description                                                             |
 |-----------|----------|--------|--------|-------------------------------------------------------------------------|
-| command   |          | string |        | Regex pattern to match against full command line.                       |
-| exclude   |          | array  |        | Regex pattern to exclude processes from the result.                     |
 | pattern   |          | string |        | Regex pattern to match process name (comm field from /proc/[pid]/comm). |
 | user      |          | string |        | User name or UID running the process.                                   |
+| command   |          | string |        | Regex pattern to match against full command line.                       |
+| exclude   |          | array  |        | Regex pattern to exclude processes from the result.                     |
 
 ## Example
 

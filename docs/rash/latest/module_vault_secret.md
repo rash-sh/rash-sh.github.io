@@ -21,16 +21,16 @@ check_mode:
 
 | Parameter      | Required | Type    | Values                    | Description                                                                                 |
 |----------------|----------|---------|---------------------------|---------------------------------------------------------------------------------------------|
-| engine         |          | string  |                           | The secrets engine type.                                                                    |
-| mount          |          | string  |                           | The mount point for the secrets engine.                                                     |
-| namespace      |          | string  |                           | The Vault namespace (Enterprise feature).                                                   |
 | path           | true     | string  |                           | The path to the secret in Vault.                                                            |
 | secret         |          | object  |                           | The secret data to write (required for state=present).                                      |
 | state          |          | string  | read<br>present<br>absent | The desired state of the secret.                                                            |
+| engine         |          | string  |                           | The secrets engine type.                                                                    |
+| version        |          | integer |                           | The KV secrets engine version (1 or 2).                                                     |
 | token          |          | string  |                           | The Vault token for authentication. If not provided, uses VAULT_TOKEN environment variable. |
 | url            |          | string  |                           | The URL of the Vault server. If not provided, uses VAULT_ADDR environment variable.         |
+| namespace      |          | string  |                           | The Vault namespace (Enterprise feature).                                                   |
+| mount          |          | string  |                           | The mount point for the secrets engine.                                                     |
 | validate_certs |          | boolean |                           | Validate SSL certificates.                                                                  |
-| version        |          | integer |                           | The KV secrets engine version (1 or 2).                                                     |
 
 ## Examples
 

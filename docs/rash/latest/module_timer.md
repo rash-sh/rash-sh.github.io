@@ -25,8 +25,8 @@ check_mode:
 | Parameter | Required | Type   | Values                     | Description |
 |-----------|----------|--------|----------------------------|-------------|
 | name      | true     | string |                            |             |
-| precision |          | string | ms<br>us<br>ns             |             |
 | state     |          | string | started<br>stopped<br>read |             |
+| precision |          | string | ms<br>us<br>ns             |             |
 
 ## Examples
 

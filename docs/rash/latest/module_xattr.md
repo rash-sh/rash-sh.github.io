@@ -24,12 +24,12 @@ check_mode:
 
 | Parameter | Required | Type    | Values                                | Description                                                                                                                     |
 |-----------|----------|---------|---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| follow    |          | boolean |                                       | Whether to follow symlinks. **[default: `true`]**                                                                               |
-| key       |          | string  |                                       | The name of the extended attribute key. Required for state=present and state=absent.                                            |
-| namespace |          | string  | user<br>trusted<br>system<br>security | The namespace for the attribute. **[default: `"user"`]**                                                                        |
 | path      | true     | string  |                                       | The full path to the file or directory.                                                                                         |
-| state     |          | string  | present<br>absent<br>all              | Whether to set/get/remove the attribute (present), remove it (absent), or list all attributes (all). **[default: `"present"`]** |
+| key       |          | string  |                                       | The name of the extended attribute key. Required for state=present and state=absent.                                            |
 | value     |          | string  |                                       | The value to set for the extended attribute. Required for state=present.                                                        |
+| namespace |          | string  | user<br>trusted<br>system<br>security | The namespace for the attribute. **[default: `"user"`]**                                                                        |
+| state     |          | string  | present<br>absent<br>all              | Whether to set/get/remove the attribute (present), remove it (absent), or list all attributes (all). **[default: `"present"`]** |
+| follow    |          | boolean |                                       | Whether to follow symlinks. **[default: `true`]**                                                                               |
 
 ## Example
 

@@ -23,21 +23,21 @@ check_mode:
 
 | Parameter              | Required | Type    | Values | Description                                                                                             |
 |------------------------|----------|---------|--------|---------------------------------------------------------------------------------------------------------|
-| apcu_autoloader        |          | boolean |        | Uses APCu to cache found/not-found classes. **[default: `false`]**                                      |
-| arguments              |          | string  |        | Composer arguments like required package, version and so on. **[default: `""`]**                        |
-| classmap_authoritative |          | boolean |        | Autoload classes from classmap only. **[default: `false`]**                                             |
-| command                |          | string  |        | Composer command to run. **[default: `"install"`]**                                                     |
 | executable             |          | string  |        | Path to composer executable on the remote host, if composer is not in PATH. **[default: `"composer"`]** |
 | executable_php         |          | string  |        | Path to PHP executable on the remote host, if PHP is not in PATH.                                       |
+| command                |          | string  |        | Composer command to run. **[default: `"install"`]**                                                     |
+| arguments              |          | string  |        | Composer arguments like required package, version and so on. **[default: `""`]**                        |
+| working_dir            |          | string  |        | Directory of your project (see --working-dir). This is required when the command is not run globally.   |
 | global_command         |          | boolean |        | Runs the specified command globally. **[default: `false`]**                                             |
-| ignore_platform_reqs   |          | boolean |        | Ignore php, hhvm, lib-* and ext-* requirements. **[default: `false`]**                                  |
 | no_dev                 |          | boolean |        | Disables installation of require-dev packages. **[default: `true`]**                                    |
-| no_plugins             |          | boolean |        | Disables all plugins. **[default: `false`]**                                                            |
-| no_scripts             |          | boolean |        | Skips the execution of all scripts defined in composer.json. **[default: `false`]**                     |
 | optimize_autoloader    |          | boolean |        | Optimize autoloader during autoloader dump. **[default: `true`]**                                       |
+| classmap_authoritative |          | boolean |        | Autoload classes from classmap only. **[default: `false`]**                                             |
+| apcu_autoloader        |          | boolean |        | Uses APCu to cache found/not-found classes. **[default: `false`]**                                      |
 | prefer_dist            |          | boolean |        | Forces installation from package dist even for dev versions. **[default: `false`]**                     |
 | prefer_source          |          | boolean |        | Forces installation from package sources when possible. **[default: `false`]**                          |
-| working_dir            |          | string  |        | Directory of your project (see --working-dir). This is required when the command is not run globally.   |
+| ignore_platform_reqs   |          | boolean |        | Ignore php, hhvm, lib-* and ext-* requirements. **[default: `false`]**                                  |
+| no_scripts             |          | boolean |        | Skips the execution of all scripts defined in composer.json. **[default: `false`]**                     |
+| no_plugins             |          | boolean |        | Disables all plugins. **[default: `false`]**                                                            |
 
 {$include_doc /// ## Example
 ///

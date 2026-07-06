@@ -23,9 +23,9 @@ check_mode:
 
 | Parameter      | Required | Type    | Values | Description                                           |
 |----------------|----------|---------|--------|-------------------------------------------------------|
-| get_disk_usage |          | boolean |        | Get Docker disk usage info. **[default: `false`]**    |
-| get_info       |          | boolean |        | Get Docker system info. **[default: `true`]**         |
 | get_version    |          | boolean |        | Get Docker version information. **[default: `true`]** |
+| get_info       |          | boolean |        | Get Docker system info. **[default: `true`]**         |
+| get_disk_usage |          | boolean |        | Get Docker disk usage info. **[default: `false`]**    |
 
 ## Example
 

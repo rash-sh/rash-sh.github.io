@@ -20,9 +20,9 @@ check_mode:
 
 | Parameter      | Required | Type   | Values            | Description                                                                                                                                         |
 |----------------|----------|--------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| blacklist_file |          | string |                   | Path to the blacklist file. If not specified, `/etc/modprobe.d/rash-blacklist.conf` is used. **[default: `"/etc/modprobe.d/rash-blacklist.conf"`]** |
 | name           | true     | string |                   | Name of kernel module to blacklist.                                                                                                                 |
 | state          |          | string | present<br>absent | Whether the module should be blacklisted or not. **[default: `"present"`]**                                                                         |
+| blacklist_file |          | string |                   | Path to the blacklist file. If not specified, `/etc/modprobe.d/rash-blacklist.conf` is used. **[default: `"/etc/modprobe.d/rash-blacklist.conf"`]** |
 
 ## Examples
 

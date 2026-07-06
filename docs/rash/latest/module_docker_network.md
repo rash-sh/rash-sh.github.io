@@ -20,18 +20,18 @@ check_mode:
 
 | Parameter   | Required | Type    | Values                               | Description                                      |
 |-------------|----------|---------|--------------------------------------|--------------------------------------------------|
-| attachable  |          | boolean |                                      | Allow manual container attachment to network.    |
-| driver      |          | string  | bridge<br>overlay<br>macvlan<br>null | Network driver (bridge, overlay, macvlan, null). |
-| enable_ipv6 |          | boolean |                                      | Enable IPv6 networking.                          |
-| force       |          | boolean |                                      | Force removal of the network.                    |
-| gateway     |          | string  |                                      | IPv4 gateway.                                    |
-| internal    |          | boolean |                                      | Restrict external access to the network.         |
-| ip_range    |          | string  |                                      | IPv4 address range.                              |
-| ipam_config |          | array   |                                      | IPAM configuration.                              |
 | name        | true     | string  |                                      | Network name (required).                         |
+| driver      |          | string  | bridge<br>overlay<br>macvlan<br>null | Network driver (bridge, overlay, macvlan, null). |
+| subnet      |          | string  |                                      | IPv4 subnet CIDR.                                |
+| gateway     |          | string  |                                      | IPv4 gateway.                                    |
+| ip_range    |          | string  |                                      | IPv4 address range.                              |
+| internal    |          | boolean |                                      | Restrict external access to the network.         |
+| enable_ipv6 |          | boolean |                                      | Enable IPv6 networking.                          |
+| attachable  |          | boolean |                                      | Allow manual container attachment to network.    |
 | scope       |          | string  | local<br>swarm                       | Network scope (local, swarm).                    |
 | state       |          | string  | present<br>absent                    | Desired state of the network.                    |
-| subnet      |          | string  |                                      | IPv4 subnet CIDR.                                |
+| force       |          | boolean |                                      | Force removal of the network.                    |
+| ipam_config |          | array   |                                      | IPAM configuration.                              |
 
 ## Example
 

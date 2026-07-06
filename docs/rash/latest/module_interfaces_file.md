@@ -20,17 +20,17 @@ check_mode:
 
 | Parameter       | Required | Type    | Values                               | Description                                                                         |
 |-----------------|----------|---------|--------------------------------------|-------------------------------------------------------------------------------------|
+| iface           | true     | string  |                                      | The interface name (e.g., eth0, enp0s3, wlan0).                                     |
+| family          |          | string  | inet<br>inet6                        | The address family (inet for IPv4, inet6 for IPv6). **[default: `"inet"`]**         |
+| method          |          | string  | static<br>dhcp<br>manual<br>loopback | The configuration method (static, dhcp, manual, etc.). **[default: `"static"`]**    |
 | address         |          | string  |                                      | The IP address for static configuration. Required if method=static.                 |
-| auto            |          | boolean |                                      | Whether the interface should be started at boot. **[default: `true`]**              |
+| netmask         |          | string  |                                      | The netmask for static configuration. Required if method=static.                    |
+| gateway         |          | string  |                                      | The default gateway for static configuration.                                       |
 | dns_nameservers |          | array   |                                      | List of DNS nameservers.                                                            |
 | dns_search      |          | array   |                                      | List of DNS search domains.                                                         |
-| family          |          | string  | inet<br>inet6                        | The address family (inet for IPv4, inet6 for IPv6). **[default: `"inet"`]**         |
-| gateway         |          | string  |                                      | The default gateway for static configuration.                                       |
-| iface           | true     | string  |                                      | The interface name (e.g., eth0, enp0s3, wlan0).                                     |
-| method          |          | string  | static<br>dhcp<br>manual<br>loopback | The configuration method (static, dhcp, manual, etc.). **[default: `"static"`]**    |
-| netmask         |          | string  |                                      | The netmask for static configuration. Required if method=static.                    |
-| path            |          | string  |                                      | Path to the interfaces file. **[default: `"/etc/network/interfaces"`]**             |
+| auto            |          | boolean |                                      | Whether the interface should be started at boot. **[default: `true`]**              |
 | state           |          | string  | present<br>absent                    | Whether the interface configuration should exist or not. **[default: `"present"`]** |
+| path            |          | string  |                                      | Path to the interfaces file. **[default: `"/etc/network/interfaces"`]**             |
 
 ## Examples
 

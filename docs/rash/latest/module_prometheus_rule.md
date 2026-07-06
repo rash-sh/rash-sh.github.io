@@ -21,8 +21,8 @@ check_mode:
 | Parameter | Required | Type   | Values            | Description                                                            |
 |-----------|----------|--------|-------------------|------------------------------------------------------------------------|
 | file      | true     | string |                   | The absolute path to the Prometheus rules file.                        |
-| interval  |          | string |                   | Evaluation interval for the rule group (e.g., `30s`, `5m`).            |
 | name      | true     | string |                   | The name of the rule group.                                            |
+| interval  |          | string |                   | Evaluation interval for the rule group (e.g., `30s`, `5m`).            |
 | state     |          | string | present<br>absent | Whether the rule group should exist or not. **[default: `"present"`]** |
 
 {$include_doc /// ## Examples

@@ -20,11 +20,11 @@ check_mode:
 
 | Parameter     | Required | Type   | Values            | Description                                                            |
 |---------------|----------|--------|-------------------|------------------------------------------------------------------------|
-| lv            | true     | string |                   | Logical volume name to snapshot.                                       |
-| size          |          | string |                   | Size of the snapshot (e.g., 5G, 512M). Required when state is present. |
-| snapshot_name | true     | string |                   | Name for the snapshot.                                                 |
-| state         |          | string | present<br>absent | Whether the snapshot should exist or not. **[default: `"present"`]**   |
 | vg            | true     | string |                   | Volume group name.                                                     |
+| lv            | true     | string |                   | Logical volume name to snapshot.                                       |
+| snapshot_name | true     | string |                   | Name for the snapshot.                                                 |
+| size          |          | string |                   | Size of the snapshot (e.g., 5G, 512M). Required when state is present. |
+| state         |          | string | present<br>absent | Whether the snapshot should exist or not. **[default: `"present"`]**   |
 
 ## Example
 

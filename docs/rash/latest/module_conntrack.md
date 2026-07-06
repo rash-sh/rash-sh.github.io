@@ -21,14 +21,14 @@ check_mode:
 
 | Parameter   | Required | Type    | Values         | Description                                                                   |
 |-------------|----------|---------|----------------|-------------------------------------------------------------------------------|
-| conn_state  |          | string  |                | Connection state to filter (e.g., ESTABLISHED, TIME_WAIT, CLOSE, SYN_SENT).   |
-| destination |          | string  |                | Destination IP address or CIDR to filter connections.                         |
 | flush       |          | boolean |                | Flush all connection tracking entries. **[default: `false`]**                 |
-| port        |          | integer |                | Port number to filter (used with protocol).                                   |
-| protocol    |          | string  |                | Network protocol to filter (tcp, udp, icmp, sctp, dccp, gre).                 |
 | source      |          | string  |                | Source IP address or CIDR to filter connections.                              |
+| destination |          | string  |                | Destination IP address or CIDR to filter connections.                         |
+| protocol    |          | string  |                | Network protocol to filter (tcp, udp, icmp, sctp, dccp, gre).                 |
+| port        |          | integer |                | Port number to filter (used with protocol).                                   |
 | source_port |          | integer |                | Source port number to filter.                                                 |
 | state       |          | string  | absent<br>list | Whether to list entries or delete matching entries. **[default: `"absent"`]** |
+| conn_state  |          | string  |                | Connection state to filter (e.g., ESTABLISHED, TIME_WAIT, CLOSE, SYN_SENT).   |
 
 ## Examples
 

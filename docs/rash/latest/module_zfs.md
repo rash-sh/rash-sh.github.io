@@ -20,14 +20,14 @@ check_mode:
 
 | Parameter        | Required | Type    | Values                                                        | Description                                                             |
 |------------------|----------|---------|---------------------------------------------------------------|-------------------------------------------------------------------------|
-| create_parent    |          | boolean |                                                               | Create parent datasets. **[default: `false`]**                          |
-| extra_properties |          | object  |                                                               | Dict of properties that trigger change on any modification.             |
-| force            |          | boolean |                                                               | Force unmount. **[default: `false`]**                                   |
 | name             | true     | string  |                                                               | Dataset name (e.g., rpool/ROOT/ubuntu).                                 |
-| properties       |          | object  |                                                               | Dict of dataset properties (mountpoint, compression, encryption, etc.). |
-| recursive        |          | boolean |                                                               | Apply recursively. **[default: `false`]**                               |
-| snapshot_suffix  |          | string  |                                                               | Snapshot suffix (used with state: snapshot).                            |
 | state            |          | string  | info<br>present<br>absent<br>mounted<br>unmounted<br>snapshot | State of the dataset. **[default: `"info"`]**                           |
+| properties       |          | object  |                                                               | Dict of dataset properties (mountpoint, compression, encryption, etc.). |
+| extra_properties |          | object  |                                                               | Dict of properties that trigger change on any modification.             |
+| create_parent    |          | boolean |                                                               | Create parent datasets. **[default: `false`]**                          |
+| recursive        |          | boolean |                                                               | Apply recursively. **[default: `false`]**                               |
+| force            |          | boolean |                                                               | Force unmount. **[default: `false`]**                                   |
+| snapshot_suffix  |          | string  |                                                               | Snapshot suffix (used with state: snapshot).                            |
 
 ## Example
 

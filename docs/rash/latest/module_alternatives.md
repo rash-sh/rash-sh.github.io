@@ -20,9 +20,9 @@ check_mode:
 
 | Parameter | Required | Type    | Values | Description                                                           |
 |-----------|----------|---------|--------|-----------------------------------------------------------------------|
-| link      |          | string  |        | The path to the symbolic link (default is auto-detected).             |
 | name      | true     | string  |        | The generic name of the link group (e.g., java, editor, python).      |
 | path      | true     | string  |        | The path to the real executable that should be linked to.             |
+| link      |          | string  |        | The path to the symbolic link (default is auto-detected).             |
 | priority  |          | integer |        | The priority of the alternative (higher values have higher priority). |
 
 ## Examples

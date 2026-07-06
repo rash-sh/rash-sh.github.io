@@ -20,13 +20,13 @@ check_mode:
 
 | Parameter | Required | Type    | Values | Description                                                         |
 |-----------|----------|---------|--------|---------------------------------------------------------------------|
-| all       |          | boolean |        | Wipe all signatures. **[default: `true`]**                          |
-| backup    |          | string  |        | Create a signature backup file before wiping.                       |
 | device    | true     | string  |        | The block device path to wipe (e.g., /dev/sdb, /dev/nvme0n1).       |
-| force     |          | boolean |        | Force wipe even if the device is mounted. **[default: `false`]**    |
-| no_act    |          | boolean |        | Dry run / check mode - do not actually wipe. **[default: `false`]** |
-| offset    |          | integer |        | Offset to start wiping (in bytes).                                  |
+| all       |          | boolean |        | Wipe all signatures. **[default: `true`]**                          |
 | types     |          | array   |        | List of signature types to wipe (e.g., ext4, zfs, swap, raid).      |
+| no_act    |          | boolean |        | Dry run / check mode - do not actually wipe. **[default: `false`]** |
+| force     |          | boolean |        | Force wipe even if the device is mounted. **[default: `false`]**    |
+| backup    |          | string  |        | Create a signature backup file before wiping.                       |
+| offset    |          | integer |        | Offset to start wiping (in bytes).                                  |
 
 ## Example
 

@@ -20,16 +20,16 @@ check_mode:
 
 | Parameter  | Required | Type    | Values                                                        | Description                                                                  |
 |------------|----------|---------|---------------------------------------------------------------|------------------------------------------------------------------------------|
-| altroot    |          | string  |                                                               | Alternate root mount point.                                                  |
-| devices    |          | array   |                                                               | List of devices for pool creation.                                           |
-| features   |          | object  |                                                               | Feature flags to enable.                                                     |
-| force      |          | boolean |                                                               | Force operation. **[default: `false`]**                                      |
-| guid       |          | string  |                                                               | Pool GUID for import by GUID.                                                |
-| mounthost  |          | string  |                                                               | Mount host for pools.                                                        |
 | name       | true     | string  |                                                               | Pool name.                                                                   |
+| state      |          | string  | info<br>present<br>absent<br>imported<br>exported<br>scrubbed | Pool state. **[default: `"info"`]**                                          |
+| devices    |          | array   |                                                               | List of devices for pool creation.                                           |
 | pool_type  |          | string  | single<br>mirror<br>raidz<br>raidz2<br>raidz3                 | Pool type (single, mirror, raidz, raidz2, raidz3). **[default: `"single"`]** |
 | properties |          | object  |                                                               | Pool properties (ashift, autoexpand, etc.).                                  |
-| state      |          | string  | info<br>present<br>absent<br>imported<br>exported<br>scrubbed | Pool state. **[default: `"info"`]**                                          |
+| features   |          | object  |                                                               | Feature flags to enable.                                                     |
+| altroot    |          | string  |                                                               | Alternate root mount point.                                                  |
+| mounthost  |          | string  |                                                               | Mount host for pools.                                                        |
+| force      |          | boolean |                                                               | Force operation. **[default: `false`]**                                      |
+| guid       |          | string  |                                                               | Pool GUID for import by GUID.                                                |
 
 ## Example
 

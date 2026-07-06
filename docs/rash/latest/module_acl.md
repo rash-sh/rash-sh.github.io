@@ -24,13 +24,13 @@ check_mode:
 
 | Parameter | Required | Type    | Values                     | Description                                                                                                         |
 |-----------|----------|---------|----------------------------|---------------------------------------------------------------------------------------------------------------------|
-| default   |          | boolean |                            | Set default ACL (inherited by new files in directory). **[default: `false`]**                                       |
+| path      | true     | string  |                            | The full path to the file or directory.                                                                             |
+| user      |          | string  |                            | The user to set ACL for (e.g. "nginx").                                                                             |
 | group     |          | string  |                            | The group to set ACL for (e.g. "developers").                                                                       |
 | mode      |          | string  |                            | The permissions mode (e.g. "r", "rw", "rwx", "rX"). Required when state=present.                                    |
-| path      | true     | string  |                            | The full path to the file or directory.                                                                             |
-| recurse   |          | boolean |                            | Apply ACLs recursively to directory contents. **[default: `false`]**                                                |
 | state     |          | string  | present<br>absent<br>query | Whether the ACL should exist or not. Use query to retrieve current ACLs without changes. **[default: `"present"`]** |
-| user      |          | string  |                            | The user to set ACL for (e.g. "nginx").                                                                             |
+| default   |          | boolean |                            | Set default ACL (inherited by new files in directory). **[default: `false`]**                                       |
+| recurse   |          | boolean |                            | Apply ACLs recursively to directory contents. **[default: `false`]**                                                |
 
 ## Examples
 

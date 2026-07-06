@@ -21,8 +21,8 @@ check_mode:
 | Parameter  | Required | Type    | Values | Description                                                                      |
 |------------|----------|---------|--------|----------------------------------------------------------------------------------|
 | name       | true     | string  |        | Name of the SELinux boolean to manage.                                           |
-| persistent |          | boolean |        | If true, the boolean setting will persist across reboots. **[default: `false`]** |
 | state      | true     | boolean |        | Desired state of the SELinux boolean (on/off).                                   |
+| persistent |          | boolean |        | If true, the boolean setting will persist across reboots. **[default: `false`]** |
 
 ## Examples
 

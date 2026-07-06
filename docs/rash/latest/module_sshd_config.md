@@ -20,13 +20,13 @@ check_mode:
 
 | Parameter      | Required | Type    | Values            | Description                                                                                                                  |
 |----------------|----------|---------|-------------------|------------------------------------------------------------------------------------------------------------------------------|
-| backup         |          | boolean |                   | Create a backup file before making changes. **[default: `false`]**                                                           |
-| match_criteria |          | string  |                   | Match block criteria (e.g., "User admin", "Group ssh-users"). When specified, the option is managed within this Match block. |
 | option         | true     | string  |                   | The SSH server configuration option name.                                                                                    |
-| path           |          | string  |                   | Path to the sshd_config file. **[default: `"/etc/ssh/sshd_config"`]**                                                        |
-| state          |          | string  | present<br>absent | Whether the option should be present or absent. **[default: `"present"`]**                                                   |
-| validate       |          | boolean |                   | Validate configuration with sshd -t before applying. **[default: `false`]**                                                  |
 | value          |          | string  |                   | The value to set for the option. Required when state=present.                                                                |
+| state          |          | string  | present<br>absent | Whether the option should be present or absent. **[default: `"present"`]**                                                   |
+| path           |          | string  |                   | Path to the sshd_config file. **[default: `"/etc/ssh/sshd_config"`]**                                                        |
+| match_criteria |          | string  |                   | Match block criteria (e.g., "User admin", "Group ssh-users"). When specified, the option is managed within this Match block. |
+| validate       |          | boolean |                   | Validate configuration with sshd -t before applying. **[default: `false`]**                                                  |
+| backup         |          | boolean |                   | Create a backup file before making changes. **[default: `false`]**                                                           |
 
 ## Examples
 

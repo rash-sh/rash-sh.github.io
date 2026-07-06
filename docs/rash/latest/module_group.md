@@ -20,9 +20,9 @@ check_mode:
 
 | Parameter | Required | Type    | Values            | Description                                                       |
 |-----------|----------|---------|-------------------|-------------------------------------------------------------------|
-| gid       |          | integer |                   | Group ID (GID) of the group.                                      |
 | name      | true     | string  |                   | Name of the group to create, remove or modify.                    |
 | state     |          | string  | absent<br>present | Whether the group should exist or not. **[default: `"present"`]** |
+| gid       |          | integer |                   | Group ID (GID) of the group.                                      |
 | system    |          | boolean |                   | Create as system group (gid < 1000). **[default: `false`]**       |
 
 ## Example

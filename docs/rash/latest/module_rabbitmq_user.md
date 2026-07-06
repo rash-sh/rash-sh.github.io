@@ -20,14 +20,14 @@ check_mode:
 
 | Parameter      | Required | Type   | Values            | Description                                                                                                    |
 |----------------|----------|--------|-------------------|----------------------------------------------------------------------------------------------------------------|
-| configure_priv |          | string |                   | Configure permissions regex pattern. **[default: `""`]**                                                       |
+| user           | true     | string |                   | Name of the RabbitMQ user to create, remove or modify.                                                         |
 | password       |          | string |                   | Password for the user.                                                                                         |
+| tags           |          |        |                   | User tags (administrator, management, monitoring, policymaker, etc). Can be a single string or a list of tags. |
+| vhost          |          | string |                   | RabbitMQ virtual host. **[default: `/`]**                                                                      |
+| configure_priv |          | string |                   | Configure permissions regex pattern. **[default: `""`]**                                                       |
+| write_priv     |          | string |                   | Write permissions regex pattern. **[default: `""`]**                                                           |
 | read_priv      |          | string |                   | Read permissions regex pattern. **[default: `""`]**                                                            |
 | state          |          | string | present<br>absent | Whether the user should exist or not. **[default: `"present"`]**                                               |
-| tags           |          |        |                   | User tags (administrator, management, monitoring, policymaker, etc). Can be a single string or a list of tags. |
-| user           | true     | string |                   | Name of the RabbitMQ user to create, remove or modify.                                                         |
-| vhost          |          | string |                   | RabbitMQ virtual host. **[default: `/`]**                                                                      |
-| write_priv     |          | string |                   | Write permissions regex pattern. **[default: `""`]**                                                           |
 
 ## Example
 

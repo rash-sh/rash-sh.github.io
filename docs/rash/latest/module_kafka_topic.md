@@ -24,12 +24,12 @@ check_mode:
 
 | Parameter          | Required | Type    | Values            | Description |
 |--------------------|----------|---------|-------------------|-------------|
-| bootstrap_servers  |          | string  |                   |             |
-| config             |          | object  |                   |             |
 | name               | true     | string  |                   |             |
+| state              |          | string  | present<br>absent |             |
 | partitions         |          | integer |                   |             |
 | replication_factor |          | integer |                   |             |
-| state              |          | string  | present<br>absent |             |
+| config             |          | object  |                   |             |
+| bootstrap_servers  |          | string  |                   |             |
 
 ## Examples
 

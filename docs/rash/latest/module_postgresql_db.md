@@ -20,21 +20,21 @@ check_mode:
 
 | Parameter         | Required | Type    | Values                               | Description                                                       |
 |-------------------|----------|---------|--------------------------------------|-------------------------------------------------------------------|
+| name              | true     | string  |                                      | Name of the database to add or remove.                            |
+| state             |          | string  | present<br>absent<br>dump<br>restore | The database state.                                               |
+| owner             |          | string  |                                      | Name of the role to set as owner of the database.                 |
+| template          |          | string  |                                      | Template used to create the database.                             |
 | encoding          |          | string  |                                      | Encoding of the database.                                         |
 | lc_collate        |          | string  |                                      | Collation order (LC_COLLATE) to use in the database.              |
 | lc_ctype          |          | string  |                                      | Character classification (LC_CTYPE) to use in the database.       |
-| login_host        |          | string  |                                      | Host running the database.                                        |
-| login_password    |          | string  |                                      | The password to authenticate with.                                |
-| login_unix_socket |          | string  |                                      | Path to a Unix domain socket for local connections.               |
-| login_user        |          | string  |                                      | The username to authenticate with.                                |
-| name              | true     | string  |                                      | Name of the database to add or remove.                            |
-| owner             |          | string  |                                      | Name of the role to set as owner of the database.                 |
-| port              |          | integer |                                      | Database port to connect to.                                      |
-| ssl_mode          |          | string  |                                      | Disable SSL certificate verification.                             |
-| state             |          | string  | present<br>absent<br>dump<br>restore | The database state.                                               |
 | target            |          | string  |                                      | File to backup or restore database.                               |
 | target_opts       |          | string  |                                      | Additional arguments to pass to pg_dump/psql during dump/restore. |
-| template          |          | string  |                                      | Template used to create the database.                             |
+| login_host        |          | string  |                                      | Host running the database.                                        |
+| login_user        |          | string  |                                      | The username to authenticate with.                                |
+| login_password    |          | string  |                                      | The password to authenticate with.                                |
+| port              |          | integer |                                      | Database port to connect to.                                      |
+| login_unix_socket |          | string  |                                      | Path to a Unix domain socket for local connections.               |
+| ssl_mode          |          | string  |                                      | Disable SSL certificate verification.                             |
 
 ## Examples
 

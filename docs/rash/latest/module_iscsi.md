@@ -24,14 +24,14 @@ check_mode:
 
 | Parameter | Required | Type    | Values                                       | Description                                                                                                                             |
 |-----------|----------|---------|----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| discover  |          | boolean |                                              | Whether to perform target discovery on the portal. **[default: `true`]**                                                                |
-| lun       |          | integer |                                              | LUN number to reference.                                                                                                                |
-| node      |          | string  |                                              | IQN of the initiator node name. When set, configures the initiator name.                                                                |
-| password  |          | string  |                                              | CHAP authentication password.                                                                                                           |
+| target    |          | string  |                                              | IQN of the iSCSI target (e.g., iqn.2024-01.com.example:storage.target01). Required unless `discover` is true without a specific target. |
 | portal    | true     | string  |                                              | Portal IP address, optionally with port (e.g., 192.168.1.100 or 192.168.1.100:3260). **[default: `3260` if no port specified]**         |
 | state     |          | string  | present<br>absent<br>logged_in<br>logged_out | Desired state of the iSCSI target connection. **[default: `"present"`]**                                                                |
-| target    |          | string  |                                              | IQN of the iSCSI target (e.g., iqn.2024-01.com.example:storage.target01). Required unless `discover` is true without a specific target. |
+| node      |          | string  |                                              | IQN of the initiator node name. When set, configures the initiator name.                                                                |
 | username  |          | string  |                                              | CHAP authentication username.                                                                                                           |
+| password  |          | string  |                                              | CHAP authentication password.                                                                                                           |
+| lun       |          | integer |                                              | LUN number to reference.                                                                                                                |
+| discover  |          | boolean |                                              | Whether to perform target discovery on the portal. **[default: `true`]**                                                                |
 
 ## Examples
 

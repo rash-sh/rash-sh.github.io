@@ -21,15 +21,15 @@ check_mode:
 | Parameter      | Required | Type    | Values                         | Description |
 |----------------|----------|---------|--------------------------------|-------------|
 | action         |          | string  | get<br>add<br>remove<br>update |             |
+| url            |          | string  |                                |             |
 | api_key        |          | string  |                                |             |
+| username       |          | string  |                                |             |
+| password       |          | string  |                                |             |
 | dashboard      |          |         |                                |             |
 | datasource     |          |         |                                |             |
 | folder         |          |         |                                |             |
 | org            |          |         |                                |             |
-| password       |          | string  |                                |             |
 | timeout        |          | integer |                                |             |
-| url            |          | string  |                                |             |
-| username       |          | string  |                                |             |
 | validate_certs |          | boolean |                                |             |
 
 ## Examples

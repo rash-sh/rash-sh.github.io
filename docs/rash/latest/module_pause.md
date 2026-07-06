@@ -23,9 +23,9 @@ check_mode:
 
 | Parameter | Required | Type    | Values | Description                               |
 |-----------|----------|---------|--------|-------------------------------------------|
+| seconds   |          | integer |        | Number of seconds to pause.               |
 | minutes   |          | integer |        | Number of minutes to pause.               |
 | prompt    |          | string  |        | Optional message to display during pause. |
-| seconds   |          | integer |        | Number of seconds to pause.               |
 
 ## Example
 

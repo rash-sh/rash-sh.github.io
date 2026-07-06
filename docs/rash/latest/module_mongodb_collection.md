@@ -20,21 +20,21 @@ check_mode:
 
 | Parameter          | Required | Type    | Values                    | Description                                               |
 |--------------------|----------|---------|---------------------------|-----------------------------------------------------------|
-| auth_database      |          | string  |                           | Authentication database. **[default: `"admin"`]**         |
-| collation          |          | object  |                           | Collation settings for the collection.                    |
-| connection_options |          | string  |                           | Connection options string.                                |
+| name               | true     | string  |                           | Name of the collection to manage.                         |
 | database           | true     | string  |                           | Name of the database containing the collection.           |
+| state              |          | string  | present<br>absent         | The collection state. **[default: `"present"`]**          |
 | indexes            |          | array   |                           | List of indexes to create on the collection.              |
+| validator          |          | object  |                           | Collection validator document.                            |
+| validation_level   |          | string  | off<br>strict<br>moderate | Validation level (off/strict/moderate).                   |
+| validation_action  |          | string  | error<br>warn             | Validation action (error/warn).                           |
+| collation          |          | object  |                           | Collation settings for the collection.                    |
+| replica_set        |          | string  |                           | Replica set name (for replica set connections).           |
 | login_host         |          | string  |                           | Database host to connect to. **[default: `"localhost"`]** |
+| login_user         |          | string  |                           | Database user to connect with.                            |
 | login_password     |          | string  |                           | Database password to use.                                 |
 | login_port         |          | integer |                           | Database port to connect to. **[default: `27017`]**       |
-| login_user         |          | string  |                           | Database user to connect with.                            |
-| name               | true     | string  |                           | Name of the collection to manage.                         |
-| replica_set        |          | string  |                           | Replica set name (for replica set connections).           |
-| state              |          | string  | present<br>absent         | The collection state. **[default: `"present"`]**          |
-| validation_action  |          | string  | error<br>warn             | Validation action (error/warn).                           |
-| validation_level   |          | string  | off<br>strict<br>moderate | Validation level (off/strict/moderate).                   |
-| validator          |          | object  |                           | Collection validator document.                            |
+| connection_options |          | string  |                           | Connection options string.                                |
+| auth_database      |          | string  |                           | Authentication database. **[default: `"admin"`]**         |
 
 ## Examples
 

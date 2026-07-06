@@ -24,11 +24,11 @@ check_mode:
 
 | Parameter | Required | Type    | Values                                 | Description |
 |-----------|----------|---------|----------------------------------------|-------------|
-| cancel    |          | boolean |                                        |             |
-| delay     |          | integer |                                        |             |
-| force     |          | boolean |                                        |             |
 | msg       |          | string  |                                        |             |
+| delay     |          | integer |                                        |             |
 | state     |          | string  | poweroff<br>shutdown<br>halt<br>reboot |             |
+| force     |          | boolean |                                        |             |
+| cancel    |          | boolean |                                        |             |
 
 ## Example
 

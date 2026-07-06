@@ -20,25 +20,25 @@ check_mode:
 
 | Parameter      | Required | Type    | Values                               | Description                                                                                                       |
 |----------------|----------|---------|--------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| compress       |          | boolean |                                      | Compress rotated log files. **[default: `false`]**                                                                |
-| config_file    |          | string  |                                      | Custom configuration file path (default: /etc/logrotate.d/<name>).                                                |
-| copy           |          | boolean |                                      | Copy log file before truncating instead of moving. **[default: `false`]**                                         |
-| copytruncate   |          | boolean |                                      | Truncate original log file in place instead of moving. **[default: `false`]**                                     |
-| create         |          | string  |                                      | Create new log file after rotation with specified permissions. Format: mode owner group (e.g., "0644 root root"). |
-| dateext        |          | boolean |                                      | Use date as suffix for rotated files. **[default: `false`]**                                                      |
-| dateformat     |          | string  |                                      | Format for date suffix (strftime format).                                                                         |
-| delaycompress  |          | boolean |                                      | Delay compression until the next rotation cycle. **[default: `false`]**                                           |
+| path           | true     |         |                                      | Path to log file(s). Can be a single path or a list of paths.                                                     |
+| state          |          | string  | present<br>absent                    | Whether the configuration should be present or absent. **[default: `"present"`]**                                 |
 | frequency      |          | string  | daily<br>weekly<br>monthly<br>yearly | How often to rotate logs. **[default: `"daily"`]**                                                                |
+| rotate         |          | integer |                                      | Number of rotated files to keep.                                                                                  |
+| compress       |          | boolean |                                      | Compress rotated log files. **[default: `false`]**                                                                |
+| delaycompress  |          | boolean |                                      | Delay compression until the next rotation cycle. **[default: `false`]**                                           |
 | missingok      |          | boolean |                                      | Don't report errors if log file is missing. **[default: `false`]**                                                |
 | notifempty     |          | boolean |                                      | Don't rotate empty log files. **[default: `false`]**                                                              |
-| path           | true     |         |                                      | Path to log file(s). Can be a single path or a list of paths.                                                     |
-| postrotate     |          | string  |                                      | Script to run after rotation.                                                                                     |
-| prerotate      |          | string  |                                      | Script to run before rotation.                                                                                    |
-| rotate         |          | integer |                                      | Number of rotated files to keep.                                                                                  |
-| shared_scripts |          | boolean |                                      | Execute prerotate/postrotate scripts only once for all matched files. **[default: `false`]**                      |
-| sharedscripts  |          | boolean |                                      | Don't rotate if sharedscripts is set and the script fails. **[default: `false`]**                                 |
+| create         |          | string  |                                      | Create new log file after rotation with specified permissions. Format: mode owner group (e.g., "0644 root root"). |
 | size           |          | string  |                                      | Rotate when file exceeds this size (e.g., "100M", "1G").                                                          |
-| state          |          | string  | present<br>absent                    | Whether the configuration should be present or absent. **[default: `"present"`]**                                 |
+| dateext        |          | boolean |                                      | Use date as suffix for rotated files. **[default: `false`]**                                                      |
+| dateformat     |          | string  |                                      | Format for date suffix (strftime format).                                                                         |
+| copy           |          | boolean |                                      | Copy log file before truncating instead of moving. **[default: `false`]**                                         |
+| copytruncate   |          | boolean |                                      | Truncate original log file in place instead of moving. **[default: `false`]**                                     |
+| sharedscripts  |          | boolean |                                      | Don't rotate if sharedscripts is set and the script fails. **[default: `false`]**                                 |
+| prerotate      |          | string  |                                      | Script to run before rotation.                                                                                    |
+| postrotate     |          | string  |                                      | Script to run after rotation.                                                                                     |
+| shared_scripts |          | boolean |                                      | Execute prerotate/postrotate scripts only once for all matched files. **[default: `false`]**                      |
+| config_file    |          | string  |                                      | Custom configuration file path (default: /etc/logrotate.d/<name>).                                                |
 
 ## Examples
 

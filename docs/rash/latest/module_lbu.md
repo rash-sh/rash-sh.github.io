@@ -20,15 +20,15 @@ check_mode:
 
 | Parameter  | Required | Type    | Values             | Description                                                                   |
 |------------|----------|---------|--------------------|-------------------------------------------------------------------------------|
-| exclude    |          | array   |                    | File or list of files to remove from LBU include list.                        |
 | executable |          | string  |                    | Path of the lbu binary to use. **[default: `"lbu"`]**                         |
 | extra_args |          | string  |                    | Additional options to pass to lbu.                                            |
+| path       |          | string  |                    | LBU overlay directory path.                                                   |
 | include    |          | array   |                    | File or list of files to add to LBU include list.                             |
-| media      |          | string  |                    | Backup media type (e.g., `usb`, `floppy`).                                    |
+| exclude    |          | array   |                    | File or list of files to remove from LBU include list.                        |
+| state      |          | string  | commit<br>rollback | Action to perform: `commit` saves changes, `rollback` reverts to last commit. |
 | message    |          | string  |                    | Commit message for lbu commit.                                                |
 | package    |          | string  |                    | Create an apk package backup at the specified path.                           |
-| path       |          | string  |                    | LBU overlay directory path.                                                   |
-| state      |          | string  | commit<br>rollback | Action to perform: `commit` saves changes, `rollback` reverts to last commit. |
+| media      |          | string  |                    | Backup media type (e.g., `usb`, `floppy`).                                    |
 | verbose    |          | boolean |                    | Enable verbose output. **[default: `false`]**                                 |
 
 ## Example

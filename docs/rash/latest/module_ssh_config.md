@@ -22,9 +22,9 @@ indent: true
 |-----------------|----------|--------|-------------------|--------------------------------------------------------------------------------|
 | host            | true     | string |                   | The host pattern to configure (e.g., "github.com", "*.example.com").           |
 | options         |          |        |                   | SSH options to set as a dictionary of key-value pairs.                         |
-| order           |          | string | first<br>last     | Order of host entry placement (first, last, or None for in-place update).      |
-| ssh_config_file |          | string |                   | Path to the SSH config file. **[default: `"~/.ssh/config"`]**                  |
 | state           |          | string | present<br>absent | Whether the host entry should be present or absent. **[default: `"present"`]** |
+| ssh_config_file |          | string |                   | Path to the SSH config file. **[default: `"~/.ssh/config"`]**                  |
+| order           |          | string | first<br>last     | Order of host entry placement (first, last, or None for in-place update).      |
 
 {$include_doc /// ## Examples
 ///

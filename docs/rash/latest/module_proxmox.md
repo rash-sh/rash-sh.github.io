@@ -20,32 +20,32 @@ check_mode:
 
 | Parameter        | Required | Type    | Values                                               | Description                                      |
 |------------------|----------|---------|------------------------------------------------------|--------------------------------------------------|
+| node             | true     | string  |                                                      | Proxmox node name.                               |
+| vmid             | true     | integer |                                                      | VM/Container ID.                                 |
+| name             |          | string  |                                                      | VM/Container name.                               |
+| state            |          | string  | present<br>started<br>stopped<br>restarted<br>absent | The desired state of the VM/Container.           |
+| vmtype           |          | string  | qemu<br>lxc                                          | Type of VM (qemu for VMs, lxc for containers).   |
 | api_host         | true     | string  |                                                      | Proxmox API host URL.                            |
+| api_user         | true     | string  |                                                      | API username (e.g., root@pam).                   |
 | api_password     |          | string  |                                                      | API password for authentication.                 |
 | api_token_id     |          | string  |                                                      | API token ID for token-based authentication.     |
 | api_token_secret |          | string  |                                                      | API token secret for token-based authentication. |
-| api_user         | true     | string  |                                                      | API username (e.g., root@pam).                   |
-| bridge           |          | string  |                                                      | Bridge network interface.                        |
-| cores            |          | integer |                                                      | Number of CPU cores.                             |
-| description      |          | string  |                                                      | Description for the VM/container.                |
-| disk             |          | string  |                                                      | Disk size (e.g., "8G").                          |
-| force            |          | boolean |                                                      | Force stop/restart operations.                   |
-| gateway          |          | string  |                                                      | Gateway IP address (for containers).             |
-| ip_address       |          | string  |                                                      | IP address configuration (for containers).       |
-| memory           |          | integer |                                                      | Memory in MB.                                    |
-| name             |          | string  |                                                      | VM/Container name.                               |
-| node             | true     | string  |                                                      | Proxmox node name.                               |
-| ostemplate       |          | string  |                                                      | OS template storage (for containers).            |
-| pool             |          | string  |                                                      | Pool to assign the VM/container to.              |
-| state            |          | string  | present<br>started<br>stopped<br>restarted<br>absent | The desired state of the VM/Container.           |
-| storage          |          | string  |                                                      | Storage pool for disk.                           |
-| tags             |          | string  |                                                      | Tags for the VM/container.                       |
 | template         |          | integer |                                                      | Template VMID to clone from.                     |
-| timeout          |          | integer |                                                      | Timeout for wait operations in seconds.          |
+| cores            |          | integer |                                                      | Number of CPU cores.                             |
+| memory           |          | integer |                                                      | Memory in MB.                                    |
+| disk             |          | string  |                                                      | Disk size (e.g., "8G").                          |
+| storage          |          | string  |                                                      | Storage pool for disk.                           |
+| bridge           |          | string  |                                                      | Bridge network interface.                        |
+| ip_address       |          | string  |                                                      | IP address configuration (for containers).       |
+| gateway          |          | string  |                                                      | Gateway IP address (for containers).             |
+| ostemplate       |          | string  |                                                      | OS template storage (for containers).            |
 | validate_certs   |          | boolean |                                                      | Validate SSL certificates.                       |
-| vmid             | true     | integer |                                                      | VM/Container ID.                                 |
-| vmtype           |          | string  | qemu<br>lxc                                          | Type of VM (qemu for VMs, lxc for containers).   |
 | wait             |          | boolean |                                                      | Wait for VM/container to be in desired state.    |
+| timeout          |          | integer |                                                      | Timeout for wait operations in seconds.          |
+| force            |          | boolean |                                                      | Force stop/restart operations.                   |
+| description      |          | string  |                                                      | Description for the VM/container.                |
+| tags             |          | string  |                                                      | Tags for the VM/container.                       |
+| pool             |          | string  |                                                      | Pool to assign the VM/container to.              |
 
 {$include_doc /// ## Examples
 ///

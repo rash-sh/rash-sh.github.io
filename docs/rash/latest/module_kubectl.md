@@ -20,19 +20,19 @@ check_mode:
 
 | Parameter    | Required | Type    | Values            | Description                                             |
 |--------------|----------|---------|-------------------|---------------------------------------------------------|
-| cascade      |          | string  |                   | Delete cascade policy (background, foreground, orphan). |
-| context      |          | string  |                   | Kubernetes context to use.                              |
-| force        |          | boolean |                   | Force deletion of resources.                            |
-| grace_period |          | integer |                   | Grace period for deletion (seconds).                    |
+| state        |          | string  | absent<br>present | Desired state of the resource.                          |
+| src          |          | string  |                   | Path to a manifest file to apply/delete.                |
 | kind         |          | string  |                   | Resource kind (deployment, pod, service, etc.).         |
 | name         |          | string  |                   | Resource name.                                          |
 | namespace    |          | string  |                   | Kubernetes namespace.                                   |
 | replicas     |          | integer |                   | Number of replicas (for scaling deployments).           |
-| selector     |          | string  |                   | Label selector to filter resources.                     |
-| src          |          | string  |                   | Path to a manifest file to apply/delete.                |
-| state        |          | string  | absent<br>present | Desired state of the resource.                          |
+| force        |          | boolean |                   | Force deletion of resources.                            |
+| context      |          | string  |                   | Kubernetes context to use.                              |
 | wait         |          | boolean |                   | Wait for the operation to complete.                     |
 | wait_timeout |          | string  |                   | Timeout for wait operation (e.g., "60s", "5m").         |
+| cascade      |          | string  |                   | Delete cascade policy (background, foreground, orphan). |
+| grace_period |          | integer |                   | Grace period for deletion (seconds).                    |
+| selector     |          | string  |                   | Label selector to filter resources.                     |
 
 ## Example
 

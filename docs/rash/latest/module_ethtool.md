@@ -20,12 +20,12 @@ check_mode:
 
 | Parameter | Required | Type    | Values                     | Description                                                                                                |
 |-----------|----------|---------|----------------------------|------------------------------------------------------------------------------------------------------------|
-| autoneg   |          | boolean |                            | Enable or disable auto-negotiation.                                                                        |
 | device    | true     | string  |                            | Network interface name (e.g., eth0, ens33).                                                                |
-| duplex    |          | string  | half<br>full               | Duplex mode (half or full).                                                                                |
-| offload   |          | object  |                            | Offload feature settings.                                                                                  |
-| speed     |          | integer |                            | Link speed in Mbps (10, 100, 1000, 2500, 5000, 10000, 25000, 40000, 50000, 100000).                        |
 | state     |          | string  | present<br>absent<br>query | Whether the settings should be present, absent (reset), or query current state. **[default: `"present"`]** |
+| speed     |          | integer |                            | Link speed in Mbps (10, 100, 1000, 2500, 5000, 10000, 25000, 40000, 50000, 100000).                        |
+| duplex    |          | string  | half<br>full               | Duplex mode (half or full).                                                                                |
+| autoneg   |          | boolean |                            | Enable or disable auto-negotiation.                                                                        |
+| offload   |          | object  |                            | Offload feature settings.                                                                                  |
 
 ## Examples
 

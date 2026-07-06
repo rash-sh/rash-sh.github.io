@@ -20,13 +20,13 @@ check_mode:
 
 | Parameter    | Required | Type    | Values            | Description                                                                                     |
 |--------------|----------|---------|-------------------|-------------------------------------------------------------------------------------------------|
-| attribute    |          | string  |                   | The attribute name to modify. If not specified, modifies element text content.                  |
-| backup       |          | boolean |                   | Create a backup file before modifying. **[default: `false`]**                                   |
 | path         | true     | string  |                   | The absolute path to the XML file to modify.                                                    |
-| pretty_print |          | boolean |                   | Format the output XML with proper indentation. **[default: `true`]**                            |
-| state        |          | string  | present<br>absent | Whether the element/attribute should exist or not. **[default: `"present"`]**                   |
-| value        |          | string  |                   | The value to set for the element or attribute. Required if state=present.                       |
 | xpath        | true     | string  |                   | The xpath expression to select elements. Supports simple path notation like /config/server/port |
+| value        |          | string  |                   | The value to set for the element or attribute. Required if state=present.                       |
+| attribute    |          | string  |                   | The attribute name to modify. If not specified, modifies element text content.                  |
+| state        |          | string  | present<br>absent | Whether the element/attribute should exist or not. **[default: `"present"`]**                   |
+| pretty_print |          | boolean |                   | Format the output XML with proper indentation. **[default: `true`]**                            |
+| backup       |          | boolean |                   | Create a backup file before modifying. **[default: `false`]**                                   |
 
 ## Examples
 

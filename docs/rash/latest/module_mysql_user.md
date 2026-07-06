@@ -20,16 +20,16 @@ check_mode:
 
 | Parameter      | Required | Type    | Values            | Description                                                         |
 |----------------|----------|---------|-------------------|---------------------------------------------------------------------|
-| config_file    |          | string  |                   | MySQL config file to read credentials from.                         |
-| host           |          | string  |                   | Host part of the user. **[default: `"localhost"`]**                 |
-| login_host     |          | string  |                   | Database host to connect to. **[default: `"localhost"`]**           |
-| login_password |          | string  |                   | Database password to use.                                           |
-| login_port     |          | integer |                   | Database port to connect to. **[default: `3306`]**                  |
-| login_user     |          | string  |                   | Database user to connect with.                                      |
 | name           | true     | string  |                   | Name of the user to add or remove.                                  |
 | password       |          | string  |                   | Password for the user.                                              |
-| priv           |          | string  |                   | Privileges to grant (format: "db.table:priv1,priv2" or "db.*:ALL"). |
 | state          |          | string  | present<br>absent | The user state. **[default: `"present"`]**                          |
+| host           |          | string  |                   | Host part of the user. **[default: `"localhost"`]**                 |
+| priv           |          | string  |                   | Privileges to grant (format: "db.table:priv1,priv2" or "db.*:ALL"). |
+| login_host     |          | string  |                   | Database host to connect to. **[default: `"localhost"`]**           |
+| login_user     |          | string  |                   | Database user to connect with.                                      |
+| login_password |          | string  |                   | Database password to use.                                           |
+| login_port     |          | integer |                   | Database port to connect to. **[default: `3306`]**                  |
+| config_file    |          | string  |                   | MySQL config file to read credentials from.                         |
 
 ## Example
 

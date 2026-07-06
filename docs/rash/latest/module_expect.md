@@ -24,9 +24,9 @@ check_mode:
 | Parameter | Required | Type    | Values | Description                                                                                                                                              |
 |-----------|----------|---------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | command   | true     | string  |        | The command to run with interactive prompts.                                                                                                             |
-| echo      |          | boolean |        | Whether to echo the command output to stdout.                                                                                                            |
 | responses | true     | object  |        | A dictionary mapping prompt patterns (strings or regex) to their responses. When a pattern is matched in the output, the corresponding response is sent. |
 | timeout   |          | integer |        | Maximum time in seconds to wait for each expected pattern.                                                                                               |
+| echo      |          | boolean |        | Whether to echo the command output to stdout.                                                                                                            |
 
 ## Example
 

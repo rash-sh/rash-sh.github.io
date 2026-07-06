@@ -20,12 +20,12 @@ check_mode:
 
 | Parameter       | Required | Type    | Values            | Description                                                                                       |
 |-----------------|----------|---------|-------------------|---------------------------------------------------------------------------------------------------|
-| no_extra_spaces |          | boolean |                   | Remove spaces around the = sign. **[default: `false`]**                                           |
-| option          | true     | string  |                   | The option (key) name to modify.                                                                  |
 | path            | true     | string  |                   | The absolute path to the INI file to modify.                                                      |
 | section         |          | string  |                   | The section name to modify. If not specified, the option will be placed before the first section. |
-| state           |          | string  | present<br>absent | Whether the option should exist or not. **[default: `"present"`]**                                |
+| option          | true     | string  |                   | The option (key) name to modify.                                                                  |
 | value           |          | string  |                   | The value to set for the option. Required if state=present.                                       |
+| state           |          | string  | present<br>absent | Whether the option should exist or not. **[default: `"present"`]**                                |
+| no_extra_spaces |          | boolean |                   | Remove spaces around the = sign. **[default: `false`]**                                           |
 
 ## Examples
 

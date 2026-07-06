@@ -20,20 +20,20 @@ check_mode:
 
 | Parameter  | Required | Type    | Values                                     | Description                                                                      |
 |------------|----------|---------|--------------------------------------------|----------------------------------------------------------------------------------|
-| comment    |          | string  |                                            | Comment for the rule.                                                            |
-| direction  |          | string  | in<br>out                                  | The direction for the policy (incoming or outgoing). **[default: `"incoming"`]** |
-| from_ip    |          | string  |                                            | Source IP address or CIDR.                                                       |
-| interface  |          | string  |                                            | Network interface for the rule.                                                  |
-| logging    |          | string  | off<br>on<br>low<br>medium<br>high<br>full | Logging level: off, on, low, medium, high, full.                                 |
-| name       |          | string  |                                            | Service name to allow/deny (e.g., ssh, http).                                    |
+| state      |          | string  | enabled<br>disabled<br>reset<br>reloaded   | Whether the firewall should be enabled, disabled, reset, or reloaded.            |
 | policy     |          | string  | allow<br>deny<br>reject                    | Set the default policy for incoming or outgoing traffic.                         |
+| direction  |          | string  | in<br>out                                  | The direction for the policy (incoming or outgoing). **[default: `"incoming"`]** |
+| rule       |          | string  | allow<br>deny<br>reject<br>limit           | The rule action (allow, deny, reject, limit).                                    |
 | port       |          | string  |                                            | Port number or service name.                                                     |
 | proto      |          | string  | tcp<br>udp                                 | Protocol (tcp or udp).                                                           |
-| route      |          | boolean |                                            | Route traffic through the firewall. **[default: `false`]**                       |
-| rule       |          | string  | allow<br>deny<br>reject<br>limit           | The rule action (allow, deny, reject, limit).                                    |
-| rule_state |          | string  | present<br>absent                          | Whether the rule should be present or absent. **[default: `"present"`]**         |
-| state      |          | string  | enabled<br>disabled<br>reset<br>reloaded   | Whether the firewall should be enabled, disabled, reset, or reloaded.            |
+| from_ip    |          | string  |                                            | Source IP address or CIDR.                                                       |
 | to_ip      |          | string  |                                            | Destination IP address or CIDR.                                                  |
+| name       |          | string  |                                            | Service name to allow/deny (e.g., ssh, http).                                    |
+| comment    |          | string  |                                            | Comment for the rule.                                                            |
+| rule_state |          | string  | present<br>absent                          | Whether the rule should be present or absent. **[default: `"present"`]**         |
+| interface  |          | string  |                                            | Network interface for the rule.                                                  |
+| logging    |          | string  | off<br>on<br>low<br>medium<br>high<br>full | Logging level: off, on, low, medium, high, full.                                 |
+| route      |          | boolean |                                            | Route traffic through the firewall. **[default: `false`]**                       |
 
 ## Examples
 

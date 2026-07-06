@@ -20,13 +20,13 @@ check_mode:
 
 | Parameter   | Required | Type    | Values            | Description                                                           |
 |-------------|----------|---------|-------------------|-----------------------------------------------------------------------|
-| compression |          | string  |                   | Compression algorithm (e.g., zstd, lzo, zlib).                        |
 | device      | true     | string  |                   | Path to the Btrfs device or mount point.                              |
-| properties  |          | object  |                   | Dict of subvolume properties to set.                                  |
-| readonly    |          | boolean |                   | Whether the snapshot should be read-only. **[default: `true`]**       |
-| snapshot    |          | string  |                   | Destination path for a snapshot of the subvolume.                     |
-| state       |          | string  | present<br>absent | Whether the subvolume should exist or not. **[default: `"present"`]** |
 | subvolume   | true     | string  |                   | Subvolume path relative to the mount point.                           |
+| state       |          | string  | present<br>absent | Whether the subvolume should exist or not. **[default: `"present"`]** |
+| snapshot    |          | string  |                   | Destination path for a snapshot of the subvolume.                     |
+| readonly    |          | boolean |                   | Whether the snapshot should be read-only. **[default: `true`]**       |
+| properties  |          | object  |                   | Dict of subvolume properties to set.                                  |
+| compression |          | string  |                   | Compression algorithm (e.g., zstd, lzo, zlib).                        |
 
 ## Example
 

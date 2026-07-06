@@ -21,8 +21,8 @@ check_mode:
 | Parameter        | Required | Type    | Values                         | Description                                                                                                          |
 |------------------|----------|---------|--------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | action           |          | string  | get<br>add<br>remove<br>update | Action to perform on the Prometheus configuration. **[default: `"get"`]**                                            |
-| alert_rules_file |          | string  |                                | Path to the alert rules file. If not set, alert rules are written to a `rules` subdirectory next to the config file. |
 | config_file      |          | string  |                                | Path to the main Prometheus configuration file. **[default: `"/etc/prometheus/prometheus.yml"`]**                    |
+| alert_rules_file |          | string  |                                | Path to the alert rules file. If not set, alert rules are written to a `rules` subdirectory next to the config file. |
 | reload           |          | boolean |                                | Reload Prometheus after changes by sending SIGHUP. **[default: `true`]**                                             |
 
 ## Examples

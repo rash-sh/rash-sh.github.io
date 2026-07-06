@@ -22,9 +22,10 @@ diff_mode:
 
 | Parameter        | Required | Type    | Values | Description                                                                                   |
 |------------------|----------|---------|--------|-----------------------------------------------------------------------------------------------|
+| url              | true     | string  |        | HTTP, HTTPS, or FTP URL to download                                                           |
+| dest             | true     | string  |        | Absolute path where to download the file to                                                   |
 | backup           |          | boolean |        | Create a backup file including the timestamp information                                      |
 | checksum         |          | string  |        | If a checksum is passed, the digest of the destination file will be calculated after download |
-| dest             | true     | string  |        | Absolute path where to download the file to                                                   |
 | force            |          | boolean |        | If true, will download the file every time and replace if contents change                     |
 | force_basic_auth |          | boolean |        | Force the sending of the Basic authentication header upon initial request                     |
 | group            |          | string  |        | Name of the group that should own the file                                                    |
@@ -32,9 +33,8 @@ diff_mode:
 | mode             |          | string  |        | The permissions the resulting file should have                                                |
 | owner            |          | string  |        | Name of the user that should own the file                                                     |
 | timeout          |          | integer |        | Timeout in seconds for URL request                                                            |
-| url              | true     | string  |        | HTTP, HTTPS, or FTP URL to download                                                           |
-| url_password     |          | string  |        | A password for HTTP basic authentication                                                      |
 | url_username     |          | string  |        | A username for HTTP basic authentication                                                      |
+| url_password     |          | string  |        | A password for HTTP basic authentication                                                      |
 | validate_certs   |          | boolean |        | If false, SSL certificates will not be validated                                              |
 
 ## Examples

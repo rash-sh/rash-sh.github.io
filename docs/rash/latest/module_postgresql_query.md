@@ -20,17 +20,17 @@ check_mode:
 
 | Parameter          | Required | Type    | Values | Description                                                   |
 |--------------------|----------|---------|--------|---------------------------------------------------------------|
+| query              | true     | string  |        | SQL query to execute.                                         |
 | database           |          | string  |        | Database name to connect to. **[default: `"postgres"`]**      |
 | login_host         |          | string  |        | Host running the database. **[default: `"localhost"`]**       |
+| login_user         |          | string  |        | The username to authenticate with.                            |
 | login_password     |          | string  |        | The password to authenticate with.                            |
 | login_port         |          | integer |        | Database port to connect to. **[default: `5432`]**            |
 | login_unix_socket  |          | string  |        | Path to a Unix domain socket for local connections.           |
-| login_user         |          | string  |        | The username to authenticate with.                            |
-| query              | true     | string  |        | SQL query to execute.                                         |
-| single_transaction |          | boolean |        | Execute query in a single transaction. **[default: `false`]** |
+| ssl_mode           |          | string  |        | SSL mode for the connection.                                  |
 | ssl_cert           |          | string  |        | Path to SSL client certificate.                               |
 | ssl_key            |          | string  |        | Path to SSL client key.                                       |
-| ssl_mode           |          | string  |        | SSL mode for the connection.                                  |
+| single_transaction |          | boolean |        | Execute query in a single transaction. **[default: `false`]** |
 
 ## Examples
 

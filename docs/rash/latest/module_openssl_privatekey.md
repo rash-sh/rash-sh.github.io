@@ -20,14 +20,14 @@ check_mode:
 
 | Parameter | Required | Type    | Values            | Description                                                                           |
 |-----------|----------|---------|-------------------|---------------------------------------------------------------------------------------|
-| force     |          | boolean |                   | Force regeneration even if key exists. **[default: `false`]                           |
-| group     |          | string  |                   | Group of the private key file (numeric gid or group name).                            |
-| mode      |          | string  |                   | Permissions of the private key file.                                                  |
-| owner     |          | string  |                   | Owner of the private key file (numeric uid or username).                              |
 | path      | true     | string  |                   | Path to write the private key file.                                                   |
 | size      |          | integer |                   | Key size in bits. **[default: `4096`]                                                 |
-| state     |          | string  | present<br>absent | State of the private key. If _absent_, removes the key file. **[default: `"present"`] |
 | type      |          | string  | RSA<br>ECC        | Key type: RSA or ECC. **[default: `"RSA"`]                                            |
+| mode      |          | string  |                   | Permissions of the private key file.                                                  |
+| owner     |          | string  |                   | Owner of the private key file (numeric uid or username).                              |
+| group     |          | string  |                   | Group of the private key file (numeric gid or group name).                            |
+| force     |          | boolean |                   | Force regeneration even if key exists. **[default: `false`]                           |
+| state     |          | string  | present<br>absent | State of the private key. If _absent_, removes the key file. **[default: `"present"`] |
 
 ## Examples
 

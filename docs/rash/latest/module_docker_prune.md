@@ -20,13 +20,13 @@ check_mode:
 
 | Parameter     | Required | Type    | Values | Description                     |
 |---------------|----------|---------|--------|---------------------------------|
-| all           |          | boolean |        | Prune all types.                |
-| builder_cache |          | boolean |        | Prune build cache.              |
 | containers    |          | boolean |        | Prune stopped containers.       |
-| force         |          | boolean |        | Do not prompt for confirmation. |
 | images        |          | boolean |        | Prune unused images.            |
-| networks      |          | boolean |        | Prune unused networks.          |
 | volumes       |          | boolean |        | Prune unused volumes.           |
+| networks      |          | boolean |        | Prune unused networks.          |
+| builder_cache |          | boolean |        | Prune build cache.              |
+| all           |          | boolean |        | Prune all types.                |
+| force         |          | boolean |        | Do not prompt for confirmation. |
 
 ## Example
 

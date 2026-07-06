@@ -20,13 +20,13 @@ check_mode:
 
 | Parameter    | Required | Type    | Values            | Description                                                               |
 |--------------|----------|---------|-------------------|---------------------------------------------------------------------------|
-| commands     | true     |         |                   | Commands the user/group can run. Can be a single command or list.         |
 | name         | true     | string  |                   | Name of the sudoers rule. This becomes the filename in sudoers.d.         |
+| user         | true     | string  |                   | User or group to grant sudo access. Groups should be prefixed with %.     |
+| commands     | true     |         |                   | Commands the user/group can run. Can be a single command or list.         |
 | nopassword   |          | boolean |                   | Whether to require password for sudo. **[default: `false`]**              |
 | setenv       |          | boolean |                   | Allow user to set environment variables with sudo. **[default: `false`]** |
-| state        |          | string  | present<br>absent | Whether the rule should be present or absent. **[default: `"present"`]**  |
 | sudoers_path |          | string  |                   | Path to the sudoers.d directory. **[default: `"/etc/sudoers.d"`]**        |
-| user         | true     | string  |                   | User or group to grant sudo access. Groups should be prefixed with %.     |
+| state        |          | string  | present<br>absent | Whether the rule should be present or absent. **[default: `"present"`]**  |
 
 ## Examples
 

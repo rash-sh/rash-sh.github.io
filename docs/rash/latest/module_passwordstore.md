@@ -23,14 +23,14 @@ check_mode:
 
 | Parameter     | Required | Type    | Values            | Description                                                                                                                                      |
 |---------------|----------|---------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| path          | true     | string  |                   | Path to the password in the password store.                                                                                                      |
+| state         |          | string  | present<br>absent | Whether the password should be present or absent. When present and password exists, returns the password content. **[default: `"present"`]**     |
+| password      |          | string  |                   | The password to store. Required for state=present when creating a new entry (unless `generate` is true or `userpass` is provided).               |
+| userpass      |          | string  |                   | The full content of the password file (multiline). First line is the password, remaining lines are metadata. Mutually exclusive with `password`. |
+| passwordstore |          | string  |                   | Path to the password-store directory. Overrides PASSWORD_STORE_DIR environment variable.                                                         |
 | generate      |          | boolean |                   | Generate a random password instead of providing one. The generated password will be stored in pass.                                              |
 | length        |          | integer |                   | Length of the generated password. Only used with `generate: true`. **[default: `16`]**                                                           |
-| password      |          | string  |                   | The password to store. Required for state=present when creating a new entry (unless `generate` is true or `userpass` is provided).               |
-| passwordstore |          | string  |                   | Path to the password-store directory. Overrides PASSWORD_STORE_DIR environment variable.                                                         |
-| path          | true     | string  |                   | Path to the password in the password store.                                                                                                      |
 | returnall     |          | boolean |                   | Return all content from the password entry, not just the first line.                                                                             |
-| state         |          | string  | present<br>absent | Whether the password should be present or absent. When present and password exists, returns the password content. **[default: `"present"`]**     |
-| userpass      |          | string  |                   | The full content of the password file (multiline). First line is the password, remaining lines are metadata. Mutually exclusive with `password`. |
 
 ## Examples
 

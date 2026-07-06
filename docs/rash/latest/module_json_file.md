@@ -20,11 +20,11 @@ check_mode:
 
 | Parameter | Required | Type    | Values            | Description                                                          |
 |-----------|----------|---------|-------------------|----------------------------------------------------------------------|
-| backup    |          | boolean |                   | Create a backup of the file before modifying. **[default: `false`]** |
-| key       | true     | string  |                   | The JSON key path using dot notation (e.g., `server.port`).          |
 | path      | true     | string  |                   | The absolute path to the JSON file to modify.                        |
-| state     |          | string  | present<br>absent | Whether the key should exist or not. **[default: `"present"`]**      |
+| key       | true     | string  |                   | The JSON key path using dot notation (e.g., `server.port`).          |
 | value     |          |         |                   | The value to set for the key. Required if state=present.             |
+| state     |          | string  | present<br>absent | Whether the key should exist or not. **[default: `"present"`]**      |
+| backup    |          | boolean |                   | Create a backup of the file before modifying. **[default: `false`]** |
 
 ## Examples
 

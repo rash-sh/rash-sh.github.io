@@ -20,16 +20,16 @@ check_mode:
 
 | Parameter | Required | Type    | Values            | Description                                                            |
 |-----------|----------|---------|-------------------|------------------------------------------------------------------------|
-| action    |          | string  |                   | Action to take on ban (e.g., `%(action_)s`, `%(action_mwl)s`).         |
-| bantime   |          | integer |                   | Ban duration in seconds. **[default: 600]**                            |
+| name      | true     | string  |                   | Jail name (required).                                                  |
+| state     |          | string  | present<br>absent | Whether the jail should be present or absent. **[default: `present`]** |
 | enabled   |          | boolean |                   | Whether the jail should be enabled or disabled. **[default: `true`]**  |
+| port      |          | string  |                   | Port(s) to protect (e.g., ssh, http, https, or 22, 80, 443).           |
 | filter    |          | string  |                   | Filter name to use for this jail.                                      |
-| findtime  |          | integer |                   | Time window in seconds for counting retries. **[default: 600]**        |
 | logpath   |          | string  |                   | Log file path to monitor.                                              |
 | maxretry  |          | integer |                   | Maximum number of retries before ban. **[default: 5]**                 |
-| name      | true     | string  |                   | Jail name (required).                                                  |
-| port      |          | string  |                   | Port(s) to protect (e.g., ssh, http, https, or 22, 80, 443).           |
-| state     |          | string  | present<br>absent | Whether the jail should be present or absent. **[default: `present`]** |
+| findtime  |          | integer |                   | Time window in seconds for counting retries. **[default: 600]**        |
+| bantime   |          | integer |                   | Ban duration in seconds. **[default: 600]**                            |
+| action    |          | string  |                   | Action to take on ban (e.g., `%(action_)s`, `%(action_mwl)s`).         |
 
 ## Examples
 

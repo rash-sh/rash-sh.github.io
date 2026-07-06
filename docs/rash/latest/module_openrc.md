@@ -21,10 +21,10 @@ check_mode:
 
 | Parameter | Required | Type    | Values                                           | Description                                        |
 |-----------|----------|---------|--------------------------------------------------|----------------------------------------------------|
-| enabled   |          | boolean |                                                  | Whether the service should be enabled on boot.     |
 | name      | true     | string  |                                                  | Name of the service to manage.                     |
-| runlevel  |          | string  | default<br>boot<br>sysinit<br>shutdown<br>single | Runlevel for the service. **[default: `default`]** |
+| enabled   |          | boolean |                                                  | Whether the service should be enabled on boot.     |
 | state     |          | string  | reloaded<br>restarted<br>started<br>stopped      | State of the service.                              |
+| runlevel  |          | string  | default<br>boot<br>sysinit<br>shutdown<br>single | Runlevel for the service. **[default: `default`]** |
 
 ## Example
 

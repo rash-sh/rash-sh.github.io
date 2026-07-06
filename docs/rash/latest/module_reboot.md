@@ -24,11 +24,11 @@ check_mode:
 
 | Parameter      | Required | Type    | Values                                  | Description                                                                                      |
 |----------------|----------|---------|-----------------------------------------|--------------------------------------------------------------------------------------------------|
-| cancel         |          | boolean |                                         | Cancel a scheduled reboot.                                                                       |
-| check_required |          | boolean |                                         | Check if a reboot is required without actually rebooting. Returns reboot_required in the result. |
-| delay          |          | integer |                                         | Seconds to wait before rebooting. Set to 0 for immediate reboot.                                 |
-| method         |          | string  | auto<br>systemctl<br>reboot<br>shutdown | Method to use for rebooting. Options: auto (default), systemctl, reboot, shutdown.               |
 | msg            |          | string  |                                         | Message to display before rebooting.                                                             |
+| delay          |          | integer |                                         | Seconds to wait before rebooting. Set to 0 for immediate reboot.                                 |
+| check_required |          | boolean |                                         | Check if a reboot is required without actually rebooting. Returns reboot_required in the result. |
+| cancel         |          | boolean |                                         | Cancel a scheduled reboot.                                                                       |
+| method         |          | string  | auto<br>systemctl<br>reboot<br>shutdown | Method to use for rebooting. Options: auto (default), systemctl, reboot, shutdown.               |
 
 ## Example
 

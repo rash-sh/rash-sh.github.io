@@ -24,13 +24,13 @@ check_mode:
 | Parameter    | Required | Type   | Values                          | Description                                                                                                      |
 |--------------|----------|--------|---------------------------------|------------------------------------------------------------------------------------------------------------------|
 | action       | true     | string | update<br>generate<br>configure | Action to perform. **[required]**                                                                                |
-| compression  |          | string |                                 | Compression algorithm for generate action. **[default: `"gzip"`]**                                               |
+| kernel       |          | string |                                 | Kernel version (e.g., 6.8.0-48-generic, all). Used with update and generate actions. **[default: `"all"`]**      |
 | config       |          |        |                                 | Dict of initramfs-tools configuration options. Keys: MODULES, BUSYBOX, COMPRESS, BOOT, NFSROOT, RUNSIZE, FSTYPE. |
-| files        |          | array  |                                 | List of files to include in initramfs.                                                                           |
+| modules      |          | array  |                                 | List of modules to include in initramfs.                                                                         |
 | hooks        |          | array  |                                 | List of hooks to ensure present.                                                                                 |
 | hooks_absent |          | array  |                                 | List of hooks to ensure absent.                                                                                  |
-| kernel       |          | string |                                 | Kernel version (e.g., 6.8.0-48-generic, all). Used with update and generate actions. **[default: `"all"`]**      |
-| modules      |          | array  |                                 | List of modules to include in initramfs.                                                                         |
+| files        |          | array  |                                 | List of files to include in initramfs.                                                                           |
+| compression  |          | string |                                 | Compression algorithm for generate action. **[default: `"gzip"`]**                                               |
 
 ## Examples
 

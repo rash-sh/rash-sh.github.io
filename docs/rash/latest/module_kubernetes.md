@@ -22,23 +22,23 @@ check_mode:
 
 | Parameter    | Required | Type    | Values            | Description                                                                  |
 |--------------|----------|---------|-------------------|------------------------------------------------------------------------------|
-| api_version  |          | string  |                   | API version of the resource (e.g., v1, apps/v1).                             |
-| cascade      |          | string  |                   | Delete cascade policy (background, foreground, orphan).                      |
-| context      |          | string  |                   | Kubernetes context to use.                                                   |
-| extra_args   |          | string  |                   | Additional arguments passed to kubectl.                                      |
-| force        |          | boolean |                   | Force deletion of resources (implies grace-period=0). **[default: `false`]** |
-| grace_period |          | integer |                   | Grace period for deletion in seconds.                                        |
-| host         |          | string  |                   | Kubernetes API server URL.                                                   |
+| state        |          | string  | absent<br>present | Desired state of the resource. **[default: `"present"`]**                    |
+| src          |          | string  |                   | Path to a manifest file to apply or delete.                                  |
 | kind         |          | string  |                   | Resource kind (e.g., Pod, Deployment, Service, ConfigMap).                   |
-| kubeconfig   |          | string  |                   | Path to kubeconfig file.                                                     |
 | name         |          | string  |                   | Resource name (used with kind for deletions without definition).             |
 | namespace    |          | string  |                   | Kubernetes namespace.                                                        |
-| selector     |          | string  |                   | Label selector to filter resources.                                          |
-| src          |          | string  |                   | Path to a manifest file to apply or delete.                                  |
-| state        |          | string  | absent<br>present | Desired state of the resource. **[default: `"present"`]**                    |
+| api_version  |          | string  |                   | API version of the resource (e.g., v1, apps/v1).                             |
+| kubeconfig   |          | string  |                   | Path to kubeconfig file.                                                     |
+| context      |          | string  |                   | Kubernetes context to use.                                                   |
+| host         |          | string  |                   | Kubernetes API server URL.                                                   |
 | validate     |          | boolean |                   | Validate resource definition before applying. **[default: `true`]**          |
 | wait         |          | boolean |                   | Wait for the operation to complete. **[default: `false`]**                   |
 | wait_timeout |          | string  |                   | Timeout for wait operation (e.g., "60s", "5m").                              |
+| force        |          | boolean |                   | Force deletion of resources (implies grace-period=0). **[default: `false`]** |
+| grace_period |          | integer |                   | Grace period for deletion in seconds.                                        |
+| cascade      |          | string  |                   | Delete cascade policy (background, foreground, orphan).                      |
+| selector     |          | string  |                   | Label selector to filter resources.                                          |
+| extra_args   |          | string  |                   | Additional arguments passed to kubectl.                                      |
 
 ## Example
 

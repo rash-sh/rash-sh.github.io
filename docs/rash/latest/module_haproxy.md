@@ -20,13 +20,13 @@ check_mode:
 
 | Parameter   | Required | Type   | Values                        | Description                                                                         |
 |-------------|----------|--------|-------------------------------|-------------------------------------------------------------------------------------|
-| balance     |          | string |                               | Load balancing algorithm (e.g., roundrobin, leastconn, source).                     |
-| check       |          | string |                               | Health check option string (e.g., "option httpchk GET /health").                    |
-| config_file |          | string |                               | Path to the HAProxy configuration file. **[default: `"/etc/haproxy/haproxy.cfg"`]** |
 | name        | true     | string |                               | Backend or frontend section name.                                                   |
+| state       |          | string | present<br>absent             | Whether the section should be present or absent. **[default: `"present"`]**         |
+| config_file |          | string |                               | Path to the HAProxy configuration file. **[default: `"/etc/haproxy/haproxy.cfg"`]** |
 | section     |          | string | backend<br>frontend<br>listen | Section type to manage. **[default: `"backend"`]**                                  |
 | servers     |          | array  |                               | List of backend servers with name, address, and optional check flag.                |
-| state       |          | string | present<br>absent             | Whether the section should be present or absent. **[default: `"present"`]**         |
+| balance     |          | string |                               | Load balancing algorithm (e.g., roundrobin, leastconn, source).                     |
+| check       |          | string |                               | Health check option string (e.g., "option httpchk GET /health").                    |
 
 ## Examples
 

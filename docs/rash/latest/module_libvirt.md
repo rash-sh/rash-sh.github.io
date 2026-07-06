@@ -20,17 +20,17 @@ check_mode:
 
 | Parameter      | Required | Type    | Values                                                                         | Description                                                  |
 |----------------|----------|---------|--------------------------------------------------------------------------------|--------------------------------------------------------------|
-| autostart      |          | boolean |                                                                                | Set autostart flag on the domain.                            |
-| disk           |          | object  |                                                                                | Disk configuration.                                          |
-| force          |          | boolean |                                                                                | Force stop (destroy) instead of graceful shutdown.           |
-| memory         |          | integer |                                                                                | Memory allocation in MiB.                                    |
 | name           | true     | string  |                                                                                | Name of the domain/VM.                                       |
-| network        |          | object  |                                                                                | Network interface configuration.                             |
-| remove_storage |          | boolean |                                                                                | Remove associated storage when undefining.                   |
 | state          |          | string  | running<br>stopped<br>paused<br>undefined<br>present<br>destroyed<br>restarted | State of the domain.                                         |
 | uri            |          | string  |                                                                                | Libvirt connection URI.                                      |
-| vcpu           |          | integer |                                                                                | Number of virtual CPUs.                                      |
 | xml            |          | string  |                                                                                | Domain XML definition (overrides other resource parameters). |
+| memory         |          | integer |                                                                                | Memory allocation in MiB.                                    |
+| vcpu           |          | integer |                                                                                | Number of virtual CPUs.                                      |
+| disk           |          | object  |                                                                                | Disk configuration.                                          |
+| network        |          | object  |                                                                                | Network interface configuration.                             |
+| autostart      |          | boolean |                                                                                | Set autostart flag on the domain.                            |
+| remove_storage |          | boolean |                                                                                | Remove associated storage when undefining.                   |
+| force          |          | boolean |                                                                                | Force stop (destroy) instead of graceful shutdown.           |
 
 {$include_doc /// ## Example
 ///

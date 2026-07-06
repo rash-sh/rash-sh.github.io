@@ -20,12 +20,12 @@ check_mode:
 
 | Parameter    | Required | Type    | Values            | Description                                                                                  |
 |--------------|----------|---------|-------------------|----------------------------------------------------------------------------------------------|
-| ignoreerrors |          | boolean |                   | Use this option to ignore errors about unknown keys. **[default: `false`]**                  |
 | name         | true     | string  |                   | The dot-separated path (key) specifying the sysctl variable.                                 |
-| reload       |          | boolean |                   | If true, performs a sysctl -p if the sysctl_file is updated. **[default: `true`]**           |
-| state        |          | string  | present<br>absent | Whether the entry should be present or absent in the sysctl file. **[default: `"present"`]** |
-| sysctl_file  |          | string  |                   | Specifies the absolute path to sysctl.conf. **[default: `"/etc/sysctl.conf"`]**              |
 | value        |          | string  |                   | Desired value of the sysctl key. Required if state=present.                                  |
+| state        |          | string  | present<br>absent | Whether the entry should be present or absent in the sysctl file. **[default: `"present"`]** |
+| reload       |          | boolean |                   | If true, performs a sysctl -p if the sysctl_file is updated. **[default: `true`]**           |
+| sysctl_file  |          | string  |                   | Specifies the absolute path to sysctl.conf. **[default: `"/etc/sysctl.conf"`]**              |
+| ignoreerrors |          | boolean |                   | Use this option to ignore errors about unknown keys. **[default: `false`]**                  |
 
 ## Examples
 

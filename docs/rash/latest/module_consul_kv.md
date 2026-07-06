@@ -20,16 +20,16 @@ check_mode:
 
 | Parameter      | Required | Type    | Values                    | Description                                      |
 |----------------|----------|---------|---------------------------|--------------------------------------------------|
-| dc             |          | string  |                           | The datacenter to use.                           |
-| host           |          | string  |                           | The Consul host.                                 |
 | key            | true     | string  |                           | The key path in Consul KV store.                 |
-| ns             |          | string  |                           | The namespace (Consul Enterprise).               |
-| port           |          | integer |                           | The Consul port.                                 |
-| recurse        |          | boolean |                           | Recursively delete keys (only for state=absent). |
-| state          |          | string  | read<br>present<br>absent | The desired state of the key.                    |
-| token          |          | string  |                           | ACL token for authentication.                    |
-| validate_certs |          | boolean |                           | Validate SSL certificates.                       |
 | value          |          | string  |                           | The value to set (required for state=present).   |
+| state          |          | string  | read<br>present<br>absent | The desired state of the key.                    |
+| host           |          | string  |                           | The Consul host.                                 |
+| port           |          | integer |                           | The Consul port.                                 |
+| token          |          | string  |                           | ACL token for authentication.                    |
+| recurse        |          | boolean |                           | Recursively delete keys (only for state=absent). |
+| dc             |          | string  |                           | The datacenter to use.                           |
+| validate_certs |          | boolean |                           | Validate SSL certificates.                       |
+| ns             |          | string  |                           | The namespace (Consul Enterprise).               |
 
 ## Examples
 

@@ -25,9 +25,9 @@ indent: true
 
 | Parameter   | Required | Type    | Values            | Description                                                                    |
 |-------------|----------|---------|-------------------|--------------------------------------------------------------------------------|
-| challenge   |          | string  |                   | Challenge type to use for domain validation. **[default: `"http"`]**           |
 | domains     | true     | array   |                   | List of domain names for the certificate.                                      |
 | email       | true     | string  |                   | Email address for Let's Encrypt registration and notifications.                |
+| challenge   |          | string  |                   | Challenge type to use for domain validation. **[default: `"http"`]**           |
 | expire_days |          | integer |                   | Renew the certificate if it expires within this many days. **[default: `30`]** |
 | state       |          | string  | absent<br>present | Whether the certificate should exist or not. **[default: `"present"`]**        |
 

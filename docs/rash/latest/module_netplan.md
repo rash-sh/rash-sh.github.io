@@ -20,13 +20,13 @@ check_mode:
 
 | Parameter | Required | Type    | Values                     | Description                                                                  |
 |-----------|----------|---------|----------------------------|------------------------------------------------------------------------------|
+| state     |          | string  | present<br>absent          | Whether the configuration should exist or not. **[default: `"present"`]**    |
+| renderer  |          | string  | networkd<br>networkmanager | Backend renderer (networkd or NetworkManager). **[default: `"networkd"`]**   |
+| version   |          | integer |                            | Netplan version. **[default: `2`]**                                          |
 | apply     |          | boolean |                            | Apply configuration immediately using netplan apply. **[default: `true`]**   |
 | backup    |          | boolean |                            | Create backup of existing config file.                                       |
 | directory |          | string  |                            | Path to the netplan configuration directory. **[default: `"/etc/netplan"`]** |
 | filename  |          | string  |                            | Name of the configuration file to manage. **[default: `"01-rash.yaml"`]**    |
-| renderer  |          | string  | networkd<br>networkmanager | Backend renderer (networkd or NetworkManager). **[default: `"networkd"`]**   |
-| state     |          | string  | present<br>absent          | Whether the configuration should exist or not. **[default: `"present"`]**    |
-| version   |          | integer |                            | Netplan version. **[default: `2`]**                                          |
 
 ## Examples
 

@@ -22,12 +22,12 @@ diff_mode:
 
 | Parameter | Required | Type    | Values                        | Description                                                                             |
 |-----------|----------|---------|-------------------------------|-----------------------------------------------------------------------------------------|
-| dest      | true     | string  |                               | The file name of the destination archive.                                               |
-| exclude   |          | array   |                               | List of patterns to exclude from the archive.                                           |
-| force     |          | boolean |                               | Force archiving even if the destination archive already exists.                         |
-| format    |          | string  | gz<br>bz2<br>xz<br>tar<br>zip | The type of compression to use. **[default: `"gz"`]**                                   |
 | path      | true     | array   |                               | Remote absolute path, list of paths, or glob patterns for the file or files to archive. |
+| dest      | true     | string  |                               | The file name of the destination archive.                                               |
+| format    |          | string  | gz<br>bz2<br>xz<br>tar<br>zip | The type of compression to use. **[default: `"gz"`]**                                   |
+| exclude   |          | array   |                               | List of patterns to exclude from the archive.                                           |
 | remove    |          | boolean |                               | Remove the original file tree after archiving.                                          |
+| force     |          | boolean |                               | Force archiving even if the destination archive already exists.                         |
 
 ## Examples
 

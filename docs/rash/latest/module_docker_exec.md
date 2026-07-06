@@ -20,14 +20,14 @@ check_mode:
 
 | Parameter | Required | Type    | Values | Description                                                                |
 |-----------|----------|---------|--------|----------------------------------------------------------------------------|
-| command   | true     | string  |        | Command to execute inside the container.                                   |
 | container | true     | string  |        | Container name or ID.                                                      |
-| detach    |          | boolean |        | Run command in the background (detached mode).                             |
-| env       |          | object  |        | Environment variables as a dictionary.                                     |
-| stdin     |          | boolean |        | Keep STDIN open even if not attached.                                      |
-| tty       |          | boolean |        | Allocate a pseudo-TTY.                                                     |
+| command   | true     | string  |        | Command to execute inside the container.                                   |
 | user      |          | string  |        | User to run the command as (e.g., "user", "uid", "user:group", "uid:gid"). |
 | workdir   |          | string  |        | Working directory inside the container.                                    |
+| env       |          | object  |        | Environment variables as a dictionary.                                     |
+| detach    |          | boolean |        | Run command in the background (detached mode).                             |
+| tty       |          | boolean |        | Allocate a pseudo-TTY.                                                     |
+| stdin     |          | boolean |        | Keep STDIN open even if not attached.                                      |
 
 ## Example
 

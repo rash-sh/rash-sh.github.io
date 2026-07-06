@@ -20,14 +20,14 @@ check_mode:
 
 | Parameter      | Required | Type    | Values                     | Description                                  |
 |----------------|----------|---------|----------------------------|----------------------------------------------|
-| body           |          |         |                            | Document body or index settings/mappings.    |
 | hostname       |          | string  |                            | Elasticsearch server hostname.               |
-| id             |          | string  |                            | Document ID (for document-level operations). |
-| index          | true     | string  |                            | Index name.                                  |
-| password       |          | string  |                            | Authentication password.                     |
 | port           |          | integer |                            | Elasticsearch server port.                   |
+| index          | true     | string  |                            | Index name.                                  |
 | state          |          | string  | present<br>absent<br>query | The desired state of the index or document.  |
+| body           |          |         |                            | Document body or index settings/mappings.    |
+| id             |          | string  |                            | Document ID (for document-level operations). |
 | username       |          | string  |                            | Authentication username.                     |
+| password       |          | string  |                            | Authentication password.                     |
 | validate_certs |          | boolean |                            | Validate SSL certificates.                   |
 
 ## Examples

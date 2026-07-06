@@ -20,12 +20,12 @@ check_mode:
 
 | Parameter | Required | Type    | Values            | Description                                                                                                                    |
 |-----------|----------|---------|-------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| backup    |          | boolean |                   | Create a backup of the original file before patching. **[default: `false`]**                                                   |
-| basedir   |          | string  |                   | Base directory for applying the patch.                                                                                         |
-| dest      | true     | string  |                   | Destination file to patch.                                                                                                     |
-| dry_run   |          | boolean |                   | Test the patch without actually applying it. **[default: `false`]**                                                            |
 | src       | true     | string  |                   | Path to the patch file to apply.                                                                                               |
+| dest      | true     | string  |                   | Destination file to patch.                                                                                                     |
+| basedir   |          | string  |                   | Base directory for applying the patch.                                                                                         |
 | state     |          | string  | present<br>absent | Whether the patch should be applied or reversed. `present` applies the patch, `absent` reverses it. **[default: `"present"`]** |
+| backup    |          | boolean |                   | Create a backup of the original file before patching. **[default: `false`]**                                                   |
+| dry_run   |          | boolean |                   | Test the patch without actually applying it. **[default: `false`]**                                                            |
 | strip     |          | integer |                   | Number of leading path components to strip from file paths in the patch. **[default: `0`]**                                    |
 
 ## Examples

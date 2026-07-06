@@ -20,10 +20,10 @@ check_mode:
 
 | Parameter  | Required | Type   | Values | Description                                    |
 |------------|----------|--------|--------|------------------------------------------------|
-| context    |          | string |        | Kubernetes context to use.                     |
-| kubeconfig |          | string |        | Path to kubeconfig file.                       |
 | name       |          | string |        | Release name. If omitted, lists all releases.  |
 | namespace  |          | string |        | Kubernetes namespace. **[default: `default`]** |
+| kubeconfig |          | string |        | Path to kubeconfig file.                       |
+| context    |          | string |        | Kubernetes context to use.                     |
 
 ## Example
 

@@ -20,14 +20,14 @@ check_mode:
 
 | Parameter  | Required | Type    | Values                                | Description                                                                                          |
 |------------|----------|---------|---------------------------------------|------------------------------------------------------------------------------------------------------|
-| cipher     |          | string  |                                       | Encryption cipher algorithm. **[default: `"aes-xts-plain64"`]**                                      |
 | device     | true     | string  |                                       | Device path to manage (e.g., /dev/sdb1).                                                             |
-| key_size   |          | integer |                                       | Key size in bits. **[default: `512`]**                                                               |
-| keyfile    |          | string  |                                       | Path to keyfile for authentication. Alternative to passphrase.                                       |
-| luks_type  |          | string  |                                       | LUKS type (luks1 or luks2). **[default: `"luks2"`]**                                                 |
-| name       |          | string  |                                       | Mapper name for opened LUKS container. Required when state=opened or state=closed.                   |
 | passphrase |          | string  |                                       | Encryption passphrase. Required when state=present without keyfile, or state=opened without keyfile. |
+| keyfile    |          | string  |                                       | Path to keyfile for authentication. Alternative to passphrase.                                       |
 | state      |          | string  | present<br>absent<br>opened<br>closed | Desired state of the LUKS container. **[default: `"present"`]**                                      |
+| cipher     |          | string  |                                       | Encryption cipher algorithm. **[default: `"aes-xts-plain64"`]**                                      |
+| key_size   |          | integer |                                       | Key size in bits. **[default: `512`]**                                                               |
+| name       |          | string  |                                       | Mapper name for opened LUKS container. Required when state=opened or state=closed.                   |
+| luks_type  |          | string  |                                       | LUKS type (luks1 or luks2). **[default: `"luks2"`]**                                                 |
 
 ## Examples
 

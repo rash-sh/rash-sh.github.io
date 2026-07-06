@@ -23,19 +23,19 @@ check_mode:
 | cmd         |          | string  |        | The command to run as a string.                                |
 | argv        |          | array   |        | The command to run as a list of arguments.                     |
 | command     |          | string  |        | The command executable (use with args).                        |
+| root        | true     | string  |        | Path to the chroot directory.                                  |
 | args        |          | string  |        | Arguments for the command (if command used instead of cmd).    |
+| chdir       |          | string  |        | Working directory inside chroot. **[default: `"/"`]**          |
+| stdin       |          | string  |        | Data to pass to command stdin.                                 |
+| executable  |          | string  |        | Shell to use for command execution. **[default: `"/bin/sh"`]** |
+| creates     |          | string  |        | File that if exists skips the command.                         |
+| removes     |          | string  |        | File that if missing skips the command.                        |
+| environment |          | object  |        | Environment variables to set.                                  |
+| env_file    |          | string  |        | File to source environment from (e.g., /etc/environment).      |
+| umask       |          | integer |        | Umask for command execution.                                   |
 | become      |          | boolean |        | Become another user inside chroot.                             |
 | become_user |          | string  |        | User to become.                                                |
-| chdir       |          | string  |        | Working directory inside chroot. **[default: `"/"`]**          |
-| creates     |          | string  |        | File that if exists skips the command.                         |
-| env_file    |          | string  |        | File to source environment from (e.g., /etc/environment).      |
-| environment |          | object  |        | Environment variables to set.                                  |
-| executable  |          | string  |        | Shell to use for command execution. **[default: `"/bin/sh"`]** |
-| removes     |          | string  |        | File that if missing skips the command.                        |
-| root        | true     | string  |        | Path to the chroot directory.                                  |
-| stdin       |          | string  |        | Data to pass to command stdin.                                 |
 | timeout     |          | integer |        | Command timeout in seconds. **[default: `3600`]**              |
-| umask       |          | integer |        | Umask for command execution.                                   |
 
 ## Example
 

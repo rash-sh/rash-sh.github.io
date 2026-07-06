@@ -20,16 +20,16 @@ check_mode:
 
 | Parameter        | Required | Type    | Values | Description                                                                                   |
 |------------------|----------|---------|--------|-----------------------------------------------------------------------------------------------|
-| body             |          | string  |        | The body of the http request/response to the web service                                      |
-| force_basic_auth |          | boolean |        | Force the sending of the Basic authentication header upon initial request                     |
-| headers          |          | object  |        | Add custom HTTP headers to a request in the format of a hash                                  |
+| url              | true     | string  |        | HTTP or HTTPS URL in the form (http|https)://host.domain[:port]/path                          |
 | method           |          | string  |        | The HTTP method of the request or response                                                    |
-| return_content   |          | boolean |        | Whether or not to return the body of the response as a "content" key in the dictionary result |
+| body             |          | string  |        | The body of the http request/response to the web service                                      |
+| headers          |          | object  |        | Add custom HTTP headers to a request in the format of a hash                                  |
 | status_code      |          | array   |        | A list of valid, numeric, HTTP status codes that signifies success of the request             |
 | timeout          |          | integer |        | The socket level timeout in seconds                                                           |
-| url              | true     | string  |        | HTTP or HTTPS URL in the form (http|https)://host.domain[:port]/path                          |
-| url_password     |          | string  |        | A password for the module to use for Basic authentication                                     |
+| return_content   |          | boolean |        | Whether or not to return the body of the response as a "content" key in the dictionary result |
 | url_username     |          | string  |        | A username for the module to use for Basic authentication                                     |
+| url_password     |          | string  |        | A password for the module to use for Basic authentication                                     |
+| force_basic_auth |          | boolean |        | Force the sending of the Basic authentication header upon initial request                     |
 | validate_certs   |          | boolean |        | If false, SSL certificates will not be validated                                              |
 
 ## Examples

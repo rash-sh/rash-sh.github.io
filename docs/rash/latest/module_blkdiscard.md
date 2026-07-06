@@ -26,11 +26,11 @@ check_mode:
 |-----------|----------|---------|--------|-----------------------------------------------------------------------------|
 | device    | true     | string  |        | Block device path (e.g., /dev/nvme0n1).                                     |
 | force     |          | boolean |        | Force discard even if device is mounted (dangerous). **[default: `false`]** |
-| length    |          | integer |        | Length in bytes to discard.                                                 |
-| offset    |          | integer |        | Starting offset in bytes.                                                   |
 | secure    |          | boolean |        | Perform secure erase. **[default: `false`]**                                |
-| step      |          | integer |        | Step size for incremental discard.                                          |
 | zeroout   |          | boolean |        | Zero out instead of discard. **[default: `false`]**                         |
+| offset    |          | integer |        | Starting offset in bytes.                                                   |
+| length    |          | integer |        | Length in bytes to discard.                                                 |
+| step      |          | integer |        | Step size for incremental discard.                                          |
 
 ## Example
 

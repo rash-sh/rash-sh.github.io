@@ -20,20 +20,20 @@ check_mode:
 
 | Parameter   | Required | Type    | Values            | Description                                                                                    |
 |-------------|----------|---------|-------------------|------------------------------------------------------------------------------------------------|
+| name        | true     | string  |                   | Repository name (section name in the .repo file).                                              |
 | baseurl     |          |         |                   | Base URL for the repository. Can be a single URL or a list of URLs.                            |
-| cost        |          | integer |                   | Cost of this repository relative to others.                                                    |
 | description |          | string  |                   | A human-readable description of the repository. Maps to the `name` key in the repository file. |
 | enabled     |          | boolean |                   | Whether the repository is enabled. **[default: `true`]**                                       |
-| exclude     |          | string  |                   | Exclude specific packages from this repository.                                                |
-| file        |          | string  |                   | Repository file name (without .repo extension). Defaults to the repository name.               |
 | gpgcheck    |          | boolean |                   | Whether to check GPG signatures on packages.                                                   |
 | gpgkey      |          | string  |                   | URL to the GPG key for the repository.                                                         |
-| includepkgs |          | string  |                   | Include only specific packages from this repository.                                           |
-| metalink    |          | string  |                   | Metalink URL for the repository.                                                               |
-| mirrorlist  |          | string  |                   | Repository mirror list URL.                                                                    |
-| name        | true     | string  |                   | Repository name (section name in the .repo file).                                              |
-| priority    |          | integer |                   | Repository priority (lower = higher priority).                                                 |
 | state       |          | string  | present<br>absent | Whether the repository should exist or not. **[default: `"present"`]**                         |
+| file        |          | string  |                   | Repository file name (without .repo extension). Defaults to the repository name.               |
+| mirrorlist  |          | string  |                   | Repository mirror list URL.                                                                    |
+| metalink    |          | string  |                   | Metalink URL for the repository.                                                               |
+| priority    |          | integer |                   | Repository priority (lower = higher priority).                                                 |
+| cost        |          | integer |                   | Cost of this repository relative to others.                                                    |
+| exclude     |          | string  |                   | Exclude specific packages from this repository.                                                |
+| includepkgs |          | string  |                   | Include only specific packages from this repository.                                           |
 
 {$include_doc /// ## Examples
 ///

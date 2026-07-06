@@ -20,15 +20,15 @@ check_mode:
 
 | Parameter          | Required | Type    | Values | Description                                                   |
 |--------------------|----------|---------|--------|---------------------------------------------------------------|
-| config_file        |          | string  |        | MySQL config file to read credentials from.                   |
+| query              | true     | string  |        | SQL query to execute.                                         |
 | database           |          | string  |        | Database name to connect to.                                  |
 | login_host         |          | string  |        | Database host to connect to. **[default: `"localhost"`]**     |
+| login_user         |          | string  |        | Database user to connect with.                                |
 | login_password     |          | string  |        | Database password to use.                                     |
 | login_port         |          | integer |        | Database port to connect to. **[default: `3306`]**            |
 | login_unix_socket  |          | string  |        | Unix socket path to connect to.                               |
-| login_user         |          | string  |        | Database user to connect with.                                |
-| query              | true     | string  |        | SQL query to execute.                                         |
 | single_transaction |          | boolean |        | Execute query in a single transaction. **[default: `false`]** |
+| config_file        |          | string  |        | MySQL config file to read credentials from.                   |
 
 {$include_doc /// ## Example
 ///

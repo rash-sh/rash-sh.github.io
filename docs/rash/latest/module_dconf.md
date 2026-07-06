@@ -21,8 +21,8 @@ check_mode:
 | Parameter | Required | Type   | Values | Description                                                                                        |
 |-----------|----------|--------|--------|----------------------------------------------------------------------------------------------------|
 | key       | true     | string |        | The dconf key path (e.g., "/org/gnome/desktop/input-sources/sources")                              |
-| state     |          |        |        | The desired state for the key (present, read, or absent). Defaults to present.                     |
 | value     |          | string |        | The value to set for the key. Uses GVariant syntax, so strings need single quotes like "'myvalue'" |
+| state     |          |        |        | The desired state for the key (present, read, or absent). Defaults to present.                     |
 
 ## Example
 

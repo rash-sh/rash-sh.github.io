@@ -11,8 +11,8 @@ indent: true
 
 | Parameter | Required | Type    | Values | Description               |
 |-----------|----------|---------|--------|---------------------------|
-| interval  |          | integer |        | Poll interval in seconds. |
 | jid       | true     | integer |        | Job ID to poll.           |
+| interval  |          | integer |        | Poll interval in seconds. |
 
 {{#include ../../rash_core/src/modules/async_poll.rs:examples}}
 

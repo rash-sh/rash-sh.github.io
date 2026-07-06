@@ -20,15 +20,15 @@ check_mode:
 
 | Parameter   | Required | Type    | Values                          | Description |
 |-------------|----------|---------|---------------------------------|-------------|
-| address     |          | string  |                                 |             |
-| dns         |          | array   |                                 |             |
 | interface   | true     | string  |                                 |             |
+| state       |          | string  | present<br>absent<br>up<br>down |             |
+| private_key |          | string  |                                 |             |
+| address     |          | string  |                                 |             |
 | listen_port |          | integer |                                 |             |
+| dns         |          | array   |                                 |             |
 | mtu         |          | integer |                                 |             |
 | peers       |          | array   |                                 |             |
-| private_key |          | string  |                                 |             |
 | save_config |          | boolean |                                 |             |
-| state       |          | string  | present<br>absent<br>up<br>down |             |
 
 ## Examples
 

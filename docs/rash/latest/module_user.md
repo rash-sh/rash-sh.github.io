@@ -20,19 +20,19 @@ check_mode:
 
 | Parameter   | Required | Type    | Values            | Description                                                                                                                          |
 |-------------|----------|---------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| append      |          | boolean |                   | If true, add the user to the groups specified in groups. If false, user will only be in the groups specified. **[default: `false`]** |
-| comment     |          | string  |                   | User description (GECOS field).                                                                                                      |
-| create_home |          | boolean |                   | Create home directory if it doesn't exist. **[default: `true`]**                                                                     |
+| name        | true     | string  |                   | Name of the user to create, remove or modify.                                                                                        |
+| state       |          | string  | absent<br>present | Whether the account should exist or not. **[default: `"present"`]**                                                                  |
+| uid         |          | integer |                   | User ID of the user.                                                                                                                 |
 | group       |          | string  |                   | Primary group name.                                                                                                                  |
 | groups      |          | array   |                   | List of supplementary groups.                                                                                                        |
+| append      |          | boolean |                   | If true, add the user to the groups specified in groups. If false, user will only be in the groups specified. **[default: `false`]** |
 | home        |          | string  |                   | Home directory path.                                                                                                                 |
-| name        | true     | string  |                   | Name of the user to create, remove or modify.                                                                                        |
+| create_home |          | boolean |                   | Create home directory if it doesn't exist. **[default: `true`]**                                                                     |
+| shell       |          | string  |                   | Login shell path.                                                                                                                    |
+| comment     |          | string  |                   | User description (GECOS field).                                                                                                      |
+| system      |          | boolean |                   | Create as system user (uid < 1000). **[default: `false`]**                                                                           |
 | password    |          | string  |                   | Encrypted password hash.                                                                                                             |
 | remove      |          | boolean |                   | Remove home directory when state=absent. **[default: `false`]**                                                                      |
-| shell       |          | string  |                   | Login shell path.                                                                                                                    |
-| state       |          | string  | absent<br>present | Whether the account should exist or not. **[default: `"present"`]**                                                                  |
-| system      |          | boolean |                   | Create as system user (uid < 1000). **[default: `false`]**                                                                           |
-| uid         |          | integer |                   | User ID of the user.                                                                                                                 |
 
 ## Example
 

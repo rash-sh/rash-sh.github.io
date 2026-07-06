@@ -20,12 +20,12 @@ check_mode:
 
 | Parameter        | Required | Type    | Values            | Description                                                                |
 |------------------|----------|---------|-------------------|----------------------------------------------------------------------------|
-| fail_on_notfound |          | boolean |                   | Fail if host not found when state=absent. **[default: `false`]**           |
-| hash_host        |          | boolean |                   | Hash hostnames in the known_hosts file for privacy. **[default: `false`]** |
-| key              |          | string  |                   | The SSH public key string. Required when state=present.                    |
 | name             | true     | string  |                   | The host name or IP address to manage.                                     |
-| path             |          | string  |                   | Path to the known_hosts file. **[default: `"~/.ssh/known_hosts"`]**        |
+| key              |          | string  |                   | The SSH public key string. Required when state=present.                    |
 | state            |          | string  | present<br>absent | Whether the host should be present or absent. **[default: `"present"`]**   |
+| path             |          | string  |                   | Path to the known_hosts file. **[default: `"~/.ssh/known_hosts"`]**        |
+| hash_host        |          | boolean |                   | Hash hostnames in the known_hosts file for privacy. **[default: `false`]** |
+| fail_on_notfound |          | boolean |                   | Fail if host not found when state=absent. **[default: `false`]**           |
 
 {$include_doc /// ## Examples
 ///

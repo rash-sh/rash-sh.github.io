@@ -21,8 +21,8 @@ check_mode:
 | Parameter | Required | Type   | Values            | Description                                                                                       |
 |-----------|----------|--------|-------------------|---------------------------------------------------------------------------------------------------|
 | name      | true     | string |                   | Site name used as filename in sites directories.                                                  |
-| sites_dir |          | string |                   | Path to the sites-available directory. **[default: `"/etc/nginx/sites-available"`]**              |
 | state     |          | string | present<br>absent | Whether the site should be present and enabled or absent and disabled. **[default: `"present"`]** |
+| sites_dir |          | string |                   | Path to the sites-available directory. **[default: `"/etc/nginx/sites-available"`]**              |
 
 {$include_doc /// ## Examples
 ///

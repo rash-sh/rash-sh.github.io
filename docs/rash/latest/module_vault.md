@@ -20,14 +20,14 @@ check_mode:
 
 | Parameter      | Required | Type    | Values                    | Description                                                                                 |
 |----------------|----------|---------|---------------------------|---------------------------------------------------------------------------------------------|
+| path           | true     | string  |                           | The path to the secret in Vault.                                                            |
+| url            |          | string  |                           | The URL of the Vault server. If not provided, uses VAULT_ADDR environment variable.         |
+| token          |          | string  |                           | The Vault token for authentication. If not provided, uses VAULT_TOKEN environment variable. |
 | data           |          | object  |                           | The secret data to write (required for state=present).                                      |
+| state          |          | string  | read<br>present<br>absent | The desired state of the secret.                                                            |
+| namespace      |          | string  |                           | The Vault namespace (Enterprise feature).                                                   |
 | engine         |          | string  | v2<br>v1                  | The KV secrets engine version.                                                              |
 | mount          |          | string  |                           | The mount point for the secrets engine.                                                     |
-| namespace      |          | string  |                           | The Vault namespace (Enterprise feature).                                                   |
-| path           | true     | string  |                           | The path to the secret in Vault.                                                            |
-| state          |          | string  | read<br>present<br>absent | The desired state of the secret.                                                            |
-| token          |          | string  |                           | The Vault token for authentication. If not provided, uses VAULT_TOKEN environment variable. |
-| url            |          | string  |                           | The URL of the Vault server. If not provided, uses VAULT_ADDR environment variable.         |
 | validate_certs |          | boolean |                           | Validate SSL certificates.                                                                  |
 
 ## Examples

@@ -20,15 +20,15 @@ check_mode:
 
 | Parameter   | Required | Type    | Values                                                                                         | Description |
 |-------------|----------|---------|------------------------------------------------------------------------------------------------|-------------|
-| autoconnect |          | boolean |                                                                                                |             |
 | conn_name   | true     | string  |                                                                                                |             |
-| dns4        |          | array   |                                                                                                |             |
-| gw4         |          | string  |                                                                                                |             |
-| ifname      |          | string  |                                                                                                |             |
-| ip4         |          | string  |                                                                                                |             |
-| ssid        |          | string  |                                                                                                |             |
 | state       |          | string  | present<br>absent<br>up<br>down                                                                |             |
 | type        |          | string  | ethernet<br>wifi<br>bridge<br>bond<br>team<br>vlan<br>vxlan<br>dummy<br>generic<br>tun<br>veth |             |
+| ifname      |          | string  |                                                                                                |             |
+| ip4         |          | string  |                                                                                                |             |
+| gw4         |          | string  |                                                                                                |             |
+| dns4        |          | array   |                                                                                                |             |
+| autoconnect |          | boolean |                                                                                                |             |
+| ssid        |          | string  |                                                                                                |             |
 | wifi_sec    |          | object  |                                                                                                |             |
 
 ## Example

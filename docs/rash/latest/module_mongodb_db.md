@@ -20,17 +20,17 @@ check_mode:
 
 | Parameter          | Required | Type    | Values            | Description                                               |
 |--------------------|----------|---------|-------------------|-----------------------------------------------------------|
-| auth_database      |          | string  |                   | Authentication database.                                  |
+| name               | true     | string  |                   | Name of the database to manage.                           |
+| state              |          | string  | present<br>absent | The database/collection state. **[default: `"present"`]** |
 | collection         |          | string  |                   | Collection name to manage within the database.            |
-| connection_options |          | string  |                   | Connection options string.                                |
 | indexes            |          | array   |                   | List of indexes to create on the collection.              |
+| replica_set        |          | string  |                   | Replica set name (for replica set connections).           |
 | login_host         |          | string  |                   | Database host to connect to. **[default: `"localhost"`]** |
+| login_user         |          | string  |                   | Database user to connect with.                            |
 | login_password     |          | string  |                   | Database password to use.                                 |
 | login_port         |          | integer |                   | Database port to connect to. **[default: `27017`]**       |
-| login_user         |          | string  |                   | Database user to connect with.                            |
-| name               | true     | string  |                   | Name of the database to manage.                           |
-| replica_set        |          | string  |                   | Replica set name (for replica set connections).           |
-| state              |          | string  | present<br>absent | The database/collection state. **[default: `"present"`]** |
+| connection_options |          | string  |                   | Connection options string.                                |
+| auth_database      |          | string  |                   | Authentication database.                                  |
 
 ## Examples
 

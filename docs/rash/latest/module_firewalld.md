@@ -20,12 +20,12 @@ check_mode:
 
 | Parameter | Required | Type    | Values              | Description                                                                     |
 |-----------|----------|---------|---------------------|---------------------------------------------------------------------------------|
-| immediate |          | boolean |                     | Apply the change immediately without requiring a reload. **[default: `false`]** |
-| permanent |          | boolean |                     | Make the change permanent (survive reboots). **[default: `false`]**             |
-| port      |          | string  |                     | Port to allow or block (e.g., 8080/tcp, 53/udp).                                |
-| service   |          | string  |                     | Service to allow or block (e.g., http, https, ssh).                             |
-| state     | true     | string  | enabled<br>disabled | Whether the rule should be enabled or disabled.                                 |
 | zone      |          | string  |                     | Firewall zone to operate on. **[default: `default` from system]**               |
+| service   |          | string  |                     | Service to allow or block (e.g., http, https, ssh).                             |
+| port      |          | string  |                     | Port to allow or block (e.g., 8080/tcp, 53/udp).                                |
+| state     | true     | string  | enabled<br>disabled | Whether the rule should be enabled or disabled.                                 |
+| permanent |          | boolean |                     | Make the change permanent (survive reboots). **[default: `false`]**             |
+| immediate |          | boolean |                     | Apply the change immediately without requiring a reload. **[default: `false`]** |
 
 ## Examples
 

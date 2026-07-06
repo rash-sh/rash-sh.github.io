@@ -20,13 +20,13 @@ check_mode:
 
 | Parameter          | Required | Type    | Values                | Description                                                                                           |
 |--------------------|----------|---------|-----------------------|-------------------------------------------------------------------------------------------------------|
+| path               | true     | string  |                       | The full path of the file/object to get the facts of.                                                 |
 | checksum_algorithm |          | string  | md5<br>sha1<br>sha256 | Algorithm to determine checksum of file. **[default: `"sha256"`]**                                    |
 | follow             |          | boolean |                       | Whether to follow symlinks. **[default: `false`]**                                                    |
-| get_attributes     |          | boolean |                       | Whether to get the attributes of a file. **[default: `true`]**                                        |
 | get_checksum       |          | boolean |                       | Whether to get the checksum of a file. **[default: `true`]**                                          |
 | get_md5            |          | boolean |                       | Whether to get the md5 checksum of a file. **[default: `true`]**                                      |
 | get_mime           |          | boolean |                       | Whether to get the mime type of a file. Requires file command to be available. **[default: `false`]** |
-| path               | true     | string  |                       | The full path of the file/object to get the facts of.                                                 |
+| get_attributes     |          | boolean |                       | Whether to get the attributes of a file. **[default: `true`]**                                        |
 
 {$include_doc /// ## Example
 ///

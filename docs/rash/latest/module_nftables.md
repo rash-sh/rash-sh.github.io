@@ -20,17 +20,17 @@ check_mode:
 
 | Parameter      | Required | Type    | Values                                       | Description                                                                               |
 |----------------|----------|---------|----------------------------------------------|-------------------------------------------------------------------------------------------|
+| table          | true     | string  |                                              | The nftables table name.                                                                  |
 | chain          |          | string  |                                              | The nftables chain name (optional for table operations).                                  |
-| chain_hook     |          | string  |                                              | The chain hook (input, output, forward, prerouting, postrouting, ingress).                |
-| chain_policy   |          | string  |                                              | The policy for the chain (accept, drop).                                                  |
-| chain_priority |          | integer |                                              | The chain priority (numeric value, typically 0, positive or negative). **[default: `0`]** |
-| chain_type     |          | string  |                                              | The chain type (filter, nat, route for certain families).                                 |
-| comment        |          | string  |                                              | Comment for the rule (stored as a comment in nftables).                                   |
-| family         |          | string  | inet<br>ip<br>ip6<br>arp<br>bridge<br>netdev | The address family (ip, ip6, inet, arp, bridge, netdev). **[default: `"inet"`]**          |
-| flush          |          | boolean |                                              | Flush all rules in the specified chain. **[default: `false`]**                            |
 | rule           |          | string  |                                              | The rule specification in nftables syntax.                                                |
 | state          |          | string  | present<br>absent                            | Whether the rule/chain/table should be present or absent. **[default: `"present"`]**      |
-| table          | true     | string  |                                              | The nftables table name.                                                                  |
+| family         |          | string  | inet<br>ip<br>ip6<br>arp<br>bridge<br>netdev | The address family (ip, ip6, inet, arp, bridge, netdev). **[default: `"inet"`]**          |
+| chain_type     |          | string  |                                              | The chain type (filter, nat, route for certain families).                                 |
+| chain_hook     |          | string  |                                              | The chain hook (input, output, forward, prerouting, postrouting, ingress).                |
+| chain_priority |          | integer |                                              | The chain priority (numeric value, typically 0, positive or negative). **[default: `0`]** |
+| chain_policy   |          | string  |                                              | The policy for the chain (accept, drop).                                                  |
+| flush          |          | boolean |                                              | Flush all rules in the specified chain. **[default: `false`]**                            |
+| comment        |          | string  |                                              | Comment for the rule (stored as a comment in nftables).                                   |
 
 ## Examples
 

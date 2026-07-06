@@ -20,17 +20,17 @@ check_mode:
 
 | Parameter         | Required | Type    | Values            | Description                                         |
 |-------------------|----------|---------|-------------------|-----------------------------------------------------|
-| encrypted         |          | boolean |                   | Whether the password is already encrypted.          |
-| login_host        |          | string  |                   | Host running the database.                          |
-| login_password    |          | string  |                   | The password to authenticate with.                  |
-| login_unix_socket |          | string  |                   | Path to a Unix domain socket for local connections. |
-| login_user        |          | string  |                   | The username to authenticate with.                  |
 | name              | true     | string  |                   | Name of the user (role) to add or remove.           |
-| password          |          | string  |                   | Password for the user.                              |
-| port              |          | integer |                   | Database port to connect to.                        |
-| role_attr_flags   |          | string  |                   | Role attributes flags.                              |
-| ssl_mode          |          | string  |                   | Disable SSL certificate verification.               |
 | state             |          | string  | present<br>absent | The user state.                                     |
+| password          |          | string  |                   | Password for the user.                              |
+| encrypted         |          | boolean |                   | Whether the password is already encrypted.          |
+| role_attr_flags   |          | string  |                   | Role attributes flags.                              |
+| login_host        |          | string  |                   | Host running the database.                          |
+| login_user        |          | string  |                   | The username to authenticate with.                  |
+| login_password    |          | string  |                   | The password to authenticate with.                  |
+| port              |          | integer |                   | Database port to connect to.                        |
+| login_unix_socket |          | string  |                   | Path to a Unix domain socket for local connections. |
+| ssl_mode          |          | string  |                   | Disable SSL certificate verification.               |
 
 ## Examples
 

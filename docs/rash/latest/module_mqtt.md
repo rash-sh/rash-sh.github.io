@@ -24,19 +24,19 @@ check_mode:
 
 | Parameter         | Required | Type    | Values | Description                                                                       |
 |-------------------|----------|---------|--------|-----------------------------------------------------------------------------------|
-| broker            | true     | string  |        | MQTT broker hostname or IP address.                                               |
-| client_id         |          | string  |        | MQTT client identifier. **[default: `rash-<uuid>`]**                              |
-| max_messages      |          | integer |        | Maximum number of messages to collect when subscribing. **[default: `1`]**        |
-| password          |          | string  |        | Password for MQTT authentication.                                                 |
+| topic             | true     | string  |        | MQTT topic to publish to or subscribe from.                                       |
 | payload           |          | string  |        | Message content to publish (required for state=publish).                          |
-| port              |          | integer |        | MQTT broker port. **[default: `1883`]**                                           |
 | qos               |          | integer |        | Quality of Service level (0, 1, or 2). **[default: `0`]**                         |
 | retain            |          | boolean |        | Whether to retain the message on the broker. **[default: `false`]**               |
+| broker            | true     | string  |        | MQTT broker hostname or IP address.                                               |
+| port              |          | integer |        | MQTT broker port. **[default: `1883`]**                                           |
+| username          |          | string  |        | Username for MQTT authentication.                                                 |
+| password          |          | string  |        | Password for MQTT authentication.                                                 |
+| client_id         |          | string  |        | MQTT client identifier. **[default: `rash-<uuid>`]**                              |
 | state             |          |         |        | Operation state: publish or subscribe. **[default: `publish`]**                   |
 | subscribe_timeout |          | integer |        | Timeout in seconds to wait for messages when subscribing. **[default: `5`]**      |
+| max_messages      |          | integer |        | Maximum number of messages to collect when subscribing. **[default: `1`]**        |
 | tls               |          | boolean |        | Enable TLS/SSL connection (use port 8883 for secure MQTT). **[default: `false`]** |
-| topic             | true     | string  |        | MQTT topic to publish to or subscribe from.                                       |
-| username          |          | string  |        | Username for MQTT authentication.                                                 |
 
 ## Examples
 

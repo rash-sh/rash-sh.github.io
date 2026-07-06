@@ -14,26 +14,26 @@ Manage Docker Compose projects for multi-container applications.
 ```yaml
 check_mode:
   support: full
-```}
+```
 
 ## Parameters
 
 | Parameter      | Required | Type    | Values                                               | Description                                              |
 |----------------|----------|---------|------------------------------------------------------|----------------------------------------------------------|
+| project_src    | true     | string  |                                                      | Path to the docker-compose project directory.            |
+| state          |          | string  | absent<br>present<br>restarted<br>started<br>stopped | Desired state of the project.                            |
+| services       |          | array   |                                                      | List of specific services to manage.                     |
+| scale          |          | object  |                                                      | Scale mapping for services (e.g., {"web": 3}).           |
+| pull           |          | boolean |                                                      | Pull images before starting.                             |
 | build          |          | boolean |                                                      | Build images before starting.                            |
 | files          |          | array   |                                                      | List of compose files to use.                            |
-| force_recreate |          | boolean |                                                      | Force recreation of containers.                          |
-| no_deps        |          | boolean |                                                      | Do not start linked services.                            |
 | project_name   |          | string  |                                                      | Custom project name.                                     |
-| project_src    | true     | string  |                                                      | Path to the docker-compose project directory.            |
-| pull           |          | boolean |                                                      | Pull images before starting.                             |
+| remove_volumes |          | boolean |                                                      | Remove volumes when removing project (state=absent).     |
 | remove_images  |          | boolean |                                                      | Remove images when removing project (state=absent).      |
 | remove_orphans |          | boolean |                                                      | Remove orphans (containers not defined in compose file). |
-| remove_volumes |          | boolean |                                                      | Remove volumes when removing project (state=absent).     |
-| scale          |          | object  |                                                      | Scale mapping for services (e.g., {"web": 3).           |
-| services       |          | array   |                                                      | List of specific services to manage.                     |
-| state          |          | string  | absent<br>present<br>restarted<br>started<br>stopped | Desired state of the project.                            |
 | timeout        |          | integer |                                                      | Timeout in seconds for operations.                       |
+| force_recreate |          | boolean |                                                      | Force recreation of containers.                          |
+| no_deps        |          | boolean |                                                      | Do not start linked services.                            |
 
 ## Example
 

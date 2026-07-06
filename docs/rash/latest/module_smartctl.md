@@ -21,10 +21,10 @@ check_mode:
 
 | Parameter  | Required | Type    | Values                      | Description                                                                 |
 |------------|----------|---------|-----------------------------|-----------------------------------------------------------------------------|
-| attributes |          | boolean |                             | Return SMART attributes for the device. **[default: `false`]**              |
 | device     | true     | string  |                             | Block device path (e.g., /dev/sda).                                         |
-| health     |          | boolean |                             | Return overall SMART health assessment. **[default: `false`]**              |
+| attributes |          | boolean |                             | Return SMART attributes for the device. **[default: `false`]**              |
 | info       |          | boolean |                             | Return device identity and capabilities information. **[default: `false`]** |
+| health     |          | boolean |                             | Return overall SMART health assessment. **[default: `false`]**              |
 | test       |          | string  | short<br>long<br>conveyance | Run a SMART self-test on the device.                                        |
 
 ## Examples

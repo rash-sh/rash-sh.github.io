@@ -20,13 +20,13 @@ check_mode:
 
 | Parameter | Required | Type    | Values                                          | Description                                                                               |
 |-----------|----------|---------|-------------------------------------------------|-------------------------------------------------------------------------------------------|
-| data      |          | string  |                                                 | The GPG key data as a string (for importing directly).                                    |
-| file      |          | string  |                                                 | Path to a file containing the GPG key.                                                    |
-| gpg_home  |          | string  |                                                 | Custom GPG home directory.                                                                |
 | key_id    |          | string  |                                                 | The key ID or fingerprint of the GPG key.                                                 |
 | keyserver |          | string  |                                                 | The keyserver to use for fetching the key. **[default: `"keys.openpgp.org"`]**            |
 | state     |          | string  | present<br>absent                               | Whether the key should be present or absent. **[default: `"present"`]**                   |
 | trust     |          | string  | unknown<br>none<br>marginal<br>full<br>ultimate | The trust level to set for the key. Valid values: unknown, none, marginal, full, ultimate |
+| data      |          | string  |                                                 | The GPG key data as a string (for importing directly).                                    |
+| file      |          | string  |                                                 | Path to a file containing the GPG key.                                                    |
+| gpg_home  |          | string  |                                                 | Custom GPG home directory.                                                                |
 | use_gpg1  |          | boolean |                                                 | Use the GnuPG 1.x binary instead of the default.                                          |
 
 ## Examples

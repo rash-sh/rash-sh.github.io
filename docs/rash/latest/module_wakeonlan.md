@@ -24,8 +24,8 @@ check_mode:
 
 | Parameter | Required | Type    | Values | Description                                                                                  |
 |-----------|----------|---------|--------|----------------------------------------------------------------------------------------------|
-| broadcast |          | string  |        | Broadcast address to send the magic packet to. **[default: `255.255.255.255`]**              |
 | mac       | true     | string  |        | MAC address of target device (required). Format: XX:XX:XX:XX:XX:XX (e.g., 00:11:22:33:44:55) |
+| broadcast |          | string  |        | Broadcast address to send the magic packet to. **[default: `255.255.255.255`]**              |
 | port      |          | integer |        | UDP port to send the magic packet to. **[default: `9`]**                                     |
 
 ## Example

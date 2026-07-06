@@ -20,22 +20,22 @@ check_mode:
 
 | Parameter            | Required | Type    | Values                                     | Description                                                                            |
 |----------------------|----------|---------|--------------------------------------------|----------------------------------------------------------------------------------------|
-| arch                 |          | string  |                                            | Architecture for the installation (e.g., amd64, arm64).                                |
-| components           |          | array   |                                            | Components to include in the installation. **[default: `["main"]`]**                   |
-| exclude              |          | string  |                                            | Comma-separated list of packages to exclude.                                           |
+| target               | true     | string  |                                            | Target directory for the base system installation.                                     |
+| suite                | true     | string  |                                            | Distribution codename (e.g., noble, jammy, bookworm, bullseye).                        |
 | executable           |          | string  |                                            | Path of the debootstrap binary to use. **[default: `"debootstrap"`]**                  |
-| include              |          | string  |                                            | Comma-separated list of packages to include.                                           |
-| keep_debootstrap_dir |          | boolean |                                            | Keep /debootstrap directory after installation. **[default: `false`]**                 |
-| keyring              |          | string  |                                            | Path to keyring file for archive signing keys.                                         |
 | mirror               |          | string  |                                            | Archive mirror URL (e.g., http://archive.ubuntu.com/ubuntu).                           |
+| arch                 |          | string  |                                            | Architecture for the installation (e.g., amd64, arm64).                                |
+| variant              |          | string  | minbase<br>buildd<br>fakechroot<br>scratch | Bootstrap variant to use. **[default: `"minbase"`]**                                   |
+| components           |          | array   |                                            | Components to include in the installation. **[default: `["main"]`]**                   |
+| include              |          | string  |                                            | Comma-separated list of packages to include.                                           |
+| exclude              |          | string  |                                            | Comma-separated list of packages to exclude.                                           |
+| keyring              |          | string  |                                            | Path to keyring file for archive signing keys.                                         |
 | no_check_gpg         |          | boolean |                                            | Skip GPG signature verification. **[default: `false`]**                                |
 | no_resolve_deps      |          | boolean |                                            | Don't resolve dependencies. **[default: `false`]**                                     |
+| unpack_tarball       |          | string  |                                            | Extract from tarball instead of downloading.                                           |
 | second_stage         |          | boolean |                                            | Run second stage after first stage (for foreign architectures). **[default: `false`]** |
 | second_stage_target  |          | string  |                                            | Target directory for second stage (for foreign architectures).                         |
-| suite                | true     | string  |                                            | Distribution codename (e.g., noble, jammy, bookworm, bullseye).                        |
-| target               | true     | string  |                                            | Target directory for the base system installation.                                     |
-| unpack_tarball       |          | string  |                                            | Extract from tarball instead of downloading.                                           |
-| variant              |          | string  | minbase<br>buildd<br>fakechroot<br>scratch | Bootstrap variant to use. **[default: `"minbase"`]**                                   |
+| keep_debootstrap_dir |          | boolean |                                            | Keep /debootstrap directory after installation. **[default: `false`]**                 |
 
 ## Example
 

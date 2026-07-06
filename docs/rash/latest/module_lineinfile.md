@@ -20,9 +20,9 @@ check_mode:
 
 | Parameter | Required | Type   | Values            | Description                                                                                                                                                                  |
 |-----------|----------|--------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| line      |          | string |                   | The line to insert/replace into the file. Required unless `state=absent`.                                                                                                    |
 | path      | true     | string |                   | The absolute path to the file to modify.                                                                                                                                     |
 | regexp    |          | string |                   | The regular expression to look for in every line of the file. If the regular expression is not matched, the line will be added to the file. Uses Python regular expressions. |
+| line      |          | string |                   | The line to insert/replace into the file. Required unless `state=absent`.                                                                                                    |
 | state     |          | string | present<br>absent | Whether the line should be there or not. **[default: `"present"`]**                                                                                                          |
 
 ## Examples

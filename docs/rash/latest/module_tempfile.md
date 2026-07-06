@@ -24,11 +24,11 @@ check_mode:
 
 | Parameter | Required | Type   | Values            | Description                                                      |
 |-----------|----------|--------|-------------------|------------------------------------------------------------------|
-| mode      |          | string |                   | Permissions of the temporary file or directory.                  |
+| state     | true     | string | file<br>directory | The type of temporary object to create.                          |
 | path      |          | string |                   | The parent directory where the temporary object will be created. |
 | prefix    |          | string |                   | Prefix for the temporary name.                                   |
-| state     | true     | string | file<br>directory | The type of temporary object to create.                          |
 | suffix    |          | string |                   | Suffix for the temporary name (only valid for files).            |
+| mode      |          | string |                   | Permissions of the temporary file or directory.                  |
 
 ## Example
 

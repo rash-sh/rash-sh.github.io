@@ -21,8 +21,8 @@ check_mode:
 | Parameter | Required | Type    | Values                                               | Description                                                                                   |
 |-----------|----------|---------|------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | dev       | true     | string  |                                                      | Target block device path.                                                                     |
-| force     |          | boolean |                                                      | Force filesystem creation even if the device already has a filesystem. **[default: `false`]** |
 | fstype    | true     | string  | ext4<br>ext3<br>ext2<br>xfs<br>btrfs<br>vfat<br>swap | Filesystem type to create.                                                                    |
+| force     |          | boolean |                                                      | Force filesystem creation even if the device already has a filesystem. **[default: `false`]** |
 | opts      |          | string  |                                                      | Additional options to pass to the mkfs command.                                               |
 
 ## Example

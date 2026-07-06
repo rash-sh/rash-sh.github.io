@@ -20,13 +20,13 @@ check_mode:
 
 | Parameter    | Required | Type   | Values | Description                                             |
 |--------------|----------|--------|--------|---------------------------------------------------------|
-| chart        |          | object |        | Chart management parameters.                            |
 | executable   |          | string |        | Path of the helm binary to use. **[default: `"helm"`]** |
 | extra_args   |          | string |        | Additional options to pass to helm.                     |
-| kube_context |          | string |        | Kubernetes context to use.                              |
 | kubeconfig   |          | string |        | Kubernetes config file path.                            |
-| list         |          | object |        | List releases parameters.                               |
+| kube_context |          | string |        | Kubernetes context to use.                              |
 | repository   |          | object |        | Repository management parameters.                       |
+| chart        |          | object |        | Chart management parameters.                            |
+| list         |          | object |        | List releases parameters.                               |
 
 ## Example
 

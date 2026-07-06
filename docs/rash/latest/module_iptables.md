@@ -21,27 +21,27 @@ check_mode:
 | Parameter        | Required | Type    | Values            | Description                                                                    |
 |------------------|----------|---------|-------------------|--------------------------------------------------------------------------------|
 | chain            | true     | string  |                   | The iptables chain to modify.                                                  |
-| comment          |          | string  |                   | Comment for the rule (requires iptables comment module).                       |
-| ctstate          |          | string  |                   | Connection tracking states (ESTABLISHED, RELATED, NEW, INVALID).               |
-| destination      |          | string  |                   | The destination address/network.                                               |
-| destination_port |          | string  |                   | The destination port.                                                          |
-| flush            |          | boolean |                   | Flush all rules in the chain. **[default: `false`]**                           |
-| flush_all        |          | boolean |                   | Perform a flush before adding rules. **[default: `false`]**                    |
-| in_interface     |          | string  |                   | The input interface.                                                           |
-| ip_version       |          | string  | ipv4<br>ipv6      | The iptables command to use (iptables, ip6tables). **[default: `"iptables"`]** |
-| jump             |          | string  |                   | The jump target (ACCEPT, DROP, REJECT, LOG, etc.).                             |
-| match            |          | string  |                   | Match extensions (state, conntrack, etc.).                                     |
-| out_interface    |          | string  |                   | The output interface.                                                          |
+| table            |          | string  |                   | The iptables table to modify. **[default: `"filter"`]**                        |
+| state            |          | string  | present<br>absent | Whether the rule should be present or absent. **[default: `"present"`]**       |
 | policy           |          | string  |                   | Set the policy for the chain (ACCEPT, DROP, REJECT, etc.).                     |
 | protocol         |          | string  |                   | The protocol of the rule (tcp, udp, icmp, all).                                |
-| rule_num         |          | string  |                   | Append rule as a specific rule number (1-based).                               |
 | source           |          | string  |                   | The source address/network.                                                    |
+| destination      |          | string  |                   | The destination address/network.                                               |
 | source_port      |          | string  |                   | The source port.                                                               |
-| state            |          | string  | present<br>absent | Whether the rule should be present or absent. **[default: `"present"`]**       |
-| table            |          | string  |                   | The iptables table to modify. **[default: `"filter"`]**                        |
+| destination_port |          | string  |                   | The destination port.                                                          |
+| jump             |          | string  |                   | The jump target (ACCEPT, DROP, REJECT, LOG, etc.).                             |
 | to_destination   |          | string  |                   | The target for DNAT/SNAT (e.g., "192.168.1.1:80").                             |
-| to_ports         |          | string  |                   | The ports for DNAT/SNAT (e.g., "8080-8090").                                   |
 | to_source        |          | string  |                   | The source for SNAT (e.g., "192.168.1.1").                                     |
+| to_ports         |          | string  |                   | The ports for DNAT/SNAT (e.g., "8080-8090").                                   |
+| in_interface     |          | string  |                   | The input interface.                                                           |
+| out_interface    |          | string  |                   | The output interface.                                                          |
+| ctstate          |          | string  |                   | Connection tracking states (ESTABLISHED, RELATED, NEW, INVALID).               |
+| match            |          | string  |                   | Match extensions (state, conntrack, etc.).                                     |
+| rule_num         |          | string  |                   | Append rule as a specific rule number (1-based).                               |
+| flush            |          | boolean |                   | Flush all rules in the chain. **[default: `false`]**                           |
+| comment          |          | string  |                   | Comment for the rule (requires iptables comment module).                       |
+| ip_version       |          | string  | ipv4<br>ipv6      | The iptables command to use (iptables, ip6tables). **[default: `"iptables"`]** |
+| flush_all        |          | boolean |                   | Perform a flush before adding rules. **[default: `false`]**                    |
 
 ## Examples
 

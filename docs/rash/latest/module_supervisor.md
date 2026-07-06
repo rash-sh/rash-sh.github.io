@@ -20,17 +20,17 @@ check_mode:
 
 | Parameter      | Required | Type    | Values                                      | Description                                                        |
 |----------------|----------|---------|---------------------------------------------|--------------------------------------------------------------------|
-| autorestart    |          | string  | True<br>False<br>Unexpected                 | Whether the program should auto-restart on exit.                   |
-| autostart      |          | boolean |                                             | Whether the program should auto-start with supervisord.            |
-| command        |          | string  |                                             | Command to run for the program.                                    |
-| config_dir     |          | string  |                                             | Path to supervisor config directory.                               |
-| enabled        |          | boolean |                                             | Whether the program should be enabled (have a config file) or not. |
-| environment    |          | object  |                                             | Environment variables for the program.                             |
 | name           | true     | string  |                                             | Program name to manage.                                            |
+| command        |          | string  |                                             | Command to run for the program.                                    |
 | state          |          | string  | reloaded<br>restarted<br>started<br>stopped | State of the program.                                              |
-| stderr_logfile |          | string  |                                             | Path to stderr log file.                                           |
-| stdout_logfile |          | string  |                                             | Path to stdout log file.                                           |
+| enabled        |          | boolean |                                             | Whether the program should be enabled (have a config file) or not. |
 | user           |          | string  |                                             | User to run the program as.                                        |
+| autostart      |          | boolean |                                             | Whether the program should auto-start with supervisord.            |
+| autorestart    |          | string  | True<br>False<br>Unexpected                 | Whether the program should auto-restart on exit.                   |
+| stdout_logfile |          | string  |                                             | Path to stdout log file.                                           |
+| stderr_logfile |          | string  |                                             | Path to stderr log file.                                           |
+| environment    |          | object  |                                             | Environment variables for the program.                             |
+| config_dir     |          | string  |                                             | Path to supervisor config directory.                               |
 
 ## Example
 

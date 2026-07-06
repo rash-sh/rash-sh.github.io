@@ -20,18 +20,18 @@ check_mode:
 
 | Parameter      | Required | Type    | Values                                 | Description                                                       |
 |----------------|----------|---------|----------------------------------------|-------------------------------------------------------------------|
-| api_token      |          | string  |                                        | Cloudflare API token. Falls back to CLOUDFLARE_API_TOKEN env var. |
-| port           |          | integer |                                        | Port for SRV records.                                             |
-| priority       |          | integer |                                        | Priority for MX and SRV records.                                  |
-| proxied        |          | boolean |                                        | Whether the record is proxied through Cloudflare.                 |
-| record         |          | string  |                                        | The record name (e.g. www). Use "@" for the zone root.            |
-| state          |          | string  | present<br>absent                      | The desired state of the record.                                  |
-| ttl            |          | integer |                                        | The TTL in seconds. 1 means auto when proxied.                    |
-| type           |          | string  | A<br>AAAA<br>CNAME<br>MX<br>TXT<br>SRV | The DNS record type.                                              |
-| validate_certs |          | boolean |                                        | Validate SSL certificates.                                        |
-| value          |          | string  |                                        | The record value (required for state=present).                    |
-| weight         |          | integer |                                        | Weight for SRV records.                                           |
 | zone           | true     | string  |                                        | The DNS zone to manage (e.g. example.com).                        |
+| record         |          | string  |                                        | The record name (e.g. www). Use "@" for the zone root.            |
+| type           |          | string  | A<br>AAAA<br>CNAME<br>MX<br>TXT<br>SRV | The DNS record type.                                              |
+| value          |          | string  |                                        | The record value (required for state=present).                    |
+| ttl            |          | integer |                                        | The TTL in seconds. 1 means auto when proxied.                    |
+| proxied        |          | boolean |                                        | Whether the record is proxied through Cloudflare.                 |
+| state          |          | string  | present<br>absent                      | The desired state of the record.                                  |
+| api_token      |          | string  |                                        | Cloudflare API token. Falls back to CLOUDFLARE_API_TOKEN env var. |
+| priority       |          | integer |                                        | Priority for MX and SRV records.                                  |
+| weight         |          | integer |                                        | Weight for SRV records.                                           |
+| port           |          | integer |                                        | Port for SRV records.                                             |
+| validate_certs |          | boolean |                                        | Validate SSL certificates.                                        |
 
 {$include_doc /// ## Examples
 ///

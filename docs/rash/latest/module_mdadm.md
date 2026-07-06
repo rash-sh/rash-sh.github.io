@@ -21,16 +21,16 @@ check_mode:
 | Parameter     | Required | Type    | Values                                        | Description                                                  |
 |---------------|----------|---------|-----------------------------------------------|--------------------------------------------------------------|
 | action        |          | string  | create<br>assemble<br>stop<br>destroy<br>info | Action to perform on the RAID array. **[default: `"info"`]** |
-| bitmap        |          | boolean |                                               | Enable write-intent bitmap. **[default: `false`]**           |
-| chunk         |          | string  |                                               | Chunk size (e.g., 64K, 512K).                                |
 | device        |          | string  |                                               | RAID device path (e.g., /dev/md0).                           |
-| devices       |          | array   |                                               | List of component devices.                                   |
-| force         |          | boolean |                                               | Force operation. **[default: `false`]**                      |
-| level         |          | integer |                                               | RAID level (0, 1, 5, 6, 10).                                 |
-| metadata      |          | string  |                                               | Metadata format. **[default: `"1.2"`]**                      |
 | name          |          | string  |                                               | Array name.                                                  |
-| raid_devices  |          | integer |                                               | Number of active devices in the array.                       |
+| level         |          | integer |                                               | RAID level (0, 1, 5, 6, 10).                                 |
+| devices       |          | array   |                                               | List of component devices.                                   |
 | spare_devices |          | array   |                                               | List of spare devices.                                       |
+| raid_devices  |          | integer |                                               | Number of active devices in the array.                       |
+| metadata      |          | string  |                                               | Metadata format. **[default: `"1.2"`]**                      |
+| chunk         |          | string  |                                               | Chunk size (e.g., 64K, 512K).                                |
+| force         |          | boolean |                                               | Force operation. **[default: `false`]**                      |
+| bitmap        |          | boolean |                                               | Enable write-intent bitmap. **[default: `false`]**           |
 
 ## Example
 

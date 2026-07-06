@@ -22,21 +22,21 @@ check_mode:
 
 | Parameter        | Required | Type    | Values                                      | Description                                                           |
 |------------------|----------|---------|---------------------------------------------|-----------------------------------------------------------------------|
-| archive          |          | string  |                                             | Archive name pattern for extract or list operations.                  |
-| borgmatic_opts   |          | array   |                                             | Additional borgmatic options.                                         |
-| compression      |          | string  |                                             | Compression algorithm (e.g., none, lz4, zstd, zstd,1-22, zlib, lzma). |
 | config_path      | true     | string  |                                             | Path to the borgmatic configuration file.                             |
-| environment      |          | array   |                                             | Environment variables for borgmatic (e.g., BORG_REMOTE_PATH).         |
+| repository       |          | string  |                                             | Borg repository path. Overrides the repository in config.             |
+| state            |          | string  | create<br>extract<br>prune<br>check<br>list | Action to perform: create, extract, prune, check, or list.            |
+| archive          |          | string  |                                             | Archive name pattern for extract or list operations.                  |
+| passphrase       |          | string  |                                             | Repository passphrase for encryption/decryption.                      |
+| compression      |          | string  |                                             | Compression algorithm (e.g., none, lz4, zstd, zstd,1-22, zlib, lzma). |
 | exclude_patterns |          | array   |                                             | File patterns to exclude from backup.                                 |
 | extract_path     |          | string  |                                             | Directory to extract files into. Required for state=extract.          |
 | keep_daily       |          | integer |                                             | Retain daily archives.                                                |
-| keep_last        |          | integer |                                             | Retain the n most recent archives.                                    |
-| keep_monthly     |          | integer |                                             | Retain monthly archives.                                              |
 | keep_weekly      |          | integer |                                             | Retain weekly archives.                                               |
+| keep_monthly     |          | integer |                                             | Retain monthly archives.                                              |
 | keep_yearly      |          | integer |                                             | Retain yearly archives.                                               |
-| passphrase       |          | string  |                                             | Repository passphrase for encryption/decryption.                      |
-| repository       |          | string  |                                             | Borg repository path. Overrides the repository in config.             |
-| state            |          | string  | create<br>extract<br>prune<br>check<br>list | Action to perform: create, extract, prune, check, or list.            |
+| keep_last        |          | integer |                                             | Retain the n most recent archives.                                    |
+| borgmatic_opts   |          | array   |                                             | Additional borgmatic options.                                         |
+| environment      |          | array   |                                             | Environment variables for borgmatic (e.g., BORG_REMOTE_PATH).         |
 
 ## Examples
 

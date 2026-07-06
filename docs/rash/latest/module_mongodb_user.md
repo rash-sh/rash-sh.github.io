@@ -20,16 +20,16 @@ check_mode:
 
 | Parameter       | Required | Type    | Values             | Description                                                              |
 |-----------------|----------|---------|--------------------|--------------------------------------------------------------------------|
-| database        |          | string  |                    | The database where the user is created/managed. **[default: `"admin"`]** |
-| login_database  |          | string  |                    | Authentication database to use for login.                                |
-| login_host      |          | string  |                    | The host running MongoDB. **[default: `"localhost"`]**                   |
-| login_password  |          | string  |                    | The password for login_user.                                             |
-| login_port      |          | integer |                    | The port MongoDB is listening on. **[default: `27017`]**                 |
-| login_user      |          | string  |                    | The MongoDB user to login with (must have userAdmin privileges).         |
 | name            | true     | string  |                    | The username of the MongoDB user to manage.                              |
 | password        |          | string  |                    | The password for the MongoDB user.                                       |
+| database        |          | string  |                    | The database where the user is created/managed. **[default: `"admin"`]** |
 | roles           |          |         |                    | The roles assigned to the user. Can be a single role or a list of roles. |
 | state           |          | string  | present<br>absent  | The desired state of the user. **[default: `"present"`]**                |
+| login_host      |          | string  |                    | The host running MongoDB. **[default: `"localhost"`]**                   |
+| login_port      |          | integer |                    | The port MongoDB is listening on. **[default: `27017`]**                 |
+| login_user      |          | string  |                    | The MongoDB user to login with (must have userAdmin privileges).         |
+| login_password  |          | string  |                    | The password for login_user.                                             |
+| login_database  |          | string  |                    | Authentication database to use for login.                                |
 | update_password |          | string  | always<br>oncreate | Whether to update existing user password/roles. **[default: `true`]**    |
 
 ## Examples

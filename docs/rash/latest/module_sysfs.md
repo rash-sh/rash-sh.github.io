@@ -23,8 +23,8 @@ check_mode:
 | Parameter | Required | Type   | Values            | Description                                                                   |
 |-----------|----------|--------|-------------------|-------------------------------------------------------------------------------|
 | path      | true     | string |                   | sysfs attribute path.                                                         |
-| state     |          | string | present<br>absent | Whether the attribute should be present or absent. **[default: `"present"`]** |
 | value     |          | string |                   | Desired value of the sysfs attribute. Required when state=present.            |
+| state     |          | string | present<br>absent | Whether the attribute should be present or absent. **[default: `"present"`]** |
 
 ## Examples
 

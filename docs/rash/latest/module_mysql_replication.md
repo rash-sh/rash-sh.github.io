@@ -20,17 +20,17 @@ check_mode:
 
 | Parameter        | Required | Type    | Values                          | Description                                                             |
 |------------------|----------|---------|---------------------------------|-------------------------------------------------------------------------|
-| config_file      |          | string  |                                 | MySQL config file to read credentials from.                             |
-| login_host       |          | string  |                                 | Database host to connect to. **[default: `"localhost"`]**               |
-| login_password   |          | string  |                                 | Database password to use.                                               |
-| login_port       |          | integer |                                 | Database port to connect to. **[default: `3306`]**                      |
-| login_user       |          | string  |                                 | Database user to connect with.                                          |
+| state            |          | string  | present<br>absent<br>getprimary | The replication state. **[default: `"present"`]**                       |
 | mode             |          | string  | primary<br>replica              | Whether the server is a primary or replica. **[default: `"primary"`]**  |
 | primary_host     |          | string  |                                 | Primary server hostname (required when mode=replica and state=present). |
+| primary_user     |          | string  |                                 | Replication user on the primary.                                        |
 | primary_password |          | string  |                                 | Replication user password on the primary.                               |
 | primary_port     |          | integer |                                 | Primary server port. **[default: `3306`]**                              |
-| primary_user     |          | string  |                                 | Replication user on the primary.                                        |
-| state            |          | string  | present<br>absent<br>getprimary | The replication state. **[default: `"present"`]**                       |
+| login_host       |          | string  |                                 | Database host to connect to. **[default: `"localhost"`]**               |
+| login_user       |          | string  |                                 | Database user to connect with.                                          |
+| login_password   |          | string  |                                 | Database password to use.                                               |
+| login_port       |          | integer |                                 | Database port to connect to. **[default: `3306`]**                      |
+| config_file      |          | string  |                                 | MySQL config file to read credentials from.                             |
 
 ## Example
 

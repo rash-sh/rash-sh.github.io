@@ -22,9 +22,9 @@ check_mode:
 |-------------|----------|---------|-------------------|---------------------------------------------------------------------------|
 | destination | true     | string  |                   | The destination network address (e.g., "192.168.0.0/24" or "default").    |
 | gateway     |          | string  |                   | The gateway IP address for the route.                                     |
+| state       |          | string  | present<br>absent | Whether the route should be present or absent. **[default: `"present"`]** |
 | interface   |          | string  |                   | The network interface for the route (e.g., eth0).                         |
 | metric      |          | integer |                   | Route metric value (lower is preferred).                                  |
-| state       |          | string  | present<br>absent | Whether the route should be present or absent. **[default: `"present"`]** |
 | table       |          | string  |                   | Routing table ID or name.                                                 |
 
 ## Examples

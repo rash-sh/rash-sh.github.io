@@ -20,17 +20,17 @@ check_mode:
 
 | Parameter | Required | Type    | Values                                            | Description                              |
 |-----------|----------|---------|---------------------------------------------------|------------------------------------------|
+| name      | true     | string  |                                                   | Name of the container.                   |
+| state     |          | string  | absent<br>present<br>started<br>stopped<br>frozen | State of the container.                  |
+| source    |          | object  |                                                   | Image source configuration.              |
 | config    |          | object  |                                                   | Container configuration key-value pairs. |
 | devices   |          | object  |                                                   | Device configuration.                    |
-| force     |          | boolean |                                                   | Force operation (for stop/delete).       |
-| name      | true     | string  |                                                   | Name of the container.                   |
 | profiles  |          | array   |                                                   | Profiles to apply to the container.      |
-| project   |          | string  |                                                   | Project name.                            |
-| source    |          | object  |                                                   | Image source configuration.              |
-| state     |          | string  | absent<br>present<br>started<br>stopped<br>frozen | State of the container.                  |
-| target    |          | string  |                                                   | Target remote LXD server.                |
-| timeout   |          | integer |                                                   | Timeout for operations (seconds).        |
+| force     |          | boolean |                                                   | Force operation (for stop/delete).       |
 | wait      |          | boolean |                                                   | Wait for operation to complete.          |
+| timeout   |          | integer |                                                   | Timeout for operations (seconds).        |
+| target    |          | string  |                                                   | Target remote LXD server.                |
+| project   |          | string  |                                                   | Project name.                            |
 
 ## Example
 

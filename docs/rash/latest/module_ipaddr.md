@@ -20,10 +20,10 @@ check_mode:
 
 | Parameter | Required | Type   | Values            | Description                                                                                                   |
 |-----------|----------|--------|-------------------|---------------------------------------------------------------------------------------------------------------|
-| address   | true     | string |                   | IP address with CIDR (e.g., 192.168.1.10/24).                                                                 |
-| family    |          | string | ipv4<br>ipv6      | IP address family (ipv4 or ipv6). Auto-detected from address format if not specified. **[default: `"ipv4"`]** |
 | interface | true     | string |                   | Network interface name.                                                                                       |
+| address   | true     | string |                   | IP address with CIDR (e.g., 192.168.1.10/24).                                                                 |
 | state     |          | string | present<br>absent | Whether the address should be present or absent. **[default: `"present"`]**                                   |
+| family    |          | string | ipv4<br>ipv6      | IP address family (ipv4 or ipv6). Auto-detected from address format if not specified. **[default: `"ipv4"`]** |
 
 ## Examples
 

@@ -20,15 +20,15 @@ check_mode:
 
 | Parameter       | Required | Type    | Values     | Description                                                                      |
 |-----------------|----------|---------|------------|----------------------------------------------------------------------------------|
-| common_name     | true     | string  |            | Common Name (CN) for the certificate.                                            |
-| force           |          | boolean |            | Whether to force regeneration even if certificate exists. **[default: `false`]** |
-| group           |          | string  |            | Group of the certificate file (name, not GID).                                   |
-| mode            |          | string  |            | Permissions of the certificate file.                                             |
-| owner           |          | string  |            | Owner of the certificate file (name, not UID).                                   |
 | path            | true     | string  |            | Absolute path to the certificate file.                                           |
 | privatekey_path | true     | string  |            | Path to the private key file.                                                    |
+| common_name     | true     | string  |            | Common Name (CN) for the certificate.                                            |
 | provider        |          | string  | selfsigned | Name of the provider to use. **[default: `"selfsigned"`]**                       |
 | valid_in        |          | integer |            | Number of days the certificate is valid. **[default: `365`]**                    |
+| mode            |          | string  |            | Permissions of the certificate file.                                             |
+| owner           |          | string  |            | Owner of the certificate file (name, not UID).                                   |
+| group           |          | string  |            | Group of the certificate file (name, not GID).                                   |
+| force           |          | boolean |            | Whether to force regeneration even if certificate exists. **[default: `false`]** |
 
 ## Examples
 

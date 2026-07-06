@@ -20,11 +20,11 @@ check_mode:
 
 | Parameter     | Required | Type    | Values            | Description                                                            |
 |---------------|----------|---------|-------------------|------------------------------------------------------------------------|
-| compression   |          | boolean |                   | Enable compression. **[default: `true`]**                              |
-| deduplication |          | boolean |                   | Enable deduplication. **[default: `true`]**                            |
+| name          | true     | string  |                   | VDO volume name.                                                       |
 | device        |          | string  |                   | Underlying block device.                                               |
 | logicalsize   |          | string  |                   | Logical size of the VDO volume (e.g., 100G, 1T).                       |
-| name          | true     | string  |                   | VDO volume name.                                                       |
+| compression   |          | boolean |                   | Enable compression. **[default: `true`]**                              |
+| deduplication |          | boolean |                   | Enable deduplication. **[default: `true`]**                            |
 | state         |          | string  | present<br>absent | Whether the VDO volume should exist or not. **[default: `"present"`]** |
 
 ## Example

@@ -21,20 +21,20 @@ check_mode:
 | Parameter             | Required | Type    | Values                         | Description                                                          |
 |-----------------------|----------|---------|--------------------------------|----------------------------------------------------------------------|
 | action                | true     | string  | install<br>configure<br>update | Action to perform: install, configure, or update.                    |
-| boot_directory        |          | string  |                                | Boot directory path. **[default: `/boot`]**                          |
-| config                |          | object  |                                | Dictionary of GRUB configuration values.                             |
-| config_file           |          | string  |                                | Path to GRUB configuration file. **[default: `/etc/default/grub`]**  |
 | device                |          | string  |                                | Device to install GRUB to (required for install action on BIOS).     |
-| disable_os_prober     |          | boolean |                                | Disable os-prober. **[default: `false`]**                            |
+| boot_directory        |          | string  |                                | Boot directory path. **[default: `/boot`]**                          |
 | efi_directory         |          | string  |                                | EFI directory path for UEFI installation. **[default: `/boot/efi`]** |
+| target                |          | string  |                                | Target platform (i386-pc, x86_64-efi, arm64-efi).                    |
+| removable             |          | boolean |                                | Install for removable media (UEFI only). **[default: `false`]**      |
+| recheck               |          | boolean |                                | Recheck device map. **[default: `false`]**                           |
+| config_file           |          | string  |                                | Path to GRUB configuration file. **[default: `/etc/default/grub`]**  |
+| config                |          | object  |                                | Dictionary of GRUB configuration values.                             |
 | kernel_params         |          | array   |                                | List of kernel parameters for GRUB_CMDLINE_LINUX.                    |
 | kernel_params_default |          | array   |                                | List of kernel parameters for GRUB_CMDLINE_LINUX_DEFAULT.            |
-| recheck               |          | boolean |                                | Recheck device map. **[default: `false`]**                           |
-| removable             |          | boolean |                                | Install for removable media (UEFI only). **[default: `false`]**      |
-| serial                |          | string  |                                | Serial console settings (e.g., "--unit=0 --speed=115200").           |
-| target                |          | string  |                                | Target platform (i386-pc, x86_64-efi, arm64-efi).                    |
-| terminal              |          | string  | console<br>serial<br>gfxterm   | Terminal type (console, serial, gfxterm).                            |
+| disable_os_prober     |          | boolean |                                | Disable os-prober. **[default: `false`]**                            |
 | timeout               |          | integer |                                | Menu timeout in seconds.                                             |
+| terminal              |          | string  | console<br>serial<br>gfxterm   | Terminal type (console, serial, gfxterm).                            |
+| serial                |          | string  |                                | Serial console settings (e.g., "--unit=0 --speed=115200").           |
 
 ## Examples
 

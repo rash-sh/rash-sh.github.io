@@ -24,13 +24,13 @@ check_mode:
 
 | Parameter           | Required | Type    | Values                       | Description                                                                                                                               |
 |---------------------|----------|---------|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| backup              |          | boolean |                              | Create backup of existing config files before modifying. **[default: `false`]**                                                           |
-| directory           |          | string  |                              | Path to the cloud-init configuration directory. **[default: `"/etc/cloud"`]**                                                             |
-| meta_data_path      |          | string  |                              | Path to write meta-data file. **[default: `"/var/lib/cloud/instance/meta-data"`]**                                                        |
-| network_config_path |          | string  |                              | Path to write network config file. **[default: `"/var/lib/cloud/instance/network-config"`]**                                              |
 | state               |          | string  | present<br>absent<br>updated | Whether the configuration should exist or not. `updated` will only apply changes if the configuration differs. **[default: `"present"`]** |
 | user_data_content   |          | string  |                              | Raw user-data content string. Used as-is if provided (should start with `#cloud-config`).                                                 |
+| backup              |          | boolean |                              | Create backup of existing config files before modifying. **[default: `false`]**                                                           |
+| directory           |          | string  |                              | Path to the cloud-init configuration directory. **[default: `"/etc/cloud"`]**                                                             |
 | user_data_path      |          | string  |                              | Path to write user-data file. **[default: `"/var/lib/cloud/instance/user-data"`]**                                                        |
+| meta_data_path      |          | string  |                              | Path to write meta-data file. **[default: `"/var/lib/cloud/instance/meta-data"`]**                                                        |
+| network_config_path |          | string  |                              | Path to write network config file. **[default: `"/var/lib/cloud/instance/network-config"`]**                                              |
 
 ## Examples
 

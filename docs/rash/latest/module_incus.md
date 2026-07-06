@@ -20,13 +20,13 @@ check_mode:
 
 | Parameter | Required | Type    | Values                                               | Description                                                          |
 |-----------|----------|---------|------------------------------------------------------|----------------------------------------------------------------------|
+| name      | true     | string  |                                                      | Name of the container/VM.                                            |
+| image     |          | string  |                                                      | Image to use for creation (e.g., images:alpine/3.19).                |
+| state     |          | string  | absent<br>present<br>restarted<br>started<br>stopped | State of the container/VM.                                           |
+| type      |          | string  | container<br>virtual-machine                         | Type of instance (container or virtual-machine).                     |
 | config    |          | object  |                                                      | Configuration key-value pairs (supports strings, booleans, numbers). |
 | devices   |          | object  |                                                      | Device configuration.                                                |
 | force     |          | boolean |                                                      | Force container/VM removal on state=absent.                          |
-| image     |          | string  |                                                      | Image to use for creation (e.g., images:alpine/3.19).                |
-| name      | true     | string  |                                                      | Name of the container/VM.                                            |
-| state     |          | string  | absent<br>present<br>restarted<br>started<br>stopped | State of the container/VM.                                           |
-| type      |          | string  | container<br>virtual-machine                         | Type of instance (container or virtual-machine).                     |
 | wait      |          | boolean |                                                      | Wait for operation to complete.                                      |
 
 ## Example

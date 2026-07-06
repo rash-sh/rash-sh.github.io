@@ -20,10 +20,10 @@ check_mode:
 
 | Parameter   | Required | Type    | Values                                      | Description                                                                            |
 |-------------|----------|---------|---------------------------------------------|----------------------------------------------------------------------------------------|
-| enabled     |          | boolean |                                             | Whether the service should be enabled at boot. **[default: `true`]**                   |
 | name        | true     | string  |                                             | Name of the service to manage.                                                         |
-| service_dir |          | string  |                                             | Runit service directory where service definitions are stored. **[default: `/etc/sv`]** |
 | state       |          | string  | reloaded<br>restarted<br>started<br>stopped | Whether the service should be started, stopped, restarted, or reloaded.                |
+| enabled     |          | boolean |                                             | Whether the service should be enabled at boot. **[default: `true`]**                   |
+| service_dir |          | string  |                                             | Runit service directory where service definitions are stored. **[default: `/etc/sv`]** |
 
 ## Example
 

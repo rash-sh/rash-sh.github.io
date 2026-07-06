@@ -20,12 +20,12 @@ check_mode:
 
 | Parameter      | Required | Type    | Values            | Description                                 |
 |----------------|----------|---------|-------------------|---------------------------------------------|
-| driver         |          | string  |                   | Volume driver (e.g., local).                |
-| driver_options |          | object  |                   | Driver-specific options.                    |
-| force          |          | boolean |                   | Force removal of volume (for state=absent). |
-| labels         |          | object  |                   | Volume labels.                              |
 | name           | true     | string  |                   | Name of the volume.                         |
 | state          |          | string  | present<br>absent | State of the volume.                        |
+| driver         |          | string  |                   | Volume driver (e.g., local).                |
+| driver_options |          | object  |                   | Driver-specific options.                    |
+| labels         |          | object  |                   | Volume labels.                              |
+| force          |          | boolean |                   | Force removal of volume (for state=absent). |
 
 ## Example
 

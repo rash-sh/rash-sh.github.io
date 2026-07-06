@@ -20,13 +20,13 @@ check_mode:
 
 | Parameter      | Required | Type    | Values            | Description                                                                                                                              |
 |----------------|----------|---------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| codename       |          | string  |                   | Distribution codename override.                                                                                                          |
-| filename       |          | string  |                   | Custom filename for the sources list (without .list extension). If not specified, the repository will be added to the main sources.list. |
-| mode           |          | string  |                   | File mode for the sources list file (octal, e.g., "0644"). **[default: `"0644"`]**                                                       |
 | repo           | true     | string  |                   | Repository string in sources.list format (required).                                                                                     |
 | state          |          | string  | present<br>absent | Whether the repository should exist or not. **[default: `"present"`]**                                                                   |
+| mode           |          | string  |                   | File mode for the sources list file (octal, e.g., "0644"). **[default: `"0644"`]**                                                       |
 | update_cache   |          | boolean |                   | Run apt-get update after adding or removing the repository. **[default: `true`]**                                                        |
 | validate_certs |          | boolean |                   | Whether to validate SSL certificates when fetching the repository. **[default: `true`]**                                                 |
+| filename       |          | string  |                   | Custom filename for the sources list (without .list extension). If not specified, the repository will be added to the main sources.list. |
+| codename       |          | string  |                   | Distribution codename override.                                                                                                          |
 
 ## Example
 

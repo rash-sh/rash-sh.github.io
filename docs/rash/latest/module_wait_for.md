@@ -22,9 +22,9 @@ check_mode:
 | Parameter       | Required | Type    | Values | Description                                                                               |
 |-----------------|----------|---------|--------|-------------------------------------------------------------------------------------------|
 | connect_timeout |          | integer |        | Maximum number of seconds to wait for a connection to happen before closing and retrying. |
-| host            |          | string  |        | Host to connect to. Defaults to localhost.                                                |
 | port            | true     | integer |        | Port number to poll.                                                                      |
 | timeout         | true     | integer |        | Maximum number of seconds to wait for.                                                    |
+| host            |          | string  |        | Host to connect to. Defaults to localhost.                                                |
 
 ## Example
 

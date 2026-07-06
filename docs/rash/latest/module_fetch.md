@@ -21,11 +21,11 @@ check_mode:
 
 | Parameter         | Required | Type    | Values | Description                                                                                                                                                             |
 |-------------------|----------|---------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| dest              | true     | string  |        | The destination path where the file should be saved. If `flat` is false and dest ends with `/`, the file is saved preserving the source directory structure under dest. |
-| fail_on_missing   |          | boolean |        | If true, the task will fail when the source file is missing. If false, a warning is printed and the task succeeds with changed=false. **[default: `true`]**             |
-| flat              |          | boolean |        | If true, stores the file directly at dest without hostname-based subdirectory structure. **[default: `false`]**                                                         |
 | src               | true     | string  |        | The file to fetch from the source path.                                                                                                                                 |
+| dest              | true     | string  |        | The destination path where the file should be saved. If `flat` is false and dest ends with `/`, the file is saved preserving the source directory structure under dest. |
+| flat              |          | boolean |        | If true, stores the file directly at dest without hostname-based subdirectory structure. **[default: `false`]**                                                         |
 | validate_checksum |          | boolean |        | Whether to validate that the source and destination file checksums match after copy. **[default: `true`]**                                                              |
+| fail_on_missing   |          | boolean |        | If true, the task will fail when the source file is missing. If false, a warning is printed and the task succeeds with changed=false. **[default: `true`]**             |
 
 ## Examples
 

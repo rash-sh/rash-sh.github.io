@@ -20,12 +20,12 @@ check_mode:
 
 | Parameter   | Required | Type    | Values            | Description                                       |
 |-------------|----------|---------|-------------------|---------------------------------------------------|
-| email       |          | string  |                   | Email address for the registry account.           |
-| password    |          | string  |                   | Password for authentication.                      |
-| reauthorize |          | boolean |                   | Force re-authorization even if already logged in. |
 | registry    |          | string  |                   | Registry URL (default: Docker Hub).               |
-| state       |          | string  | present<br>absent | Desired state of the registry login.              |
 | username    |          | string  |                   | Username for authentication.                      |
+| password    |          | string  |                   | Password for authentication.                      |
+| email       |          | string  |                   | Email address for the registry account.           |
+| state       |          | string  | present<br>absent | Desired state of the registry login.              |
+| reauthorize |          | boolean |                   | Force re-authorization even if already logged in. |
 
 ## Example
 

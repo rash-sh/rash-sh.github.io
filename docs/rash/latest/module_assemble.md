@@ -20,13 +20,13 @@ check_mode:
 
 | Parameter     | Required | Type    | Values | Description                                                                                                                           |
 |---------------|----------|---------|--------|---------------------------------------------------------------------------------------------------------------------------------------|
-| delimiter     |          | string  |        | A delimiter to separate the file contents.                                                                                            |
+| src           | true     | string  |        | An already existing directory full of source files.                                                                                   |
 | dest          | true     | string  |        | A file to create using the concatenation of all of the source files.                                                                  |
+| delimiter     |          | string  |        | A delimiter to separate the file contents.                                                                                            |
+| validate      |          | string  |        | The validation command to run before copying into place. The path to the file to validate is passed in by `%s` which must be present. |
+| regexp        |          | string  |        | Assemble files only if the given regular expression matches the filename. If not set, all files are assembled.                        |
 | ignore_hidden |          | boolean |        | A boolean that controls if files that start with a `.` will be included or not. **[default: `false`]**                                |
 | mode          |          | string  |        | Permissions of the destination file.                                                                                                  |
-| regexp        |          | string  |        | Assemble files only if the given regular expression matches the filename. If not set, all files are assembled.                        |
-| src           | true     | string  |        | An already existing directory full of source files.                                                                                   |
-| validate      |          | string  |        | The validation command to run before copying into place. The path to the file to validate is passed in by `%s` which must be present. |
 
 ## Examples
 

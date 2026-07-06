@@ -20,10 +20,10 @@ check_mode:
 
 | Parameter  | Required | Type    | Values            | Description                                                                     |
 |------------|----------|---------|-------------------|---------------------------------------------------------------------------------|
-| reload     |          | boolean |                   | Whether to reload auditd after changes. **[default: `true`]**                   |
-| rules      | true     | array   |                   | List of audit rules to add or remove.                                           |
 | rules_file |          | string  |                   | Path to the audit rules file. **[default: `"/etc/audit/rules.d/audit.rules"`]** |
+| rules      | true     | array   |                   | List of audit rules to add or remove.                                           |
 | state      |          | string  | present<br>absent | Whether the rules should be present or absent. **[default: `"present"`]**       |
+| reload     |          | boolean |                   | Whether to reload auditd after changes. **[default: `true`]**                   |
 
 ## Examples
 

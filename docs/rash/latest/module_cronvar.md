@@ -21,9 +21,9 @@ check_mode:
 | Parameter | Required | Type   | Values            | Description                                                                                    |
 |-----------|----------|--------|-------------------|------------------------------------------------------------------------------------------------|
 | name      | true     | string |                   | Variable name (e.g., SHELL, PATH, MAILTO).                                                     |
+| value     |          | string |                   | Variable value. Required if state=present.                                                     |
 | state     |          | string | absent<br>present | Whether the variable should be present or absent. **[default: `"present"`]**                   |
 | user      |          | string |                   | The specific user whose crontab should be modified. Defaults to system crontab (/etc/crontab). |
-| value     |          | string |                   | Variable value. Required if state=present.                                                     |
 
 {$include_doc /// ## Examples
 ///

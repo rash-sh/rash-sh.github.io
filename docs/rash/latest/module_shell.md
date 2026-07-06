@@ -23,10 +23,10 @@ check_mode:
 
 | Parameter  | Required | Type   | Values | Description                                                    |
 |------------|----------|--------|--------|----------------------------------------------------------------|
-| chdir      |          | string |        | Change into this directory before running the command.         |
 | cmd        | true     | string |        | The shell command to execute.                                  |
-| creates    |          | string |        | A filename, when it already exists, this step will not be run. |
 | executable |          | string |        | Shell to use for command execution. **[default: `"/bin/sh"`]** |
+| chdir      |          | string |        | Change into this directory before running the command.         |
+| creates    |          | string |        | A filename, when it already exists, this step will not be run. |
 | removes    |          | string |        | A filename, when it does not exist, this step will not be run. |
 | stdin      |          | string |        | Set stdin for the command.                                     |
 

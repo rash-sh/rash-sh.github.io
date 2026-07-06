@@ -20,14 +20,14 @@ check_mode:
 
 | Parameter   | Required | Type    | Values            | Description                                                                          |
 |-------------|----------|---------|-------------------|--------------------------------------------------------------------------------------|
-| comment     |          | string  |                   | A comment to attach to the key. By default, this is extracted from the key.          |
-| exclusive   |          | boolean |                   | Whether to remove all other non-specified keys from the file. **[default: `false`]** |
-| key         |          |         |                   | The SSH public key(s). Can be a single key string or a list of keys.                 |
-| key_options |          | string  |                   | A string of ssh key options to be prepended to the key.                              |
-| manage_dir  |          | boolean |                   | Whether to create the .ssh directory if it doesn't exist. **[default: `true`]**      |
-| path        |          | string  |                   | Alternate path to the authorized_keys file. By default, uses ~/.ssh/authorized_keys. |
-| state       |          | string  | present<br>absent | Whether the key should be present or absent. **[default: `"present"`]**              |
 | user        | true     | string  |                   | The username whose authorized_keys file should be modified.                          |
+| key         |          |         |                   | The SSH public key(s). Can be a single key string or a list of keys.                 |
+| state       |          | string  | present<br>absent | Whether the key should be present or absent. **[default: `"present"`]**              |
+| path        |          | string  |                   | Alternate path to the authorized_keys file. By default, uses ~/.ssh/authorized_keys. |
+| exclusive   |          | boolean |                   | Whether to remove all other non-specified keys from the file. **[default: `false`]** |
+| manage_dir  |          | boolean |                   | Whether to create the .ssh directory if it doesn't exist. **[default: `true`]**      |
+| comment     |          | string  |                   | A comment to attach to the key. By default, this is extracted from the key.          |
+| key_options |          | string  |                   | A string of ssh key options to be prepended to the key.                              |
 
 {$include_doc /// ## Examples
 ///

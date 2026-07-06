@@ -20,14 +20,14 @@ check_mode:
 
 | Parameter      | Required | Type    | Values                           | Description                                                      |
 |----------------|----------|---------|----------------------------------|------------------------------------------------------------------|
-| auth_database  |          | string  |                                  | Authentication database.                                         |
-| login_host     |          | string  |                                  | Database host to connect to. **[default: `"localhost"`]**        |
-| login_password |          | string  |                                  | Database password to use.                                        |
-| login_port     |          | integer |                                  | Database port to connect to. **[default: `27017`]**              |
-| login_user     |          | string  |                                  | Database user to connect with.                                   |
-| members        |          | array   |                                  | List of replica set members (host:port format).                  |
 | repl_set       | true     | string  |                                  | Replica set name.                                                |
 | state          |          | string  | present<br>absent<br>initialized | The desired state of the replica set. **[default: `"present"`]** |
+| members        |          | array   |                                  | List of replica set members (host:port format).                  |
+| login_host     |          | string  |                                  | Database host to connect to. **[default: `"localhost"`]**        |
+| login_port     |          | integer |                                  | Database port to connect to. **[default: `27017`]**              |
+| login_user     |          | string  |                                  | Database user to connect with.                                   |
+| login_password |          | string  |                                  | Database password to use.                                        |
+| auth_database  |          | string  |                                  | Authentication database.                                         |
 
 ## Examples
 

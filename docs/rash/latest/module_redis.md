@@ -21,19 +21,19 @@ check_mode:
 | Parameter      | Required | Type    | Values | Description                                                           |
 |----------------|----------|---------|--------|-----------------------------------------------------------------------|
 | command        | true     |         |        | The Redis command to execute.                                         |
-| db             |          | integer |        | The database number to use.                                           |
-| flush_mode     |          |         |        | Type of flush (for flush command).                                    |
-| key            |          | string  |        | The key to operate on (for set/get/delete commands).                  |
 | login_host     |          | string  |        | The host running Redis.                                               |
-| login_password |          | string  |        | The password to authenticate with.                                    |
 | login_port     |          | integer |        | The port to connect to.                                               |
+| login_password |          | string  |        | The password to authenticate with.                                    |
 | login_user     |          | string  |        | The user to authenticate with.                                        |
-| master_host    |          | string  |        | The master host (for replica command).                                |
-| master_port    |          | integer |        | The master port (for replica command).                                |
+| db             |          | integer |        | The database number to use.                                           |
+| key            |          | string  |        | The key to operate on (for set/get/delete commands).                  |
+| value          |          | string  |        | The value to set (for set command) or configure (for config command). |
+| ttl            |          | integer |        | Whether the key should have an expiry time in seconds.                |
+| flush_mode     |          |         |        | Type of flush (for flush command).                                    |
 | name           |          | string  |        | Configuration setting name (for config command).                      |
 | replica_mode   |          |         |        | The mode for replica command.                                         |
-| ttl            |          | integer |        | Whether the key should have an expiry time in seconds.                |
-| value          |          | string  |        | The value to set (for set command) or configure (for config command). |
+| master_host    |          | string  |        | The master host (for replica command).                                |
+| master_port    |          | integer |        | The master port (for replica command).                                |
 
 ## Example
 

@@ -22,8 +22,8 @@ check_mode:
 |------------|----------|--------|-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | name       | true     | string |                               | Name of kernel module to manage.                                                                                                           |
 | params     |          | string |                               | Module parameters. **[default: `""`]**                                                                                                     |
-| persistent |          | string | disabled<br>absent<br>present | Persistency between reboots for configured module. Creates files in /etc/modules-load.d/ and /etc/modprobe.d/. **[default: `"disabled"`]** |
 | state      |          | string | present<br>absent             | Whether the module should be present or absent. **[default: `"present"`]**                                                                 |
+| persistent |          | string | disabled<br>absent<br>present | Persistency between reboots for configured module. Creates files in /etc/modules-load.d/ and /etc/modprobe.d/. **[default: `"disabled"`]** |
 
 ## Examples
 

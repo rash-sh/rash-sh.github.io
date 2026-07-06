@@ -20,16 +20,16 @@ check_mode:
 
 | Parameter    | Required | Type    | Values                         | Description                                           |
 |--------------|----------|---------|--------------------------------|-------------------------------------------------------|
-| build        |          | object  |                                | Build options when source=build.                      |
-| force        |          | boolean |                                | Force removal of the image.                           |
-| force_source |          | boolean |                                | Force rebuild/repull even if image exists.            |
-| load_path    |          | string  |                                | Path to load image from (for source=load).            |
 | name         | true     | string  |                                | Image name with optional tag (e.g., nginx:latest).    |
+| tag          |          | string  |                                | Tag for the image (appended to name).                 |
+| state        |          | string  | present<br>absent              | Desired state of the image.                           |
+| source       |          | string  | build<br>load<br>pull<br>local | Source of the image (build, load, pull, local).       |
+| build        |          | object  |                                | Build options when source=build.                      |
 | push         |          | boolean |                                | Push the image to a registry.                         |
 | repository   |          | string  |                                | Repository to push to (full name including registry). |
-| source       |          | string  | build<br>load<br>pull<br>local | Source of the image (build, load, pull, local).       |
-| state        |          | string  | present<br>absent              | Desired state of the image.                           |
-| tag          |          | string  |                                | Tag for the image (appended to name).                 |
+| load_path    |          | string  |                                | Path to load image from (for source=load).            |
+| force_source |          | boolean |                                | Force rebuild/repull even if image exists.            |
+| force        |          | boolean |                                | Force removal of the image.                           |
 
 ## Example
 

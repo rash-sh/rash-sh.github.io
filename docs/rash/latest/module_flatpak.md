@@ -23,12 +23,12 @@ check_mode:
 
 | Parameter  | Required | Type    | Values            | Description                                                                                                                           |
 |------------|----------|---------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| executable |          | string  |                   | Path of the flatpak binary to use. **[default: `"flatpak"`]**                                                                         |
-| method     |          | string  | system<br>user    | The installation method to use. `system` installs for all users, `user` installs for the current user only. **[default: `"system"`]** |
 | name       |          | array   |                   | Name or list of names of the Flatpak package(s) to install or remove. Package IDs are preferred (e.g., `org.gnome.Calendar`).         |
-| no_deps    |          | boolean |                   | Whether to install without dependencies. **[default: `false`]**                                                                       |
-| remote     |          | string  |                   | The Flatpak remote to use for installation. **[default: `"flathub"`]**                                                                |
 | state      |          | string  | absent<br>present | Whether to install (`present`), or remove (`absent`) a Flatpak package. **[default: `"present"`]**                                    |
+| remote     |          | string  |                   | The Flatpak remote to use for installation. **[default: `"flathub"`]**                                                                |
+| method     |          | string  | system<br>user    | The installation method to use. `system` installs for all users, `user` installs for the current user only. **[default: `"system"`]** |
+| no_deps    |          | boolean |                   | Whether to install without dependencies. **[default: `false`]**                                                                       |
+| executable |          | string  |                   | Path of the flatpak binary to use. **[default: `"flatpak"`]**                                                                         |
 
 ## Example
 

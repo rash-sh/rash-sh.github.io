@@ -21,18 +21,18 @@ check_mode:
 | Parameter     | Required | Type    | Values | Description                                                                                             |
 |---------------|----------|---------|--------|---------------------------------------------------------------------------------------------------------|
 | command       | true     | string  |        | Rclone command to execute. Valid values: sync, copy, move, delete, purge, mkdir, rmdir, check, ls, lsd. |
+| source        | true     | string  |        | Source remote:path or local path.                                                                       |
+| dest          |          | string  |        | Destination remote:path or local path.                                                                  |
 | config        |          | string  |        | Path to rclone config file.                                                                             |
 | create_remote |          | boolean |        | Create the remote if it doesn't exist.                                                                  |
-| dest          |          | string  |        | Destination remote:path or local path.                                                                  |
+| remote_type   |          | string  |        | Remote type for create_remote (s3, gcs, dropbox, etc.).                                                 |
+| filter        |          | array   |        | List of filter patterns.                                                                                |
 | dry_run       |          | boolean |        | Dry run mode - show what would be transferred without making changes.                                   |
 | exclude       |          | array   |        | Skip files that match pattern.                                                                          |
-| filter        |          | array   |        | List of filter patterns.                                                                                |
 | include       |          | array   |        | Include files that match pattern.                                                                       |
+| retries       |          | integer |        | Maximum number of times to retry failed operations.                                                     |
 | quiet         |          | boolean |        | Reduce verbosity in output.                                                                             |
 | rclone_opts   |          | array   |        | Additional rclone options.                                                                              |
-| remote_type   |          | string  |        | Remote type for create_remote (s3, gcs, dropbox, etc.).                                                 |
-| retries       |          | integer |        | Maximum number of times to retry failed operations.                                                     |
-| source        | true     | string  |        | Source remote:path or local path.                                                                       |
 
 ## Examples
 

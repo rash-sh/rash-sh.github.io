@@ -20,34 +20,34 @@ check_mode:
 
 | Parameter         | Required | Type    | Values                                               | Description                                              |
 |-------------------|----------|---------|------------------------------------------------------|----------------------------------------------------------|
+| name              | true     | string  |                                                      | Name of the container.                                   |
+| image             |          | string  |                                                      | Image to use for the container.                          |
+| state             |          | string  | absent<br>present<br>restarted<br>started<br>stopped | State of the container.                                  |
+| env               |          | array   |                                                      | Environment variables.                                   |
+| env_dict          |          | object  |                                                      | Dictionary of environment variables.                     |
+| ports             |          | array   |                                                      | Port mappings.                                           |
+| volumes           |          | array   |                                                      | Volume mappings.                                         |
+| networks          |          | array   |                                                      | Networks to connect to.                                  |
+| healthcheck       |          | object  |                                                      | Health check configuration.                              |
+| memory            |          | string  |                                                      | Memory limit (e.g., "512m", "1g").                       |
+| cpu_shares        |          | integer |                                                      | CPU shares (relative weight).                            |
+| cpu_quota         |          | integer |                                                      | CPU quota in microseconds.                               |
+| cpu_period        |          | integer |                                                      | CPU period in microseconds.                              |
+| command           |          | array   |                                                      | Command to run in the container.                         |
+| entrypoint        |          | string  |                                                      | Entry point for the container.                           |
+| working_dir       |          | string  |                                                      | Working directory inside the container.                  |
+| user              |          | string  |                                                      | User to run as inside the container.                     |
+| restart_policy    |          | string  |                                                      | Restart policy (no, always, on-failure, unless-stopped). |
+| hostname          |          | string  |                                                      | Container hostname.                                      |
+| privileged        |          | boolean |                                                      | Run container in privileged mode.                        |
+| interactive       |          | boolean |                                                      | Keep stdin open.                                         |
+| tty               |          | boolean |                                                      | Allocate a pseudo-TTY.                                   |
 | auto_remove       |          | boolean |                                                      | Automatically remove the container when it exits.        |
 | capabilities_add  |          | array   |                                                      | List of capabilities to add.                             |
 | capabilities_drop |          | array   |                                                      | List of capabilities to drop.                            |
-| command           |          | array   |                                                      | Command to run in the container.                         |
-| cpu_period        |          | integer |                                                      | CPU period in microseconds.                              |
-| cpu_quota         |          | integer |                                                      | CPU quota in microseconds.                               |
-| cpu_shares        |          | integer |                                                      | CPU shares (relative weight).                            |
-| detach            |          | boolean |                                                      | Run container in detached mode (background).             |
-| entrypoint        |          | string  |                                                      | Entry point for the container.                           |
-| env               |          | array   |                                                      | Environment variables.                                   |
-| env_dict          |          | object  |                                                      | Dictionary of environment variables.                     |
-| force             |          | boolean |                                                      | Force container removal on state=absent.                 |
-| healthcheck       |          | object  |                                                      | Health check configuration.                              |
-| hostname          |          | string  |                                                      | Container hostname.                                      |
-| image             |          | string  |                                                      | Image to use for the container.                          |
-| interactive       |          | boolean |                                                      | Keep stdin open.                                         |
-| memory            |          | string  |                                                      | Memory limit (e.g., "512m", "1g").                       |
-| name              | true     | string  |                                                      | Name of the container.                                   |
-| networks          |          | array   |                                                      | Networks to connect to.                                  |
-| ports             |          | array   |                                                      | Port mappings.                                           |
-| privileged        |          | boolean |                                                      | Run container in privileged mode.                        |
 | pull              |          | boolean |                                                      | Pull image before running.                               |
-| restart_policy    |          | string  |                                                      | Restart policy (no, always, on-failure, unless-stopped). |
-| state             |          | string  | absent<br>present<br>restarted<br>started<br>stopped | State of the container.                                  |
-| tty               |          | boolean |                                                      | Allocate a pseudo-TTY.                                   |
-| user              |          | string  |                                                      | User to run as inside the container.                     |
-| volumes           |          | array   |                                                      | Volume mappings.                                         |
-| working_dir       |          | string  |                                                      | Working directory inside the container.                  |
+| force             |          | boolean |                                                      | Force container removal on state=absent.                 |
+| detach            |          | boolean |                                                      | Run container in detached mode (background).             |
 
 ## Example
 

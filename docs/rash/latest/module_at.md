@@ -21,10 +21,10 @@ check_mode:
 
 | Parameter | Required | Type    | Values            | Description                                                                                                            |
 |-----------|----------|---------|-------------------|------------------------------------------------------------------------------------------------------------------------|
-| at_time   |          | string  |                   | When to execute the command (e.g., 'now + 1 hour', '10:30', 'teatime'). Required if state=present.                     |
 | command   |          | string  |                   | The command to execute. Required if state=present.                                                                     |
-| name      |          | string  |                   | A name for this job, used for identification and removal. If not specified, a name will be generated from the command. |
+| at_time   |          | string  |                   | When to execute the command (e.g., 'now + 1 hour', '10:30', 'teatime'). Required if state=present.                     |
 | state     |          | string  | absent<br>present | Whether the job should be present or absent. **[default: `"present"`]**                                                |
+| name      |          | string  |                   | A name for this job, used for identification and removal. If not specified, a name will be generated from the command. |
 | unique    |          | boolean |                   | If true, prevent duplicate jobs with the same command. **[default: `false`]**                                          |
 
 ## Examples

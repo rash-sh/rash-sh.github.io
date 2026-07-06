@@ -20,16 +20,16 @@ check_mode:
 
 | Parameter       | Required | Type    | Values            | Description                                                               |
 |-----------------|----------|---------|-------------------|---------------------------------------------------------------------------|
-| alias           |          | string  |                   | Alias for the certificate in the keystore.                                |
-| cacert_chain    |          | array   |                   | List of CA certificate chain files (PEM format).                          |
-| certificate     |          | string  |                   | Path to the certificate file (PEM format).                                |
-| force           |          | boolean |                   | Force overwrite existing entry with same alias.                           |
-| password        | true     | string  |                   | Password for the keystore.                                                |
 | path            | true     | string  |                   | Path to the keystore file.                                                |
-| pkcs12_password |          | string  |                   | Password for the PKCS12 file.                                             |
-| pkcs12_path     |          | string  |                   | Path to a PKCS12 file to import.                                          |
-| private_key     |          | string  |                   | Path to the private key file (PEM format).                                |
+| password        | true     | string  |                   | Password for the keystore.                                                |
 | state           |          | string  | present<br>absent | Whether the entry should be present or absent. **[default: `"present"`]** |
+| alias           |          | string  |                   | Alias for the certificate in the keystore.                                |
+| certificate     |          | string  |                   | Path to the certificate file (PEM format).                                |
+| private_key     |          | string  |                   | Path to the private key file (PEM format).                                |
+| cacert_chain    |          | array   |                   | List of CA certificate chain files (PEM format).                          |
+| pkcs12_path     |          | string  |                   | Path to a PKCS12 file to import.                                          |
+| pkcs12_password |          | string  |                   | Password for the PKCS12 file.                                             |
+| force           |          | boolean |                   | Force overwrite existing entry with same alias.                           |
 
 ## Examples
 

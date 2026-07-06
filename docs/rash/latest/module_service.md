@@ -21,8 +21,8 @@ check_mode:
 
 | Parameter | Required | Type    | Values                                      | Description                                                             |
 |-----------|----------|---------|---------------------------------------------|-------------------------------------------------------------------------|
-| enabled   |          | boolean |                                             | Whether the service should be enabled, disabled, or neither.            |
 | name      | true     | string  |                                             | Name of the service to manage.                                          |
+| enabled   |          | boolean |                                             | Whether the service should be enabled, disabled, or neither.            |
 | state     |          | string  | reloaded<br>restarted<br>started<br>stopped | State of the service.                                                   |
 | use       |          | string  | systemd<br>openrc<br>sysvinit               | The service manager to use. If not specified, it will be auto-detected. |
 
