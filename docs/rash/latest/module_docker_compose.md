@@ -14,7 +14,7 @@ Manage Docker Compose projects for multi-container applications.
 ```yaml
 check_mode:
   support: full
-```
+```}
 
 ## Parameters
 
@@ -23,7 +23,7 @@ check_mode:
 | project_src    | true     | string  |                                                      | Path to the docker-compose project directory.            |
 | state          |          | string  | absent<br>present<br>restarted<br>started<br>stopped | Desired state of the project.                            |
 | services       |          | array   |                                                      | List of specific services to manage.                     |
-| scale          |          | object  |                                                      | Scale mapping for services (e.g., {"web": 3}).           |
+| scale          |          | object  |                                                      | Scale mapping for services (e.g., {"web": 3).           |
 | pull           |          | boolean |                                                      | Pull images before starting.                             |
 | build          |          | boolean |                                                      | Build images before starting.                            |
 | files          |          | array   |                                                      | List of compose files to use.                            |

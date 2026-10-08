@@ -54,37 +54,37 @@ check_mode:
   register: files
 
 - debug:
-    msg: "Files opened: {{ files.extra.events | length }"
-/// ```
-///
-/// ### Trace process execution
-///
-/// ```yaml
-/// - trace:
-///     probe: process_exec
-///     duration: 5s
-///   become: true
-///   register: procs
-/// ```
-///
-/// ### Filter syscalls
-///
-/// ```yaml
-/// - trace:
-///     probe: syscalls
-///     filter: open,openat,read,write
-///     duration: 10s
-///   register: syscalls
-/// ```
-///
-/// ### Custom bpftrace expression
-///
-/// ```yaml
-/// - trace:
-///     expr: 'tracepoint:syscalls:sys_enter_open { @[comm] = count(); }'
-///     duration: 10s
-///   become: true
-///   register: custom
-/// ```}
+    msg: "Files opened: {{ files.extra.events | length }}"
+```
+
+### Trace process execution
+
+```yaml
+- trace:
+    probe: process_exec
+    duration: 5s
+  become: true
+  register: procs
+```
+
+### Filter syscalls
+
+```yaml
+- trace:
+    probe: syscalls
+    filter: open,openat,read,write
+    duration: 10s
+  register: syscalls
+```
+
+### Custom bpftrace expression
+
+```yaml
+- trace:
+    expr: 'tracepoint:syscalls:sys_enter_open { @[comm] = count(); }'
+    duration: 10s
+  become: true
+  register: custom
+```
 
 {% endraw %}

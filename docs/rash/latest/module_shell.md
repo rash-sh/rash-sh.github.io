@@ -7,10 +7,8 @@ indent: true
 {% raw %}
 # shell
 
-Execute shell commands with pipe support, redirections, and environment
-variables. This module extends the command module by providing full shell
-features including pipes, redirections, environment variable expansion,
-shell glob expansion, and subshell execution.
+Execute shell commands with pipes, redirections, expansion, and subshells. Process output can
+be captured, inherited, discarded, or streamed and captured with `tee`.
 
 ## Attributes
 
@@ -21,40 +19,35 @@ check_mode:
 
 ## Parameters
 
-| Parameter  | Required | Type   | Values | Description                                                    |
-|------------|----------|--------|--------|----------------------------------------------------------------|
-| cmd        | true     | string |        | The shell command to execute.                                  |
-| executable |          | string |        | Shell to use for command execution. **[default: `"/bin/sh"`]** |
-| chdir      |          | string |        | Change into this directory before running the command.         |
-| creates    |          | string |        | A filename, when it already exists, this step will not be run. |
-| removes    |          | string |        | A filename, when it does not exist, this step will not be run. |
-| stdin      |          | string |        | Set stdin for the command.                                     |
+| Parameter  | Required | Type   | Values                            | Description                                                                                                                                                                |
+|------------|----------|--------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cmd        | true     | string |                                   | The shell command to execute.                                                                                                                                              |
+| executable |          | string |                                   | Shell executable. Defaults to `/bin/sh`.                                                                                                                                   |
+| chdir      |          | string |                                   | Change into this directory before running the command.                                                                                                                     |
+| creates    |          | string |                                   | Skip execution when this path already exists.                                                                                                                              |
+| removes    |          | string |                                   | Skip execution when this path does not exist.                                                                                                                              |
+| stdin      |          | string |                                   | Data written to stdin.                                                                                                                                                     |
+| stdout     |          | string | capture<br>inherit<br>null<br>tee | stdout handling: `capture` (default, registered), `tee` (streamed live and registered), `inherit` (streamed live, not registered) or `null` (discarded; quote it in YAML). |
+| stderr     |          | string | capture<br>inherit<br>null<br>tee | stderr handling: `capture` (default, registered), `tee` (streamed live and registered), `inherit` (streamed live, not registered) or `null` (discarded; quote it in YAML). |
 
-{$include_doc /// ## Example
-///
-/// ```yaml
-/// - shell:
-///     cmd: cat /var/log/app.log | grep ERROR | wc -l
-///     register: error_count
-///
-/// - shell: echo "hello world" | tr a-z A-Z
-///   register: upper
-///
-/// - shell:
-///     cmd: find . -name "*.log" -mtime +7 -delete
-///     chdir: /var/log
-///
-/// - shell:
-///     cmd: process_data.sh < input.txt > output.txt
-///     executable: /bin/bash
-///
-/// - shell:
-///     cmd: echo "file exists"
-///     creates: /tmp/marker
-///
-/// - shell:
-///     cmd: echo "file removed"
-///     removes: /tmp/cleanup-target
-/// ```}
+## Example
+
+```yaml
+- shell: echo "hello world" | tr a-z A-Z
+  register: upper
+
+- shell:
+    cmd: cargo build 2>&1
+    stdout: tee
+    stderr: tee
+
+- shell:
+    cmd: find . -name "*.log" -mtime +7 -delete
+    chdir: /var/log
+
+- shell:
+    cmd: process_data.sh < input.txt > output.txt
+    executable: /bin/bash
+```
 
 {% endraw %}

@@ -33,55 +33,55 @@ check_mode:
 | include_dependencies |          | boolean |                             | Include dependencies when installing. **[default: `true`]**                                                                                                                                                                                                                            |
 | install_dir          |          | string  |                             | Custom installation directory for gems.                                                                                                                                                                                                                                                |
 
-{$include_doc /// ## Example
-///
-/// ```yaml
-/// - name: Install a gem
-///   gem:
-///     name: bundler
-///     state: present
-///
-/// - name: Install specific version of a gem
-///   gem:
-///     name: rails
-///     version: "7.0.0"
-///     state: present
-///
-/// - name: Install gem with version constraint
-///   gem:
-///     name: rake
-///     version: ">= 13.0"
-///     state: present
-///
-/// - name: Install gem to user directory
-///   gem:
-///     name: rubocop
-///     user_install: true
-///
-/// - name: Install pre-release version
-///   gem:
-///     name: some_gem
-///     pre_release: true
-///
-/// - name: Install from specific source
-///   gem:
-///     name: private_gem
-///     gem_source: https://gems.example.com
-///
-/// - name: Install gems from Gemfile
-///   gem:
-///     bundler: true
-///     chdir: /app
-///
-/// - name: Remove a gem
-///   gem:
-///     name: rails
-///     state: absent
-///
-/// - name: Update gem to latest version
-///   gem:
-///     name: bundler
-///     state: latest
-/// ```}
+## Example
+
+```yaml
+- name: Install a gem
+  gem:
+    name: bundler
+    state: present
+
+- name: Install specific version of a gem
+  gem:
+    name: rails
+    version: "7.0.0"
+    state: present
+
+- name: Install gem with version constraint
+  gem:
+    name: rake
+    version: ">= 13.0"
+    state: present
+
+- name: Install gem to user directory
+  gem:
+    name: rubocop
+    user_install: true
+
+- name: Install pre-release version
+  gem:
+    name: some_gem
+    pre_release: true
+
+- name: Install from specific source
+  gem:
+    name: private_gem
+    gem_source: https://gems.example.com
+
+- name: Install gems from Gemfile
+  gem:
+    bundler: true
+    chdir: /app
+
+- name: Remove a gem
+  gem:
+    name: rails
+    state: absent
+
+- name: Update gem to latest version
+  gem:
+    name: bundler
+    state: latest
+```
 
 {% endraw %}

@@ -23,7 +23,8 @@ check_mode:
 
 | Parameter | Required | Type   | Values          | Description                    |
 | --------- | -------- | ------ | --------------- | ------------------------------ |
-| action    | true     | string | flush_handlers  | The meta action to perform     |
+| action    | true     | string | flush_handlers, exit | The meta action to perform  |
+| code      | false    | integer | 0-255 | Exit status when action is `exit` (default: 0). Templated strings like `"{{ rc }}"` are accepted. |
 
 ## Example
 
@@ -31,6 +32,11 @@ check_mode:
 - name: Flush handlers before continuing
   meta:
     action: flush_handlers
+
+- name: Exit with an application-specific status
+  meta:
+    action: exit
+    code: 2
 ```
 
 {% endraw %}

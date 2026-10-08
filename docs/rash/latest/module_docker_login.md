@@ -45,24 +45,24 @@ check_mode:
   docker_login:
     registry: registry.example.com
     username: deploy
-    password: "{{ registry_password }"
-///     email: deploy@example.com
-///
-/// - name: Logout from Docker Hub
-///   docker_login:
-///     state: absent
-///
-/// - name: Logout from private registry
-///   docker_login:
-///     registry: registry.example.com
-///     state: absent
-///
-/// - name: Re-authorize (force login even if already logged in)
-///   docker_login:
-///     registry: registry.example.com
-///     username: deploy
-///     password: "{{ registry_password }}"
-///     reauthorize: true
-/// ```}
+    password: "{{ registry_password }}"
+    email: deploy@example.com
+
+- name: Logout from Docker Hub
+  docker_login:
+    state: absent
+
+- name: Logout from private registry
+  docker_login:
+    registry: registry.example.com
+    state: absent
+
+- name: Re-authorize (force login even if already logged in)
+  docker_login:
+    registry: registry.example.com
+    username: deploy
+    password: "{{ registry_password }}"
+    reauthorize: true
+```
 
 {% endraw %}

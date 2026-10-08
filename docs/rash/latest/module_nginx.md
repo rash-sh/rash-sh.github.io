@@ -24,27 +24,27 @@ check_mode:
 | state     |          | string | present<br>absent | Whether the site should be present and enabled or absent and disabled. **[default: `"present"`]** |
 | sites_dir |          | string |                   | Path to the sites-available directory. **[default: `"/etc/nginx/sites-available"`]**              |
 
-{$include_doc /// ## Examples
-///
-/// ```yaml
-/// - nginx:
-///     name: mysite
-///     state: present
-///     config: |
-///       server {
-///          listen 80;
-///          server_name example.com;
-///          root /var/www/html;
-///       }
-///
-/// - nginx:
-///     name: oldsite
-///     state: absent
-///
-/// - nginx:
-///     name: mysite
-///     state: present
-///     template: /etc/rash/templates/mysite.conf.j2
-/// ```}
+## Examples
+
+```yaml
+- nginx:
+    name: mysite
+    state: present
+    config: |
+      server {
+         listen 80;
+         server_name example.com;
+         root /var/www/html;
+      }
+
+- nginx:
+    name: oldsite
+    state: absent
+
+- nginx:
+    name: mysite
+    state: present
+    template: /etc/rash/templates/mysite.conf.j2
+```
 
 {% endraw %}

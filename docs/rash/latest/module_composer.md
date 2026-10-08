@@ -39,50 +39,50 @@ check_mode:
 | no_scripts             |          | boolean |        | Skips the execution of all scripts defined in composer.json. **[default: `false`]**                     |
 | no_plugins             |          | boolean |        | Disables all plugins. **[default: `false`]**                                                            |
 
-{$include_doc /// ## Example
-///
-/// ```yaml
-/// - name: Install dependencies from composer.lock
-///   composer:
-///     command: install
-///     working_dir: /path/to/project
-///
-/// - name: Install dependencies without dev packages
-///   composer:
-///     command: install
-///     working_dir: /path/to/project
-///     no_dev: true
-///
-/// - name: Install a new package
-///   composer:
-///     command: require
-///     arguments: my/package
-///     working_dir: /path/to/project
-///
-/// - name: Install a package globally
-///   composer:
-///     command: require
-///     global_command: true
-///     arguments: my/package
-///
-/// - name: Update all dependencies
-///   composer:
-///     command: update
-///     working_dir: /path/to/project
-///
-/// - name: Create a new project
-///   composer:
-///     command: create-project
-///     arguments: package/package /path/to/project ~1.0
-///     working_dir: /tmp
-///     prefer_dist: true
-///
-/// - name: Optimize autoloader for production
-///   composer:
-///     command: dump-autoload
-///     working_dir: /path/to/project
-///     optimize_autoloader: true
-///     no_dev: true
-/// ```}
+## Example
+
+```yaml
+- name: Install dependencies from composer.lock
+  composer:
+    command: install
+    working_dir: /path/to/project
+
+- name: Install dependencies without dev packages
+  composer:
+    command: install
+    working_dir: /path/to/project
+    no_dev: true
+
+- name: Install a new package
+  composer:
+    command: require
+    arguments: my/package
+    working_dir: /path/to/project
+
+- name: Install a package globally
+  composer:
+    command: require
+    global_command: true
+    arguments: my/package
+
+- name: Update all dependencies
+  composer:
+    command: update
+    working_dir: /path/to/project
+
+- name: Create a new project
+  composer:
+    command: create-project
+    arguments: package/package /path/to/project ~1.0
+    working_dir: /tmp
+    prefer_dist: true
+
+- name: Optimize autoloader for production
+  composer:
+    command: dump-autoload
+    working_dir: /path/to/project
+    optimize_autoloader: true
+    no_dev: true
+```
 
 {% endraw %}

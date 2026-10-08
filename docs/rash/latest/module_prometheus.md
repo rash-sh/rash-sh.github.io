@@ -64,30 +64,30 @@ check_mode:
         - name: example
           rules:
             - alert: HighRequestLatency
-              expr: job:request_latency_seconds:mean5m{job="myjob" > 0.5
-///               for: 10m
-///               labels:
-///                 severity: page
-///               annotations:
-///                 summary: High request latency
-///
-/// - prometheus:
-///     action: get
-///
-/// - prometheus:
-///     action: add
-///     targets:
-///       - job_name: node
-///         static_configs:
-///           - targets: ['localhost:9100']
-///     alert_rules:
-///       groups:
-///         - name: node_alerts
-///           rules:
-///             - alert: NodeDown
-///               expr: up == 0
-///               for: 5m
-///     reload: true
-/// ```}
+              expr: job:request_latency_seconds:mean5m{job="myjob"} > 0.5
+              for: 10m
+              labels:
+                severity: page
+              annotations:
+                summary: High request latency
+
+- prometheus:
+    action: get
+
+- prometheus:
+    action: add
+    targets:
+      - job_name: node
+        static_configs:
+          - targets: ['localhost:9100']
+    alert_rules:
+      groups:
+        - name: node_alerts
+          rules:
+            - alert: NodeDown
+              expr: up == 0
+              for: 5m
+    reload: true
+```
 
 {% endraw %}

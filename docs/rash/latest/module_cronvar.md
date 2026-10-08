@@ -25,25 +25,25 @@ check_mode:
 | state     |          | string | absent<br>present | Whether the variable should be present or absent. **[default: `"present"`]**                   |
 | user      |          | string |                   | The specific user whose crontab should be modified. Defaults to system crontab (/etc/crontab). |
 
-{$include_doc /// ## Examples
-///
-/// ```yaml
-/// - cronvar:
-///     name: PATH
-///     value: /usr/local/bin:/usr/bin:/bin
-///
-/// - cronvar:
-///     name: MAILTO
-///     value: admin@example.com
-///     user: root
-///
-/// - cronvar:
-///     name: SHELL
-///     value: /bin/bash
-///
-/// - cronvar:
-///     name: OLD_VAR
-///     state: absent
-/// ```}
+## Examples
+
+```yaml
+- cronvar:
+    name: PATH
+    value: /usr/local/bin:/usr/bin:/bin
+
+- cronvar:
+    name: MAILTO
+    value: admin@example.com
+    user: root
+
+- cronvar:
+    name: SHELL
+    value: /bin/bash
+
+- cronvar:
+    name: OLD_VAR
+    state: absent
+```
 
 {% endraw %}

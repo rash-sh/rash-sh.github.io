@@ -28,25 +28,25 @@ check_mode:
 | get_mime           |          | boolean |                       | Whether to get the mime type of a file. Requires file command to be available. **[default: `false`]** |
 | get_attributes     |          | boolean |                       | Whether to get the attributes of a file. **[default: `true`]**                                        |
 
-{$include_doc /// ## Example
-///
-/// ```yaml
-/// - stat:
-///     path: /etc/app/config.json
-///   register: config_stat
-///
-/// - name: Only run if config exists and is recent
-///   command:
-///     cmd: ./reload-config.sh
-///   when: config_stat.stat.exists and config_stat.stat.mtime > (ansible_date_time.epoch | int - 86400)
-///
-/// - stat:
-///     path: /path/to/file
-///     checksum_algorithm: sha256
-///   register: file_stat
-///
-/// - debug:
-///     var: "file_stat.stat.checksum"
-/// ```}
+## Example
+
+```yaml
+- stat:
+    path: /etc/app/config.json
+  register: config_stat
+
+- name: Only run if config exists and is recent
+  command:
+    cmd: ./reload-config.sh
+  when: config_stat.stat.exists and config_stat.stat.mtime > (ansible_date_time.epoch | int - 86400)
+
+- stat:
+    path: /path/to/file
+    checksum_algorithm: sha256
+  register: file_stat
+
+- debug:
+    var: "file_stat.stat.checksum"
+```
 
 {% endraw %}

@@ -7,10 +7,9 @@ indent: true
 {% raw %}
 # block
 
-This module allows grouping tasks together for execution.
-Similar to Ansible's block directive.
-
-Note: `vars` declared in a block are added to the parent context.
+Group tasks together for execution. The traditional sequence form remains supported. The
+mapping form adds `defaults`, which are merged into every child task unless that task overrides
+them. `vars` and `environment` maps are merged key-by-key.
 
 ## Attributes
 
@@ -21,23 +20,27 @@ check_mode:
 
 ## Parameters
 
-| Parameter | Required | Type | Values | Description                   |
-| --------- | -------- | ---- | ------ | ----------------------------- |
-| block     | true     | list |        | List of tasks to execute      |
+`block` takes either a list of tasks or a mapping:
+
+| Parameter | Required | Type | Values | Description                                                |
+| --------- | -------- | ---- | ------ | ---------------------------------------------------------- |
+| tasks     | true     | list |        | Tasks to execute.                                          |
+| defaults  | false    | map  |        | Task attributes applied to every child task it doesn't set. |
 
 ## Example
 
 ```yaml
-- name: Example block
-  block:
-    - name: Create a file
-      copy:
-        content: "Hello World"
-        dest: "/tmp/test.txt"
+- block:
+    - command: echo simple
 
-    - name: Run a command
-      command:
-        cmd: "echo 'Success'"
+- block:
+    tasks:
+      - command: ./migrate
+      - command: ./verify
+    defaults:
+      environment:
+        APP_ENV: production
+      become: true
 ```
 
 {% endraw %}

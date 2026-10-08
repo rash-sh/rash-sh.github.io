@@ -27,25 +27,25 @@ check_mode:
 | hash_host        |          | boolean |                   | Hash hostnames in the known_hosts file for privacy. **[default: `false`]** |
 | fail_on_notfound |          | boolean |                   | Fail if host not found when state=absent. **[default: `false`]**           |
 
-{$include_doc /// ## Examples
-///
-/// ```yaml
-/// - known_hosts:
-///     name: github.com
-///     key: github.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC...
-///
-/// - known_hosts:
-///     name: github.com
-///     key: '{{ lookup("file", "~/.ssh/github_key.pub") }}'
-///
-/// - known_hosts:
-///     name: old-server.local
-///     state: absent
-///
-/// - known_hosts:
-///     name: 192.168.1.100
-///     key: 192.168.1.100 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTY...
-///     path: /home/deploy/.ssh/known_hosts
-/// ```}
+## Examples
+
+```yaml
+- known_hosts:
+    name: github.com
+    key: github.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC...
+
+- known_hosts:
+    name: github.com
+    key: '{{ lookup("file", "~/.ssh/github_key.pub") }}'
+
+- known_hosts:
+    name: old-server.local
+    state: absent
+
+- known_hosts:
+    name: 192.168.1.100
+    key: 192.168.1.100 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTY...
+    path: /home/deploy/.ssh/known_hosts
+```
 
 {% endraw %}

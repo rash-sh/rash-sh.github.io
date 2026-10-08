@@ -57,76 +57,76 @@ check_mode:
     value: 192.168.1.1
     ttl: 300
     key_name: mykey
-    key_secret: "{{ dns_key }"
-///     key_algorithm: hmac-sha256
-///     state: present
-///
-/// - name: Add AAAA record
-///   nsupdate:
-///     server: dns.example.com
-///     zone: example.com
-///     record: www
-///     type: AAAA
-///     value: "2001:db8::1"
-///     state: present
-///
-/// - name: Add CNAME record
-///   nsupdate:
-///     server: dns.example.com
-///     zone: example.com
-///     record: blog
-///     type: CNAME
-///     value: www.example.com
-///     state: present
-///
-/// - name: Add MX record
-///   nsupdate:
-///     server: dns.example.com
-///     zone: example.com
-///     record: "@"
-///     type: MX
-///     value: mail.example.com
-///     priority: 10
-///     state: present
-///
-/// - name: Add TXT record
-///   nsupdate:
-///     server: dns.example.com
-///     zone: example.com
-///     record: "@"
-///     type: TXT
-///     value: "v=spf1 include:_spf.example.com ~all"
-///     state: present
-///
-/// - name: Add SRV record
-///   nsupdate:
-///     server: dns.example.com
-///     zone: example.com
-///     record: "_sip._tcp"
-///     type: SRV
-///     value: "sip.example.com"
-///     priority: 10
-///     weight: 60
-///     port: 5060
-///     state: present
-///
-/// - name: Delete a DNS record
-///   nsupdate:
-///     server: dns.example.com
-///     zone: example.com
-///     record: old
-///     type: A
-///     state: absent
-///
-/// - name: Add record using custom port
-///   nsupdate:
-///     server: dns.example.com
-///     port: 5353
-///     zone: example.com
-///     record: test
-///     type: A
-///     value: 10.0.0.1
-///     state: present
-/// ```}
+    key_secret: "{{ dns_key }}"
+    key_algorithm: hmac-sha256
+    state: present
+
+- name: Add AAAA record
+  nsupdate:
+    server: dns.example.com
+    zone: example.com
+    record: www
+    type: AAAA
+    value: "2001:db8::1"
+    state: present
+
+- name: Add CNAME record
+  nsupdate:
+    server: dns.example.com
+    zone: example.com
+    record: blog
+    type: CNAME
+    value: www.example.com
+    state: present
+
+- name: Add MX record
+  nsupdate:
+    server: dns.example.com
+    zone: example.com
+    record: "@"
+    type: MX
+    value: mail.example.com
+    priority: 10
+    state: present
+
+- name: Add TXT record
+  nsupdate:
+    server: dns.example.com
+    zone: example.com
+    record: "@"
+    type: TXT
+    value: "v=spf1 include:_spf.example.com ~all"
+    state: present
+
+- name: Add SRV record
+  nsupdate:
+    server: dns.example.com
+    zone: example.com
+    record: "_sip._tcp"
+    type: SRV
+    value: "sip.example.com"
+    priority: 10
+    weight: 60
+    port: 5060
+    state: present
+
+- name: Delete a DNS record
+  nsupdate:
+    server: dns.example.com
+    zone: example.com
+    record: old
+    type: A
+    state: absent
+
+- name: Add record using custom port
+  nsupdate:
+    server: dns.example.com
+    port: 5353
+    zone: example.com
+    record: test
+    type: A
+    value: 10.0.0.1
+    state: present
+```
 
 {% endraw %}

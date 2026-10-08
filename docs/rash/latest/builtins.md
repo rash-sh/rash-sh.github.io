@@ -23,21 +23,21 @@ By default, every execution of `rash` exposes two variables to the Context: `{{ 
       - 'rash.user.uid == 1000'
       - 'rash.user.gid == 1000'
       - 'rash.check_mode == false'
-```
+```}
 
 `src/vars/builtin.rs`:
 
 ```rust,no_run,noplaypen
 #[derive(Serialize, Deserialize)]
 pub struct Builtins {
-    /// Args passed from command line execution.
+    Args passed from command line execution.
     args: Vec<String>,
-    /// Script directory absolute path.
+    Script directory absolute path.
     dir: String,
-    /// Script absolute path.
+    Script absolute path.
     path: String,
     user: UserInfo,
-    /// Whether rash is running in check mode.
+    Whether rash is running in check mode.
     check_mode: bool,
 }
 
@@ -64,7 +64,7 @@ Example:
 
 ## env
 
-You can access any environment var as `{{ env.MY_ENV_VAR }}`.
+You can access any environment var as `{{ env.MY_ENV_VAR }`.
 
 Also, you can use command line arguments to pass environment variables:
 

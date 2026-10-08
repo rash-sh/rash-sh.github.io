@@ -31,60 +31,60 @@ check_mode:
 | timeout        |          | integer |                   | Timeout in seconds for API requests.                                    |
 | validate_certs |          | boolean |                   | If false, SSL certificates will not be validated.                       |
 
-{$include_doc /// ## Examples
-///
-/// ```yaml
-/// - name: Create Jenkins job
-///   jenkins_job:
-///     name: myapp-build
-///     state: present
-///     url: http://jenkins.local
-///     user: admin
-///     password: secret
-///
-/// - name: Create Jenkins job with config XML
-///   jenkins_job:
-///     name: myapp-build
-///     state: present
-///     url: http://jenkins.local
-///     user: admin
-///     password: secret
-///     config: |
-///       <project>
-///         <description>My app build job</description>
-///         <builders>
-///           <hudson.tasks.Shell>
-///             <command>echo "Building"</command>
-///           </hudson.tasks.Shell>
-///         </builders>
-///       </project>
-///
-/// - name: Trigger Jenkins build
-///   jenkins_job:
-///     name: myapp-build
-///     state: present
-///     url: http://jenkins.local
-///     user: admin
-///     password: secret
-///     enabled: true
-///
-/// - name: Delete Jenkins job
-///   jenkins_job:
-///     name: old-job
-///     state: absent
-///     url: http://jenkins.local
-///     user: admin
-///     password: secret
-///
-/// - name: Trigger build with token
-///   jenkins_job:
-///     name: myapp-build
-///     state: present
-///     url: http://jenkins.local
-///     user: admin
-///     password: secret
-///     token: build-token
-///     enabled: true
-/// ```}
+## Examples
+
+```yaml
+- name: Create Jenkins job
+  jenkins_job:
+    name: myapp-build
+    state: present
+    url: http://jenkins.local
+    user: admin
+    password: secret
+
+- name: Create Jenkins job with config XML
+  jenkins_job:
+    name: myapp-build
+    state: present
+    url: http://jenkins.local
+    user: admin
+    password: secret
+    config: |
+      <project>
+        <description>My app build job</description>
+        <builders>
+          <hudson.tasks.Shell>
+            <command>echo "Building"</command>
+          </hudson.tasks.Shell>
+        </builders>
+      </project>
+
+- name: Trigger Jenkins build
+  jenkins_job:
+    name: myapp-build
+    state: present
+    url: http://jenkins.local
+    user: admin
+    password: secret
+    enabled: true
+
+- name: Delete Jenkins job
+  jenkins_job:
+    name: old-job
+    state: absent
+    url: http://jenkins.local
+    user: admin
+    password: secret
+
+- name: Trigger build with token
+  jenkins_job:
+    name: myapp-build
+    state: present
+    url: http://jenkins.local
+    user: admin
+    password: secret
+    token: build-token
+    enabled: true
+```
 
 {% endraw %}

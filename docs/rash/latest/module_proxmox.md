@@ -47,77 +47,77 @@ check_mode:
 | tags             |          | string  |                                                      | Tags for the VM/container.                       |
 | pool             |          | string  |                                                      | Pool to assign the VM/container to.              |
 
-{$include_doc /// ## Examples
-///
-/// ```yaml
-/// - name: Create a container
-///   proxmox:
-///     node: pve1
-///     vmid: 100
-///     name: myapp
-///     state: present
-///     api_host: pve.local
-///     api_user: root@pam
-///     api_password: '{{ proxmox_password }}'
-///
-/// - name: Start a VM
-///   proxmox:
-///     node: pve1
-///     vmid: 101
-///     state: started
-///     api_host: pve.local
-///     api_user: root@pam
-///     api_password: '{{ proxmox_password }}'
-///
-/// - name: Stop a container
-///   proxmox:
-///     node: pve1
-///     vmid: 100
-///     state: stopped
-///     api_host: pve.local
-///     api_user: root@pam
-///     api_password: '{{ proxmox_password }}'
-///
-/// - name: Restart a VM
-///   proxmox:
-///     node: pve1
-///     vmid: 101
-///     state: restarted
-///     api_host: pve.local
-///     api_user: root@pam
-///     api_password: '{{ proxmox_password }}'
-///
-/// - name: Remove a container
-///   proxmox:
-///     node: pve1
-///     vmid: 100
-///     state: absent
-///     api_host: pve.local
-///     api_user: root@pam
-///     api_password: '{{ proxmox_password }}'
-///
-/// - name: Create VM from template with specific CPU and memory
-///   proxmox:
-///     node: pve1
-///     vmid: 200
-///     name: myvm
-///     state: present
-///     template: 9000
-///     cores: 4
-///     memory: 8192
-///     api_host: pve.local
-///     api_user: root@pam
-///     api_password: '{{ proxmox_password }}'
-///
-/// - name: Use API token instead of password
-///   proxmox:
-///     node: pve1
-///     vmid: 100
-///     state: started
-///     api_host: pve.local
-///     api_user: root@pam
-///     api_token_id: mytoken
-///     api_token_secret: '{{ proxmox_token_secret }}'
-/// ```}
+## Examples
+
+```yaml
+- name: Create a container
+  proxmox:
+    node: pve1
+    vmid: 100
+    name: myapp
+    state: present
+    api_host: pve.local
+    api_user: root@pam
+    api_password: '{{ proxmox_password }}'
+
+- name: Start a VM
+  proxmox:
+    node: pve1
+    vmid: 101
+    state: started
+    api_host: pve.local
+    api_user: root@pam
+    api_password: '{{ proxmox_password }}'
+
+- name: Stop a container
+  proxmox:
+    node: pve1
+    vmid: 100
+    state: stopped
+    api_host: pve.local
+    api_user: root@pam
+    api_password: '{{ proxmox_password }}'
+
+- name: Restart a VM
+  proxmox:
+    node: pve1
+    vmid: 101
+    state: restarted
+    api_host: pve.local
+    api_user: root@pam
+    api_password: '{{ proxmox_password }}'
+
+- name: Remove a container
+  proxmox:
+    node: pve1
+    vmid: 100
+    state: absent
+    api_host: pve.local
+    api_user: root@pam
+    api_password: '{{ proxmox_password }}'
+
+- name: Create VM from template with specific CPU and memory
+  proxmox:
+    node: pve1
+    vmid: 200
+    name: myvm
+    state: present
+    template: 9000
+    cores: 4
+    memory: 8192
+    api_host: pve.local
+    api_user: root@pam
+    api_password: '{{ proxmox_password }}'
+
+- name: Use API token instead of password
+  proxmox:
+    node: pve1
+    vmid: 100
+    state: started
+    api_host: pve.local
+    api_user: root@pam
+    api_token_id: mytoken
+    api_token_secret: '{{ proxmox_token_secret }}'
+```
 
 {% endraw %}

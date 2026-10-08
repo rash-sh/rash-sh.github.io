@@ -24,8 +24,8 @@ Use [find module](./module_find.html) as a lookup. Returns the extra field of th
       recurse: false
   loop: "{{ find(tmp_query) }}"
   copy:
-    src: "{{ item }}""
-    dest: "/tmp2/{{ item | basename }}"
+    src: "{{ item }}"
+    dest: "/tmp2/{{ item | split('/') | last }}"
 
 ```
 

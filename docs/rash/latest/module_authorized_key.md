@@ -29,36 +29,36 @@ check_mode:
 | comment     |          | string  |                   | A comment to attach to the key. By default, this is extracted from the key.          |
 | key_options |          | string  |                   | A string of ssh key options to be prepended to the key.                              |
 
-{$include_doc /// ## Examples
-///
-/// ```yaml
-/// - authorized_key:
-///     user: deploy
-///     key: ssh-rsa AAAA... user@host
-///     state: present
-///
-/// - authorized_key:
-///     user: deploy
-///     key: '{{ lookup("file", "~/.ssh/id_rsa.pub") }}'
-///     state: present
-///
-/// - authorized_key:
-///     user: deploy
-///     key:
-///       - ssh-rsa AAAA... user1@host
-///       - ssh-ed25519 AAAA... user2@host
-///     state: present
-///
-/// - authorized_key:
-///     user: deploy
-///     key: ssh-rsa AAAA... old@host
-///     state: absent
-///
-/// - authorized_key:
-///     user: deploy
-///     key: ssh-rsa AAAA... deploy@host
-///     exclusive: true
-///     key_options: 'no-port-forwarding,from="10.0.1.1"'
-/// ```}
+## Examples
+
+```yaml
+- authorized_key:
+    user: deploy
+    key: ssh-rsa AAAA... user@host
+    state: present
+
+- authorized_key:
+    user: deploy
+    key: '{{ lookup("file", "~/.ssh/id_rsa.pub") }}'
+    state: present
+
+- authorized_key:
+    user: deploy
+    key:
+      - ssh-rsa AAAA... user1@host
+      - ssh-ed25519 AAAA... user2@host
+    state: present
+
+- authorized_key:
+    user: deploy
+    key: ssh-rsa AAAA... old@host
+    state: absent
+
+- authorized_key:
+    user: deploy
+    key: ssh-rsa AAAA... deploy@host
+    exclusive: true
+    key_options: 'no-port-forwarding,from="10.0.1.1"'
+```
 
 {% endraw %}

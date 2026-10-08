@@ -33,77 +33,77 @@ check_mode:
 | port           |          | integer |                                        | Port for SRV records.                                             |
 | validate_certs |          | boolean |                                        | Validate SSL certificates.                                        |
 
-{$include_doc /// ## Examples
-///
-/// ```yaml
-/// - name: Create A record
-///   cloudflare_dns:
-///     zone: example.com
-///     record: www
-///     type: A
-///     value: 192.168.1.1
-///     ttl: 300
-///     proxied: true
-///     state: present
-///
-/// - name: Create AAAA record
-///   cloudflare_dns:
-///     zone: example.com
-///     record: www
-///     type: AAAA
-///     value: 2001:db8::1
-///     state: present
-///
-/// - name: Create CNAME record
-///   cloudflare_dns:
-///     zone: example.com
-///     record: blog
-///     type: CNAME
-///     value: www.example.com
-///     state: present
-///
-/// - name: Create MX record
-///   cloudflare_dns:
-///     zone: example.com
-///     record: "@"
-///     type: MX
-///     value: mail.example.com
-///     priority: 10
-///     state: present
-///
-/// - name: Create TXT record
-///   cloudflare_dns:
-///     zone: example.com
-///     record: "@"
-///     type: TXT
-///     value: "v=spf1 include:_spf.example.com ~all"
-///     state: present
-///
-/// - name: Create SRV record
-///   cloudflare_dns:
-///     zone: example.com
-///     record: "_sip._tcp"
-///     type: SRV
-///     value: "sip.example.com"
-///     priority: 10
-///     weight: 60
-///     port: 5060
-///     state: present
-///
-/// - name: Delete a DNS record
-///   cloudflare_dns:
-///     zone: example.com
-///     record: old
-///     type: A
-///     state: absent
-///
-/// - name: Create record using API token from environment
-///   cloudflare_dns:
-///     zone: example.com
-///     record: test
-///     type: A
-///     value: 10.0.0.1
-///     state: present
-/// ```}
+## Examples
+
+```yaml
+- name: Create A record
+  cloudflare_dns:
+    zone: example.com
+    record: www
+    type: A
+    value: 192.168.1.1
+    ttl: 300
+    proxied: true
+    state: present
+
+- name: Create AAAA record
+  cloudflare_dns:
+    zone: example.com
+    record: www
+    type: AAAA
+    value: 2001:db8::1
+    state: present
+
+- name: Create CNAME record
+  cloudflare_dns:
+    zone: example.com
+    record: blog
+    type: CNAME
+    value: www.example.com
+    state: present
+
+- name: Create MX record
+  cloudflare_dns:
+    zone: example.com
+    record: "@"
+    type: MX
+    value: mail.example.com
+    priority: 10
+    state: present
+
+- name: Create TXT record
+  cloudflare_dns:
+    zone: example.com
+    record: "@"
+    type: TXT
+    value: "v=spf1 include:_spf.example.com ~all"
+    state: present
+
+- name: Create SRV record
+  cloudflare_dns:
+    zone: example.com
+    record: "_sip._tcp"
+    type: SRV
+    value: "sip.example.com"
+    priority: 10
+    weight: 60
+    port: 5060
+    state: present
+
+- name: Delete a DNS record
+  cloudflare_dns:
+    zone: example.com
+    record: old
+    type: A
+    state: absent
+
+- name: Create record using API token from environment
+  cloudflare_dns:
+    zone: example.com
+    record: test
+    type: A
+    value: 10.0.0.1
+    state: present
+```
 
 {% endraw %}

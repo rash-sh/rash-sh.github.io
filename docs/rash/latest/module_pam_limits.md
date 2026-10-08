@@ -29,45 +29,45 @@ check_mode:
 | comment    |          | string  |                                                                                                                                                                                          | Comment associated with the limit.                                         |
 | backup     |          | boolean |                                                                                                                                                                                          | Create a backup file before modifying. **[default: `false`]**              |
 
-{$include_doc /// ## Examples
-///
-/// ```yaml
-/// - name: Set max open files limit for nginx user
-///   pam_limits:
-///     domain: nginx
-///     limit_type: soft
-///     item: nofile
-///     value: "65535"
-///
-/// - name: Set hard limit for max processes
-///   pam_limits:
-///     domain: '*'
-///     limit_type: hard
-///     item: nproc
-///     value: "4096"
-///
-/// - name: Remove memlock limit for user
-///   pam_limits:
-///     domain: myuser
-///     limit_type: soft
-///     item: memlock
-///     value: unlimited
-///
-/// - name: Set limits in a custom file with comment
-///   pam_limits:
-///     domain: "@developers"
-///     limit_type: "-"
-///     item: nofile
-///     value: "100000"
-///     dest: /etc/security/limits.d/99-developers.conf
-///     comment: Custom limits for developers
-///
-/// - name: Ensure limit does not exist
-///   pam_limits:
-///     domain: olduser
-///     limit_type: soft
-///     item: nofile
-///     state: absent
-/// ```}
+## Examples
+
+```yaml
+- name: Set max open files limit for nginx user
+  pam_limits:
+    domain: nginx
+    limit_type: soft
+    item: nofile
+    value: "65535"
+
+- name: Set hard limit for max processes
+  pam_limits:
+    domain: '*'
+    limit_type: hard
+    item: nproc
+    value: "4096"
+
+- name: Remove memlock limit for user
+  pam_limits:
+    domain: myuser
+    limit_type: soft
+    item: memlock
+    value: unlimited
+
+- name: Set limits in a custom file with comment
+  pam_limits:
+    domain: "@developers"
+    limit_type: "-"
+    item: nofile
+    value: "100000"
+    dest: /etc/security/limits.d/99-developers.conf
+    comment: Custom limits for developers
+
+- name: Ensure limit does not exist
+  pam_limits:
+    domain: olduser
+    limit_type: soft
+    item: nofile
+    state: absent
+```
 
 {% endraw %}

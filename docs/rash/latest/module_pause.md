@@ -7,10 +7,9 @@ indent: true
 {% raw %}
 # pause
 
-Pause execution for a given duration.
-
-This module is useful for debugging, rate limiting, or waiting for
-external processes that don't have a clear signal.
+Pause execution for a duration or prompt a human for input. Human input is returned as the
+module output and can be captured with `register`. With `echo: false` the input is never
+logged.
 
 ## Attributes
 
@@ -21,11 +20,13 @@ check_mode:
 
 ## Parameters
 
-| Parameter | Required | Type    | Values | Description                               |
-|-----------|----------|---------|--------|-------------------------------------------|
-| seconds   |          | integer |        | Number of seconds to pause.               |
-| minutes   |          | integer |        | Number of minutes to pause.               |
-| prompt    |          | string  |        | Optional message to display during pause. |
+| Parameter | Required | Type    | Values | Description                                                                                                                           |
+|-----------|----------|---------|--------|---------------------------------------------------------------------------------------------------------------------------------------|
+| seconds   |          | integer |        | Number of seconds to pause.                                                                                                           |
+| minutes   |          | integer |        | Number of minutes to pause.                                                                                                           |
+| prompt    |          | string  |        | Optional message to display.                                                                                                          |
+| input     |          | boolean |        | Read one line of input after displaying the prompt and return it as the task output. Without a terminal, the line is read from stdin. |
+| echo      |          | boolean |        | Echo the typed input. Set false for passwords/secrets: the input is then never logged.                                                |
 
 ## Example
 
@@ -34,11 +35,15 @@ check_mode:
     seconds: 5
 
 - pause:
-    minutes: 1
+    prompt: "Environment name: "
+    input: true
+  register: answer
 
 - pause:
-    seconds: 30
-    prompt: "Waiting for service to start..."
+    prompt: "Password: "
+    input: true
+    echo: false
+  register: password
 ```
 
 {% endraw %}

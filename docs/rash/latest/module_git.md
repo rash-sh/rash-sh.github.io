@@ -32,35 +32,35 @@ diff_mode:
 | accept_hostkey |          | boolean |        | Automatically accept the host key when connecting via SSH.                          |
 | force          |          | boolean |        | Force a reset to the specified version, discarding any local changes.               |
 
-{$include_doc /// ## Examples
-///
-/// ```yaml
-/// - name: Clone application
-///   git:
-///     repo: https://github.com/user/app.git
-///     dest: /opt/app
-///     version: v1.2.0
-///
-/// - name: Clone with SSH
-///   git:
-///     repo: git@github.com:user/private-config.git
-///     dest: /etc/app/config
-///     key_file: /root/.ssh/deploy_key
-///     accept_hostkey: yes
-///
-/// - name: Shallow clone
-///   git:
-///     repo: https://github.com/user/large-repo.git
-///     dest: /opt/repo
-///     depth: 1
-///     single_branch: yes
-///     version: main
-///
-/// - name: Update existing clone
-///   git:
-///     repo: https://github.com/user/app.git
-///     dest: /opt/app
-///     update: yes
-/// ```}
+## Examples
+
+```yaml
+- name: Clone application
+  git:
+    repo: https://github.com/user/app.git
+    dest: /opt/app
+    version: v1.2.0
+
+- name: Clone with SSH
+  git:
+    repo: git@github.com:user/private-config.git
+    dest: /etc/app/config
+    key_file: /root/.ssh/deploy_key
+    accept_hostkey: yes
+
+- name: Shallow clone
+  git:
+    repo: https://github.com/user/large-repo.git
+    dest: /opt/repo
+    depth: 1
+    single_branch: yes
+    version: main
+
+- name: Update existing clone
+  git:
+    repo: https://github.com/user/app.git
+    dest: /opt/app
+    update: yes
+```
 
 {% endraw %}
