@@ -33,19 +33,20 @@ To test your changes to the Rash website locally before committing to the Rash r
 
 To generate the docs:
 ```bash
-# Remove the old master docs and copy your updated docs from your rash repo
-rm -fr docs/rash/master
-mkdir docs/rash/master
-cp -r ../rash/Documentation/* docs/rash/master/
+# Build the processed Markdown, including generated module/lookup pages and llms.txt.
+make -C ../rash book VERSION=latest
 
-# Starts a live-reloading server that serves the docs at [http://0.0.0.0:4000/docs/rash/master](http://0.0.0.0:4000/docs/rash/master). This requires Docker installed on your machine.
+# Replace the local website snapshot with the generated output.
+rm -rf docs/rash/latest
+cp -r ../rash/rash_book/rash-sh.github.io/docs/rash/latest docs/rash/latest
+
+# Start a live-reloading server at http://0.0.0.0:4000/docs/rash/latest/.
 make run
 ```
 
-When you are done, revert the changes to the repo:
+When you are done, revert the local snapshot:
 ```bash
-rm docs/rash/master
-git checkout -- docs/rash/master
+git checkout -- docs/rash/latest
 ```
 
 ## Github Pages & Jekyll
