@@ -6,8 +6,8 @@ Use the versioned documentation index for technical questions. The `latest` docu
 
 ## Documentation
 
-- [Development documentation index](https://rash.sh/docs/rash/latest/llms.txt): Machine-oriented navigation for the current `master` documentation.
-- [Development documentation](https://rash.sh/docs/rash/latest/): Human-readable documentation for the current `master` branch.
+- [Development documentation index](https://rash-sh.github.io/docs/rash/latest/llms.txt): Machine-oriented navigation for the current `master` documentation.
+- [Development documentation](https://rash-sh.github.io/docs/rash/latest/): Human-readable documentation for the current `master` branch.
 
 ## Project
 
