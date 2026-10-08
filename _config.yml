@@ -1,6 +1,6 @@
 # Site settings
 title: rash.sh
-url: "https://rash.sh" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://rash-sh.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
