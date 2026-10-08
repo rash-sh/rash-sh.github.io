@@ -5,7 +5,9 @@ If this a docs page, include the docs values and check if the page should be "no
 {% endcomment %}
 
 {% assign url = page.url | split: '/' %}
+{% assign is_docs_page = false %}
 {% if url.size > 1 and url[1] == "docs" %}
+{% assign is_docs_page = true %}
 {% include values_docs.inc %}
 {% endif %}
 
@@ -25,6 +27,17 @@ If this a docs page, include the docs values and check if the page should be "no
     <title>{{ page.doctitle | default: "Rash" | escape }}</title>
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+    {% if is_docs_page %}
+      <link rel="describedby" href="{{ currentProjectVersionPath | append: 'llms.txt' | absolute_url }}">
+      {% assign markdownPath = filepath | replace: '.html', '.md' %}
+      {% if markdownPath == '' or markdownPath == '/' %}
+        {% assign markdownPath = 'index.md' %}
+      {% endif %}
+      <link rel="alternate" type="text/markdown" href="https://raw.githubusercontent.com/rash-sh/rash-sh.github.io/master{{ currentProjectVersionPath }}{{ markdownPath }}">
+    {% else %}
+      <link rel="describedby" href="{{ '/llms.txt' | absolute_url }}">
+    {% endif %}
 
     {% include favicon.html %}
 
